@@ -6,7 +6,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 144, 251, 162), // Set background color here
+      backgroundColor: Color.fromARGB(255, 154, 250, 170), // Set background color here
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,11 +22,11 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20), // Adding some space between the image and text
             Text(
               'Seedling',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             ),
             Text(
               'A Language Learning App',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 24),
             ),
           ],
         ),
