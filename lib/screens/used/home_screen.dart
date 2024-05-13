@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             ),
             Text(
-              'A Language Learning App',
+              'The Language Learning App',
               style: TextStyle(fontSize: 24),
             ),
           ],
