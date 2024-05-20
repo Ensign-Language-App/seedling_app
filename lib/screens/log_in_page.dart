@@ -4,7 +4,7 @@ import 'package:seedling_app/screens/home_page.dart';
 
 
 class LogInPage extends StatelessWidget {
-  const LogInPage({Key? key}) : super(key: key);
+  const LogInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class LogInPage extends StatelessWidget {
                       onTap: () {
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(builder: (context) => const HomePage()),
                         );
                       },
                       child: Container(
@@ -102,12 +102,12 @@ class LogInPage extends StatelessWidget {
                         ),),
                       ),
                     ),
-                    SizedBox(height: 150,),
+                    const SizedBox(height: 150,),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => RegistrationPage()),
+                          MaterialPageRoute(builder: (context) => const RegistrationPage()),
                         );
                       },
                       child: const Align(
