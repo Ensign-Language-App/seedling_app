@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/home_page.dart';
+import 'package:seedling_app/utilities/theme.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+
+class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-          scaffoldBackgroundColor: const Color(0xFFE9E9E9),
-          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-            selectedItemColor: Colors.green,
-            backgroundColor: Colors.white,
-            elevation: 20,
-          ),
-        ),
+        theme: lightMode,
+        darkTheme: darkMode,
         debugShowCheckedModeBanner: false,
         home: const HomePage()
     );

@@ -45,8 +45,18 @@ class SideMenu extends StatelessWidget {
             title: Text('Settings'),
             onTap: null,
           ),
+          ListTile(
+            leading: const Icon(Icons.dark_mode),
+            title: const Text('Dark Mode'),
+            trailing: Switch(
+              value: false,
+              onChanged: (bool value) {
+
+              },
+            ),
+          ),
           const Padding(
-            padding: EdgeInsets.only(top: 350),
+            padding: EdgeInsets.only(top: 300),
             child: Divider()
           ),
           ListTile(
