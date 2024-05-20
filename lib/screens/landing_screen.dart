@@ -48,7 +48,7 @@ class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderS
                 Padding(
                     padding: EdgeInsets.only(bottom: 20),
                     child: Image(
-                      image: AssetImage('assets/seedling_icon.png'),
+                      image: AssetImage('assets/images/seedling_icon.png'),
                       width: 105,
                       height: 105,
                     )

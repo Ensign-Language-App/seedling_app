@@ -90,4 +90,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/seedling.png
+    - assets/images/seedling_icon.png
