@@ -8,6 +8,10 @@ class LogInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = Theme.of(context).canvasColor;
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    final signUpColor = isDarkMode ? Colors.white : Colors.black;
+
     return Scaffold(
       body: Stack(
         children: [
@@ -34,12 +38,12 @@ class LogInPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 200.0),
             child: Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
-                color: Colors.white,
+                color: backgroundColor,
               ),
               height: double.infinity,
               width: double.infinity,
@@ -110,20 +114,20 @@ class LogInPage extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => const RegistrationPage()),
                         );
                       },
-                      child: const Align(
+                      child: Align(
                         alignment: Alignment.bottomRight,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text ("Don't have an account?", style: TextStyle(
+                            const Text ("Don't have an account?", style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey
                             ),),
                             Text ("Sign up", style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 17,
-                                color: Colors.black
+                                color: signUpColor
                             ),),
                           ],
                         ),

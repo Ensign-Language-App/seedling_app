@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/home_page.dart';
+import 'package:seedling_app/screens/landing_screen.dart';
 import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget{
         theme: themeNotifier.isDarkMode ? darkMode : lightMode,
         darkTheme: darkMode,
         debugShowCheckedModeBanner: false,
-        home: const HomePage()
+        home: const LandingScreen(),
     );
   }
 }
