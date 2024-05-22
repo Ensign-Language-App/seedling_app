@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
+import 'package:seedling_app/providers/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
@@ -49,9 +51,9 @@ class SideMenu extends StatelessWidget {
             leading: const Icon(Icons.dark_mode),
             title: const Text('Dark Mode'),
             trailing: Switch(
-              value: false,
+              value: Provider.of<ThemeNotifier>(context).isDarkMode,
               onChanged: (bool value) {
-
+                Provider.of<ThemeNotifier>(context, listen: false).toggleTheme();
               },
             ),
           ),

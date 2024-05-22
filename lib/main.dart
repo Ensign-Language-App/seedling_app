@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/home_page.dart';
 import 'package:seedling_app/utilities/theme.dart';
+import 'package:seedling_app/providers/theme_provider.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(
+  ChangeNotifierProvider(
+    create: (_) => ThemeNotifier(),
+    child: const MyApp(),
+  ),
+);
 
 
 class MyApp extends StatelessWidget{
@@ -10,8 +17,10 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+
     return MaterialApp(
-        theme: lightMode,
+        theme: themeNotifier.isDarkMode ? darkMode : lightMode,
         darkTheme: darkMode,
         debugShowCheckedModeBanner: false,
         home: const HomePage()
