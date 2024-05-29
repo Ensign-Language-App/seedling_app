@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:seedling_app/Widgets/bottom_nav_bar.dart';
 import 'package:seedling_app/Widgets/top_nav_bar.dart';
 import 'package:seedling_app/Widgets/side_menu.dart';
+import 'package:firebase_auth/firebase_auth.dart'
+import 'package:seedling_app/screens/auth.dart'
 
 class HomePage extends StatelessWidget{
   const HomePage({super.key});
