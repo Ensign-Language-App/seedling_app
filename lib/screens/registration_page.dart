@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/home_page.dart';
 
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({super.key});
@@ -7,22 +6,22 @@ class RegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ValueNotifier<bool> showingAccountCreationSheet = ValueNotifier(false);
-    final TextEditingController _firstNameController = TextEditingController();
-    final TextEditingController _lastNameController = TextEditingController();
-    final TextEditingController _userNameController = TextEditingController();
-    final TextEditingController _emailController = TextEditingController();
-    final TextEditingController _passwordController = TextEditingController();
-    final TextEditingController _reEnteredPasswordController = TextEditingController();
+    final TextEditingController firstNameController = TextEditingController();
+    final TextEditingController lastNameController = TextEditingController();
+    final TextEditingController userNameController = TextEditingController();
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+    final TextEditingController reEnteredPasswordController = TextEditingController();
 
-    bool _isFirstNameValid = true;
-    bool _isLastNameValid = true;
-    bool _isUsernameValid = true;
-    bool _isEmailValid = true;
-    bool _isPasswordValid = true;
-    bool _isReEnteredPasswordValid = true;
+    bool isFirstNameValid = true;
+    bool isLastNameValid = true;
+    bool isUsernameValid = true;
+    bool isEmailValid = true;
+    bool isPasswordValid = true;
+    bool isReEnteredPasswordValid = true;
 
-    bool _usernameExists = false;
-    bool _emailExists = false;
+    bool usernameExists = false;
+    bool emailExists = false;
 
     return Scaffold(
       appBar: AppBar(
@@ -37,7 +36,7 @@ class RegistrationPage extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              if (!_usernameExists && !_emailExists) {
+              if (!usernameExists && !emailExists) {
                 _addAccount();
                 showingAccountCreationSheet.value = false;
               }
@@ -52,16 +51,16 @@ class RegistrationPage extends StatelessWidget {
         padding: const EdgeInsets.all(30.0),
         children: [
           TextFormField(
-            controller: _firstNameController,
+            controller: firstNameController,
             decoration: const InputDecoration(
               labelText: 'First Name',
               hintText: 'Enter your first name',
             ),
             onChanged: (value) {
-              _isFirstNameValid = value.trim().isNotEmpty && RegExp(r'^[a-zA-Z]+$').hasMatch(value);
+              isFirstNameValid = value.trim().isNotEmpty && RegExp(r'^[a-zA-Z]+$').hasMatch(value);
             },
           ),
-          if (!_isFirstNameValid)
+          if (!isFirstNameValid)
             const Padding(
               padding: EdgeInsets.only(left: 8.0),
               child: Text(
@@ -71,18 +70,18 @@ class RegistrationPage extends StatelessWidget {
             ),
           const SizedBox(height: 15.0),
           TextFormField(
-            controller: _lastNameController,
+            controller: lastNameController,
             decoration: const InputDecoration(
               labelText: 'Last Name',
               hintText: 'Enter your last name',
             ),
             onChanged: (value) {
-              _isLastNameValid = value.trim().isNotEmpty && RegExp(r'^[a-zA-Z]+$').hasMatch(value);
+              isLastNameValid = value.trim().isNotEmpty && RegExp(r'^[a-zA-Z]+$').hasMatch(value);
             },
           ),
           const SizedBox(height: 15.0),
           TextFormField(
-            controller: _userNameController,
+            controller: userNameController,
             decoration: const InputDecoration(
               labelText: 'Username',
               hintText: 'Choose a username',
@@ -93,7 +92,7 @@ class RegistrationPage extends StatelessWidget {
           ),
           const SizedBox(height: 15.0),
           TextFormField(
-            controller: _emailController,
+            controller: emailController,
             decoration: const InputDecoration(
               labelText: 'Email',
               hintText: 'Enter your email address',
@@ -104,7 +103,7 @@ class RegistrationPage extends StatelessWidget {
           ),
           const SizedBox(height: 15.0),
           TextFormField(
-            controller: _passwordController,
+            controller: passwordController,
             obscureText: true,
             decoration: const InputDecoration(
               labelText: 'Password',
@@ -116,7 +115,7 @@ class RegistrationPage extends StatelessWidget {
           ),
           const SizedBox(height: 15.0),
           TextFormField(
-            controller: _reEnteredPasswordController,
+            controller: reEnteredPasswordController,
             obscureText: true,
             decoration: const InputDecoration(
               labelText: 'Re-enter Password',
