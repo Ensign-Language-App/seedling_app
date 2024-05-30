@@ -1,7 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:logging/logging.dart';
+
+final Logger _logger = Logger('AuthScreen');
 
 class Auth {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+
 
   // Sign in with email and password
   Future<User?> signInWithEmailAndPassword(String email, String password) async {
@@ -10,7 +14,7 @@ class Auth {
       User? user = result.user;
       return user;
     } catch (e) {
-      print("Error signing in: ${e.toString()}");
+      _logger.severe("Error signing in: ${e.toString()}");
       return null;
     }
   }
@@ -22,7 +26,7 @@ class Auth {
       User? user = result.user;
       return user;
     } catch (e) {
-      print("Error registering: ${e.toString()}");
+      _logger.severe("Error registering: ${e.toString()}");
       return null;
     }
   }
@@ -32,7 +36,7 @@ class Auth {
     try {
       return await _auth.signOut();
     } catch (e) {
-      print("Error signing out: ${e.toString()}");
+      _logger.severe("Error signing out: ${e.toString()}");
     }
   }
 }

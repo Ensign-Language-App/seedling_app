@@ -8,7 +8,7 @@ import 'package:seedling_app/screens/home_page.dart';
 void main() {
   testWidgets('HomePage UI test', (WidgetTester tester) async {
     // Build our widget and trigger a frame.
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(const MaterialApp(
       home: HomePage(),
     ));
 
