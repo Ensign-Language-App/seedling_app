@@ -3,6 +3,13 @@ import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
+void main() => runApp(MaterialApp(
+      home: ChangeNotifierProvider(
+        create: (_) => ThemeNotifier(),
+        child: const SideMenu(),
+      ),
+    ));
+
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
 
@@ -20,8 +27,7 @@ class SideMenu extends StatelessWidget {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage: NetworkImage(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2eBwWNVsx4cmRUBRM9jip0fzz4rej8CmQ-Q&usqp=CAU'),
+                    backgroundImage: AssetImage('assets/icons/flags/US_flag.png'),
                   ),
                   SizedBox(height: 10),
                   Text(
@@ -54,14 +60,12 @@ class SideMenu extends StatelessWidget {
             trailing: Switch(
               value: Provider.of<ThemeNotifier>(context).isDarkMode,
               onChanged: (bool value) {
-                Provider.of<ThemeNotifier>(context, listen: false).toggleTheme();
+                Provider.of<ThemeNotifier>(context, listen: false)
+                    .toggleTheme();
               },
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 300),
-            child: Divider()
-          ),
+          const Padding(padding: EdgeInsets.only(top: 300), child: Divider()),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text('Log out'),
@@ -77,5 +81,3 @@ class SideMenu extends StatelessWidget {
     );
   }
 }
-
-void main() => runApp(const MaterialApp(home: Scaffold(body: SideMenu())));
