@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:seedling_app/screens/settings_page.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
@@ -43,10 +44,16 @@ class SideMenu extends StatelessWidget {
             title: Text('About'),
             onTap: null,
           ),
-          const ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: null,
+          ListTile(
+            leading: const Icon(Icons.settings),
+            title: const Text('Settings'),
+            onTap: () {
+              Navigator.pop(context); // Close the drawer
+              Navigator.push( // Navigate to the SettingsView
+                context,
+                MaterialPageRoute(builder: (context) => SettingsView(showMenu: ValueNotifier<bool>(false))),
+              );
+            },
           ),
           ListTile(
             leading: const Icon(Icons.dark_mode),
