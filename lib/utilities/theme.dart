@@ -10,7 +10,6 @@ ThemeData lightMode = ThemeData(
   ),
 );
 
-
 ThemeData darkMode = ThemeData(
   colorScheme: ColorScheme.fromSeed(
     seedColor: Colors.white,

@@ -54,14 +54,12 @@ class SideMenu extends StatelessWidget {
             trailing: Switch(
               value: Provider.of<ThemeNotifier>(context).isDarkMode,
               onChanged: (bool value) {
-                Provider.of<ThemeNotifier>(context, listen: false).toggleTheme();
+                Provider.of<ThemeNotifier>(context, listen: false)
+                    .toggleTheme();
               },
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 300),
-            child: Divider()
-          ),
+          const Padding(padding: EdgeInsets.only(top: 300), child: Divider()),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text('Log out'),

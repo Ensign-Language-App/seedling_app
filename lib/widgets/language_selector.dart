@@ -19,8 +19,14 @@ class LanguageSelectorState extends State<LanguageSelector> {
     {'language': 'Italian', 'path': 'assets/icons/flags/Italy_flag.png'},
     {'language': 'Portuguese', 'path': 'assets/icons/flags/Portugal_flag.png'},
     {'language': 'Russian', 'path': 'assets/icons/flags/Russia_flag.png'},
-    {'language': 'Chinese (Simplified)', 'path': 'assets/icons/flags/China_flag.png'},
-    {'language': 'Chinese (Traditional)', 'path': 'assets/icons/flags/Taiwan_flag.png'},
+    {
+      'language': 'Chinese (Simplified)',
+      'path': 'assets/icons/flags/China_flag.png'
+    },
+    {
+      'language': 'Chinese (Traditional)',
+      'path': 'assets/icons/flags/Taiwan_flag.png'
+    },
     {'language': 'Japanese', 'path': 'assets/icons/flags/Japan_flag.png'},
     {'language': 'Korean', 'path': 'assets/icons/flags/Korea_flag.png'},
   ];
@@ -64,6 +70,5 @@ class LanguageSelectorState extends State<LanguageSelector> {
   }
 }
 
-
-
-void main() => runApp( const MaterialApp(home: Scaffold(body: LanguageSelector())));
+void main() =>
+    runApp(const MaterialApp(home: Scaffold(body: LanguageSelector())));

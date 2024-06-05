@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:seedling_app/screens/home_page.dart';
 
-
 class LogInPage extends StatelessWidget {
   const LogInPage({super.key});
 
@@ -55,36 +54,49 @@ class LogInPage extends StatelessWidget {
                     const TextField(
                       decoration: InputDecoration(
                           suffixIcon: Icon(Icons.check, color: Colors.grey),
-                          label: Text('Username/E-mail', style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 17, 109, 75),
-                          ),)
-                      ),
+                          label: Text(
+                            'Username/E-mail',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 17, 109, 75),
+                            ),
+                          )),
                     ),
                     const TextField(
                       decoration: InputDecoration(
-                          suffixIcon: Icon(Icons.visibility_off, color: Colors.grey),
-                          label: Text('Password', style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 17, 109, 75),
-                          ),)
-                      ),
+                          suffixIcon:
+                              Icon(Icons.visibility_off, color: Colors.grey),
+                          label: Text(
+                            'Password',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 17, 109, 75),
+                            ),
+                          )),
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     const Align(
                       alignment: Alignment.centerRight,
-                      child: Text('Forgot Password?', style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                        color: Color.fromARGB(255, 35, 215, 149),
-                      ),),
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                          color: Color.fromARGB(255, 35, 215, 149),
+                        ),
+                      ),
                     ),
-                    const SizedBox(height: 70,),
+                    const SizedBox(
+                      height: 70,
+                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (context) => const HomePage()),
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()),
                         );
                       },
                       child: Container(
@@ -92,26 +104,32 @@ class LogInPage extends StatelessWidget {
                         width: 300,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
-                          gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 17, 109, 75),
-                                Color.fromARGB(255, 35, 215, 149),
-                              ]
+                          gradient: const LinearGradient(colors: [
+                            Color.fromARGB(255, 17, 109, 75),
+                            Color.fromARGB(255, 35, 215, 149),
+                          ]),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'SIGN IN',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                        child: const Center(child: Text('SIGN IN', style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.white,),
-                        ),),
                       ),
                     ),
-                    const SizedBox(height: 150,),
+                    const SizedBox(
+                      height: 150,
+                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const RegistrationPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const RegistrationPage()),
                         );
                       },
                       child: Align(
@@ -120,15 +138,19 @@ class LogInPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            const Text ("Don't have an account?", style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey
-                            ),),
-                            Text ("Sign up", style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17,
-                                color: signUpColor
-                            ),),
+                            const Text(
+                              "Don't have an account?",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey),
+                            ),
+                            Text(
+                              "Sign up",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                  color: signUpColor),
+                            ),
                           ],
                         ),
                       ),
@@ -343,7 +365,3 @@ void main() {
 //     home: LogInPage(),
 //   ));
 // }
-
-
-
-

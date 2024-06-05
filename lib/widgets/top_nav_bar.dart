@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
 
-
-class TopNavBar extends StatelessWidget implements PreferredSizeWidget{
+class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
   const TopNavBar({super.key});
 
   @override
@@ -10,10 +9,7 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       title: const Text('Home'),
       actions: <Widget>[
-        const SizedBox(
-          width: 50,
-          child: LanguageSelector()
-        ),
+        const SizedBox(width: 50, child: LanguageSelector()),
         IconButton(
           icon: const Icon(Icons.more_vert),
           onPressed: () {},

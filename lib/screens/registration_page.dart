@@ -5,13 +5,15 @@ class RegistrationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ValueNotifier<bool> showingAccountCreationSheet = ValueNotifier(false);
+    final ValueNotifier<bool> showingAccountCreationSheet =
+        ValueNotifier(false);
     final TextEditingController firstNameController = TextEditingController();
     final TextEditingController lastNameController = TextEditingController();
     final TextEditingController userNameController = TextEditingController();
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
-    final TextEditingController reEnteredPasswordController = TextEditingController();
+    final TextEditingController reEnteredPasswordController =
+        TextEditingController();
 
     bool isFirstNameValid = true;
     bool isLastNameValid = true;
@@ -57,7 +59,8 @@ class RegistrationPage extends StatelessWidget {
               hintText: 'Enter your first name',
             ),
             onChanged: (value) {
-              isFirstNameValid = value.trim().isNotEmpty && RegExp(r'^[a-zA-Z]+$').hasMatch(value);
+              isFirstNameValid = value.trim().isNotEmpty &&
+                  RegExp(r'^[a-zA-Z]+$').hasMatch(value);
             },
           ),
           if (!isFirstNameValid)
@@ -76,7 +79,8 @@ class RegistrationPage extends StatelessWidget {
               hintText: 'Enter your last name',
             ),
             onChanged: (value) {
-              isLastNameValid = value.trim().isNotEmpty && RegExp(r'^[a-zA-Z]+$').hasMatch(value);
+              isLastNameValid = value.trim().isNotEmpty &&
+                  RegExp(r'^[a-zA-Z]+$').hasMatch(value);
             },
           ),
           const SizedBox(height: 15.0),
@@ -138,8 +142,6 @@ class RegistrationPage extends StatelessWidget {
   void _addAccount() {
     // Add account logic
   }
-
-
 }
 
 void main() {

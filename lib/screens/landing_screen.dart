@@ -3,22 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class LandingScreen extends StatefulWidget {
-
   const LandingScreen({super.key});
 
   @override
   State<LandingScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderStateMixin{
-
+class _SplashScreenState extends State<LandingScreen>
+    with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(const Duration(seconds: 2),(){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const LogInPage()));
+    Future.delayed(const Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const LogInPage()));
     });
   }
 
@@ -38,21 +38,17 @@ class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderS
                 gradient: LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
-                    colors: [Colors.lightGreenAccent, Colors.blue]
-                )
-            ),
-
+                    colors: [Colors.lightGreenAccent, Colors.blue])),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
+              children: <Widget>[
                 Padding(
                     padding: EdgeInsets.only(bottom: 20),
                     child: Image(
                       image: AssetImage('assets/images/seedling_icon.png'),
                       width: 105,
                       height: 105,
-                    )
-                ),
+                    )),
                 Text(
                   'Seedling',
                   style: TextStyle(
@@ -61,9 +57,7 @@ class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderS
                   ),
                 )
               ],
-            )
-        )
-    );
+            )));
   }
 }
 
