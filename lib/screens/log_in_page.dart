@@ -20,8 +20,8 @@ class LogInPage extends StatelessWidget {
             width: double.infinity,
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color.fromARGB(255, 24, 143, 57),
-                Color.fromARGB(255, 97, 168, 112),
+                Color.fromARGB(255, 17, 109, 75),
+                Color.fromARGB(255, 35, 215, 149),
               ]),
             ),
             child: const Padding(
@@ -94,8 +94,8 @@ class LogInPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                           gradient: const LinearGradient(
                               colors: [
-                                Color.fromARGB(255, 35, 168, 56),
-                                Color.fromARGB(255, 57, 148, 89),
+                                Color.fromARGB(255, 17, 109, 75),
+                                Color.fromARGB(255, 35, 215, 149),
                               ]
                           ),
                         ),
