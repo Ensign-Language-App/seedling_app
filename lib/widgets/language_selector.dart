@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+void main() => runApp( const MaterialApp(home: Center(child: LanguageSelector())));
+
 class LanguageSelector extends StatefulWidget {
   const LanguageSelector({super.key});
 
@@ -65,5 +68,3 @@ class LanguageSelectorState extends State<LanguageSelector> {
 }
 
 
-
-void main() => runApp( const MaterialApp(home: Scaffold(body: LanguageSelector())));
