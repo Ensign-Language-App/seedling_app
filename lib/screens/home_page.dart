@@ -29,13 +29,13 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 LessonButton(
-                  image: 'assets/icons/flags/US_flag.png',
+                  image: 'assets/icons/flags/UK_flag.png',
                   number: '3',
                   title: '3',
                   color: Colors.blue,
                 ),
                 LessonButton(
-                  image: 'assets/icons/flags/US_flag.png',
+                  image: 'assets/icons/flags/Germany_flag.png',
                   number: '4',
                   title: '4',
                   color: Colors.green,
