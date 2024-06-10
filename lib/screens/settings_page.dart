@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart' show AppBar, BuildContext, Icon, Icons, ListTile, ListView, MaterialApp, Scaffold, StatelessWidget, Text, ValueNotifier, Widget, runApp;
 
 class SettingsView extends StatelessWidget {
-  final ValueNotifier<bool> showMenu;
 
-  const SettingsView({super.key, required this.showMenu});
+  const SettingsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +46,7 @@ class SettingsView extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
-    home: SettingsView(showMenu: ValueNotifier<bool>(false)),
+  runApp(const MaterialApp(
+    home: SettingsView(),
   ));
 }

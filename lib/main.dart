@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/Widgets/bottom_nav_bar.dart';
 import 'package:seedling_app/screens/home_page.dart';
+import 'package:seedling_app/screens/landing_screen.dart';
 import 'package:seedling_app/screens/learn_page.dart';
 import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
-import 'package:provider/provider.dart';
 
 void main() => runApp(
   ChangeNotifierProvider(
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => const LandingScreen(),
         '/learn': (context) => const LanguageLearningApp(),
       },
     );
