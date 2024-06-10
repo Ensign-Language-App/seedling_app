@@ -2,28 +2,41 @@ import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class LandingScreen extends StatefulWidget {
+void main() => runApp(const MaterialApp(home: LandingScreen()));
 
+class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});
 
   @override
-  State<LandingScreen> createState() => _SplashScreenState();
+  State<LandingScreen> createState() => _LandingScreenState();
 }
 
-class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderStateMixin{
+class _LandingScreenState extends State<LandingScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
 
   @override
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(const Duration(seconds: 2),(){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const LogInPage()));
+    _controller = AnimationController(
+      duration: const Duration(seconds: 3),
+      vsync: this,
+    )..repeat(reverse: true);
+
+    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
+
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (_) => const LogInPage()));
     });
   }
 
   @override
   void dispose() {
+    _controller.dispose();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: SystemUiOverlay.values);
     super.dispose();
@@ -32,39 +45,36 @@ class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderS
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+      body: AnimatedBuilder(
+        animation: _animation,
+        builder: (context, child) {
+          return Container(
             width: double.infinity,
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: [Colors.lightGreenAccent, Colors.blue]
-                )
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: const [Color(0xFFfff3b0), Color(0xFF57cc99)],
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                transform: GradientRotation(_animation.value * 3.14 * 2),
+              ),
             ),
-
-            child: const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
-                Padding(
-                    padding: EdgeInsets.only(bottom: 20),
-                    child: Image(
-                      image: AssetImage('assets/images/seedling_icon.png'),
-                      width: 105,
-                      height: 105,
-                    )
-                ),
-                Text(
-                  'Seedling',
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.white,
-                  ),
-                )
-              ],
-            )
-        )
+            child: child,
+          );
+        },
+        child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(bottom: 20),
+              child: Image(
+                image: AssetImage('assets/icons/Seedling_icon4.png'),
+                width: 250,
+                height: 250,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
-
-void main() => runApp(const MaterialApp(home: LandingScreen()));

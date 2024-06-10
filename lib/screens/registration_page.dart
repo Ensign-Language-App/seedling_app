@@ -15,10 +15,10 @@ class RegistrationPage extends StatelessWidget {
 
     bool isFirstNameValid = true;
     bool isLastNameValid = true;
-    bool isUsernameValid = true;
-    bool isEmailValid = true;
-    bool isPasswordValid = true;
-    bool isReEnteredPasswordValid = true;
+    // bool isUsernameValid = true;
+    // bool isEmailValid = true;
+    // bool isPasswordValid = true;
+    // bool isReEnteredPasswordValid = true;
 
     bool usernameExists = false;
     bool emailExists = false;
