@@ -4,11 +4,8 @@ import 'package:seedling_app/Widgets/top_nav_bar.dart';
 import 'package:seedling_app/Widgets/side_menu.dart';
 import 'package:seedling_app/widgets/lesson_button.dart';
 
-<<<<<<< HEAD
-=======
 void main() => runApp(const MaterialApp(home: HomePage()));
 
->>>>>>> 20ca6cb81bbacd458b1efca712b824d03a1d16e7
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
