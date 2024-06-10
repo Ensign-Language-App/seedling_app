@@ -38,7 +38,8 @@ class _SplashScreenState extends State<LandingScreen> with SingleTickerProviderS
                 gradient: LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
-                    colors: [Colors.lightGreenAccent, Colors.blue]
+                    // colors: [Color.fromRGBO(178, 255, 89, 1), Colors.blue]
+                    colors: [Color.fromRGBO(255, 150, 79, 1), Colors.orange]
                 )
             ),
 
