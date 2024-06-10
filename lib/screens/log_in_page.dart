@@ -1,11 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:seedling_app/screens/home_page.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(const MaterialApp(home: LogInPage()));
 
-class LogInPage extends StatelessWidget {
+class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
+
+  @override
+  LogInPageState createState() => LogInPageState();
+}
+
+class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+
+    _controller = AnimationController(
+      duration: const Duration(seconds: 3),
+      vsync: this,
+    )..repeat(reverse: true);
+
+    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,29 +46,35 @@ class LogInPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          _buildGradientBackground(),
+          _buildAnimatedGradientBackground(),
           _buildFormContainer(context, backgroundColor, signUpColor),
         ],
       ),
     );
   }
 
-  Widget _buildGradientBackground() {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 17, 109, 75),
-            Color.fromARGB(255, 35, 215, 149),
-          ],
-        ),
-      ),
+  Widget _buildAnimatedGradientBackground() {
+    return AnimatedBuilder(
+      animation: _animation,
+      builder: (context, child) {
+        return Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: const [Color(0xFF57cc99), Color.fromARGB(255, 196, 202, 144)],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              transform: GradientRotation(_animation.value * 3.14 * 2),
+            ),
+          ),
+          child: child,
+        );
+      },
       child: const Padding(
         padding: EdgeInsets.only(top: 60.0, left: 22),
         child: Text(
-          'Hello there\nSign in',
+          'Hello there!\nSign in',
           style: TextStyle(
               fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
         ),
@@ -77,7 +113,7 @@ class LogInPage extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
-                    color: Color.fromARGB(255, 35, 215, 149),
+                    color: Color.fromARGB(255, 182, 216, 131),
                   ),
                 ),
               ),
@@ -101,7 +137,7 @@ class LogInPage extends StatelessWidget {
           labelText,
           style: const TextStyle(
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 17, 109, 75),
+            color: Color.fromARGB(255, 196, 202, 144),
           ),
         ),
       ),
@@ -122,10 +158,7 @@ class LogInPage extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           gradient: const LinearGradient(
-            colors: [
-              Color.fromARGB(255, 17, 109, 75),
-              Color.fromARGB(255, 35, 215, 149),
-            ],
+            colors: [Color(0xFF57cc99), Color.fromARGB(255, 196, 202, 144)],
           ),
         ),
         child: const Center(
@@ -177,6 +210,7 @@ class LogInPage extends StatelessWidget {
     );
   }
 }
+
 
 // TESTING FOR AUTHENTICATION
 // import 'package:flutter/material.dart';

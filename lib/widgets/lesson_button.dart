@@ -13,7 +13,7 @@ class LessonButton extends StatefulWidget {
   final String title;
   final Color color;
 
-  const LessonButton({Key? key, required this.image, required this.number, required this.title, required this.color}) : super(key: key);
+  const LessonButton({super.key, required this.image, required this.number, required this.title, required this.color});
 
   @override
   LessonButtonState createState() => LessonButtonState();
@@ -36,9 +36,9 @@ class LessonButtonState extends State<LessonButton> {
                 value: 0.2,
                 strokeWidth: 50,
               ),
-              const CircleAvatar(
+              CircleAvatar(
                 radius: 40,
-                backgroundColor: Colors.white,
+                backgroundColor: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF0E1415) : const Color(0xFFF5FAFB),
               ),
               CircleAvatar(
                 radius: 35,

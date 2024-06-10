@@ -36,6 +36,7 @@ dependencies:
   flip_card: ^0.7.0
   mockito: ^5.0.16
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
@@ -52,11 +53,11 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
 
-  flutter_launcher_icons: "^0.9.0"
+  flutter_launcher_icons: ^0.13.1
 
 
 flutter_icons:
-  image_path: "assets/icons/seedling_icon.png"
+  image_path: "assets/icons/Seedling_icon3.png"
 #  android: true
   ios: true
 
@@ -103,5 +104,6 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/images/seedling_icon.png
+    - assets/icons/
     - assets/icons/flags/
+    - assets/images/lessons/

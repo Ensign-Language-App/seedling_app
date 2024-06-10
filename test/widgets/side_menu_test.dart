@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/side_menu.dart';
-import 'package:seedling_app/providers/theme_provider.dart';
+import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
 void main() {

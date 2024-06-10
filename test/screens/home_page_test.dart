@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:seedling_app/Widgets/bottom_nav_bar.dart';
-import 'package:seedling_app/Widgets/side_menu.dart';
 import 'package:seedling_app/Widgets/top_nav_bar.dart';
 import 'package:seedling_app/screens/home_page.dart'; 
 

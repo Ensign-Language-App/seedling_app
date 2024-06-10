@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
-import 'package:seedling_app/providers/theme_provider.dart';
+import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/screens/settings_page.dart';
 
