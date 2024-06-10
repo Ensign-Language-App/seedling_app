@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
+import 'package:seedling_app/screens/profile_page.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
@@ -31,20 +32,26 @@ class SideMenu extends StatelessWidget {
                   ),
                 ]),
           ),
-          const ListTile(
+           ListTile(
             leading: Icon(Icons.person),
             title: Text('Profile'),
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfilePage()),
+                );
+            },
           ),
           const ListTile(
             leading: Icon(Icons.info),
             title: Text('About'),
             onTap: null,
           ),
-          const ListTile(
+          ListTile(
             leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: null,
+            title: const Text('Settings'),
+            onTap: () {
+            },
           ),
           const Padding(padding: EdgeInsets.only(top: 350), child: Divider()),
           ListTile(
