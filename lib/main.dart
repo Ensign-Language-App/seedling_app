@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:seedling_app/Widgets/bottom_nav_bar.dart';
-import 'package:seedling_app/screens/home_page.dart';
 import 'package:seedling_app/screens/landing_screen.dart';
 import 'package:seedling_app/screens/learn_page.dart';
 import 'package:seedling_app/utilities/theme.dart';

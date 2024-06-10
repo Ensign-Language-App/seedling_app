@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show AppBar, BuildContext, Icon, Icons, ListTile, ListView, MaterialApp, Scaffold, StatelessWidget, Text, ValueNotifier, Widget, runApp;
+import 'package:flutter/material.dart';
 
 class SettingsView extends StatelessWidget {
 
