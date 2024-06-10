@@ -7,6 +7,7 @@ class LanguageLearningApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
       appBar: AppBar(title: const Text('Learn')),
       body: Center(
         child: FlipCard(
