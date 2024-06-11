@@ -13,7 +13,8 @@ class LearningPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
+      // backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
+      backgroundColor: Colors.lightGreen,  // Using predefined color
       appBar: AppBar(title: const Text('Learn')),
       body: Center(
         child: FlipCard(
@@ -28,7 +29,7 @@ class LearningPage extends StatelessWidget {
               width: 300,
               alignment: Alignment.center,
               child: const Text(
-                'Question',
+                'The best anime \never made is...',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
@@ -46,7 +47,7 @@ class LearningPage extends StatelessWidget {
               width: 300,
               alignment: Alignment.center,
               child: const Text(
-                'Answer',
+                'Saint Seiya',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
