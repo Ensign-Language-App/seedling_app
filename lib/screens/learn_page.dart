@@ -13,7 +13,8 @@ class LearningPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
+      // backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
+      backgroundColor: Colors.lightGreen,  // Using predefined color
       appBar: AppBar(title: const Text('Learn')),
       body: Center(
         child: FlipCard(
