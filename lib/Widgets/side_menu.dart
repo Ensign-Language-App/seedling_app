@@ -29,8 +29,7 @@ class SideMenu extends StatelessWidget {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage: NetworkImage(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2eBwWNVsx4cmRUBRM9jip0fzz4rej8CmQ-Q&usqp=CAU'),
+                    backgroundImage: AssetImage('assets/icons/flags/US_flag.png'),
                   ),
                   SizedBox(height: 10),
                   Text(
@@ -42,7 +41,7 @@ class SideMenu extends StatelessWidget {
                   ),
                 ]),
           ),
-           ListTile(
+          ListTile(
             leading: const Icon(Icons.person),
             title: const Text('Profile'),
             onTap: () {
@@ -58,7 +57,7 @@ class SideMenu extends StatelessWidget {
             onTap: null,
           ),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: const Icon(Icons.settings),
             title: const Text('Settings'),
             onTap: () {
               Navigator.push(
@@ -67,7 +66,18 @@ class SideMenu extends StatelessWidget {
               );
             },
           ),
-          const Padding(padding: EdgeInsets.only(top: 350), child: Divider()),
+          ListTile(
+            leading: const Icon(Icons.dark_mode),
+            title: const Text('Dark Mode'),
+            trailing: Switch(
+              value: Provider.of<ThemeNotifier>(context).isDarkMode,
+              onChanged: (bool value) {
+                Provider.of<ThemeNotifier>(context, listen: false)
+                    .toggleTheme();
+              },
+            ),
+          ),
+          const Padding(padding: EdgeInsets.only(top: 300), child: Divider()),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text('Log out'),
@@ -83,5 +93,3 @@ class SideMenu extends StatelessWidget {
     );
   }
 }
-
-void main() => runApp(const MaterialApp(home: Scaffold(body: SideMenu())));
