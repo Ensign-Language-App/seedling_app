@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SettingsView extends StatelessWidget {
-  const SettingsView({super.key, required ValueNotifier<bool> showMenu});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +46,6 @@ class SettingsView extends StatelessWidget {
 
 void main() {
   runApp(const MaterialApp(
-    home: SettingsView(),
+    home: SettingsPage(),
   ));
 }

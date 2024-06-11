@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
-class LanguageLearningApp extends StatelessWidget {
-  const LanguageLearningApp({super.key});
+void main() => runApp(
+  const MaterialApp(
+    home: LearningPage(),
+  ),
+);
+
+class LearningPage extends StatelessWidget {
+  const LearningPage({super.key});
 
   @override
   Widget build(BuildContext context) {

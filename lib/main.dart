@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/screens/landing_screen.dart';
-import 'package:seedling_app/screens/learn_page.dart';
 import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
 
@@ -23,11 +22,7 @@ class MyApp extends StatelessWidget {
       theme: themeNotifier.isDarkMode ? darkMode : lightMode,
       darkTheme: darkMode,
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const LandingScreen(),
-        '/learn': (context) => const LanguageLearningApp(),
-      },
+      home: const LandingScreen()
     );
   }
 }

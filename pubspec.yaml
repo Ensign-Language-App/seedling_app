@@ -36,7 +36,6 @@ dependencies:
   logging: ^1.0.2
   flip_card: ^0.7.0
   mockito: ^5.0.16
-  font_awesome_flutter: ^9.0.0
 
 
 
