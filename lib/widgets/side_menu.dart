@@ -30,11 +30,11 @@ class SideMenu extends StatelessWidget {
                   CircleAvatar(
                     radius: 40,
                     backgroundImage:
-                        AssetImage('assets/icons/flags/US_flag.png'),
+                        AssetImage('assets/images/default_icon.jpg'),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Duo',
+                    'Leo',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
