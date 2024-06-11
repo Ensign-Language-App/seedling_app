@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/landing_screen.dart';
-import 'package:seedling_app/utilities/theme.dart';
-import 'package:seedling_app/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:seedling_app/screens/landing_screen.dart';
+import 'package:seedling_app/screens/learn_page.dart';
+import 'package:seedling_app/utilities/theme.dart';
+import 'package:seedling_app/providers/theme_notifier.dart';
 
 void main() => runApp(
   ChangeNotifierProvider(
@@ -11,8 +12,7 @@ void main() => runApp(
   ),
 );
 
-
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -20,10 +20,14 @@ class MyApp extends StatelessWidget{
     final themeNotifier = Provider.of<ThemeNotifier>(context);
 
     return MaterialApp(
-        theme: themeNotifier.isDarkMode ? darkMode : lightMode,
-        darkTheme: darkMode,
-        debugShowCheckedModeBanner: false,
-        home: const LandingScreen(),
+      theme: themeNotifier.isDarkMode ? darkMode : lightMode,
+      darkTheme: darkMode,
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LandingScreen(),
+        '/learn': (context) => const LanguageLearningApp(),
+      },
     );
   }
 }
