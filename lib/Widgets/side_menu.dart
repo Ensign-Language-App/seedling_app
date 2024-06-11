@@ -29,7 +29,8 @@ class SideMenu extends StatelessWidget {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage: AssetImage('assets/icons/flags/US_flag.png'),
+                    backgroundImage:
+                        AssetImage('assets/icons/flags/US_flag.png'),
                   ),
                   SizedBox(height: 10),
                   Text(
