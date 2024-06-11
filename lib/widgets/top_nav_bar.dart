@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
-import '../screens/learn_page.dart';
 
 class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
   const TopNavBar({super.key});
@@ -14,10 +13,6 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: const Icon(Icons.more_vert),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const LearningPage()),
-            );
           },
         ),
       ],
