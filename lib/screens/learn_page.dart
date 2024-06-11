@@ -29,7 +29,7 @@ class LearningPage extends StatelessWidget {
               width: 300,
               alignment: Alignment.center,
               child: const Text(
-                'Question',
+                'The best anime \never made is...',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
@@ -47,7 +47,7 @@ class LearningPage extends StatelessWidget {
               width: 300,
               alignment: Alignment.center,
               child: const Text(
-                'Answer',
+                'Saint Seiya',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
