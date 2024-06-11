@@ -61,13 +61,9 @@ class SideMenu extends StatelessWidget {
             leading: const Icon(Icons.settings),
             title: const Text('Settings'),
             onTap: () {
-              Navigator.pop(context); // Close the drawer
               Navigator.push(
-                // Navigate to the SettingsView
                 context,
-                MaterialPageRoute(
-                    builder: (context) =>
-                        SettingsView(showMenu: ValueNotifier<bool>(false))),
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
               );
             },
           ),
