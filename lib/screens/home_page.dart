@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:seedling_app/Widgets/bottom_nav_bar.dart';
 import 'package:seedling_app/Widgets/top_nav_bar.dart';
 import 'package:seedling_app/Widgets/side_menu.dart';
+import 'package:seedling_app/widgets/lesson_button.dart';
 
-class HomePage extends StatelessWidget{
+void main() => runApp(const MaterialApp(home: HomePage()));
+
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
@@ -14,10 +17,30 @@ class HomePage extends StatelessWidget{
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              height: 200,
-              color: const Color(0xFFD1DC6E),
-              child: const Center(child: Text('Section 1')),
+            const SizedBox(height: 40),
+            const LessonButton(
+              image: 'assets/icons/flags/US_flag.png',
+              number: '2',
+              title: '2',
+              color: Colors.red,
+            ),
+            const SizedBox(height: 20),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                LessonButton(
+                  image: 'assets/icons/flags/UK_flag.png',
+                  number: '3',
+                  title: '3',
+                  color: Colors.blue,
+                ),
+                LessonButton(
+                  image: 'assets/icons/flags/Germany_flag.png',
+                  number: '4',
+                  title: '4',
+                  color: Colors.green,
+                ),
+              ],
             ),
             Container(
               height: 200,

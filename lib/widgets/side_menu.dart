@@ -33,8 +33,8 @@ class SideMenu extends StatelessWidget {
                 ]),
           ),
            ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Profile'),
+            leading: const Icon(Icons.person),
+            title: const Text('Profile'),
             onTap: () {
               Navigator.push(
                 context,
