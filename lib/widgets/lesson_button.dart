@@ -1,55 +1,157 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MaterialApp(home: Scaffold(body: Center(child: LessonButton(
-  image: 'assets/icons/flags/US_flag.png',
-  number: '1',
-  title: 'Lesson 1',
-  color: Colors.red,
-)))));
+void main() => runApp(const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: LessonButton(
+            image: 'assets/icons/flags/US_flag.png',
+            title: 'Lesson 1',
+            lessonColor: Color(0xFFf4a261),
+            stackColor1: Color(0xFFe9c46a),
+            stackColor2: Color(0xFF2a9d8f),
+            progress: 0.5,
+          ),
+        ),
+      ),
+    ));
 
 class LessonButton extends StatefulWidget {
   final String image;
-  final String number;
   final String title;
-  final Color color;
+  final Color lessonColor;
+  final Color stackColor1;
+  final Color stackColor2;
+  final double progress;
 
-  const LessonButton({super.key, required this.image, required this.number, required this.title, required this.color});
+  const LessonButton(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.lessonColor,
+      required this.stackColor1,
+      required this.stackColor2,
+      required this.progress});
 
   @override
   LessonButtonState createState() => LessonButtonState();
 }
 
-class LessonButtonState extends State<LessonButton> {
+class ColoredCard extends StatelessWidget {
+  final Offset offset;
+  final Color color;
+  final double rotation;
+
+  const ColoredCard({
+    super.key,
+    required this.offset,
+    required this.color,
+    required this.rotation,
+  });
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Stack(
-            alignment: Alignment.center,
-            children: <Widget>[
-              CircularProgressIndicator(
-                backgroundColor: Colors.grey,
-                valueColor: AlwaysStoppedAnimation<Color>(widget.color),
-                value: 0.2,
-                strokeWidth: 50,
-              ),
-              CircleAvatar(
-                radius: 40,
-                backgroundColor: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF0E1415) : const Color(0xFFF5FAFB),
-              ),
-              CircleAvatar(
-                radius: 35,
-                backgroundImage: AssetImage(widget.image),
+    return Transform.translate(
+      offset: offset,
+      child: Transform.rotate(
+        angle: rotation,
+        child: Container(
+          width: 130,
+          height: 120,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: const Offset(0, 3),
               ),
             ],
           ),
-          Text(widget.title, style: const TextStyle(fontSize: 20)),
-          Text(widget.number, style: const TextStyle(fontSize: 16)),
-        ],
+        ),
       ),
     );
+  }
+}
+
+class LessonButtonState extends State<LessonButton> {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: Alignment.center,
+      children: <Widget>[
+        ColoredCard(
+          offset: const Offset(10, 10),
+          color: widget.stackColor1,
+          rotation: 0.1,
+        ),
+        ColoredCard(
+          offset: const Offset(-20, -20),
+          color: widget.stackColor2,
+          rotation: -0.1,
+        ),
+      Container(
+        width: 140,
+        height: 130,
+        decoration: BoxDecoration(
+          color: widget.lessonColor,
+          // gradient: LinearGradient(
+          //   colors: [widget.lessonColor, Colors.white],
+          //   // You can change these colors
+          //   begin: Alignment.topLeft,
+          //   end: Alignment.bottomRight,
+          // ),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  Image.asset(
+                    widget.image,
+                    width: 70,
+                    height: 70,
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          widget.title,
+                          style: const TextStyle(fontSize: 11),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      SizedBox(
+                          width: 15,
+                          height: 15,
+                          child: CircularProgressIndicator(
+                            backgroundColor: Colors.grey[500],
+                            valueColor: const AlwaysStoppedAnimation<Color>(
+                                Colors.white),
+                            value: widget.progress,
+                            strokeWidth: 2,
+                          ))
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    ]);
   }
 }
