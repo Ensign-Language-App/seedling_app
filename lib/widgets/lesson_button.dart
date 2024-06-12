@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seedling_app/screens/lesson_page.dart';
 
 void main() => runApp(const MaterialApp(
       home: Scaffold(
@@ -91,67 +92,76 @@ class LessonButtonState extends State<LessonButton> {
           color: widget.stackColor2,
           rotation: -0.1,
         ),
-      Container(
-        width: 140,
-        height: 130,
-        decoration: BoxDecoration(
-          color: widget.lessonColor,
-          // gradient: LinearGradient(
-          //   colors: [widget.lessonColor, Colors.white],
-          //   // You can change these colors
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomRight,
-          // ),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, 3),
+        GestureDetector(
+          child: Container(
+            width: 140,
+            height: 130,
+            decoration: BoxDecoration(
+              color: widget.lessonColor,
+              // gradient: LinearGradient(
+              //   colors: [widget.lessonColor, Colors.white],
+              //   // You can change these colors
+              //   begin: Alignment.topLeft,
+              //   end: Alignment.bottomRight,
+              // ),
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: const Offset(0, 3),
+                ),
+              ],
             ),
-          ],
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: [
-                  Image.asset(
-                    widget.image,
-                    width: 70,
-                    height: 70,
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Text(
-                          widget.title,
-                          style: const TextStyle(fontSize: 11),
-                          textAlign: TextAlign.center,
-                        ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        widget.image,
+                        width: 70,
+                        height: 70,
                       ),
-                      SizedBox(
-                          width: 15,
-                          height: 15,
-                          child: CircularProgressIndicator(
-                            backgroundColor: Colors.grey[500],
-                            valueColor: const AlwaysStoppedAnimation<Color>(
-                                Colors.white),
-                            value: widget.progress,
-                            strokeWidth: 2,
-                          ))
+                      const SizedBox(height: 10),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(
+                              widget.title,
+                              style: const TextStyle(fontSize: 11),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          SizedBox(
+                              width: 15,
+                              height: 15,
+                              child: CircularProgressIndicator(
+                                backgroundColor: Colors.grey[500],
+                                valueColor: const AlwaysStoppedAnimation<Color>(
+                                    Colors.white),
+                                value: widget.progress,
+                                strokeWidth: 2,
+                              ))
+                        ],
+                      )
                     ],
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    ]);
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const LessonPage()),
+            );
+          },
+        )
+      ]
+    );
   }
 }
