@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:seedling_app/screens/language_selection_page.dart';
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({super.key});
 
@@ -41,6 +41,7 @@ class RegistrationPage extends StatelessWidget {
                 showingAccountCreationSheet.value = false;
               }
               _resetFields();
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const LanguagesSelectionPage()));
             },
             icon: const Icon(Icons.done),
             disabledColor: Colors.grey,
