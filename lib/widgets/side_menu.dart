@@ -78,7 +78,7 @@ class SideMenu extends StatelessWidget {
               },
             ),
           ),
-          const Padding(padding: EdgeInsets.only(top: 300), child: Divider()),
+          const Divider(),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text('Log out'),
