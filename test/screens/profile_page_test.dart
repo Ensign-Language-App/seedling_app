@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:country_flags/country_flags.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:seedling_app/screens/profile_page.dart';
+import 'package:seedling_app/widgets/language_selector.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +26,7 @@ void main() {
 
     expect(find.byType(CircleAvatar), findsOneWidget);
     expect(find.text('User Name'), findsOneWidget);
-    expect(find.byType(CountryFlag), findsWidgets);
+    expect(find.byType(LanguageSelector), findsWidgets);
   });
 
   testWidgets('Learning Path section displays correctly', (WidgetTester tester) async {
@@ -34,7 +34,7 @@ void main() {
 
     expect(find.text('Current Learning Path:'), findsOneWidget);
     expect(find.byType(LinearProgressIndicator), findsOneWidget);
-    expect(find.byType(CountryFlag), findsWidgets); // Since there are multiple CountryFlags
+    expect(find.byType(LanguageSelector), findsWidgets);
   });
 
   testWidgets('Achievements section displays correctly', (WidgetTester tester) async {
