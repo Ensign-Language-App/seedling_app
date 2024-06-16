@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 
-void main() => runApp( const MaterialApp(home: Center(child: LanguageSelector())));
+void main() => runApp( const MaterialApp(home: Center(child: LanguageSelector(width: 50, height:50))));
 
 class LanguageSelector extends StatefulWidget {
-  const LanguageSelector({super.key});
+
+  final double width;
+  final double height;
+
+  const LanguageSelector({super.key, required this.width, required this.height});
 
   @override
   LanguageSelectorState createState() => LanguageSelectorState();
@@ -60,8 +64,8 @@ class LanguageSelectorState extends State<LanguageSelector> {
       },
       child: Image.asset(
         _selectedFlag,
-        width: 50,
-        height: 50,
+        width: widget.width,
+        height: widget.height,
       ),
     );
   }

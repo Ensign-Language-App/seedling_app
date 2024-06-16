@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
 
     return MaterialApp(
-      theme: themeNotifier.isDarkMode ? darkMode : lightMode,
+      theme: lightMode,
       darkTheme: darkMode,
+      themeMode: themeNotifier.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       debugShowCheckedModeBanner: false,
       home: const LandingScreen()
     );

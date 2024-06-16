@@ -1,9 +1,13 @@
-import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
+import 'package:country_flags/country_flags.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:seedling_app/widgets/language_selector.dart';
+
+void main() => runApp(const MaterialApp(home: ProfilePage()));
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,29 +25,24 @@ class ProfilePage extends StatelessWidget {
             Container(
               height: 200,
               color: Colors.lightGreen,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(20.0),
                     child: CircleAvatar(
                       radius: 60,
                       backgroundImage:
-                          AssetImage('assets/images/default_icon.jpg'),
+                      AssetImage('assets/images/default_icon.jpg'),
                     ),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      CountryFlag.fromCountryCode(
-                        'CA',
-                        height: 60,
-                        width: 90,
-                        borderRadius: 10,
-                      ),
-                      const SizedBox(height: 10),
-                      const Text(
+                      LanguageSelector(width: 100, height: 100),
+                      SizedBox(height: 10),
+                      Text(
                         'User Name',
                         style: TextStyle(
                           color: Colors.black,
@@ -73,10 +72,10 @@ class ProfilePage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text(
+                              Text(
                                 'Current Learning Path:',
                                 style: TextStyle(
                                   color: Colors.black,
@@ -84,13 +83,8 @@ class ProfilePage extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const SizedBox(width: 10),
-                              CountryFlag.fromCountryCode(
-                                'FR',
-                                height: 30,
-                                width: 45,
-                                borderRadius: 5,
-                              ),
+                              SizedBox(width: 10),
+                              LanguageSelector(width: 40, height: 40)
                             ],
                           ),
                           const SizedBox(height: 15),
@@ -192,61 +186,64 @@ class ProfilePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          width: 160,
-                          height: 105,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border:
-                                Border.all(color: Colors.lightGreen, width: 3),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Favorites',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                        Expanded(
+                          child: Container(
+                            height: 105,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: Colors.lightGreen, width: 3),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Favorites',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                Spacer(),
-                                Icon(Icons.list,
-                                    color: Colors.lightGreen, size: 40),
-                              ],
+                                  Spacer(),
+                                  Icon(Icons.list,
+                                      color: Colors.lightGreen, size: 40),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                        Container(
-                          width: 165,
-                          height: 105,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border:
-                                Border.all(color: Colors.lightGreen, width: 3),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Practice',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                        const SizedBox(width: 5),
+                        Expanded(
+                          child: Container(
+                            height: 105,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: Colors.lightGreen, width: 3),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Practice',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                Spacer(),
-                                Icon(FontAwesomeIcons.book,
-                                    color: Colors.lightGreen, size: 30),
-                              ],
+                                  Spacer(),
+                                  Icon(FontAwesomeIcons.book,
+                                      color: Colors.lightGreen, size: 30),
+                                ],
+                              ),
                             ),
                           ),
                         ),

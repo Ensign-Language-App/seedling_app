@@ -9,7 +9,7 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: const Text('Home'),
       actions: <Widget>[
-        const SizedBox(width: 50, child: LanguageSelector()),
+        const SizedBox(width: 50, child: LanguageSelector(width: 50, height: 50)),
         IconButton(
           icon: const Icon(Icons.more_vert),
           onPressed: () {
