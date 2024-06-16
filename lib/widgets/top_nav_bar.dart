@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
 
-class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
-  const TopNavBar({super.key});
+class TopNavBar extends StatefulWidget implements PreferredSizeWidget {
 
+  final String title;
+  const TopNavBar({super.key, required this.title});
+
+  @override
+  TopNavBarState createState() => TopNavBarState();
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+
+
+class TopNavBarState extends State<TopNavBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -18,9 +30,7 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
       ],
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-void main() => runApp(const MaterialApp(home: Scaffold(body: TopNavBar())));
+void main() => runApp(const MaterialApp(home: Scaffold(body: TopNavBar(title: 'Home'))));
+

@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/home_page.dart';
-import 'package:seedling_app/screens/learn_page.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+  final PageController pageController;
+  final int currentIndex;
+
+  const BottomNavBar(
+      {super.key, required this.pageController, required this.currentIndex});
 
   @override
   BottomNavBarState createState() => BottomNavBarState();
-
 }
 
 class BottomNavBarState extends State<BottomNavBar> {
-  int activeIndex = 0;
-
-  List<Widget> pages = const [
-    HomePage(),
-    LearningPage(),
-  ];
-
-
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: activeIndex,
+      currentIndex: widget.currentIndex,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -38,21 +31,7 @@ class BottomNavBarState extends State<BottomNavBar> {
         ),
       ],
       onTap: (int index) {
-        if (index != activeIndex) {
-          setState(() {
-            activeIndex = index;
-          });
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => pages[activeIndex],
-            ),
-          ).then((_) {
-            setState(() {
-              activeIndex = 0;
-            });
-          });
-        }
+        widget.pageController.jumpToPage(index);
       },
     );
   }

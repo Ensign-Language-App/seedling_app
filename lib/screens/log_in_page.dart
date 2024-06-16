@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seedling_app/screens/home_page_controller.dart';
 import 'package:seedling_app/screens/registration_page.dart';
-import 'package:seedling_app/screens/home_page.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(const MaterialApp(home: LogInPage()));
@@ -149,7 +149,7 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
       onTap: () {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const HomePage()),
+          MaterialPageRoute(builder: (context) => const HomePageController()),
         );
       },
       child: Container(

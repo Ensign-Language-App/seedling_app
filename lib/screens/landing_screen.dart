@@ -8,12 +8,12 @@ class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});
 
   @override
-  State<LandingScreen> createState() => _LandingScreenState();
+  State<LandingScreen> createState() => LandingScreenState();
 }
 
-class _LandingScreenState extends State<LandingScreen>
+class LandingScreenState extends State<LandingScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
+  late AnimationController controller;
   late Animation<double> _animation;
 
   @override
@@ -21,22 +21,22 @@ class _LandingScreenState extends State<LandingScreen>
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    _controller = AnimationController(
+    controller = AnimationController(
       duration: const Duration(seconds: 3),
       vsync: this,
     )..repeat(reverse: true);
 
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
+    _animation = Tween(begin: 0.0, end: 1.0).animate(controller);
 
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => const LogInPage()));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const LogInPage()));
     });
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    controller.dispose();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: SystemUiOverlay.values);
     super.dispose();

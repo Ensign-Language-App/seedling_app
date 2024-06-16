@@ -6,7 +6,7 @@ import 'package:seedling_app/widgets/language_selector.dart';
 void main() {
   testWidgets('TopNavBar Widget Test', (WidgetTester tester) async {
 
-    await tester.pumpWidget(const MaterialApp(home: Scaffold(body: TopNavBar())));
+    await tester.pumpWidget(const MaterialApp(home: Scaffold(body: TopNavBar(title: 'Home'))));
 
     expect(find.byType(AppBar), findsOneWidget);
     expect(find.text('Home'), findsOneWidget);

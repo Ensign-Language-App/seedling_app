@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
-import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/profile_page.dart';
 import 'package:seedling_app/screens/settings_page.dart';
 import 'package:seedling_app/widgets/side_menu.dart';
