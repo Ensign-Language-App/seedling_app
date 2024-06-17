@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/home_page.dart';
 
+import 'home_page_controller.dart';
+
 void main() => runApp(const MaterialApp(home: LanguagesSelectionPage()));
 
 class LanguagesSelectionPage extends StatelessWidget {
-
   const LanguagesSelectionPage({super.key});
 
   @override
@@ -16,14 +17,14 @@ class LanguagesSelectionPage extends StatelessWidget {
       ),
       body: Container(
         color: Colors.yellow, // Yellow background
-        padding: const EdgeInsets.symmetric(vertical: 40.0), // Padding to center vertically
+        padding: const EdgeInsets.symmetric(
+            vertical: 40.0), // Padding to center vertically
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center, // Center vertically
           children: <Widget>[
             LanguageTile(
               imagePath: 'assets/icons/flags/France_flag.png',
               language: 'French',
-
             ),
             LanguageTile(
               imagePath: 'assets/icons/flags/Spain_flag.png',
@@ -44,20 +45,25 @@ class LanguageTile extends StatelessWidget {
   final String imagePath;
   final String language;
 
-  const LanguageTile({super.key, required this.imagePath, required this.language});
+  const LanguageTile(
+      {super.key, required this.imagePath, required this.language});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const HomePageController()));
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0), // Padding around each tile
+        padding: const EdgeInsets.symmetric(
+            vertical: 16.0, horizontal: 16.0), // Padding around each tile
         child: Row(
           children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2, 
+              width: MediaQuery.of(context).size.width / 2,
               child: Image.asset(
                 imagePath,
                 width: 50, // Adjust icon size
