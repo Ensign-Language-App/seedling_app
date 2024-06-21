@@ -46,6 +46,7 @@ dependencies:
   country_flags: ^2.2.0
   firebase_core: ^2.32.0
   firebase_auth: ^4.7.3
+  url_launcher: ^6.3.0
 
 
 

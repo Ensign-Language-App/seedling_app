@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MaterialApp(home: ProfilePage()));
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
+
+  static void _launchURL(String url) async {
+    if (!await launchUrl(Uri.parse(url))) {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +39,7 @@ class ProfilePage extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 60,
                       backgroundImage:
-                      AssetImage('assets/images/default_icon.jpg'),
+                          AssetImage('assets/images/default_icon.jpg'),
                     ),
                   ),
                   Column(
@@ -151,12 +158,12 @@ class ProfilePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       margin: const EdgeInsets.only(bottom: 15),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'Social Media',
                               style: TextStyle(
                                 color: Colors.black,
@@ -164,18 +171,42 @@ class ProfilePage extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Icon(FontAwesomeIcons.facebook,
-                                    color: Colors.blue, size: 40),
-                                Icon(FontAwesomeIcons.twitter,
-                                    color: Colors.lightBlue, size: 40),
-                                Icon(FontAwesomeIcons.instagram,
-                                    color: Colors.pink, size: 40),
-                                Icon(FontAwesomeIcons.youtube,
-                                    color: Colors.red, size: 40),
+                                IconButton(
+                                  icon: const Icon(FontAwesomeIcons.facebook,
+                                      color: Colors.blue, size: 30),
+                                  onPressed: () =>
+                                      _launchURL('https://www.facebook.com/'),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                ),
+                                IconButton(
+                                  icon: const Icon(FontAwesomeIcons.twitter,
+                                      color: Colors.lightBlue, size: 30),
+                                  onPressed: () =>
+                                      _launchURL('https://twitter.com/'),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                ),
+                                IconButton(
+                                  icon: const Icon(FontAwesomeIcons.instagram,
+                                      color: Colors.pink, size: 30),
+                                  onPressed: () =>
+                                      _launchURL('https://www.instagram.com/'),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                ),
+                                IconButton(
+                                  icon: const Icon(FontAwesomeIcons.youtube,
+                                      color: Colors.red, size: 30),
+                                  onPressed: () =>
+                                      _launchURL('https://www.youtube.com/'),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                ),
                               ],
                             ),
                           ],
