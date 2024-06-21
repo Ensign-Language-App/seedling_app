@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/home_page.dart';
-
 import 'home_page_controller.dart';
 
 void main() => runApp(const MaterialApp(home: LanguagesSelectionPage()));

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
 void main() => runApp(
-  const MaterialApp(
-    home: LessonPage(),
-  ),
-);
+      const MaterialApp(
+        home: LessonPage(),
+      ),
+    );
 
 class LessonPage extends StatelessWidget {
   const LessonPage({super.key});
@@ -14,7 +14,7 @@ class LessonPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
-      backgroundColor: Colors.lightGreen,  // Using predefined color
+      backgroundColor: Colors.lightGreen, // Using predefined color
       appBar: AppBar(title: const Text('Learn')),
       body: Center(
         child: FlipCard(
