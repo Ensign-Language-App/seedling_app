@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'home_page.dart';
+import 'bookmark_page.dart';
 
 void main() => runApp(const MaterialApp(home: ProfilePage()));
 
@@ -214,71 +216,80 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            height: 105,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Colors.lightGreen, width: 3),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Favorites',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 105,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                    color: Colors.lightGreen, width: 3),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Favorites',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  Spacer(),
-                                  Icon(Icons.list,
-                                      color: Colors.lightGreen, size: 40),
-                                ],
+                                    Spacer(),
+                                    Icon(Icons.list,
+                                        color: Colors.lightGreen, size: 40),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 5),
-                        Expanded(
-                          child: Container(
-                            height: 105,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Colors.lightGreen, width: 3),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Practice',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                          const SizedBox(width: 5),
+                          Expanded(
+                            child: Container(
+                              height: 105,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                    color: Colors.lightGreen, width: 3),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      'Practice',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  Spacer(),
-                                  Icon(FontAwesomeIcons.book,
-                                      color: Colors.lightGreen, size: 30),
-                                ],
+                                    const Spacer(),
+                                    IconButton(
+                                      icon: const Icon(FontAwesomeIcons.book,
+                                          color: Colors.lightGreen, size: 30),
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()),
+                                        );
+                                      },
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
+                        ]),
                   ],
                 ),
               ),
