@@ -30,6 +30,7 @@ class RegistrationPage extends StatelessWidget {
     bool usernameExists = false;
     bool emailExists = false;
 
+    // Clears input of all fields
     void resetFields() {
       firstNameController.clear();
       lastNameController.clear();
@@ -39,6 +40,8 @@ class RegistrationPage extends StatelessWidget {
       reEnteredPasswordController.clear();
     }
 
+    // This needs to be filled out more
+    // Error checks and makeing shure it actually works
     Future<void> addAccount() async {
       final userController =
           Provider.of<UserController>(context, listen: false);
