@@ -8,13 +8,15 @@ class ThemeNotifier extends ChangeNotifier with WidgetsBindingObserver {
 
   ThemeNotifier() {
     WidgetsBinding.instance.addObserver(this);
-    final brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
+    final brightness =
+        SchedulerBinding.instance.platformDispatcher.platformBrightness;
     _isDarkMode = brightness == Brightness.dark;
   }
 
   @override
   void didChangePlatformBrightness() {
-    final brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
+    final brightness =
+        SchedulerBinding.instance.platformDispatcher.platformBrightness;
     _isDarkMode = brightness == Brightness.dark;
     notifyListeners();
   }

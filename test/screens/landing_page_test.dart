@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/landing_screen.dart';

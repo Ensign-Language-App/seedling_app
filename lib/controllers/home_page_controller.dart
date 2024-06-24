@@ -7,7 +7,6 @@ import 'package:seedling_app/widgets/side_menu.dart';
 import 'package:seedling_app/widgets/top_nav_bar.dart';
 
 class HomePageController extends StatefulWidget {
-
   const HomePageController({super.key});
 
   @override
@@ -18,7 +17,6 @@ class HomeControllerState extends State<HomePageController> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
   List<String> pageNames = ['Home', 'Learn', 'Bookmark'];
-
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +36,8 @@ class HomeControllerState extends State<HomePageController> {
           BookmarkPage(),
         ],
       ),
-      bottomNavigationBar: BottomNavBar(currentIndex: _currentIndex, pageController: _pageController),
+      bottomNavigationBar: BottomNavBar(
+          currentIndex: _currentIndex, pageController: _pageController),
     );
   }
 }

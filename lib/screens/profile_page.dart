@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home_page.dart';
-import 'bookmark_page.dart';
 
 void main() => runApp(const MaterialApp(home: ProfilePage()));
 

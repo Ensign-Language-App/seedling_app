@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_page_controller.dart';
+import '../controllers/home_page_controller.dart';
 
 void main() => runApp(const MaterialApp(home: LanguagesSelectionPage()));
 

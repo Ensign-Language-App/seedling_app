@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const BookmarkPage());
 
-
 class BookmarkPage extends StatefulWidget {
-
   const BookmarkPage({super.key});
 
   @override

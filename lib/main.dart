@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/screens/landing_screen.dart';
 import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'utilities/firebase_options.dart';
 
-void main() => runApp(
-  ChangeNotifierProvider(
-    create: (_) => ThemeNotifier(),
-    child: const MyApp(),
-  ),
-);
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeNotifier()),
+        ChangeNotifierProvider(create: (_) => UserController()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,7 +34,7 @@ class MyApp extends StatelessWidget {
       darkTheme: darkMode,
       themeMode: themeNotifier.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: const LandingScreen()
+      home: const LandingScreen(),
     );
   }
 }

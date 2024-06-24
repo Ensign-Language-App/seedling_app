@@ -1,9 +1,12 @@
+// ignore_for_file: use_build_context_synchronously, avoid_print, duplicate_ignore
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/home_page_controller.dart';
+import 'package:provider/provider.dart';
+import 'package:seedling_app/controllers/user_controller.dart';
+import 'package:seedling_app/controllers/home_page_controller.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:flutter/services.dart';
-
-void main() => runApp(const MaterialApp(home: LogInPage()));
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -12,7 +15,8 @@ class LogInPage extends StatefulWidget {
   LogInPageState createState() => LogInPageState();
 }
 
-class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixin {
+class LogInPageState extends State<LogInPage>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -62,7 +66,10 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: const [Color(0xFF57cc99), Color.fromARGB(255, 196, 202, 144)],
+              colors: const [
+                Color(0xFF57cc99),
+                Color.fromARGB(255, 196, 202, 144)
+              ],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               transform: GradientRotation(_animation.value * 3.14 * 2),
@@ -76,7 +83,10 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
         child: Text(
           'Hello there!\nSign in',
           style: TextStyle(
-              fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
+            fontSize: 30,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
@@ -101,7 +111,7 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 60),
+              const SizedBox(height: 40),
               _buildTextField('Username/E-mail', Icons.check, false),
               const SizedBox(height: 20),
               _buildTextField('Password', Icons.visibility_off, true),
@@ -118,8 +128,68 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
                 ),
               ),
               const SizedBox(height: 70),
-              _buildSignInButton(context),
-              const SizedBox(height: 150),
+              //TODO: CHECK SIGN IN FUNCTIONING PROPERLY WITH INTEGRATE WITH FIRESTORE
+              _buildSignInButton("SIGN IN", () async {
+                try {
+                  final userController =
+                      Provider.of<UserController>(context, listen: false);
+                  await userController.signInWithEmailAndPassword(
+                      'email', 'password');
+                  if (userController.user != null && mounted) {
+                    // TODO: REPLACE THE COMMENT BELOW WITH CORRECT LOGIC
+                    // ignore: use_build_context_synchronously
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const HomePageController(),
+                    ));
+                  }
+                } on FirebaseAuthException catch (e) {
+                  //TODO: REMOVE PRINT ON PRODUCTION
+                  print(e.message);
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(e.message ?? 'An error occurred'),
+                      ),
+                    );
+                  }
+                } catch (e) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Login failed')),
+                    );
+                  }
+                }
+              }),
+              const SizedBox(height: 10),
+              _buildSignInButton("CONTINUE WITH GOOGLE", () async {
+                try {
+                  final userController =
+                      Provider.of<UserController>(context, listen: false);
+                  await userController.signInWithGoogle();
+                  if (userController.user != null && mounted) {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const HomePageController(),
+                    ));
+                  }
+                } on FirebaseAuthException catch (e) {
+                  //TODO: REMOVE PRINT ON PRODUCTION
+                  print(e.message);
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(e.message ?? 'An error occurred'),
+                      ),
+                    );
+                  }
+                } catch (e) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Login failed')),
+                    );
+                  }
+                }
+              }),
+              const SizedBox(height: 100),
               _buildSignUpLink(context, signUpColor),
             ],
           ),
@@ -144,14 +214,9 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
     );
   }
 
-  Widget _buildSignInButton(BuildContext context) {
+  Widget _buildSignInButton(String text, Function() onTap) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HomePageController()),
-        );
-      },
+      onTap: onTap,
       child: Container(
         height: 55,
         width: 300,
@@ -161,12 +226,12 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
             colors: [Color(0xFF57cc99), Color.fromARGB(255, 196, 202, 144)],
           ),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'SIGN IN',
-            style: TextStyle(
+            text,
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 20,
+              fontSize: 15,
               color: Colors.white,
             ),
           ),
@@ -178,10 +243,9 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
   Widget _buildSignUpLink(BuildContext context, Color signUpColor) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const RegistrationPage()),
-        );
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const RegistrationPage(),
+        ));
       },
       child: Align(
         alignment: Alignment.bottomRight,
@@ -211,32 +275,31 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
   }
 }
 
-
 // TESTING FOR AUTHENTICATION
 // import 'package:flutter/material.dart';
 // import 'package:seedling_app/screens/registration_page.dart';
 // import 'package:seedling_app/screens/home_page.dart';
-// import 'auth.dart';
+// import 'package:seedling_app/utilities/auth.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
-
+//
 // class LogInPage extends StatefulWidget {
 //   const LogInPage({super.key});
-
+//
 //   @override
 //   _LogInPageState createState() => _LogInPageState();
 // }
-
+//
 // class _LogInPageState extends State<LogInPage> {
 //   final Auth _auth = Auth();
 //   final TextEditingController _emailController = TextEditingController();
 //   final TextEditingController _passwordController = TextEditingController();
-
+//
 //   @override
 //   Widget build(BuildContext context) {
 //     final backgroundColor = Theme.of(context).canvasColor;
 //     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
 //     final signUpColor = isDarkMode ? Colors.white : Colors.black;
-
+//
 //     return Scaffold(
 //       body: Stack(
 //         children: [
@@ -399,7 +462,7 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
 //     );
 //   }
 // }
-
+//
 // void main() {
 //   runApp(const MaterialApp(
 //     home: LogInPage(),
