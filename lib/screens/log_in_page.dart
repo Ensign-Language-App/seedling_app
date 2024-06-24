@@ -116,7 +116,11 @@ class LogInPageState extends State<LogInPage>
               const SizedBox(height: 20),
               _buildTextField('Password', Icons.visibility_off, true),
               const SizedBox(height: 20),
-              const Align(
+              GestureDetector(
+                onTap: () {
+                  //TODO: ADD NAVIGATION TO FORGOT PASSWORD PAGE
+                },
+                child: const Align(
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Forgot Password?',
@@ -125,7 +129,7 @@ class LogInPageState extends State<LogInPage>
                     fontSize: 17,
                     color: Color.fromARGB(255, 182, 216, 131),
                   ),
-                ),
+                ),)
               ),
               const SizedBox(height: 70),
               //TODO: CHECK SIGN IN FUNCTIONING PROPERLY WITH INTEGRATE WITH FIRESTORE
@@ -189,7 +193,13 @@ class LogInPageState extends State<LogInPage>
                   }
                 }
               }),
-              const SizedBox(height: 100),
+              const SizedBox(height: 10),
+              _buildSignInButton('CONTINUE WITHOUT LOGIN', () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const HomePageController(),
+                ));
+              }),
+              const SizedBox(height: 70),
               _buildSignUpLink(context, signUpColor),
             ],
           ),

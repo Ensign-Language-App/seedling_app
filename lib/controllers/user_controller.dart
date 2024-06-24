@@ -21,6 +21,7 @@ class UserController with ChangeNotifier {
   }
 
   Future<void> signInWithEmailAndPassword(String email, String password) async {
+    //TODO: INTEGRATE THIS WITH FIRESTORE AUTHENTICATION...
     final userCredential = await FirebaseAuth.instance
         .signInWithEmailAndPassword(email: email, password: password);
     _user = userCredential.user;
@@ -29,6 +30,7 @@ class UserController with ChangeNotifier {
 
   Future<void> registerWithEmailAndPassword(
       String email, String password) async {
+    //TODO: INTEGRATE THIS WITH FIRESTORE AUTHENTICATION...
     final userCredential = await FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: email, password: password);
     _user = userCredential.user;
