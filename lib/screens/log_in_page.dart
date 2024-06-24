@@ -132,7 +132,7 @@ class LogInPageState extends State<LogInPage>
                 ),)
               ),
               const SizedBox(height: 70),
-              //TODO: CHECK SIGN IN FUNCTIONING PROPERLY WITH INTEGRATE WITH FIRESTORE
+              //TODO: INTEGRATE 'SIGN IN' WITH FIRESTORE
               _buildSignInButton("SIGN IN", () async {
                 try {
                   final userController =
