@@ -55,7 +55,7 @@ class _LessonPageState extends State<LessonPage> {
                         borderRadius: BorderRadius.circular(30.0),
                       ),
                       child: Container(
-                        height: 400,
+                        height: 450,
                         width: 300,
                         alignment: Alignment.center,
                         child: const Text(
@@ -73,7 +73,7 @@ class _LessonPageState extends State<LessonPage> {
                         borderRadius: BorderRadius.circular(30.0),
                       ),
                       child: Container(
-                        height: 400,
+                        height: 450,
                         width: 300,
                         alignment: Alignment.center,
                         child: const Text(
