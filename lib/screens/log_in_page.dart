@@ -67,8 +67,10 @@ class LogInPageState extends State<LogInPage>
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: const [
-                Color(0xFF57cc99),
-                Color.fromARGB(255, 196, 202, 144)
+                // Color(0xFF57cc99),
+                Color(0xFFff964f),
+                // Color.fromARGB(255, 196, 202, 144)
+                Color(0xFFFFF3B0)
               ],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
@@ -127,7 +129,8 @@ class LogInPageState extends State<LogInPage>
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
-                    color: Color.fromARGB(255, 182, 216, 131),
+                    // color: Color.fromARGB(255, 182, 216, 131),
+                    color: Color(0xFFff964f)
                   ),
                 ),)
               ),
@@ -217,7 +220,8 @@ class LogInPageState extends State<LogInPage>
           labelText,
           style: const TextStyle(
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 196, 202, 144),
+            // color: Color.fromARGB(255, 196, 202, 144),
+            color: Color(0xFFff964f)
           ),
         ),
       ),
@@ -233,7 +237,8 @@ class LogInPageState extends State<LogInPage>
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           gradient: const LinearGradient(
-            colors: [Color(0xFF57cc99), Color.fromARGB(255, 196, 202, 144)],
+            // colors: [Color(0xFF57cc99), Color.fromARGB(255, 196, 202, 144)],
+            colors: [Color(0xFFff964f), Color(0xFFFFF3B0)],
           ),
         ),
         child: Center(

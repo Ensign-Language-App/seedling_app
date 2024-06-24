@@ -74,7 +74,8 @@ class LandingScreenState extends State<LandingScreen>
               width: double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: const [Color(0xFFfff3b0), Color(0xFF57cc99)],
+                  // colors: const [Color(0xFFfff3b0), Color(0xFF57cc99)],
+                  colors: const [Color(0xFFfff3b0), Color(0xFFff964f)],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   transform: GradientRotation(_animation.value * 3.14 * 2),
