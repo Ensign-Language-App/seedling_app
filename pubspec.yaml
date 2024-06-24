@@ -68,7 +68,7 @@ dev_dependencies:
 
 
 flutter_icons:
-  image_path: "assets/icons/Seedling_icon3.png"
+  image_path: "assets/icons/Seedling.png"
 #  android: true
   ios: true
 
