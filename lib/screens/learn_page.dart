@@ -21,10 +21,10 @@ class LearningPage extends StatelessWidget {
           front: Card(
             elevation: 8.0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+              borderRadius: BorderRadius.circular(30.0),
             ),
             child: Container(
-              height: 200,
+              height: 450,
               width: 300,
               alignment: Alignment.center,
               child: const Text(
@@ -39,10 +39,10 @@ class LearningPage extends StatelessWidget {
           back: Card(
             elevation: 8.0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+              borderRadius: BorderRadius.circular(30.0),
             ),
             child: Container(
-              height: 200,
+              height: 450,
               width: 300,
               alignment: Alignment.center,
               child: const Text(
