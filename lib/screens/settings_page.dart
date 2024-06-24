@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seedling_app/screens/settings_screens.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -10,33 +11,43 @@ class SettingsPage extends StatelessWidget {
         title: const Text('Settings'),
       ),
       body: ListView(
-        children: const [
+        children: [
           ListTile(
-            leading: Icon(Icons.subscriptions),
-            title: Text('My Subscription'),
+            leading: const Icon(Icons.settings),
+            title: const Text('General'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const GeneralPage()),
+              );
+            },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('General'),
+            leading: const Icon(Icons.notifications),
+            title: const Text('Notifications'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NotificationsPage()),
+              );
+            },
           ),
-          ListTile(
-            leading: Icon(Icons.privacy_tip),
-            title: Text('Privacy'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notifications'),
-          ),
-          ListTile(
+          const ListTile(
             title: Text('Advance'),
           ),
           ListTile(
-            leading: Icon(Icons.help),
-            title: Text('Help & Support'),
+            leading: const Icon(Icons.help),
+            title: const Text('Help & Support'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HelpSupportPage()),
+              );
+            },
           ),
           ListTile(
-            leading: Icon(Icons.delete_forever),
-            title: Text('Delete or Suspend Account'),
+            leading: const Icon(Icons.delete_forever),
+            title: const Text('Delete or Suspend Account'),
           ),
         ],
       ),

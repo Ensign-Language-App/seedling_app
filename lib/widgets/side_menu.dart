@@ -62,11 +62,6 @@ class SideMenuState extends State<SideMenu> {
               );
             },
           ),
-          const ListTile(
-            leading: Icon(Icons.info),
-            title: Text('About'),
-            onTap: null,
-          ),
           ListTile(
             leading: const Icon(Icons.settings),
             title: const Text('Settings'),
