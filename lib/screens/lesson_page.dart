@@ -12,10 +12,10 @@ class LessonPage extends StatefulWidget {
   const LessonPage({super.key});
 
   @override
-  _LessonPageState createState() => _LessonPageState();
+  LessonPageState createState() => LessonPageState();
 }
 
-class _LessonPageState extends State<LessonPage> {
+class LessonPageState extends State<LessonPage> {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   bool isCardVisible = true;
 
