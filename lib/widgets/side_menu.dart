@@ -31,7 +31,8 @@ class SideMenuState extends State<SideMenu> {
         children: <Widget>[
           DrawerHeader(
             decoration: const BoxDecoration(
-              color: Colors.lightGreen,
+              color: Color.fromRGBO(255, 150, 79, 1.0),
+              // color: Colors.lightGreen,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
