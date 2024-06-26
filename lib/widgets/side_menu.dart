@@ -5,6 +5,8 @@ import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/profile_page.dart';
 import 'package:seedling_app/screens/settings_page.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
+import 'package:seedling_app/screens/settings_screens.dart';
+
 
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
@@ -69,6 +71,16 @@ class SideMenuState extends State<SideMenu> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.notifications),
+            title: const Text('Notifications'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NotificationsPage()),
               );
             },
           ),
