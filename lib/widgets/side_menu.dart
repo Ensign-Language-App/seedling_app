@@ -48,7 +48,7 @@ class SideMenuState extends State<SideMenu> {
                   userController.user?.displayName ?? 'Guest',
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 17,
                   ),
                 ),
               ],
