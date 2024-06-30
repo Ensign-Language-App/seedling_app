@@ -20,7 +20,8 @@ class LogInPageState extends State<LogInPage>
   late AnimationController _controller;
   late Animation<double> _animation;
   var textStatePass = true;
-
+  var eyeConColor = Colors.grey;
+  var eyeCon = Icons.visibility_off;
   @override
   void initState() {
     super.initState();
@@ -117,7 +118,7 @@ class LogInPageState extends State<LogInPage>
               const SizedBox(height: 40),
               _buildTextFieldUN('Username/E-mail', Icons.check, false),
               const SizedBox(height: 20),
-              _buildTextFieldPass('Password', Icons.visibility_off),
+              _buildTextFieldPass('Password'),
               const SizedBox(height: 20),
               GestureDetector(
                   onTap: () {
@@ -227,10 +228,17 @@ class LogInPageState extends State<LogInPage>
     );
   }
 
-  Widget _buildTextFieldPass(String labelText, IconData icon) {
+  Widget _buildTextFieldPass(String labelText) {
     void toggleObscureText() {
       setState(() {
         textStatePass = !textStatePass;
+        if (eyeConColor == Colors.grey) {
+          eyeConColor = Colors.green;
+          eyeCon = Icons.visibility;
+        } else {
+          eyeConColor = Colors.grey;
+          eyeCon = Icons.visibility_off;
+        }
       });
     }
 
@@ -238,7 +246,8 @@ class LogInPageState extends State<LogInPage>
       obscureText: textStatePass,
       decoration: InputDecoration(
         suffixIcon: IconButton(
-            icon: Icon(icon, color: Colors.grey), onPressed: toggleObscureText),
+            icon: Icon(eyeCon, color: eyeConColor),
+            onPressed: toggleObscureText),
         label: Text(
           labelText,
           style: const TextStyle(
