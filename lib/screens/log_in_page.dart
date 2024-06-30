@@ -19,6 +19,7 @@ class LogInPageState extends State<LogInPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
+  var textStatePass = true;
 
   @override
   void initState() {
@@ -114,26 +115,25 @@ class LogInPageState extends State<LogInPage>
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 40),
-              _buildTextField('Username/E-mail', Icons.check, false),
+              _buildTextFieldUN('Username/E-mail', Icons.check, false),
               const SizedBox(height: 20),
-              _buildTextField('Password', Icons.visibility_off, true),
+              _buildTextFieldPass('Password', Icons.visibility_off),
               const SizedBox(height: 20),
               GestureDetector(
-                onTap: () {
-                  //TODO: ADD NAVIGATION TO FORGOT PASSWORD PAGE
-                },
-                child: const Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17,
-                    // color: Color.fromARGB(255, 182, 216, 131),
-                    color: Color(0xFFff964f)
-                  ),
-                ),)
-              ),
+                  onTap: () {
+                    //TODO: ADD NAVIGATION TO FORGOT PASSWORD PAGE
+                  },
+                  child: const Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                          // color: Color.fromARGB(255, 182, 216, 131),
+                          color: Color(0xFFff964f)),
+                    ),
+                  )),
               const SizedBox(height: 70),
               //TODO: INTEGRATE 'SIGN IN' WITH FIRESTORE
               _buildSignInButton("SIGN IN", () async {
@@ -211,7 +211,7 @@ class LogInPageState extends State<LogInPage>
     );
   }
 
-  Widget _buildTextField(String labelText, IconData icon, bool obscureText) {
+  Widget _buildTextFieldUN(String labelText, IconData icon, bool obscureText) {
     return TextField(
       obscureText: obscureText,
       decoration: InputDecoration(
@@ -219,10 +219,32 @@ class LogInPageState extends State<LogInPage>
         label: Text(
           labelText,
           style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            // color: Color.fromARGB(255, 196, 202, 144),
-            color: Color(0xFFff964f)
-          ),
+              fontWeight: FontWeight.bold,
+              // color: Color.fromARGB(255, 196, 202, 144),
+              color: Color(0xFFff964f)),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTextFieldPass(String labelText, IconData icon) {
+    void toggleObscureText() {
+      setState(() {
+        textStatePass = !textStatePass;
+      });
+    }
+
+    return TextField(
+      obscureText: textStatePass,
+      decoration: InputDecoration(
+        suffixIcon: IconButton(
+            icon: Icon(icon, color: Colors.grey), onPressed: toggleObscureText),
+        label: Text(
+          labelText,
+          style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              // color: Color.fromARGB(255, 196, 202, 144),
+              color: Color(0xFFff964f)),
         ),
       ),
     );
