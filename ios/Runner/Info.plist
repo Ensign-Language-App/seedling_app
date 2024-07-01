@@ -25,12 +25,9 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.202345167900-e5npivdjlpk0rq23us1cavc0d9sofehf</string>
-				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+				<string>fbYOUR_FACEBOOK_APP_ID</string>
 			</array>
 		</dict>
 	</array>
@@ -63,26 +60,5 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>We need to access your Face ID for authentication</string>
-	<key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fbYOUR_FACEBOOK_APP_ID</string>
-        </array>
-      </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>2212645345739249</string>
-    <key>FacebookDisplayName</key>
-    <string>Seedling</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-      <string>fbapi</string>
-      <string>fb-messenger-api</string>
-      <string>fbauth2</string>
-      <string>fbshareextension</string>
-    </array>
-
 </dict>
 </plist>

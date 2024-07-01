@@ -339,32 +339,33 @@ class LogInPageState extends State<LogInPage>
     }
   }
 
-  Future<void> _signInWithFacebook() async {
-    try {
-      final userController =
-      Provider.of<UserController>(context, listen: false);
-      await userController.signInWithFacebook();
-      if (userController.user != null && mounted) {
-        Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => const HomePageController(),
-        ));
-      }
-    } on FirebaseAuthException catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(e.message ?? 'An error occurred'),
-          ),
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Login failed')),
-        );
-      }
-    }
-  }
+  // TODO: FIX THIS
+  // Future<void> _signInWithFacebook() async {
+  //   try {
+  //     final userController =
+  //     Provider.of<UserController>(context, listen: false);
+  //     await userController.signInWithFacebook();
+  //     if (userController.user != null && mounted) {
+  //       Navigator.of(context).pushReplacement(MaterialPageRoute(
+  //         builder: (context) => const HomePageController(),
+  //       ));
+  //     }
+  //   } on FirebaseAuthException catch (e) {
+  //     if (mounted) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         SnackBar(
+  //           content: Text(e.message ?? 'An error occurred'),
+  //         ),
+  //       );
+  //     }
+  //   } catch (e) {
+  //     if (mounted) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(content: Text('Login failed')),
+  //       );
+  //     }
+  //   }
+  // }
 
   void _continueWithoutLogin() {
     Navigator.of(context).pushReplacement(MaterialPageRoute(

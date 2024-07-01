@@ -70,31 +70,31 @@ class UserController with ChangeNotifier {
     }
   }
 
-  Future<void> signInWithFacebook() async {
-    try {
-      final LoginResult result = await FacebookAuth.instance.login();
-      print('Facebook login result: ${result.status}');
-      if (result.status == LoginStatus.success) {
-        final AccessToken accessToken = result.accessToken!;
-        print('Facebook access token: ${accessToken.token}');
-        final OAuthCredential credential = FacebookAuthProvider.credential(accessToken.token);
-        final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
-        _user = userCredential.user;
-        notifyListeners();
-      } else {
-        print('Facebook login failed: ${result.message}');
-        throw FirebaseAuthException(
-            message: 'Failed to sign in with Facebook',
-            code: 'ERROR_FACEBOOK_LOGIN_FAILED');
-      }
-    } on PlatformException catch (e) {
-      print('Failed to sign in with Facebook: $e');
-      throw FirebaseAuthException(message: e.message, code: e.code);
-    } catch (e) {
-      print('An error occurred while signing in with Facebook: $e');
-      throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
-    }
-  }
+  // Future<void> signInWithFacebook() async {
+  //   try {
+  //     final LoginResult result = await FacebookAuth.instance.login();
+  //     print('Facebook login result: ${result.status}');
+  //     if (result.status == LoginStatus.success) {
+  //       final AccessToken accessToken = result.accessToken!;
+  //       print('Facebook access token: ${accessToken.token}');
+  //       final OAuthCredential credential = FacebookAuthProvider.credential(accessToken.token);
+  //       final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+  //       _user = userCredential.user;
+  //       notifyListeners();
+  //     } else {
+  //       print('Facebook login failed: ${result.message}');
+  //       throw FirebaseAuthException(
+  //           message: 'Failed to sign in with Facebook',
+  //           code: 'ERROR_FACEBOOK_LOGIN_FAILED');
+  //     }
+  //   } on PlatformException catch (e) {
+  //     print('Failed to sign in with Facebook: $e');
+  //     throw FirebaseAuthException(message: e.message, code: e.code);
+  //   } catch (e) {
+  //     print('An error occurred while signing in with Facebook: $e');
+  //     throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
+  //   }
+  // }
 
 
   Future<void> registerWithEmailAndPassword(
