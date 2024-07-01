@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/log_in_page.dart';
+import 'package:seedling_app/screens/language_selection_page.dart';
 import '../utilities/firestore_service.dart';
 
 void main() => runApp(const MaterialApp(home: RegistrationPage()));
-
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -211,7 +210,7 @@ class RegistrationPageState extends State<RegistrationPage> {
           passwordController.text.trim());
     }
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => const LogInPage(),
+      builder: (context) => const LanguagesSelectionPage(),
     ));
   }
 }
