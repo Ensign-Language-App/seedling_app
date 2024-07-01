@@ -17,7 +17,7 @@ class UserController with ChangeNotifier {
       idToken: googleAuth?.idToken,
     );
     final userCredential =
-        await FirebaseAuth.instance.signInWithCredential(credential);
+    await FirebaseAuth.instance.signInWithCredential(credential);
     _user = userCredential.user;
     notifyListeners();
   }
@@ -56,22 +56,39 @@ class UserController with ChangeNotifier {
     }
   }
 
-
   Future<void> signInWithEmailAndPassword(String email, String password) async {
-    //TODO: INTEGRATE THIS WITH FIRESTORE AUTHENTICATION...
-    final userCredential = await FirebaseAuth.instance
-        .signInWithEmailAndPassword(email: email, password: password);
-    _user = userCredential.user;
-    notifyListeners();
+    try {
+      final userCredential = await FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: email, password: password);
+      _user = userCredential.user;
+      notifyListeners();
+    } on FirebaseAuthException catch (e) {
+      print(e.message);
+    } catch (e) {
+      print('An error occurred while signing in');
+    }
   }
 
   Future<void> registerWithEmailAndPassword(
-      String email, String password) async {
-    //TODO: INTEGRATE THIS WITH FIRESTORE AUTHENTICATION...
-    final userCredential = await FirebaseAuth.instance
-        .createUserWithEmailAndPassword(email: email, password: password);
-    _user = userCredential.user;
-    notifyListeners();
+      String email, String password, String firstName, String lastName) async {
+    try {
+      await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: email, password: password);
+      // _user = userCredential.user;
+
+      if (_user != null) {
+        await _user!.updateDisplayName("$firstName $lastName");
+        await _user!.reload();
+        _user = FirebaseAuth.instance.currentUser;
+      }
+      notifyListeners();
+    } on FirebaseAuthException catch (e) {
+      print(e.message);
+      rethrow;
+    } catch (e) {
+      print('An error occurred while registering: $e');
+      rethrow;
+    }
   }
 
   Future<void> signOut() async {

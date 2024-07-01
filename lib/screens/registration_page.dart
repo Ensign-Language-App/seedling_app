@@ -1,8 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/language_selection_page.dart';
-import '../utilities/firestore_service.dart';
-
-void main() => runApp(const MaterialApp(home: RegistrationPage()));
+import 'package:provider/provider.dart';
+import 'package:seedling_app/controllers/user_controller.dart';
+import 'package:seedling_app/screens/log_in_page.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -17,8 +17,7 @@ class RegistrationPageState extends State<RegistrationPage> {
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController reEnteredPasswordController =
-      TextEditingController();
+  final TextEditingController reEnteredPasswordController = TextEditingController();
 
   bool isFirstNameValid = true;
   bool isLastNameValid = true;
@@ -26,9 +25,6 @@ class RegistrationPageState extends State<RegistrationPage> {
   bool isEmailValid = true;
   bool isPasswordValid = true;
   bool isReEnteredPasswordValid = true;
-
-  bool usernameExists = false;
-  bool emailExists = false;
 
   bool isLoading = false;
 
@@ -52,111 +48,104 @@ class RegistrationPageState extends State<RegistrationPage> {
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : ListView(
-              padding: const EdgeInsets.all(30.0),
-              children: [
-                //TODO: MAKE UNICODE NAME AVAILABLE
-                TextFormField(
-                  controller: firstNameController,
-                  decoration: InputDecoration(
-                    labelText: 'First Name',
-                    hintText: 'Enter your first name',
-                    errorText: isFirstNameValid
-                        ? null
-                        : 'First name can only contain letters.',
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      isFirstNameValid = value.trim().isNotEmpty &&
-                          RegExp(r'^[a-zA-Z]+$').hasMatch(value);
-                    });
-                  },
-                ),
-                const SizedBox(height: 15.0),
-                TextFormField(
-                  //TODO: MAKE UNICODE NAME AVAILABLE
-                  controller: lastNameController,
-                  decoration: InputDecoration(
-                    labelText: 'Last Name',
-                    hintText: 'Enter your last name',
-                    errorText: isLastNameValid
-                        ? null
-                        : 'Last name can only contain letters.',
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      isLastNameValid = value.trim().isNotEmpty &&
-                          RegExp(r'^[a-zA-Z]+$').hasMatch(value);
-                    });
-                  },
-                ),
-                const SizedBox(height: 15.0),
-                TextFormField(
-                  //TODO: USERNAME VALIDATION?
-                  controller: userNameController,
-                  decoration: const InputDecoration(
-                    labelText: 'Username',
-                    hintText: 'Choose a username',
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      setState(() {
-                        isUsernameValid = value.trim().isNotEmpty &&
-                                RegExp(r'^[a-zA-Z]+$').hasMatch(value) ||
-                            RegExp(r'^[a-zA-Z0-9]+$').hasMatch(value);
-                      });
-                    });
-                  },
-                ),
-                const SizedBox(height: 15.0),
-                TextFormField(
-                  //TODO: IMPLEMENT EMAIL VALIDATION LOGIC?
-                  controller: emailController,
-                  decoration: const InputDecoration(
-                    labelText: 'Email',
-                    hintText: 'Enter your email address',
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      isEmailValid = value.trim().isNotEmpty &&
-                          RegExp(r'^@.+$').hasMatch(value);
-                    });
-                  },
-                ),
-                const SizedBox(height: 15.0),
-                TextFormField(
-                  //TODO: IMPLEMENT PASSWORD VALIDATION LOGIC?
-                  controller: passwordController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
-                    hintText: 'Enter a strong password',
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      isPasswordValid = value.trim().isNotEmpty &&
-                              RegExp(r'^[a-zA-Z]+$').hasMatch(value) ||
-                          RegExp(r'^[a-zA-Z0-9]+$').hasMatch(value);
-                    });
-                  },
-                ),
-                const SizedBox(height: 15.0),
-                TextFormField(
-                  //TODO: IMPLEMENT RE-ENTER PASSWORD VALIDATION LOGIC?
-                  controller: reEnteredPasswordController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    labelText: 'Re-enter Password',
-                    hintText: 'Re-enter your password',
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      isReEnteredPasswordValid =
-                          value.trim() == passwordController.text;
-                    });
-                  },
-                ),
-              ],
+        padding: const EdgeInsets.all(30.0),
+        children: [
+          TextFormField(
+            controller: firstNameController,
+            decoration: InputDecoration(
+              labelText: 'First Name',
+              hintText: 'Enter your first name',
+              errorText: isFirstNameValid
+                  ? null
+                  : 'First name can only contain letters.',
             ),
+            onChanged: (value) {
+              setState(() {
+                isFirstNameValid = value.trim().isNotEmpty &&
+                    RegExp(r'^[\p{L}\p{M}]+$', unicode: true).hasMatch(value);
+              });
+            },
+          ),
+          const SizedBox(height: 15.0),
+          // TODO: SET UP THE WARNING HERE
+          TextFormField(
+            controller: lastNameController,
+            decoration: InputDecoration(
+              labelText: 'Last Name',
+              hintText: 'Enter your last name',
+              errorText: isLastNameValid
+                  ? null
+                  : 'Last name can only contain letters.',
+            ),
+            onChanged: (value) {
+              setState(() {
+                isLastNameValid = value.trim().isNotEmpty &&
+                    RegExp(r'^[\p{L}\p{M}]+$', unicode: true).hasMatch(value);
+              });
+            },
+          ),
+          const SizedBox(height: 15.0),
+          TextFormField(
+            controller: userNameController,
+            decoration: const InputDecoration(
+              labelText: 'Username',
+              hintText: 'Choose a username',
+            ),
+            onChanged: (value) {
+              setState(() {
+                isUsernameValid = value.trim().isNotEmpty &&
+                    RegExp(r'^[a-zA-Z0-9]+$').hasMatch(value);
+              });
+            },
+          ),
+          const SizedBox(height: 15.0),
+          TextFormField(
+            controller: emailController,
+            decoration: const InputDecoration(
+              labelText: 'Email',
+              hintText: 'Enter your email address',
+            ),
+            onChanged: (value) {
+              setState(() {
+                isEmailValid = value.trim().isNotEmpty &&
+                    RegExp(r'^[^@]+@[^@]+\.[^@]+$').hasMatch(value);
+              });
+            },
+          ),
+          const SizedBox(height: 15.0),
+          TextFormField(
+            controller: passwordController,
+            obscureText: true,
+            decoration: const InputDecoration(
+              labelText: 'Password',
+              hintText: 'Enter a strong password',
+            ),
+            onChanged: (value) {
+              setState(() {
+                isPasswordValid = value.trim().isNotEmpty &&
+                    value.length >= 8 &&
+                    RegExp(r'[0-9]').hasMatch(value) &&
+                    RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value);
+              });
+            },
+          ),
+          const SizedBox(height: 15.0),
+          TextFormField(
+            controller: reEnteredPasswordController,
+            obscureText: true,
+            decoration: const InputDecoration(
+              labelText: 'Re-enter Password',
+              hintText: 'Re-enter your password',
+            ),
+            onChanged: (value) {
+              setState(() {
+                isReEnteredPasswordValid =
+                    value.trim() == passwordController.text;
+              });
+            },
+          ),
+        ],
+      ),
     );
   }
 
@@ -178,16 +167,21 @@ class RegistrationPageState extends State<RegistrationPage> {
   }
 
   void _validateAndSubmit() async {
+    // TODO: SET UP THE LOGIC HERE
     setState(() {
       isFirstNameValid = firstNameController.text.trim().isNotEmpty &&
-          RegExp(r'^[a-zA-Z]+$').hasMatch(firstNameController.text);
+          RegExp(r'^[\p{L}\p{M}]+$', unicode: true)
+              .hasMatch(firstNameController.text);
       isLastNameValid = lastNameController.text.trim().isNotEmpty &&
-          RegExp(r'^[a-zA-Z]+$').hasMatch(lastNameController.text);
+          RegExp(r'^[\p{L}\p{M}]+$', unicode: true)
+              .hasMatch(lastNameController.text);
       isUsernameValid = userNameController.text.trim().isNotEmpty;
       isEmailValid = emailController.text.trim().isNotEmpty &&
-          RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(emailController.text);
+          RegExp(r'^[^@]+@[^@]+\.[^@]+$').hasMatch(emailController.text);
       isPasswordValid = passwordController.text.trim().isNotEmpty &&
-          passwordController.text.length >= 6;
+          passwordController.text.length >= 8 &&
+          RegExp(r'[0-9]').hasMatch(passwordController.text) &&
+          RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(passwordController.text);
       isReEnteredPasswordValid =
           passwordController.text == reEnteredPasswordController.text;
     });
@@ -202,15 +196,35 @@ class RegistrationPageState extends State<RegistrationPage> {
         isLoading = true;
       });
 
-      FirestoreService.saveUser(
+      try {
+        final userController = Provider.of<UserController>(context, listen: false);
+        await userController.registerWithEmailAndPassword(
+          emailController.text.trim(),
+          passwordController.text.trim(),
           firstNameController.text.trim(),
           lastNameController.text.trim(),
-          userNameController.text.trim(),
-          emailController.text.trim(),
-          passwordController.text.trim());
+        );
+
+        // TODO: WAIT FOR THE LANGUAGE SELECTION PAGE TO BE READY
+        // Navigate to the language selection page
+        // Navigator.of(context).push(MaterialPageRoute(
+        //   builder: (context) => const LanguagesSelectionPage(),
+        // ));
+
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => const LogInPage(),
+        ));
+
+      } on FirebaseAuthException catch (e) {
+        // Handle errors
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(e.message ?? 'An error occurred')),
+        );
+      } finally {
+        setState(() {
+          isLoading = false;
+        });
+      }
     }
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => const LanguagesSelectionPage(),
-    ));
   }
 }
