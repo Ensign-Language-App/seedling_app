@@ -7,7 +7,6 @@ import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/controllers/home_page_controller.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:flutter/services.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -16,7 +15,8 @@ class LogInPage extends StatefulWidget {
   LogInPageState createState() => LogInPageState();
 }
 
-class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixin {
+class LogInPageState extends State<LogInPage>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
   var textStatePass = true;
@@ -74,10 +74,7 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: const [
-                Color(0xFFff964f),
-                Color(0xFFFFF3B0)
-              ],
+              colors: const [Color(0xFFff964f), Color(0xFFFFF3B0)],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               transform: GradientRotation(_animation.value * 3.14 * 2),
@@ -100,7 +97,8 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
     );
   }
 
-  Widget _buildFormContainer(BuildContext context, Color backgroundColor, Color signUpColor) {
+  Widget _buildFormContainer(
+      BuildContext context, Color backgroundColor, Color signUpColor) {
     return Padding(
       padding: const EdgeInsets.only(top: 200.0),
       child: Container(
@@ -119,7 +117,8 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 40),
-              _buildTextField(emailController, 'Username/E-mail', Icons.check, false),
+              _buildTextField(
+                  emailController, 'Username/E-mail', Icons.check, false),
               const SizedBox(height: 20),
               _buildTextField(passwordController, 'Password', null, true),
               const SizedBox(height: 20),
@@ -139,12 +138,50 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
                   )),
               const SizedBox(height: 40),
               _buildSignInButton("SIGN IN", _signInWithEmail),
-              const SizedBox(height: 10),
-              _buildSignInButton("CONTINUE WITH GOOGLE", _signInWithGoogle),
-              const SizedBox(height: 10),
-              _buildSignInButton('CONTINUE WITHOUT LOGIN', _continueWithoutLogin),
-              const SizedBox(height: 10),
-              SignInWithAppleButton(onPressed: _signInWithApple),
+              const SizedBox(height: 20),
+              const Text("Or continue with"),
+              const Divider(
+                color: Colors.grey,
+                thickness: 1,
+                height: 40,
+              ),
+              Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: _signInWithGoogle,
+                        child: const Image(
+                          height: 25,
+                          width: 25,
+                          image: AssetImage("assets/icons/Google_icon.png")
+                        )
+                      ),
+                      GestureDetector(
+                        onTap: _signInWithApple,
+                        child: const Icon(IconData(0xf04be, fontFamily: 'MaterialIcons'))
+                      ),
+                      // ! TODO: FIX THIS
+                      // GestureDetector(
+                      //     onTap: _signInWithFacebook,
+                      //     child: const Image(
+                      //         height: 20,
+                      //         width: 20,
+                      //         image: AssetImage("assets/icons/Facebook_icon.png")
+                      //     )
+                      // ),
+                    ],
+                  )
+                ],
+              ),
+
+              // const SizedBox(height: 10),
+              // _buildSignInButton("CONTINUE WITH GOOGLE", _signInWithGoogle),
+              // const SizedBox(height: 10),
+              // _buildSignInButton('CONTINUE WITHOUT LOGIN', _continueWithoutLogin),
+              // const SizedBox(height: 10),
+              // SignInWithAppleButton(onPressed: _signInWithApple),
               const SizedBox(height: 70),
               _buildSignUpLink(context, signUpColor),
             ],
@@ -154,7 +191,8 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
     );
   }
 
-  Widget _buildTextField(TextEditingController controller, String labelText, IconData? icon, bool obscureText) {
+  Widget _buildTextField(TextEditingController controller, String labelText,
+      IconData? icon, bool obscureText) {
     return TextField(
       controller: controller,
       obscureText: obscureText,
@@ -163,8 +201,7 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
         label: Text(
           labelText,
           style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color(0xFFff964f)),
+              fontWeight: FontWeight.bold, color: Color(0xFFff964f)),
         ),
       ),
     );
@@ -250,7 +287,8 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
 
   Future<void> _signInWithGoogle() async {
     try {
-      final userController = Provider.of<UserController>(context, listen: false);
+      final userController =
+          Provider.of<UserController>(context, listen: false);
       await userController.signInWithGoogle();
       if (userController.user != null && mounted) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -276,8 +314,36 @@ class LogInPageState extends State<LogInPage> with SingleTickerProviderStateMixi
 
   Future<void> _signInWithApple() async {
     try {
-      final userController = Provider.of<UserController>(context, listen: false);
+      final userController =
+          Provider.of<UserController>(context, listen: false);
       await userController.signInWithApple();
+      if (userController.user != null && mounted) {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => const HomePageController(),
+        ));
+      }
+    } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(e.message ?? 'An error occurred'),
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Login failed')),
+        );
+      }
+    }
+  }
+
+  Future<void> _signInWithFacebook() async {
+    try {
+      final userController =
+      Provider.of<UserController>(context, listen: false);
+      await userController.signInWithFacebook();
       if (userController.user != null && mounted) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => const HomePageController(),

@@ -87,9 +87,12 @@ class RegistrationPageState extends State<RegistrationPage> {
           const SizedBox(height: 15.0),
           TextFormField(
             controller: userNameController,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: 'Username',
               hintText: 'Choose a username',
+              errorText: isUsernameValid
+                  ? null
+                  : 'Username can only contain letters and numbers.',
             ),
             onChanged: (value) {
               setState(() {
@@ -101,9 +104,12 @@ class RegistrationPageState extends State<RegistrationPage> {
           const SizedBox(height: 15.0),
           TextFormField(
             controller: emailController,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: 'Email',
               hintText: 'Enter your email address',
+              errorText: isEmailValid
+                  ? null
+                  : 'Invalid Email.',
             ),
             onChanged: (value) {
               setState(() {
@@ -116,9 +122,12 @@ class RegistrationPageState extends State<RegistrationPage> {
           TextFormField(
             controller: passwordController,
             obscureText: true,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: 'Password',
               hintText: 'Enter a strong password',
+              errorText: isPasswordValid
+                  ? null
+                  : 'Password must contain at lease a lower case, upper case, and special character.',
             ),
             onChanged: (value) {
               setState(() {
@@ -133,9 +142,12 @@ class RegistrationPageState extends State<RegistrationPage> {
           TextFormField(
             controller: reEnteredPasswordController,
             obscureText: true,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: 'Re-enter Password',
               hintText: 'Re-enter your password',
+              errorText: isReEnteredPasswordValid
+                  ? null
+                  : 'Re-entered password is different from the password.',
             ),
             onChanged: (value) {
               setState(() {
