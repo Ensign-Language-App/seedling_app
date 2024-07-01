@@ -90,7 +90,7 @@ class LandingScreenState extends State<LandingScreen>
               Padding(
                 padding: EdgeInsets.only(bottom: 20),
                 child: Image(
-                  image: AssetImage('assets/icons/Seedling_icon4.png'),
+                  image: AssetImage('assets/icons/Seedling_icon5.png'),
                   width: 250,
                   height: 250,
                 ),
