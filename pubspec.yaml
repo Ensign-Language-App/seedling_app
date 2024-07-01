@@ -52,8 +52,6 @@ dependencies:
   crypto: ^3.0.1
   sign_in_with_apple: ^6.1.1
   local_auth: ^2.2.0
-#  flutter_facebook_auth: ^6.0.4
-
 
 
 dev_dependencies:
@@ -65,7 +63,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
-
   flutter_launcher_icons: ^0.13.1
 
 

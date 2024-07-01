@@ -162,26 +162,11 @@ class LogInPageState extends State<LogInPage>
                         onTap: _signInWithApple,
                         child: const Icon(IconData(0xf04be, fontFamily: 'MaterialIcons'))
                       ),
-                      // ! TODO: FIX THIS
-                      // GestureDetector(
-                      //     onTap: _signInWithFacebook,
-                      //     child: const Image(
-                      //         height: 20,
-                      //         width: 20,
-                      //         image: AssetImage("assets/icons/Facebook_icon.png")
-                      //     )
-                      // ),
                     ],
                   )
                 ],
               ),
 
-              // const SizedBox(height: 10),
-              // _buildSignInButton("CONTINUE WITH GOOGLE", _signInWithGoogle),
-              // const SizedBox(height: 10),
-              // _buildSignInButton('CONTINUE WITHOUT LOGIN', _continueWithoutLogin),
-              // const SizedBox(height: 10),
-              // SignInWithAppleButton(onPressed: _signInWithApple),
               const SizedBox(height: 70),
               _buildSignUpLink(context, signUpColor),
             ],
@@ -338,34 +323,6 @@ class LogInPageState extends State<LogInPage>
       }
     }
   }
-
-  // TODO: FIX THIS
-  // Future<void> _signInWithFacebook() async {
-  //   try {
-  //     final userController =
-  //     Provider.of<UserController>(context, listen: false);
-  //     await userController.signInWithFacebook();
-  //     if (userController.user != null && mounted) {
-  //       Navigator.of(context).pushReplacement(MaterialPageRoute(
-  //         builder: (context) => const HomePageController(),
-  //       ));
-  //     }
-  //   } on FirebaseAuthException catch (e) {
-  //     if (mounted) {
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         SnackBar(
-  //           content: Text(e.message ?? 'An error occurred'),
-  //         ),
-  //       );
-  //     }
-  //   } catch (e) {
-  //     if (mounted) {
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         const SnackBar(content: Text('Login failed')),
-  //       );
-  //     }
-  //   }
-  // }
 
   void _continueWithoutLogin() {
     Navigator.of(context).pushReplacement(MaterialPageRoute(

@@ -25,9 +25,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fbYOUR_FACEBOOK_APP_ID</string>
+				<string>com.googleusercontent.apps.202345167900-e5npivdjlpk0rq23us1cavc0d9sofehf</string>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			</array>
 		</dict>
 	</array>
@@ -60,5 +63,6 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>We need to access your Face ID for authentication</string>
+
 </dict>
 </plist>
