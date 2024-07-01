@@ -50,7 +50,7 @@ dependencies:
   google_sign_in: ^6.1.5
   cloud_firestore: ^5.0.1
   crypto: ^3.0.1
-#  sign_in_with_apple: ^6.1.1
+  sign_in_with_apple: ^6.1.1
 
 
 

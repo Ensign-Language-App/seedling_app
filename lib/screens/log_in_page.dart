@@ -7,6 +7,7 @@ import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/controllers/home_page_controller.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:flutter/services.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -135,7 +136,7 @@ class LogInPageState extends State<LogInPage>
                           color: Color(0xFFff964f)),
                     ),
                   )),
-              const SizedBox(height: 70),
+              const SizedBox(height: 40),
               //TODO: INTEGRATE 'SIGN IN' WITH FIRESTORE
               _buildSignInButton("SIGN IN", () async {
                 try {
@@ -202,6 +203,29 @@ class LogInPageState extends State<LogInPage>
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => const HomePageController(),
                 ));
+              }),
+              const SizedBox(height: 10),
+              // TODO: CHANGE APPLE BUTTON LAYOUT
+              SignInWithAppleButton(onPressed: () async {
+                try {
+                  final userController =
+                      Provider.of<UserController>(context, listen: false);
+                  await userController.signInWithApple();
+                  if (userController.user != null && mounted) {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const HomePageController(),
+                    ));
+                  }
+                } on FirebaseAuthException catch (e) {
+                  print(e.message);
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(e.message ?? 'An error occurred'),
+                      ),
+                    );
+                  }
+                }
               }),
               const SizedBox(height: 70),
               _buildSignUpLink(context, signUpColor),

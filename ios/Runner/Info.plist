@@ -30,6 +30,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.202345167900-e5npivdjlpk0rq23us1cavc0d9sofehf</string>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			</array>
 		</dict>
 	</array>
@@ -57,6 +58,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-    <string>We need access to your photo library to allow you to upload photos for your learning activities.</string>
+	<string>We need access to your photo library to allow you to upload photos for your learning activities.</string>
+	<key>ASAuthorizationAppleIDRequest</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 </dict>
 </plist>
