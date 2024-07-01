@@ -44,9 +44,6 @@ class UserController with ChangeNotifier {
         final displayName = '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'.trim();
         await _user!.updateDisplayName(displayName);
       }
-
-      // TODO: REMOVE PRINT ON PRODUCTION
-      print('appleCredential: ${appleCredential}');
       notifyListeners();
     } on PlatformException catch (e) {
       // TODO: REMOVE PRINT ON PRODUCTION

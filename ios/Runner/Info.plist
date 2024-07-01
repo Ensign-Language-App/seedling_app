@@ -61,5 +61,7 @@
 	<string>We need access to your photo library to allow you to upload photos for your learning activities.</string>
 	<key>ASAuthorizationAppleIDRequest</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSFaceIDUsageDescription</key>
+    <string>We need to access your Face ID for authentication</string>
 </dict>
 </plist>

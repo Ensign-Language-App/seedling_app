@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../utilities/biometric_auth.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/profile_page.dart';
@@ -16,6 +17,8 @@ class SideMenu extends StatefulWidget {
 }
 
 class SideMenuState extends State<SideMenu> {
+  final BiometricAuth biometricAuth = BiometricAuth();
+
   @override
   Widget build(BuildContext context) {
     final userController = Provider.of<UserController>(context);
@@ -34,7 +37,6 @@ class SideMenuState extends State<SideMenu> {
           DrawerHeader(
             decoration: const BoxDecoration(
               color: Color.fromRGBO(255, 150, 79, 1.0),
-              // color: Colors.lightGreen,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,11 +59,22 @@ class SideMenuState extends State<SideMenu> {
           ListTile(
             leading: const Icon(Icons.person),
             title: const Text('Profile'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ProfilePage()),
-              );
+            onTap: () async {
+              bool isAuthenticated = await biometricAuth.authenticate();
+              if (!mounted) return;
+
+              if (isAuthenticated) {
+                Navigator.push(
+                  // TODO: ADDRESS THIS WARNING
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfilePage()),
+                );
+              } else {
+                // TODO: ADDRESS THIS WARNING
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Authentication failed')),
+                );
+              }
             },
           ),
           ListTile(
@@ -106,7 +119,7 @@ class SideMenuState extends State<SideMenu> {
               await userController.signOut();
               if (mounted) {
                 Navigator.pushReplacement(
-                  // ignore: use_build_context_synchronously
+                  // TODO: ADDRESS THIS WARNING
                   context,
                   MaterialPageRoute(builder: (context) => const LogInPage()),
                 );
