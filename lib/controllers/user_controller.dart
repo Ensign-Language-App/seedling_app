@@ -21,9 +21,6 @@ class UserController with ChangeNotifier {
           await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
-    } on PlatformException catch (e) {
-      print('Failed to sign in with Google: $e');
-      throw FirebaseAuthException(message: e.message, code: e.code);
     } catch (e) {
       print('An error occurred while signing in with Google: $e');
       throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');

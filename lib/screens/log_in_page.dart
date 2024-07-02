@@ -280,11 +280,11 @@ class LogInPageState extends State<LogInPage>
           builder: (context) => const HomePageController(),
         ));
       }
-    } on FirebaseAuthException catch (e) {
+    } on Exception {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text("Login cancelled" ?? e.message ?? 'An error occurred'),
+          const SnackBar(
+            content: Text("Login cancelled"),
           ),
         );
       }

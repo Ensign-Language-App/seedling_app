@@ -34,6 +34,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>GoogleService-Info</key>
+    <string>GoogleService-Info.plist</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -63,6 +65,5 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>We need to access your Face ID for authentication</string>
-
 </dict>
 </plist>
