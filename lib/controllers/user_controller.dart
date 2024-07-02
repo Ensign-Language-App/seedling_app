@@ -10,7 +10,6 @@ class UserController with ChangeNotifier {
   User? get user => _user;
 
   Future<void> signInWithGoogle() async {
-    try {
       final googleAccount = await GoogleSignIn().signIn();
       final googleAuth = await googleAccount?.authentication;
       final credential = GoogleAuthProvider.credential(
@@ -21,10 +20,6 @@ class UserController with ChangeNotifier {
           await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
-    } catch (e) {
-      print('An error occurred while signing in with Google: $e');
-      throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
-    }
   }
 
   Future<void> signInWithApple() async {
@@ -73,32 +68,6 @@ class UserController with ChangeNotifier {
       print('An error occurred while signing in');
     }
   }
-
-  // Future<void> signInWithFacebook() async {
-  //   try {
-  //     final LoginResult result = await FacebookAuth.instance.login();
-  //     print('Facebook login result: ${result.status}');
-  //     if (result.status == LoginStatus.success) {
-  //       final AccessToken accessToken = result.accessToken!;
-  //       print('Facebook access token: ${accessToken.token}');
-  //       final OAuthCredential credential = FacebookAuthProvider.credential(accessToken.token);
-  //       final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
-  //       _user = userCredential.user;
-  //       notifyListeners();
-  //     } else {
-  //       print('Facebook login failed: ${result.message}');
-  //       throw FirebaseAuthException(
-  //           message: 'Failed to sign in with Facebook',
-  //           code: 'ERROR_FACEBOOK_LOGIN_FAILED');
-  //     }
-  //   } on PlatformException catch (e) {
-  //     print('Failed to sign in with Facebook: $e');
-  //     throw FirebaseAuthException(message: e.message, code: e.code);
-  //   } catch (e) {
-  //     print('An error occurred while signing in with Facebook: $e');
-  //     throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
-  //   }
-  // }
 
 
   Future<void> registerWithEmailAndPassword(
