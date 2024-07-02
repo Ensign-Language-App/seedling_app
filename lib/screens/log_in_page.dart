@@ -257,7 +257,7 @@ class LogInPageState extends State<LogInPage>
     await userController.signInWithEmailAndPassword(
         emailController.text.trim(), passwordController.text.trim());
 
-    if (mounted) {
+    if (userController.user != null && mounted) {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => const HomePageController(),
       ));
