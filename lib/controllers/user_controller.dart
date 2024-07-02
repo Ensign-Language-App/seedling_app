@@ -6,20 +6,38 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class UserController with ChangeNotifier {
   User? _user = FirebaseAuth.instance.currentUser;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   User? get user => _user;
 
   Future<void> signInWithGoogle() async {
-      final googleAccount = await GoogleSignIn().signIn();
-      final googleAuth = await googleAccount?.authentication;
-      final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth?.accessToken,
-        idToken: googleAuth?.idToken,
-      );
-      final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
-      _user = userCredential.user;
-      notifyListeners();
+    try {
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      if (googleUser == null) {
+        throw PlatformException(
+          code: 'sign_in_canceled',
+          message: 'Sign in aborted by user',
+        );
+      }
+
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+
+      if (googleAuth.accessToken == null || googleAuth.idToken == null) {
+        throw PlatformException(
+          code: 'ERROR_MISSING_GOOGLE_AUTH_TOKENS',
+          message: 'Missing Google Auth Tokens',
+        );
+      }
+
+      // Use these tokens to authenticate with Firebase or your backend
+      print('Sign in successful: Access Token: ${googleAuth.accessToken}, ID Token: ${googleAuth.idToken}');
+    } catch (error) {
+      if (error is PlatformException && error.code == 'sign_in_canceled') {
+        print('Sign in cancelled by user');
+      } else {
+        print('An error occurred while signing in with Google: $error');
+      }
+    }
   }
 
   Future<void> signInWithApple() async {

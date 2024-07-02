@@ -280,7 +280,7 @@ class LogInPageState extends State<LogInPage>
           builder: (context) => const HomePageController(),
         ));
       }
-    } on Exception {
+    } on PlatformException {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
