@@ -284,7 +284,7 @@ class LogInPageState extends State<LogInPage>
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(e.message ?? 'An error occurred'),
+            content: Text("Login cancelled" ?? e.message ?? 'An error occurred'),
           ),
         );
       }
@@ -311,7 +311,7 @@ class LogInPageState extends State<LogInPage>
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(e.message ?? 'An error occurred'),
+            content: Text("Login cancelled" ?? e.message ?? 'An error occurred'),
           ),
         );
       }

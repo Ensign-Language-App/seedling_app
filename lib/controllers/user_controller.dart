@@ -10,16 +10,24 @@ class UserController with ChangeNotifier {
   User? get user => _user;
 
   Future<void> signInWithGoogle() async {
-    final googleAccount = await GoogleSignIn().signIn();
-    final googleAuth = await googleAccount?.authentication;
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
-    final userCredential =
-    await FirebaseAuth.instance.signInWithCredential(credential);
-    _user = userCredential.user;
-    notifyListeners();
+    try {
+      final googleAccount = await GoogleSignIn().signIn();
+      final googleAuth = await googleAccount?.authentication;
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+      final userCredential =
+          await FirebaseAuth.instance.signInWithCredential(credential);
+      _user = userCredential.user;
+      notifyListeners();
+    } on PlatformException catch (e) {
+      print('Failed to sign in with Google: $e');
+      throw FirebaseAuthException(message: e.message, code: e.code);
+    } catch (e) {
+      print('An error occurred while signing in with Google: $e');
+      throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
+    }
   }
 
   Future<void> signInWithApple() async {
