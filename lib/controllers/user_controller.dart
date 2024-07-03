@@ -6,13 +6,12 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class UserController with ChangeNotifier {
   User? _user = FirebaseAuth.instance.currentUser;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
-
   User? get user => _user;
 
   Future<void> signInWithGoogle() async {
     try {
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      final GoogleSignIn googleSignIn = GoogleSignIn();
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
       if (googleUser == null) {
         throw PlatformException(
           code: 'sign_in_canceled',
@@ -28,6 +27,15 @@ class UserController with ChangeNotifier {
           message: 'Missing Google Auth Tokens',
         );
       }
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+      final userCredential =
+      await FirebaseAuth.instance.signInWithCredential(credential);
+      _user = userCredential.user;
+      notifyListeners();
 
       // Use these tokens to authenticate with Firebase or your backend
       print('Sign in successful: Access Token: ${googleAuth.accessToken}, ID Token: ${googleAuth.idToken}');
