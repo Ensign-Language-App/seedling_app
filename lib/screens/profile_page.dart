@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home_page.dart';
+import 'package:seedling_app/controllers/user_controller.dart';
 
-void main() => runApp(const MaterialApp(home: ProfilePage()));
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => UserController(),
+      child: const MaterialApp(home: ProfilePage()),
+    );
+  }
+}
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -17,6 +31,9 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final userController = Provider.of<UserController>(context);
+    final user = userController.user;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -32,28 +49,30 @@ class ProfilePage extends StatelessWidget {
             Container(
               height: 200,
               color: Colors.lightGreen,
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: CircleAvatar(
                       radius: 60,
-                      backgroundImage:
-                          AssetImage('assets/images/default_icon.jpg'),
+                      backgroundImage: user?.photoURL != null
+                          ? NetworkImage(user!.photoURL!)
+                          : const AssetImage('assets/images/default_icon.jpg')
+                      as ImageProvider,
                     ),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      LanguageSelector(width: 100, height: 100),
-                      SizedBox(height: 10),
+                      const LanguageSelector(width: 100, height: 100),
+                      const SizedBox(height: 10),
                       Text(
-                        'User Name',
-                        style: TextStyle(
+                        user?.displayName ?? 'User Name',
+                        style: const TextStyle(
                           color: Colors.black,
-                          fontSize: 30,
+                          fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -279,7 +298,7 @@ class ProfilePage extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const HomePage()),
+                                              const HomePage()),
                                         );
                                       },
                                     ),
