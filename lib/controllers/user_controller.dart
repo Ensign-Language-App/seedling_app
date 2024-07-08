@@ -77,6 +77,7 @@ class UserController with ChangeNotifier {
       throw FirebaseAuthException(message: e.message, code: e.code);
     } catch (e) {
       // TODO: REMOVE PRINT ON PRODUCTION
+      // TODO: REMOVE PRINT ON PRODUCTION
       print('An error occurred while signing in with Apple: $e');
       throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
     }
