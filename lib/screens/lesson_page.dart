@@ -88,6 +88,13 @@ class LessonPageState extends State<LessonPage> {
 
   void showNextCard() {
     setState(() {
+      currentIndex = (currentIndex + 3) % words.length;
+      isCardVisible = true;
+    });
+  }
+
+  void showPreviousCard() {
+    setState(() {
       currentIndex = (currentIndex + 1) % words.length;
       isCardVisible = true;
     });
@@ -99,9 +106,10 @@ class LessonPageState extends State<LessonPage> {
       backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
       appBar: AppBar(title: const Text('Learn')),
       body: isLoading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : words.isEmpty
-              ? Center(child: Text(message.isEmpty ? 'No words found' : message))
+              ? Center(
+                  child: Text(message.isEmpty ? 'No words found' : message))
               : Center(
                   child: isCardVisible
                       ? GestureDetector(
@@ -112,16 +120,35 @@ class LessonPageState extends State<LessonPage> {
                             key: Key(words[currentIndex]['english']!),
                             direction: DismissDirection.horizontal,
                             onDismissed: (direction) {
+                              if (direction == DismissDirection.endToStart) {
+                                // Left Swipe
+                                setState(() {
+                                  isCardVisible = false;
+                                });
+                                // Show the next card after a delay
+                                Future.delayed(
+                                    const Duration(milliseconds: 300),
+                                    showNextCard);
+                              } else {
+                                // Right Swipe
+                                setState(() {
+                                  isCardVisible = false;
+                                });
+                                // Show the next card after a delay
+                                Future.delayed(
+                                    const Duration(milliseconds: 300),
+                                    showPreviousCard);
+                              }
+
                               setState(() {
                                 isCardVisible = false;
                               });
                               // Show the next card after a delay
-                              Future.delayed(
-                                  const Duration(milliseconds: 300),
+                              Future.delayed(const Duration(milliseconds: 300),
                                   showNextCard);
                             },
                             child: Dismissible(
-                              key: Key('flip_card_${currentIndex}'),
+                              key: Key('flip_card_$currentIndex'),
                               direction: DismissDirection.vertical,
                               onDismissed: (direction) {
                                 setState(() {
