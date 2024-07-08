@@ -9,18 +9,18 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MaterialApp(
-    home: LessonPage(),
+    home: ReviewPage(),
   ));
 }
 
-class LessonPage extends StatefulWidget {
-  const LessonPage({super.key});
+class ReviewPage extends StatefulWidget {
+  const ReviewPage({super.key});
 
   @override
-  LessonPageState createState() => LessonPageState();
+  ReviewPageState createState() => ReviewPageState();
 }
 
-class LessonPageState extends State<LessonPage> {
+class ReviewPageState extends State<ReviewPage> {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   bool isCardVisible = true;
   List<Map<String, String>> words = [];
@@ -215,3 +215,62 @@ class LessonPageState extends State<LessonPage> {
     );
   }
 }
+
+
+
+
+// Leo's code
+
+/*
+class LearningPage extends StatelessWidget {
+  const LearningPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),  // Using RGB values
+      // backgroundColor: Colors.lightGreen, // Using predefined color
+      body: Center(
+        child: FlipCard(
+          direction: FlipDirection.HORIZONTAL,
+          front: Card(
+            elevation: 8.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            child: Container(
+              height: 450,
+              width: 300,
+              alignment: Alignment.center,
+              child: const Text(
+                'The best anime \never made is...',
+                style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          back: Card(
+            elevation: 8.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            child: Container(
+              height: 450,
+              width: 300,
+              alignment: Alignment.center,
+              child: const Text(
+                'Dragon Ball',
+                style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}*/

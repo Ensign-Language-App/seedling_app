@@ -23,7 +23,7 @@ class BottomNavBarState extends State<BottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.menu_book),
-          label: 'Learn',
+          label: 'Review',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.collections_bookmark),

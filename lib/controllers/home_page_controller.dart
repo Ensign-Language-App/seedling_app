@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/bookmark_page.dart';
 import 'package:seedling_app/screens/home_page.dart';
-import 'package:seedling_app/screens/learn_page.dart';
+import 'package:seedling_app/screens/review_page.dart';
 import 'package:seedling_app/widgets/bottom_nav_bar.dart';
 import 'package:seedling_app/widgets/side_menu.dart';
 import 'package:seedling_app/widgets/top_nav_bar.dart';
@@ -32,7 +32,7 @@ class HomeControllerState extends State<HomePageController> {
         },
         children: const [
           HomePage(),
-          LearningPage(),
+          ReviewPage(),
           BookmarkPage(),
         ],
       ),
