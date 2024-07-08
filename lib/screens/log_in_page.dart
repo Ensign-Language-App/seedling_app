@@ -66,6 +66,7 @@ class LogInPageState extends State<LogInPage>
   }
 
   Widget _buildAnimatedGradientBackground() {
+    final screenHeight = MediaQuery.of(context).size.height;
     return AnimatedBuilder(
       animation: _animation,
       builder: (context, child) {
@@ -83,9 +84,9 @@ class LogInPageState extends State<LogInPage>
           child: child,
         );
       },
-      child: const Padding(
-        padding: EdgeInsets.only(top: 60.0, left: 22),
-        child: Text(
+      child: Padding(
+        padding: EdgeInsets.only(top: screenHeight * .07, left: 22),
+        child: const Text(
           'Hello there!\nSign in',
           style: TextStyle(
             fontSize: 30,
@@ -99,8 +100,9 @@ class LogInPageState extends State<LogInPage>
 
   Widget _buildFormContainer(
       BuildContext context, Color backgroundColor, Color signUpColor) {
+    final screenHeight = MediaQuery.of(context).size.height;
     return Padding(
-      padding: const EdgeInsets.only(top: 200.0),
+      padding: EdgeInsets.only(top: screenHeight * .25),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
@@ -116,12 +118,12 @@ class LogInPageState extends State<LogInPage>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 40),
+              SizedBox(height: screenHeight * .025),
               _buildTextField(
                   emailController, 'Username/E-mail', Icons.check, false),
-              const SizedBox(height: 20),
+              SizedBox(height: screenHeight * .02),
               _buildTextField(passwordController, 'Password', null, true),
-              const SizedBox(height: 20),
+              SizedBox(height: screenHeight * .02),
               GestureDetector(
                   onTap: () {
                     //TODO: ADD NAVIGATION TO FORGOT PASSWORD PAGE
@@ -136,9 +138,9 @@ class LogInPageState extends State<LogInPage>
                           color: Color(0xFFff964f)),
                     ),
                   )),
-              const SizedBox(height: 40),
+              SizedBox(height: screenHeight * .025),
               _buildSignInButton("SIGN IN", _signInWithEmail),
-              const SizedBox(height: 20),
+              SizedBox(height: screenHeight * .02),
               const Text("Or continue with"),
               const Divider(
                 color: Colors.grey,
@@ -151,23 +153,21 @@ class LogInPageState extends State<LogInPage>
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       GestureDetector(
-                        onTap: _signInWithGoogle,
-                        child: const Image(
-                          height: 25,
-                          width: 25,
-                          image: AssetImage("assets/icons/Google_icon.png")
-                        )
-                      ),
+                          onTap: _signInWithGoogle,
+                          child: const Image(
+                              height: 25,
+                              width: 25,
+                              image:
+                                  AssetImage("assets/icons/Google_icon.png"))),
                       GestureDetector(
-                        onTap: _signInWithApple,
-                        child: const Icon(IconData(0xf04be, fontFamily: 'MaterialIcons'))
-                      ),
+                          onTap: _signInWithApple,
+                          child: const Icon(
+                              IconData(0xf04be, fontFamily: 'MaterialIcons'))),
                     ],
                   )
                 ],
               ),
-
-              const SizedBox(height: 70),
+              SizedBox(height: screenHeight * .11),
               _buildSignUpLink(context, signUpColor),
             ],
           ),
@@ -311,7 +311,8 @@ class LogInPageState extends State<LogInPage>
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text("Login cancelled" ?? e.message ?? 'An error occurred'),
+            content:
+                Text("Login cancelled" ?? e.message ?? 'An error occurred'),
           ),
         );
       }
