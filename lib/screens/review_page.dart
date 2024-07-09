@@ -165,6 +165,14 @@ class ReviewPageState extends State<ReviewPage> {
                             child: Dismissible(
                               key: Key('flip_card_$currentIndex'),
                               direction: DismissDirection.up,
+                              background: const Text(
+                                "\n\n\nMastered",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromARGB(175, 255, 255, 255),
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.bold),
+                              ),
                               onDismissed: (direction) {
                                 //TODO remove card from review list
 
