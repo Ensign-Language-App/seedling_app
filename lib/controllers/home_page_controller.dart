@@ -16,7 +16,7 @@ class HomePageController extends StatefulWidget {
 class HomeControllerState extends State<HomePageController> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
-  List<String> pageNames = ['Home', 'Learn', 'Bookmark'];
+  List<String> pageNames = ['Home', 'Review', 'Bookmark'];
 
   @override
   Widget build(BuildContext context) {

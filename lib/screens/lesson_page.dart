@@ -119,6 +119,22 @@ class LessonPageState extends State<LessonPage> {
                           child: Dismissible(
                             key: Key(words[currentIndex]['english']!),
                             direction: DismissDirection.horizontal,
+                            background: const Text(
+                              "\n\nPrevious",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(175, 255, 255, 255),
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            secondaryBackground: const Text(
+                              "\n\nNext",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(175, 255, 255, 255),
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
                             onDismissed: (direction) {
                               if (direction == DismissDirection.endToStart) {
                                 // Left Swipe
@@ -150,13 +166,27 @@ class LessonPageState extends State<LessonPage> {
                             child: Dismissible(
                               key: Key('flip_card_$currentIndex'),
                               direction: DismissDirection.vertical,
+                              background: const Text(
+                                "\nAdd to Review",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromARGB(175, 255, 255, 255),
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              secondaryBackground: const Text(
+                                "\n\n\nMastered",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromARGB(175, 255, 255, 255),
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.bold),
+                              ),
                               onDismissed: (direction) {
                                 if (direction == DismissDirection.up) {
-                                  // Swipe Up
-                                  // TODO add to done list
+                                  //TODO Add to Mastered List
                                 } else {
-                                  // Swipe Down
-                                  // TODO add to review list
+                                  //TODO Add to Review List
                                 }
 
                                 setState(() {

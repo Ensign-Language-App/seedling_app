@@ -104,7 +104,6 @@ class ReviewPageState extends State<ReviewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
-      appBar: AppBar(title: const Text('Learn')),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : words.isEmpty
@@ -119,6 +118,22 @@ class ReviewPageState extends State<ReviewPage> {
                           child: Dismissible(
                             key: Key(words[currentIndex]['english']!),
                             direction: DismissDirection.horizontal,
+                            background: const Text(
+                              "\n\nPrevious",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(175, 255, 255, 255),
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            secondaryBackground: const Text(
+                              "\n\nNext",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(175, 255, 255, 255),
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
                             onDismissed: (direction) {
                               if (direction == DismissDirection.endToStart) {
                                 // Left Swipe
@@ -149,15 +164,9 @@ class ReviewPageState extends State<ReviewPage> {
                             },
                             child: Dismissible(
                               key: Key('flip_card_$currentIndex'),
-                              direction: DismissDirection.vertical,
+                              direction: DismissDirection.up,
                               onDismissed: (direction) {
-                                if (direction == DismissDirection.up) {
-                                  // Swipe Up
-                                  // TODO add to done list
-                                } else {
-                                  // Swipe Down
-                                  // TODO add to review list
-                                }
+                                //TODO remove card from review list
 
                                 setState(() {
                                   isCardVisible = false;

@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                 Flexible(
                   child: LessonButton(
                     image: 'assets/images/lessons/the_body.png',
-                    title: 'The body',
+                    title: 'The Body',
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
@@ -123,7 +123,7 @@ class HomePage extends StatelessWidget {
                 Flexible(
                   child: LessonButton(
                     image: 'assets/images/lessons/the_body.png',
-                    title: 'The body',
+                    title: 'The Body',
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
