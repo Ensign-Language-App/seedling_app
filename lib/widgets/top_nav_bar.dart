@@ -1,43 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/bookmark_page.dart';
-import 'package:seedling_app/screens/home_page.dart';
-import 'package:seedling_app/screens/review_page.dart';
-import 'package:seedling_app/widgets/bottom_nav_bar.dart';
-import 'package:seedling_app/widgets/side_menu.dart';
-import 'package:seedling_app/widgets/top_nav_bar.dart';
+import 'package:seedling_app/widgets/language_selector.dart';
 
-class HomePageController extends StatefulWidget {
-  const HomePageController({super.key});
+class TopNavBar extends StatefulWidget implements PreferredSizeWidget {
+  final String title;
+
+  const TopNavBar({super.key, required this.title});
 
   @override
-  State<HomePageController> createState() => HomeControllerState();
+  TopNavBarState createState() => TopNavBarState();
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-class HomeControllerState extends State<HomePageController> {
-  int _currentIndex = 0;
-  final PageController _pageController = PageController();
-  List<String> pageNames = ['Home', 'Review', 'Bookmark'];
-
+class TopNavBarState extends State<TopNavBar> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const SideMenu(),
-      appBar: TopNavBar(title: pageNames[_currentIndex]),
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        children: const [
-          HomePage(),
-          ReviewPage(),
-          BookmarkPage(),
-        ],
-      ),
-      bottomNavigationBar: BottomNavBar(
-          currentIndex: _currentIndex, pageController: _pageController),
+    return AppBar(
+      title: const Text('Home'),
+      actions: <Widget>[
+        const SizedBox(
+            width: 50, child: LanguageSelector(width: 50, height: 50)),
+        IconButton(
+          icon: const Icon(Icons.more_vert),
+          onPressed: () {},
+        ),
+      ],
     );
   }
 }
+
+void main() =>
+    runApp(const MaterialApp(home: Scaffold(body: TopNavBar(title: 'Home'))));
