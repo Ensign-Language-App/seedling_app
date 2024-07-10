@@ -127,7 +127,6 @@ class LogInPageState extends State<LogInPage>
               SizedBox(height: screenHeight * .02),
               GestureDetector(
                   onTap: () {
-                    //TODO: ADD NAVIGATION TO FORGOT PASSWORD PAGE
                     Navigator.push(
                       context,
                       MaterialPageRoute(
