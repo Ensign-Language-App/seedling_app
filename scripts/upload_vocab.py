@@ -13,7 +13,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # Load the vocabulary JSON data
-with open('path/to/your/vocab.json', 'r', encoding='utf-8') as f:
+with open('/Users/Justin/Projects/Ensign/CS480/Ensign_Language_App/seedling_app/scripts/vocab.json', 'r', encoding='utf-8') as f:
     vocab_data = json.load(f)
 
 # Function to upload vocabulary data to Firestore
@@ -30,3 +30,4 @@ def upload_vocab_to_firestore(data, collection_name='vocabulary'):
 upload_vocab_to_firestore(vocab_data)
 
 print('Vocabulary data uploaded successfully.')
+
