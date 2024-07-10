@@ -1,6 +1,6 @@
 {
-    "Subjects": {
-      "Basic Vocabulary": {
+    "Seedling": {
+      "Vocabulary": {
         "People": {
           "mother": {
             "Spanish": "madre (f)",
@@ -79,7 +79,7 @@
             "Italian": "infermiera (f)",
             "German": "krankenschwester (f)"
           },
-          "Police officer": {
+          "police officer": {
             "Spanish": "policía",
             "Portuguese": "policial",
             "French": "policier (m)",
@@ -143,7 +143,7 @@
             "German": "cousin (m)"
           }
         },
-        "Objects": {
+        "Home": {
           "house": {
             "Spanish": "casa (f)",
             "Portuguese": "casa (f)",
@@ -781,7 +781,7 @@
             "German": "lehren"
           }
         },
-        "Greetings and Polite Expressions": {
+        "Greetings": {
           "Hello": {
             "Spanish": "Hola",
             "Portuguese": "Olá",
@@ -1065,120 +1065,120 @@
             "German": "Die Rechnung, bitte?"
           }
         },
-      "Daily Expressions": {
-        "How are you?": {
-          "Spanish": "¿Cómo estás?",
-          "Portuguese": "Como você está?",
-          "French": "Comment ça va ?",
-          "Italian": "Come stai?",
-          "German": "Wie geht's?"
+        "Conversation": {
+          "How are you?": {
+            "Spanish": "¿Cómo estás?",
+            "Portuguese": "Como você está?",
+            "French": "Comment ça va ?",
+            "Italian": "Come stai?",
+            "German": "Wie geht's?"
+            },
+          "I’m fine, thank you": {
+            "Spanish": "Bien, gracias",
+            "Portuguese": "Bem, obrigado(a)",
+            "French": "Bien, merci",
+            "Italian": "Bene, grazie",
+            "German": "Gut, danke"
+            },
+          "What’s up?": {
+            "Spanish": "¿Qué pasa?",
+            "Portuguese": "E aí?",
+            "French": "Quoi de neuf ?",
+            "Italian": "Che succede?",
+            "German": "Was ist los?"
+            },
+          "Nothing much": {
+            "Spanish": "Nada mucho",
+            "Portuguese": "Nada demais",
+            "French": "Pas grand-chose",
+            "Italian": "Niente di che",
+            "German": "Nicht viel"
+            },
+          "See you later": {
+            "Spanish": "Hasta luego",
+            "Portuguese": "Até logo",
+            "French": "À plus tard",
+            "Italian": "A dopo",
+            "German": "Bis später"
+            },
+          "Take care": {
+            "Spanish": "Cuídate",
+            "Portuguese": "Se cuida",
+            "French": "Prends soin de toi",
+            "Italian": "Stammi bene",
+            "German": "Pass auf dich auf"
+            },
+          "What time is it?": {
+            "Spanish": "¿Qué hora es?",
+            "Portuguese": "Que horas são?",
+            "French": "Quelle heure est-il ?",
+            "Italian": "Che ore sono?",
+            "German": "Wie spät ist es?"
+            },
+          "Where is the bathroom?": {
+            "Spanish": "¿Dónde está el baño?",
+            "Portuguese": "Onde fica o banheiro?",
+            "French": "Où sont les toilettes?",
+            "Italian": "Dove si trova il bagno?",
+            "German": "Wo ist die Toilette?"
+            },
+          "I’m hungry": {
+            "Spanish": "Tengo hambre",
+            "Portuguese": "Estou com fome",
+            "French": "J'ai faim",
+            "Italian": "Ho fame",
+            "German": "Ich habe Hunger"
+            },
+          "I’m thirsty": {
+            "Spanish": "Tengo sed",
+            "Portuguese": "Estou com sede",
+            "French": "J'ai soif",
+            "Italian": "Ho sete",
+            "German": "Ich habe Durst"
+            },
+          "Good luck": {
+            "Spanish": "Buena suerte",
+            "Portuguese": "Boa sorte",
+            "French": "Bonne chance",
+            "Italian": "Buona fortuna",
+            "German": "Viel Glück"
+            },
+          "Congratulations": {
+            "Spanish": "Felicidades",
+            "Portuguese": "Parabéns",
+            "French": "Félicitations",
+            "Italian": "Congratulazioni",
+            "German": "Herzlichen Glückwunsch"
+            },
+          "Happy birthday": {
+            "Spanish": "Feliz cumpleaños",
+            "Portuguese": "Feliz aniversário",
+            "French": "Joyeux anniversaire",
+            "Italian": "Buon compleanno",
+            "German": "Alles Gute zum Geburtstag"
+            },
+          "Merry Christmas": {
+            "Spanish": "Feliz Navidad",
+            "Portuguese": "Feliz Natal",
+            "French": "Joyeux Noël",
+            "Italian": "Buon Natale",
+            "German": "Frohe Weihnachten"
+            },
+          "Happy New Year": {
+            "Spanish": "Feliz Año Nuevo",
+            "Portuguese": "Feliz Ano Novo",
+            "French": "Bonne année",
+            "Italian": "Felice Anno Nuovo",
+            "German": "Frohes Neues Jahr"
+            },
+          "Get well soon": {
+            "Spanish": "Recupérate pronto",
+            "Portuguese": "Melhoras",
+            "French": "Bon rétablissement",
+            "Italian": "Guarisci presto",
+            "German": "Gute Besserung"
+            }
         },
-        "I’m fine, thank you": {
-          "Spanish": "Bien, gracias",
-          "Portuguese": "Bem, obrigado(a)",
-          "French": "Bien, merci",
-          "Italian": "Bene, grazie",
-          "German": "Gut, danke"
-        },
-        "What’s up?": {
-          "Spanish": "¿Qué pasa?",
-          "Portuguese": "E aí?",
-          "French": "Quoi de neuf ?",
-          "Italian": "Che succede?",
-          "German": "Was ist los?"
-        },
-        "Nothing much": {
-          "Spanish": "Nada mucho",
-          "Portuguese": "Nada demais",
-          "French": "Pas grand-chose",
-          "Italian": "Niente di che",
-          "German": "Nicht viel"
-        },
-        "See you later": {
-          "Spanish": "Hasta luego",
-          "Portuguese": "Até logo",
-          "French": "À plus tard",
-          "Italian": "A dopo",
-          "German": "Bis später"
-        },
-        "Take care": {
-          "Spanish": "Cuídate",
-          "Portuguese": "Se cuida",
-          "French": "Prends soin de toi",
-          "Italian": "Stammi bene",
-          "German": "Pass auf dich auf"
-        },
-        "What time is it?": {
-          "Spanish": "¿Qué hora es?",
-          "Portuguese": "Que horas são?",
-          "French": "Quelle heure est-il ?",
-          "Italian": "Che ore sono?",
-          "German": "Wie spät ist es?"
-        },
-        "Where is the bathroom?": {
-          "Spanish": "¿Dónde está el baño?",
-          "Portuguese": "Onde fica o banheiro?",
-          "French": "Où sont les toilettes?",
-          "Italian": "Dove si trova il bagno?",
-          "German": "Wo ist die Toilette?"
-        },
-        "I’m hungry": {
-          "Spanish": "Tengo hambre",
-          "Portuguese": "Estou com fome",
-          "French": "J'ai faim",
-          "Italian": "Ho fame",
-          "German": "Ich habe Hunger"
-        },
-        "I’m thirsty": {
-          "Spanish": "Tengo sed",
-          "Portuguese": "Estou com sede",
-          "French": "J'ai soif",
-          "Italian": "Ho sete",
-          "German": "Ich habe Durst"
-        },
-        "Good luck": {
-          "Spanish": "Buena suerte",
-          "Portuguese": "Boa sorte",
-          "French": "Bonne chance",
-          "Italian": "Buona fortuna",
-          "German": "Viel Glück"
-        },
-        "Congratulations": {
-          "Spanish": "Felicidades",
-          "Portuguese": "Parabéns",
-          "French": "Félicitations",
-          "Italian": "Congratulazioni",
-          "German": "Herzlichen Glückwunsch"
-        },
-        "Happy birthday": {
-          "Spanish": "Feliz cumpleaños",
-          "Portuguese": "Feliz aniversário",
-          "French": "Joyeux anniversaire",
-          "Italian": "Buon compleanno",
-          "German": "Alles Gute zum Geburtstag"
-        },
-        "Merry Christmas": {
-          "Spanish": "Feliz Navidad",
-          "Portuguese": "Feliz Natal",
-          "French": "Joyeux Noël",
-          "Italian": "Buon Natale",
-          "German": "Frohe Weihnachten"
-        },
-        "Happy New Year": {
-          "Spanish": "Feliz Año Nuevo",
-          "Portuguese": "Feliz Ano Novo",
-          "French": "Bonne année",
-          "Italian": "Felice Anno Nuovo",
-          "German": "Frohes Neues Jahr"
-        },
-        "Get well soon": {
-          "Spanish": "Recupérate pronto",
-          "Portuguese": "Melhoras",
-          "French": "Bon rétablissement",
-          "Italian": "Guarisci presto",
-          "German": "Gute Besserung"
-        }
-      },
         "Numbers": {
           "one": {
             "Spanish": "uno",
@@ -1391,7 +1391,7 @@
             "German": "million"
           }
         },
-        "Days of the Week": {
+        "Days": {
           "Monday": {
             "Spanish": "lunes",
             "Portuguese": "segunda-feira",
@@ -1528,7 +1528,7 @@
             "German": "dezember"
           }
         },
-        "Time Expressions": {
+        "Time": {
           "today": {
             "Spanish": "hoy",
             "Portuguese": "hoje",
@@ -1919,131 +1919,131 @@
             "German": "ich setze, du setzt, er/sie setzt, wir setzen, ihr setzt, sie setzen"
           }
         },
-      "Subject Pronouns": {
-        "I": {
-          "Spanish": "yo",
-          "Portuguese": "eu",
-          "French": "je",
-          "Italian": "io",
-          "German": "ich"
+        "Subject Pronouns": {
+          "I": {
+            "Spanish": "yo",
+            "Portuguese": "eu",
+            "French": "je",
+            "Italian": "io",
+            "German": "ich"
+            },
+          "you": {
+            "Spanish": "tú / usted",
+            "Portuguese": "tu / você",
+            "French": "tu",
+            "Italian": "tu",
+            "German": "du"
+            },
+          "he": {
+            "Spanish": "él",
+            "Portuguese": "ele",
+            "French": "il",
+            "Italian": "lui",
+            "German": "er"
+            },
+          "she": {
+            "Spanish": "ella",
+            "Portuguese": "ela",
+            "French": "elle",
+            "Italian": "lei",
+            "German": "sie"
+            },
+          "it": {
+            "Spanish": "él / ella / ello",
+            "Portuguese": "ele / ela / isso",
+            "French": "il / elle / on",
+            "Italian": "esso / essa",
+            "German": "es / sie / es"
+            },
+          "we": {
+            "Spanish": "nosotros / nosotras",
+            "Portuguese": "nós",
+            "French": "nous",
+            "Italian": "noi",
+            "German": "wir"
+            },
+          "they": {
+            "Spanish": "ellos / ellas",
+            "Portuguese": "eles / elas",
+            "French": "ils / elles",
+            "Italian": "loro",
+            "German": "sie"
+            }
         },
-        "you": {
-          "Spanish": "tú / usted",
-          "Portuguese": "tu / você",
-          "French": "tu",
-          "Italian": "tu",
-          "German": "du"
+        "Possessive Pronouns": {
+          "my": {
+            "Spanish": "mi",
+            "Portuguese": "meu / minha",
+            "French": "mon / ma",
+            "Italian": "mio",
+            "German": "mein"
+            },
+          "your": {
+            "Spanish": "tu",
+            "Portuguese": "teu / tua",
+            "French": "ton / ta",
+            "Italian": "tuo",
+            "German": "dein"
+            },
+          "his": {
+            "Spanish": "su",
+            "Portuguese": "seu / sua",
+            "French": "son / sa",
+            "Italian": "suo",
+            "German": "sein"
+            },
+          "her": {
+            "Spanish": "su",
+            "Portuguese": "seu / sua",
+            "French": "son / sa",
+            "Italian": "suo",
+            "German": "ihr"
+            },
+          "its": {
+            "Spanish": "su",
+            "Portuguese": "seu",
+            "French": "son",
+            "Italian": "suo",
+            "German": "sein"
+            },
+          "our": {
+            "Spanish": "nuestro / nuestra",
+            "Portuguese": "nosso",
+            "French": "notre",
+            "Italian": "nostro",
+            "German": "unser"
+            },
+          "their": {
+            "Spanish": "su",
+            "Portuguese": "seu",
+            "French": "leur",
+            "Italian": "loro",
+            "German": "ihr"
+            }
         },
-        "he": {
-          "Spanish": "él",
-          "Portuguese": "ele",
-          "French": "il",
-          "Italian": "lui",
-          "German": "er"
+        "Articles": {
+          "the": {
+            "Spanish": "el / la",
+            "Portuguese": "o / a",
+            "French": "le / la",
+            "Italian": "il / la",
+            "German": "der / die / das"
+            },
+          "a": {
+            "Spanish": "un / una",
+            "Portuguese": "um / uma",
+            "French": "un / une",
+            "Italian": "un / una",
+            "German": "ein / eine"
+            },
+          "an": {
+            "Spanish": "un / una",
+            "Portuguese": "um / uma",
+            "French": "un / une",
+            "Italian": "un / una",
+            "German": "ein"
+            }
         },
-        "she": {
-          "Spanish": "ella",
-          "Portuguese": "ela",
-          "French": "elle",
-          "Italian": "lei",
-          "German": "sie"
-        },
-        "it": {
-          "Spanish": "él / ella / ello",
-          "Portuguese": "ele / ela / isso",
-          "French": "il / elle / on",
-          "Italian": "esso / essa",
-          "German": "es / sie / es"
-        },
-        "we": {
-          "Spanish": "nosotros / nosotras",
-          "Portuguese": "nós",
-          "French": "nous",
-          "Italian": "noi",
-          "German": "wir"
-        },
-        "they": {
-          "Spanish": "ellos / ellas",
-          "Portuguese": "eles / elas",
-          "French": "ils / elles",
-          "Italian": "loro",
-          "German": "sie"
-        }
-      },
-      "possessive pronouns": {
-        "my": {
-          "Spanish": "mi",
-          "Portuguese": "meu / minha",
-          "French": "mon / ma",
-          "Italian": "mio",
-          "German": "mein"
-        },
-        "your": {
-          "Spanish": "tu",
-          "Portuguese": "teu / tua",
-          "French": "ton / ta",
-          "Italian": "tuo",
-          "German": "dein"
-        },
-        "his": {
-          "Spanish": "su",
-          "Portuguese": "seu / sua",
-          "French": "son / sa",
-          "Italian": "suo",
-          "German": "sein"
-        },
-        "her": {
-          "Spanish": "su",
-          "Portuguese": "seu / sua",
-          "French": "son / sa",
-          "Italian": "suo",
-          "German": "ihr"
-        },
-        "its": {
-          "Spanish": "su",
-          "Portuguese": "seu",
-          "French": "son",
-          "Italian": "suo",
-          "German": "sein"
-        },
-        "our": {
-          "Spanish": "nuestro / nuestra",
-          "Portuguese": "nosso",
-          "French": "notre",
-          "Italian": "nostro",
-          "German": "unser"
-        },
-        "their": {
-          "Spanish": "su",
-          "Portuguese": "seu",
-          "French": "leur",
-          "Italian": "loro",
-          "German": "ihr"
-        }
-      },
-      "articles": {
-        "the": {
-          "Spanish": "el / la",
-          "Portuguese": "o / a",
-          "French": "le / la",
-          "Italian": "il / la",
-          "German": "der / die / das"
-        },
-        "a": {
-          "Spanish": "un / una",
-          "Portuguese": "um / uma",
-          "French": "un / une",
-          "Italian": "un / una",
-          "German": "ein / eine"
-        },
-        "an": {
-          "Spanish": "un / una",
-          "Portuguese": "um / uma",
-          "French": "un / une",
-          "Italian": "un / una",
-          "German": "ein"
-        }
-      },
         "Prepositions": {
           "in": {
             "Spanish": "en",
@@ -2295,7 +2295,7 @@
             "German": "Tomate"
           }
         },
-        "Meals and Dining": {
+        "Dining": {
           "breakfast": {
             "Spanish": "desayuno",
             "Portuguese": "café da manhã / pequeno-almoço",
