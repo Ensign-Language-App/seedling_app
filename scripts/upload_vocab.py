@@ -3,7 +3,7 @@ from firebase_admin import credentials, firestore
 import json
 
 # Path to your service account key file
-service_account_key_path = 'path/to/your/serviceAccountKey.json'
+service_account_key_path = '/Users/Justin/Projects/Ensign/CS480/Ensign_Language_App/seedling_app/scripts/firebase-adminsdk.json'
 
 # Initialize the Firebase Admin SDK
 cred = credentials.Certificate(service_account_key_path)
