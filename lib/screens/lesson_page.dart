@@ -3,19 +3,22 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:seedling_app/widgets/language_selector.dart'; 
 import 'dart:async';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MaterialApp(
-    home: LessonPage(),
+  runApp(MaterialApp(
+    home: LessonPage(selectedLanguage: 'English'),
   ));
 }
 
+// ignore: must_be_immutable
 class LessonPage extends StatefulWidget {
-  const LessonPage({super.key});
-
+  String selectedLanguage;
+  LessonPage({super.key, required this.selectedLanguage});
+  
   @override
   LessonPageState createState() => LessonPageState();
 }
@@ -27,7 +30,7 @@ class LessonPageState extends State<LessonPage> {
   int currentIndex = 0;
   bool isLoading = true;
   String message = '';
-  String selectedLanguage = 'Spanish';  // Add this line
+  // String selectedLanguage = 'Spanish';
 
   @override
   void initState() {
@@ -35,13 +38,13 @@ class LessonPageState extends State<LessonPage> {
     fetchWords();
   }
 
-  void onLanguageChanged(String language) {
-    setState(() {
-      selectedLanguage = language;
-      isLoading = true;
-    });
-    fetchWords();
-  }
+  // void onLanguageChanged(String language) {
+  //   setState(() {
+  //     selectedLanguage = language;
+  //     isLoading = true;
+  //   });
+  //   fetchWords();
+  // }
 
   Future<void> fetchWords() async {
     const maxRetries = 5;
@@ -62,7 +65,7 @@ class LessonPageState extends State<LessonPage> {
           print('Fetched document: ${doc.id} with data: ${doc.data()}');
           fetchedWords.add({
             'english': doc.id,
-            selectedLanguage.toLowerCase(): doc[selectedLanguage.toLowerCase()],
+            widget.selectedLanguage.toLowerCase(): doc[widget.selectedLanguage],
           });
         }
 
@@ -89,6 +92,26 @@ class LessonPageState extends State<LessonPage> {
     }
   }
 
+  void resetCard() {
+    setState(() {
+      isCardVisible = true;
+    });
+  }
+
+  void showNextCard() {
+    setState(() {
+      currentIndex = (currentIndex + 3) % words.length;
+      isCardVisible = true;
+    });
+  }
+
+  void showPreviousCard() {
+    setState(() {
+      currentIndex = (currentIndex + 1) % words.length;
+      isCardVisible = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +122,13 @@ class LessonPageState extends State<LessonPage> {
           LanguageSelector(
             width: 50,
             height: 50,
-            onLanguageChanged: onLanguageChanged,  // Pass the callback here
+            onLanguageChanged: (String language) {
+              setState(() {
+                widget.selectedLanguage = language;
+                isLoading = true;
+              });
+              fetchWords();
+            },
           ),
           Expanded(
             child: isLoading
@@ -179,7 +208,7 @@ class LessonPageState extends State<LessonPage> {
                                           width: 300,
                                           alignment: Alignment.center,
                                           child: Text(
-                                            words[currentIndex][selectedLanguage.toLowerCase()]!,
+                                            words[currentIndex][widget.selectedLanguage.toLowerCase()]!,
                                             style: const TextStyle(
                                               fontSize: 24.0,
                                               fontWeight: FontWeight.bold,

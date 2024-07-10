@@ -16,43 +16,30 @@ class HomePageController extends StatefulWidget {
 class HomeControllerState extends State<HomePageController> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
-  List<String> pageNames = ['Home', 'Review', 'Bookmark'];
-
-  String selectedLanguage = 'English';  // Add this line
-
-  // Method to handle language change
-  void onLanguageChanged(String language) {
-    setState(() {
-      selectedLanguage = language;
-    });
-    // Any additional logic to handle the language change can be added here
-  }
+  List<String> pageNames = ['Home', 'Review', 'Bookmark', 'Lesson'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SideMenu(),
-      appBar: TopNavBar(
+     appBar: TopNavBar(
         title: pageNames[_currentIndex],
         onLanguageChanged: onLanguageChanged, // Pass the callback here
-      ),
-      body: PageView(
+      ),      body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
-        children: [
-          HomePage(selectedLanguage: selectedLanguage),  // Pass selected language to HomePage
-          ReviewPage(selectedLanguage: selectedLanguage),  // Pass selected language to ReviewPage
-          BookmarkPage(selectedLanguage: selectedLanguage),  // Pass selected language to BookmarkPage
+        children: const [
+          HomePage(),
+          ReviewPage(),
+          BookmarkPage(),
         ],
       ),
       bottomNavigationBar: BottomNavBar(
-        currentIndex: _currentIndex,
-        pageController: _pageController,
-      ),
+          currentIndex: _currentIndex, pageController: _pageController),
     );
   }
 }
