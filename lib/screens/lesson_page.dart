@@ -20,13 +20,6 @@ class LessonPage extends StatefulWidget {
   LessonPageState createState() => LessonPageState();
 }
 
-class LessonPage extends StatefulWidget {
-  const LessonPage({super.key});
-
-  @override
-  LessonPageState createState() => LessonPageState();
-}
-
 class LessonPageState extends State<LessonPage> {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   bool isCardVisible = true;
@@ -34,7 +27,7 @@ class LessonPageState extends State<LessonPage> {
   int currentIndex = 0;
   bool isLoading = true;
   String message = '';
-  String selectedLanguage = 'English';  // Add this line
+  String selectedLanguage = 'Spanish';  // Add this line
 
   @override
   void initState() {
@@ -64,12 +57,12 @@ class LessonPageState extends State<LessonPage> {
             .collection('People')
             .get();
 
-        List<Map<String, String>> fetchedWords = [];
+  List<Map<String, String>> fetchedWords = [];
         for (var doc in querySnapshot.docs) {
           print('Fetched document: ${doc.id} with data: ${doc.data()}');
           fetchedWords.add({
             'english': doc.id,
-            selectedLanguage.toLowerCase(): doc[selectedLanguage],
+            selectedLanguage.toLowerCase(): doc[selectedLanguage.toLowerCase()],
           });
         }
 

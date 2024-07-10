@@ -18,11 +18,24 @@ class HomeControllerState extends State<HomePageController> {
   final PageController _pageController = PageController();
   List<String> pageNames = ['Home', 'Review', 'Bookmark'];
 
+  String selectedLanguage = 'English';  // Add this line
+
+  // Method to handle language change
+  void onLanguageChanged(String language) {
+    setState(() {
+      selectedLanguage = language;
+    });
+    // Any additional logic to handle the language change can be added here
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SideMenu(),
-      appBar: TopNavBar(title: pageNames[_currentIndex]),
+      appBar: TopNavBar(
+        title: pageNames[_currentIndex],
+        onLanguageChanged: onLanguageChanged, // Pass the callback here
+      ),
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
@@ -30,14 +43,16 @@ class HomeControllerState extends State<HomePageController> {
             _currentIndex = index;
           });
         },
-        children: const [
-          HomePage(),
-          ReviewPage(),
-          BookmarkPage(),
+        children: [
+          HomePage(selectedLanguage: selectedLanguage),  // Pass selected language to HomePage
+          ReviewPage(selectedLanguage: selectedLanguage),  // Pass selected language to ReviewPage
+          BookmarkPage(selectedLanguage: selectedLanguage),  // Pass selected language to BookmarkPage
         ],
       ),
       bottomNavigationBar: BottomNavBar(
-          currentIndex: _currentIndex, pageController: _pageController),
+        currentIndex: _currentIndex,
+        pageController: _pageController,
+      ),
     );
   }
 }

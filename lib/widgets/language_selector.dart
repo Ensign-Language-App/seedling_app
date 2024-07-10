@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(
-    home: Center(child: LanguageSelector(width: 50, height: 50, ))));
+  home: Center(child: LanguageSelector(width: 50, height: 50, onLanguageChanged: languageChanged)),
+));
+
+void languageChanged(String language) {
+  print('Language changed to $language');
+}
 
 class LanguageSelector extends StatefulWidget {
   final double width;
