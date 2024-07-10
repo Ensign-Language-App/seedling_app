@@ -16,16 +16,14 @@ class HomePageController extends StatefulWidget {
 class HomeControllerState extends State<HomePageController> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
-  List<String> pageNames = ['Home', 'Review', 'Bookmark', 'Lesson'];
+  List<String> pageNames = ['Home', 'Review', 'Bookmark'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SideMenu(),
-     appBar: TopNavBar(
-        title: pageNames[_currentIndex],
-        onLanguageChanged: onLanguageChanged, // Pass the callback here
-      ),      body: PageView(
+      appBar: TopNavBar(title: pageNames[_currentIndex]),
+      body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {
