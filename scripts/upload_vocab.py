@@ -18,7 +18,7 @@ with open(vocab_json_path, 'r', encoding='utf-8') as f:
     vocab_data = json.load(f)
 
 # Function to upload vocabulary data to Firestore
-def upload_vocab_to_firestore(data, collection_name='vocabulary'):
+def upload_vocab_to_firestore(data, collection_name='Vocabulary'):
     for vocabulary, vocab_data in data.items():
         for subject, subject_data in vocab_data.items():
             for topic, topic_data in subject_data.items():
