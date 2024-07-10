@@ -141,15 +141,15 @@
             "French": "cousin (m)",
             "Italian": "cugino (m)",
             "German": "cousin (m)"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
 
-  {
-    "Subjects": {
-      "Basic Vocabulary": {
+//   {
+//     "Subjects": {
+//       "Basic Vocabulary": {
         "Objects": {
           "house": {
             "Spanish": "casa (f)",
@@ -290,15 +290,15 @@
             "French": "tasse (f)",
             "Italian": "tazza (f)",
             "German": "tasse (f)"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
-      "Basic Vocabulary": {
+//   {
+//     "Subjects": {
+//       "Basic Vocabulary": {
         "Places": {
           "school": {
             "Spanish": "escuela (f)",
@@ -439,15 +439,15 @@
             "French": "marché (m)",
             "Italian": "mercato (m)",
             "German": "markt (m)"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
-      "Basic Vocabulary": {
+//   {
+//     "Subjects": {
+//       "Basic Vocabulary": {
         "Adjectives": {
           "big": {
             "Spanish": "grande",
@@ -623,15 +623,15 @@
             "French": "sûr (m), sûre (f)",
             "Italian": "sicuro (m), sicura (f)",
             "German": "sicher"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
-      "Basic Vocabulary": {
+//   {
+//     "Subjects": {
+//       "Basic Vocabulary": {
         "Verbs": {
           "to be": {
             "Spanish": "ser/estar",
@@ -807,15 +807,15 @@
             "French": "enseigner",
             "Italian": "insegnare",
             "German": "lehren"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
-      "Common Phrases": {
+//   {
+//     "Subjects": {
+//       "Common Phrases": {
         "Greetings and Polite Expressions": {
           "Hello": {
             "Spanish": "Hola",
@@ -991,15 +991,15 @@
             "French": "Peut-être",
             "Italian": "Forse",
             "German": "Vielleicht"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
-      "Common Phrases": {
+//   {
+//     "Subjects": {
+//       "Common Phrases": {
         "Questions": {
           "What is your name?": {
             "Spanish": "¿Cuál es tu nombre?",
@@ -1105,14 +1105,14 @@
             "French": "L'addition, s'il vous plaît ?",
             "Italian": "Il conto, per favore?",
             "German": "Die Rechnung, bitte?"
-          }
-        }
-      }
-    }
-  }
+          },
+//         }
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
+//   {
+//     "Subjects": {
       "Daily Expressions": {
         "How are you?": {
           "Spanish": "¿Cómo estás?",
@@ -1225,14 +1225,14 @@
           "French": "Bon rétablissement",
           "Italian": "Guarisci presto",
           "German": "Gute Besserung"
-        }
-      }
-    }
-  }
+        },
+//       }
+//     }
+//   }
   
-  {
-    "Subjects": {
-      "Numbers and Dates": {
+//   {
+//     "Subjects": {
+//       "Numbers and Dates": {
         "Numbers": {
           "one": {
             "Spanish": "uno",
