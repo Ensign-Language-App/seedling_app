@@ -34,7 +34,7 @@ class LessonPageState extends State<LessonPage> {
     fetchWords();
   }
 
-  Future<void> fetchWords() async {
+Future<void> fetchWords() async {
     const maxRetries = 5;
     const backoffDuration = Duration(seconds: 2);
     int retryCount = 0;
@@ -43,9 +43,9 @@ class LessonPageState extends State<LessonPage> {
       try {
         print('Attempting to fetch words...');
         QuerySnapshot querySnapshot = await FirebaseFirestore.instance
-            .collection('Subjects')
-            .doc('Test')
-            .collection('Words')
+            .collection('Vocabulary')
+            .doc('Subjects')
+            .collection('People')
             .get();
 
         List<Map<String, String>> fetchedWords = [];
@@ -53,7 +53,11 @@ class LessonPageState extends State<LessonPage> {
           print('Fetched document: ${doc.id} with data: ${doc.data()}');
           fetchedWords.add({
             'english': doc.id,
+            'spanish': doc['Spanish'],
+            'portuguese': doc['Portuguese'],
             'french': doc['French'],
+            'italian': doc['Italian'],
+            'german': doc['German'],
           });
         }
 
