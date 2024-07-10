@@ -141,15 +141,8 @@
             "French": "cousin (m)",
             "Italian": "cugino (m)",
             "German": "cousin (m)"
-          },
-//         }
-//       }
-//     }
-//   }
-
-//   {
-//     "Subjects": {
-//       "Basic Vocabulary": {
+          }
+        },
         "Objects": {
           "house": {
             "Spanish": "casa (f)",
@@ -290,15 +283,8 @@
             "French": "tasse (f)",
             "Italian": "tazza (f)",
             "German": "tasse (f)"
-          },
-//         }
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
-//       "Basic Vocabulary": {
+          }
+        },
         "Places": {
           "school": {
             "Spanish": "escuela (f)",
@@ -439,15 +425,8 @@
             "French": "marché (m)",
             "Italian": "mercato (m)",
             "German": "markt (m)"
-          },
-//         }
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
-//       "Basic Vocabulary": {
+          }
+        },
         "Adjectives": {
           "big": {
             "Spanish": "grande",
@@ -623,15 +602,8 @@
             "French": "sûr (m), sûre (f)",
             "Italian": "sicuro (m), sicura (f)",
             "German": "sicher"
-          },
-//         }
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
-//       "Basic Vocabulary": {
+          }
+        },
         "Verbs": {
           "to be": {
             "Spanish": "ser/estar",
@@ -807,15 +779,8 @@
             "French": "enseigner",
             "Italian": "insegnare",
             "German": "lehren"
-          },
-//         }
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
-//       "Common Phrases": {
+          }
+        },
         "Greetings and Polite Expressions": {
           "Hello": {
             "Spanish": "Hola",
@@ -991,15 +956,8 @@
             "French": "Peut-être",
             "Italian": "Forse",
             "German": "Vielleicht"
-          },
-//         }
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
-//       "Common Phrases": {
+          }
+        },
         "Questions": {
           "What is your name?": {
             "Spanish": "¿Cuál es tu nombre?",
@@ -1105,14 +1063,8 @@
             "French": "L'addition, s'il vous plaît ?",
             "Italian": "Il conto, per favore?",
             "German": "Die Rechnung, bitte?"
-          },
-//         }
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
+          }
+        },
       "Daily Expressions": {
         "How are you?": {
           "Spanish": "¿Cómo estás?",
@@ -1225,14 +1177,8 @@
           "French": "Bon rétablissement",
           "Italian": "Guarisci presto",
           "German": "Gute Besserung"
-        },
-//       }
-//     }
-//   }
-  
-//   {
-//     "Subjects": {
-//       "Numbers and Dates": {
+        }
+      },
         "Numbers": {
           "one": {
             "Spanish": "uno",
@@ -1581,15 +1527,8 @@
             "Italian": "dicembre",
             "German": "dezember"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Time Expressions": {
-        "Words": {
+        },
+        "Time Expressions": {
           "today": {
             "Spanish": "hoy",
             "Portuguese": "hoje",
@@ -1695,15 +1634,8 @@
             "Italian": "a volte",
             "German": "manchmal"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Regular Verbs": {
-        "Words": {
+        },
+        "Regular Verbs": {
           "to work": {
             "Spanish": "yo trabajo, tú trabajas, él/ella trabaja, nosotros/as trabajamos, vosotros/as trabajáis, ellos/as trabajan",
             "Portuguese": "eu trabalho, tu trabalhas, ele/ela trabalha, nós trabalhamos, vós trabalhais, eles/elas trabalham",
@@ -1844,15 +1776,8 @@
             "Italian": "io mi siedo, tu ti siedi, lui/lei si siede, noi ci sediamo, voi vi sedete, loro si siedono",
             "German": "ich sitze, du sitzt, er/sie sitzt, wir sitzen, ihr sitzt, sie sitzen"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Irregular Verbs": {
-        "Words": {
+        },
+        "Irregular Verbs": {
           "to be": {
             "Spanish": "yo soy, tú eres, él/ella es, nosotros/as somos, vosotros/as sois, ellos/as son",
             "Portuguese": "eu sou, tu és, ele/ela é, nós somos, vós sois, eles/elas são",
@@ -1993,14 +1918,8 @@
             "Italian": "io metto, tu metti, lui/lei mette, noi mettiamo, voi mettete, loro mettono",
             "German": "ich setze, du setzt, er/sie setzt, wir setzen, ihr setzt, sie setzen"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "subject pronouns": {
+        },
+      "Subject Pronouns": {
         "I": {
           "Spanish": "yo",
           "Portuguese": "eu",
@@ -2124,14 +2043,8 @@
           "Italian": "un / una",
           "German": "ein"
         }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Grammar": {
-        "Prepositions & Conjunctions": {
+      },
+        "Prepositions": {
           "in": {
             "Spanish": "en",
             "Portuguese": "em / dentro de",
@@ -2274,15 +2187,8 @@
             "Italian": "dal",
             "German": "seit"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Basic Vocabulary": {
-        "Common Food Items": {
+        },
+        "Food": {
           "bread": {
             "Spanish": "pan (m)",
             "Portuguese": "pão (m)",
@@ -2389,7 +2295,7 @@
             "German": "Tomate"
           }
         },
-        "Meals and Dining Phrases": {
+        "Meals and Dining": {
           "breakfast": {
             "Spanish": "desayuno",
             "Portuguese": "café da manhã / pequeno-almoço",
@@ -2439,36 +2345,29 @@
             "Italian": "ho sete",
             "German": "Ich habe Durst"
           },
-          "What do you want to eat": {
+          "What do you want to eat?": {
             "Spanish": "¿qué quieres comer?",
             "Portuguese": "o que queres comer?",
             "French": "que veux-tu manger ?",
             "Italian": "cosa vuoi mangiare?",
             "German": "Was möchtest du essen?"
           },
-          "I would like": {
+          "I would like...": {
             "Spanish": "me gustaría…",
             "Portuguese": "eu gostaria de…",
             "French": "je voudrais…",
             "Italian": "vorrei…",
             "German": "Ich möchte…"
           },
-          "Can I have the menu": {
+          "Can I have the menu?": {
             "Spanish": "¿puedo ver el menú?",
             "Portuguese": "posso ver o cardápio?",
             "French": "puis-je voir le menu ?",
             "Italian": "posso vedere il menù?",
             "German": "Kann ich die Speisekarte haben?"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Basic Vocabulary": {
-        "Travel Related Vocabulary": {
+        },
+        "Travel": {
           "airport": {
             "Spanish": "aeropuerto (m)",
             "Portuguese": "aeroporto (m)",
@@ -2540,15 +2439,15 @@
             "German": "tourist (m/f)"
           }
         },
-        "Asking For Directions": {
-          "Where is…": {
+        "Directions": {
+          "Where is…?": {
             "Spanish": "¿dónde está…?",
             "Portuguese": "onde está…?",
             "French": "où est…?",
             "Italian": "dove è…?",
             "German": "wo ist…?"
           },
-          "How do I get to…": {
+          "How do I get to…?": {
             "Spanish": "¿cómo llego a…?",
             "Portuguese": "como chego a…?",
             "French": "comment arriver à…?",
@@ -2611,15 +2510,8 @@
             "Italian": "di fronte a",
             "German": "gegenüber von"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Basic Health Terms": {
-        "Words": {
+        },
+        "Health": {
           "doctor": {
             "Spanish": "médico",
             "Portuguese": "médico",
@@ -2690,10 +2582,8 @@
             "Italian": "raffreddore",
             "German": "erkältung"
           }
-        }
-      },
-      "Emergency Phrases": {
-        "Phrases": {
+        },
+        "Emergency": {
           "I need help": {
             "Spanish": "necesito ayuda",
             "Portuguese": "eu preciso de ajuda",
@@ -2764,15 +2654,8 @@
             "Italian": "pericolo",
             "German": "gefahr"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Common Shopping Terms": {
-        "Words": {
+        },
+        "Shopping": {
           "price": {
             "Spanish": "precio (m)",
             "Portuguese": "preço (m)",
@@ -2843,10 +2726,8 @@
             "Italian": "affare (m)",
             "German": "schnäppchen (n)"
           }
-        }
-      },
-      "Money and Transactions": {
-        "Words": {
+        },
+        "Money": {
           "cash": {
             "Spanish": "efectivo (m) / dinero en efectivo",
             "Portuguese": "dinheiro (m)",
@@ -2917,15 +2798,8 @@
             "Italian": "banca (f)",
             "German": "bank (f)"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Colors": {
-        "Words": {
+        },
+        "Colors": {
           "red": {
             "Spanish": "rojo (m)",
             "Portuguese": "vermelho (m)",
@@ -3017,15 +2891,8 @@
             "Italian": "turchese",
             "German": "türkis"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Family and Relationships": {
-        "Words": {
+        },
+        "Family": {
           "mother": {
             "Spanish": "madre",
             "Portuguese": "mãe",
@@ -3131,15 +2998,8 @@
             "Italian": "cugino / cugina",
             "German": "cousin / cousine"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Body Parts": {
-        "Words": {
+        },
+        "Body": {
           "head": {
             "Spanish": "cabeza",
             "Portuguese": "cabeça",
@@ -3238,15 +3098,8 @@
             "Italian": "ginocchio",
             "German": "knie"
           }
-        }
-      }
-    }
-  }
-  
-  {
-    "Subjects": {
-      "Animals": {
-        "Words": {
+        },
+        "Animals": {
           "dog": {
             "Spanish": "perro",
             "Portuguese": "cão",
@@ -3426,5 +3279,4 @@
       }
     }
   }
-} 
   
