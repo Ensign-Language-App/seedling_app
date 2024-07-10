@@ -427,6 +427,113 @@
             "German": "markt (m)"
           }
         },
+        "Clothing": {
+          "shirt": {
+            "Spanish": "camisa (f)",
+            "Portuguese": "camisa (f)",
+            "French": "chemise (f)",
+            "Italian": "camicia (f)",
+            "German": "hemd (n)"
+            },
+          "pants": {
+            "Spanish": "pantalones (m)",
+            "Portuguese": "calças (f)",
+            "French": "pantalon (m)",
+            "Italian": "pantaloni (m)",
+            "German": "hose (f)"
+            },
+          "dress": {
+            "Spanish": "vestido (m)",
+            "Portuguese": "vestido (m)",
+            "French": "robe (f)",
+            "Italian": "vestito (m)",
+            "German": "kleid (n)"
+            },
+          "shoes": {
+            "Spanish": "zapatos (m)",
+            "Portuguese": "sapatos (m)",
+            "French": "chaussures (f)",
+            "Italian": "scarpe (f)",
+            "German": "schuhe (f)"
+            },
+          "hat": {
+            "Spanish": "sombrero (m)",
+            "Portuguese": "chapéu (m)",
+            "French": "chapeau (m)",
+            "Italian": "cappello (m)",
+            "German": "hut (m)"
+            },
+          "coat": {
+            "Spanish": "abrigo (m)",
+            "Portuguese": "casaco (m)",
+            "French": "manteau (m)",
+            "Italian": "cappotto (m)",
+            "German": "mantel (m)"
+            },
+          "skirt": {
+            "Spanish": "falda (f)",
+            "Portuguese": "saia (f)",
+            "French": "jupe (f)",
+            "Italian": "gonna (f)",
+            "German": "rock (m)"
+            },
+          "socks": {
+            "Spanish": "calcetines (m)",
+            "Portuguese": "meias (f)",
+            "French": "chaussettes (f)",
+            "Italian": "calzini (m)",
+            "German": "socken (f)"
+            },
+          "gloves": {
+            "Spanish": "guantes (m)",
+            "Portuguese": "luvas (f)",
+            "French": "gants (m)",
+            "Italian": "guanti (m)",
+            "German": "handschuhe (f)"
+            },
+          "scarf": {
+            "Spanish": "bufanda (f)",
+            "Portuguese": "cachecol (m)",
+            "French": "écharpe (f)",
+            "Italian": "sciarpa (f)",
+            "German": "schal (m)"
+            },
+          "sweater": {
+            "Spanish": "suéter (m)",
+            "Portuguese": "suéter (m)",
+            "French": "pull (m)",
+            "Italian": "maglione (m)",
+            "German": "pullover (m)"
+            },
+          "jacket": {
+            "Spanish": "chaqueta (f)",
+            "Portuguese": "jaqueta (f)",
+            "French": "veste (f)",
+            "Italian": "giacca (f)",
+            "German": "jacke (f)"
+            },
+          "shorts": {
+            "Spanish": "pantalones cortos (m)",
+            "Portuguese": "shorts (m)",
+            "French": "short (m)",
+            "Italian": "pantaloncini (m)",
+            "German": "shorts (m)"
+            },
+          "belt": {
+            "Spanish": "cinturón (m)",
+            "Portuguese": "cinto (m)",
+            "French": "ceinture (f)",
+            "Italian": "cintura (f)",
+            "German": "gürtel (m)"
+            },
+          "tie": {
+            "Spanish": "corbata (f)",
+            "Portuguese": "gravata (f)",
+            "French": "cravate (f)",
+            "Italian": "cravatta (f)",
+            "German": "krawatte (f)"
+          }
+        }, 
         "Adjectives": {
           "big": {
             "Spanish": "grande",
@@ -2188,7 +2295,7 @@
             "German": "seit"
           }
         },
-        "Food": {
+        "Food & Drink": {
           "bread": {
             "Spanish": "pan (m)",
             "Portuguese": "pão (m)",
