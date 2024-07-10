@@ -7,6 +7,7 @@ import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/controllers/home_page_controller.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:flutter/services.dart';
+import 'package:seedling_app/screens/reset_pass_page.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -127,6 +128,14 @@ class LogInPageState extends State<LogInPage>
               GestureDetector(
                   onTap: () {
                     //TODO: ADD NAVIGATION TO FORGOT PASSWORD PAGE
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ResetPassword();
+                        },
+                      ),
+                    );
                   },
                   child: const Align(
                     alignment: Alignment.centerRight,
