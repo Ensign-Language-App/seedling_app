@@ -1,0 +1,3430 @@
+{
+    "Subjects": {
+      "Basic Vocabulary": {
+        "People": {
+          "mother": {
+            "Spanish": "madre (f)",
+            "Portuguese": "mãe (f)",
+            "French": "mère (f)",
+            "Italian": "madre (f)",
+            "German": "mutter (f)"
+          },
+          "father": {
+            "Spanish": "padre (m)",
+            "Portuguese": "pai (m)",
+            "French": "père (m)",
+            "Italian": "padre (m)",
+            "German": "vater (m)"
+          },
+          "sister": {
+            "Spanish": "hermana (f)",
+            "Portuguese": "irmã (f)",
+            "French": "sœur (f)",
+            "Italian": "sorella (f)",
+            "German": "schwester (f)"
+          },
+          "brother": {
+            "Spanish": "hermano (m)",
+            "Portuguese": "irmão (m)",
+            "French": "frère (m)",
+            "Italian": "fratello (m)",
+            "German": "bruder (m)"
+          },
+          "son": {
+            "Spanish": "hijo (m)",
+            "Portuguese": "filho (m)",
+            "French": "fils (m)",
+            "Italian": "figlio (m)",
+            "German": "sohn (m)"
+          },
+          "daughter": {
+            "Spanish": "hija (f)",
+            "Portuguese": "filha (f)",
+            "French": "fille (f)",
+            "Italian": "figlia (f)",
+            "German": "tochter (f)"
+          },
+          "friend": {
+            "Spanish": "amigo (m)",
+            "Portuguese": "amigo (m)",
+            "French": "ami (m)",
+            "Italian": "amico (m)",
+            "German": "freund (m)"
+          },
+          "teacher": {
+            "Spanish": "profesor (m)",
+            "Portuguese": "professor (m)",
+            "French": "professeur (m)",
+            "Italian": "professore (m)",
+            "German": "lehrer (m)"
+          },
+          "student": {
+            "Spanish": "estudiante",
+            "Portuguese": "estudante",
+            "French": "étudiant",
+            "Italian": "studente",
+            "German": "student"
+          },
+          "doctor": {
+            "Spanish": "doctor (m)",
+            "Portuguese": "médico (m)",
+            "French": "médecin (m)",
+            "Italian": "dottore (m)",
+            "German": "arzt (m)"
+          },
+          "nurse": {
+            "Spanish": "enfermera (f)",
+            "Portuguese": "enfermeira (f)",
+            "French": "infirmière (f)",
+            "Italian": "infermiera (f)",
+            "German": "krankenschwester (f)"
+          },
+          "Police officer": {
+            "Spanish": "policía",
+            "Portuguese": "policial",
+            "French": "policier (m)",
+            "Italian": "poliziotto (m)",
+            "German": "polizist (m)"
+          },
+          "firefighter": {
+            "Spanish": "bombero (m)",
+            "Portuguese": "bombeiro (m)",
+            "French": "pompier (m)",
+            "Italian": "pompiere (m)",
+            "German": "feuerwehrmann (m)"
+          },
+          "neighbor": {
+            "Spanish": "vecino (m)",
+            "Portuguese": "vizinho (m)",
+            "French": "voisin (m)",
+            "Italian": "vicino (m)",
+            "German": "nachbar (m)"
+          },
+          "child": {
+            "Spanish": "niño (m)",
+            "Portuguese": "criança",
+            "French": "enfant",
+            "Italian": "bambino (m)",
+            "German": "kind"
+          },
+          "adult": {
+            "Spanish": "adulto (m)",
+            "Portuguese": "adulto (m)",
+            "French": "adulte",
+            "Italian": "adulto (m)",
+            "German": "erwachsener (m)"
+          },
+          "baby": {
+            "Spanish": "bebé",
+            "Portuguese": "bebê",
+            "French": "bébé",
+            "Italian": "bambino (m)",
+            "German": "baby"
+          },
+          "grandmother": {
+            "Spanish": "abuela (f)",
+            "Portuguese": "avó (f)",
+            "French": "grand-mère (f)",
+            "Italian": "nonna (f)",
+            "German": "großmutter (f)"
+          },
+          "grandfather": {
+            "Spanish": "abuelo (m)",
+            "Portuguese": "avô (m)",
+            "French": "grand-père (m)",
+            "Italian": "nonno (m)",
+            "German": "großvater (m)"
+          },
+          "cousin": {
+            "Spanish": "primo (m)",
+            "Portuguese": "primo (m)",
+            "French": "cousin (m)",
+            "Italian": "cugino (m)",
+            "German": "cousin (m)"
+          }
+        }
+      }
+    }
+  }
+
+  {
+    "Subjects": {
+      "Basic Vocabulary": {
+        "Objects": {
+          "house": {
+            "Spanish": "casa (f)",
+            "Portuguese": "casa (f)",
+            "French": "maison (f)",
+            "Italian": "casa (f)",
+            "German": "haus (n)"
+          },
+          "car": {
+            "Spanish": "coche (m)",
+            "Portuguese": "carro (m)",
+            "French": "voiture (f)",
+            "Italian": "auto (f)",
+            "German": "auto (n)"
+          },
+          "computer": {
+            "Spanish": "computadora (f)",
+            "Portuguese": "computador (m)",
+            "French": "ordinateur (m)",
+            "Italian": "computer (m)",
+            "German": "computer (m)"
+          },
+          "phone": {
+            "Spanish": "teléfono (m)",
+            "Portuguese": "telefone (m)",
+            "French": "téléphone (m)",
+            "Italian": "telefono (m)",
+            "German": "telefon (n)"
+          },
+          "book": {
+            "Spanish": "libro (m)",
+            "Portuguese": "livro (m)",
+            "French": "livre (m)",
+            "Italian": "libro (m)",
+            "German": "buch (n)"
+          },
+          "chair": {
+            "Spanish": "silla (f)",
+            "Portuguese": "cadeira (f)",
+            "French": "chaise (f)",
+            "Italian": "sedia (f)",
+            "German": "stuhl (m)"
+          },
+          "table": {
+            "Spanish": "mesa (f)",
+            "Portuguese": "mesa (f)",
+            "French": "table (f)",
+            "Italian": "tavolo (m)",
+            "German": "tisch (m)"
+          },
+          "bed": {
+            "Spanish": "cama (f)",
+            "Portuguese": "cama (f)",
+            "French": "lit (m)",
+            "Italian": "letto (m)",
+            "German": "bett (n)"
+          },
+          "pen": {
+            "Spanish": "bolígrafo (m)",
+            "Portuguese": "caneta (f)",
+            "French": "stylo (m)",
+            "Italian": "penna (f)",
+            "German": "stift (m)"
+          },
+          "window": {
+            "Spanish": "ventana (f)",
+            "Portuguese": "janela (f)",
+            "French": "fenêtre (f)",
+            "Italian": "finestra (f)",
+            "German": "fenster (n)"
+          },
+          "door": {
+            "Spanish": "puerta (f)",
+            "Portuguese": "porta (f)",
+            "French": "porte (f)",
+            "Italian": "porta (f)",
+            "German": "tür (f)"
+          },
+          "lamp": {
+            "Spanish": "lámpara (f)",
+            "Portuguese": "lâmpada (f)",
+            "French": "lampe (f)",
+            "Italian": "lampada (f)",
+            "German": "lampe (f)"
+          },
+          "clock": {
+            "Spanish": "reloj (m)",
+            "Portuguese": "relógio (m)",
+            "French": "horloge (f)",
+            "Italian": "orologio (m)",
+            "German": "uhr (f)"
+          },
+          "bag": {
+            "Spanish": "bolsa (f)",
+            "Portuguese": "bolsa (f)",
+            "French": "sac (m)",
+            "Italian": "borsa (f)",
+            "German": "tasche (f)"
+          },
+          "television": {
+            "Spanish": "televisión (f)",
+            "Portuguese": "televisão (f)",
+            "French": "télévision (f)",
+            "Italian": "televisione (f)",
+            "German": "fernsehen (n)"
+          },
+          "refrigerator": {
+            "Spanish": "refrigerador (m)",
+            "Portuguese": "geladeira (f)",
+            "French": "réfrigérateur (m)",
+            "Italian": "frigorifero (m)",
+            "German": "kühlschrank (m)"
+          },
+          "oven": {
+            "Spanish": "horno (m)",
+            "Portuguese": "forno (m)",
+            "French": "four (m)",
+            "Italian": "forno (m)",
+            "German": "ofen (m)"
+          },
+          "microwave": {
+            "Spanish": "microondas (m)",
+            "Portuguese": "microondas (m)",
+            "French": "micro-ondes (m)",
+            "Italian": "microonde (m)",
+            "German": "mikrowelle (f)"
+          },
+          "sofa": {
+            "Spanish": "sofá (m)",
+            "Portuguese": "sofá (m)",
+            "French": "canapé (m)",
+            "Italian": "divano (m)",
+            "German": "sofa (n)"
+          },
+          "cup": {
+            "Spanish": "taza (f)",
+            "Portuguese": "copo (m)",
+            "French": "tasse (f)",
+            "Italian": "tazza (f)",
+            "German": "tasse (f)"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Basic Vocabulary": {
+        "Places": {
+          "school": {
+            "Spanish": "escuela (f)",
+            "Portuguese": "escola (f)",
+            "French": "école (f)",
+            "Italian": "scuola (f)",
+            "German": "schule (f)"
+          },
+          "city": {
+            "Spanish": "ciudad (f)",
+            "Portuguese": "cidade (f)",
+            "French": "ville (f)",
+            "Italian": "città (f)",
+            "German": "stadt (f)"
+          },
+          "country": {
+            "Spanish": "país (m)",
+            "Portuguese": "país (m)",
+            "French": "pays (m)",
+            "Italian": "paese (m)",
+            "German": "land (n)"
+          },
+          "park": {
+            "Spanish": "parque (m)",
+            "Portuguese": "parque (m)",
+            "French": "parc (m)",
+            "Italian": "parco (m)",
+            "German": "park (m)"
+          },
+          "store": {
+            "Spanish": "tienda (f)",
+            "Portuguese": "loja (f)",
+            "French": "magasin (m)",
+            "Italian": "negozio (m)",
+            "German": "geschäft (n)"
+          },
+          "garden": {
+            "Spanish": "jardín (m)",
+            "Portuguese": "jardim (m)",
+            "French": "jardin (m)",
+            "Italian": "giardino (m)",
+            "German": "garten (m)"
+          },
+          "hospital": {
+            "Spanish": "hospital (m)",
+            "Portuguese": "hospital (m)",
+            "French": "hôpital (m)",
+            "Italian": "ospedale (m)",
+            "German": "krankenhaus (n)"
+          },
+          "restaurant": {
+            "Spanish": "restaurante (m)",
+            "Portuguese": "restaurante (m)",
+            "French": "restaurant (m)",
+            "Italian": "ristorante (m)",
+            "German": "restaurant (n)"
+          },
+          "airport": {
+            "Spanish": "aeropuerto (m)",
+            "Portuguese": "aeroporto (m)",
+            "French": "aéroport (m)",
+            "Italian": "aeroporto (m)",
+            "German": "flughafen (m)"
+          },
+          "train station": {
+            "Spanish": "estación de tren (f)",
+            "Portuguese": "estação de trem (f)",
+            "French": "gare (f)",
+            "Italian": "stazione ferroviaria (f)",
+            "German": "bahnhof (m)"
+          },
+          "bus stop": {
+            "Spanish": "parada de autobús (f)",
+            "Portuguese": "parada de ônibus (f)",
+            "French": "arrêt de bus (m)",
+            "Italian": "fermata dell'autobus (f)",
+            "German": "bushaltestelle (f)"
+          },
+          "library": {
+            "Spanish": "biblioteca (f)",
+            "Portuguese": "biblioteca (f)",
+            "French": "bibliothèque (f)",
+            "Italian": "biblioteca (f)",
+            "German": "bibliothek (f)"
+          },
+          "museum": {
+            "Spanish": "museo (m)",
+            "Portuguese": "museu (m)",
+            "French": "musée (m)",
+            "Italian": "museo (m)",
+            "German": "museum (n)"
+          },
+          "beach": {
+            "Spanish": "playa (f)",
+            "Portuguese": "praia (f)",
+            "French": "plage (f)",
+            "Italian": "spiaggia (f)",
+            "German": "strand (m)"
+          },
+          "hotel": {
+            "Spanish": "hotel (m)",
+            "Portuguese": "hotel (m)",
+            "French": "hôtel (m)",
+            "Italian": "hotel (m)",
+            "German": "hotel (n)"
+          },
+          "office": {
+            "Spanish": "oficina (f)",
+            "Portuguese": "escritório (m)",
+            "French": "bureau (m)",
+            "Italian": "ufficio (m)",
+            "German": "büro (n)"
+          },
+          "factory": {
+            "Spanish": "fábrica (f)",
+            "Portuguese": "fábrica (f)",
+            "French": "usine (f)",
+            "Italian": "fabbrica (f)",
+            "German": "fabrik (f)"
+          },
+          "farm": {
+            "Spanish": "granja (f)",
+            "Portuguese": "fazenda (f)",
+            "French": "ferme (f)",
+            "Italian": "fattoria (f)",
+            "German": "bauernhof (m)"
+          },
+          "theater": {
+            "Spanish": "teatro (m)",
+            "Portuguese": "teatro (m)",
+            "French": "théâtre (m)",
+            "Italian": "teatro (m)",
+            "German": "theater (n)"
+          },
+          "market": {
+            "Spanish": "mercado (m)",
+            "Portuguese": "mercado (m)",
+            "French": "marché (m)",
+            "Italian": "mercato (m)",
+            "German": "markt (m)"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Basic Vocabulary": {
+        "Adjectives": {
+          "big": {
+            "Spanish": "grande",
+            "Portuguese": "grande",
+            "French": "grand (m), grande (f)",
+            "Italian": "grande",
+            "German": "groß"
+          },
+          "small": {
+            "Spanish": "pequeño (m), pequeña (f)",
+            "Portuguese": "pequeno (m), pequena (f)",
+            "French": "petit (m), petite (f)",
+            "Italian": "piccolo (m), piccola (f)",
+            "German": "klein"
+          },
+          "happy": {
+            "Spanish": "feliz",
+            "Portuguese": "feliz",
+            "French": "heureux (m), heureuse (f)",
+            "Italian": "felice",
+            "German": "glücklich"
+          },
+          "sad": {
+            "Spanish": "triste",
+            "Portuguese": "triste",
+            "French": "triste",
+            "Italian": "triste",
+            "German": "traurig"
+          },
+          "new": {
+            "Spanish": "nuevo (m), nueva (f)",
+            "Portuguese": "novo (m), nova (f)",
+            "French": "nouveau (m), nouvelle (f)",
+            "Italian": "nuovo (m), nuova (f)",
+            "German": "neu"
+          },
+          "old": {
+            "Spanish": "viejo (m), vieja (f)",
+            "Portuguese": "velho (m), velha (f)",
+            "French": "vieux (m), vieille (f)",
+            "Italian": "vecchio (m), vecchia (f)",
+            "German": "alt"
+          },
+          "good": {
+            "Spanish": "bueno (m), buena (f)",
+            "Portuguese": "bom (m), boa (f)",
+            "French": "bon (m), bonne (f)",
+            "Italian": "buono (m), buona (f)",
+            "German": "gut"
+          },
+          "bad": {
+            "Spanish": "malo (m), mala (f)",
+            "Portuguese": "mau (m), má (f)",
+            "French": "mauvais (m), mauvaise (f)",
+            "Italian": "cattivo (m), cattiva (f)",
+            "German": "schlecht"
+          },
+          "beautiful": {
+            "Spanish": "hermoso (m), hermosa (f)",
+            "Portuguese": "bonito (m), bonita (f)",
+            "French": "beau (m), belle (f)",
+            "Italian": "bello (m), bella (f)",
+            "German": "schön"
+          },
+          "ugly": {
+            "Spanish": "feo (m), fea (f)",
+            "Portuguese": "feio (m), feia (f)",
+            "French": "laid (m), laide (f)",
+            "Italian": "brutto (m), brutta (f)",
+            "German": "hässlich"
+          },
+          "easy": {
+            "Spanish": "fácil",
+            "Portuguese": "fácil",
+            "French": "facile",
+            "Italian": "facile",
+            "German": "einfach"
+          },
+          "difficult": {
+            "Spanish": "difícil",
+            "Portuguese": "difícil",
+            "French": "difficile",
+            "Italian": "difficile",
+            "German": "schwierig"
+          },
+          "fast": {
+            "Spanish": "rápido (m), rápida (f)",
+            "Portuguese": "rápido (m), rápida (f)",
+            "French": "rapide",
+            "Italian": "veloce",
+            "German": "schnell"
+          },
+          "slow": {
+            "Spanish": "lento (m), lenta (f)",
+            "Portuguese": "lento (m), lenta (f)",
+            "French": "lent (m), lente (f)",
+            "Italian": "lento (m), lenta (f)",
+            "German": "langsam"
+          },
+          "hot": {
+            "Spanish": "caliente",
+            "Portuguese": "quente",
+            "French": "chaud (m), chaude (f)",
+            "Italian": "caldo (m), calda (f)",
+            "German": "heiß"
+          },
+          "cold": {
+            "Spanish": "frío (m), fría (f)",
+            "Portuguese": "frio (m), fria (f)",
+            "French": "froid (m), froide (f)",
+            "Italian": "freddo (m), fredda (f)",
+            "German": "kalt"
+          },
+          "long": {
+            "Spanish": "largo (m), larga (f)",
+            "Portuguese": "longo (m), longa (f)",
+            "French": "long (m), longue (f)",
+            "Italian": "lungo (m), lunga (f)",
+            "German": "lang"
+          },
+          "short": {
+            "Spanish": "corto (m), corta (f)",
+            "Portuguese": "curto (m), curta (f)",
+            "French": "court (m), courte (f)",
+            "Italian": "corto (m), corta (f)",
+            "German": "kurz"
+          },
+          "clean": {
+            "Spanish": "limpio (m), limpia (f)",
+            "Portuguese": "limpo (m), limpa (f)",
+            "French": "propre",
+            "Italian": "pulito (m), pulita (f)",
+            "German": "sauber"
+          },
+          "dirty": {
+            "Spanish": "sucio (m), sucia (f)",
+            "Portuguese": "sujo (m), suja (f)",
+            "French": "sale",
+            "Italian": "sporco (m), sporca (f)",
+            "German": "schmutzig"
+          },
+          "strong": {
+            "Spanish": "fuerte",
+            "Portuguese": "forte",
+            "French": "fort (m), forte (f)",
+            "Italian": "forte",
+            "German": "stark"
+          },
+          "weak": {
+            "Spanish": "débil",
+            "Portuguese": "fraco (m), fraca (f)",
+            "French": "faible",
+            "Italian": "debole",
+            "German": "schwach"
+          },
+          "rich": {
+            "Spanish": "rico (m), rica (f)",
+            "Portuguese": "rico (m), rica (f)",
+            "French": "riche",
+            "Italian": "ricco (m), ricca (f)",
+            "German": "reich"
+          },
+          "poor": {
+            "Spanish": "pobre",
+            "Portuguese": "pobre",
+            "French": "pauvre",
+            "Italian": "povero (m), povera (f)",
+            "German": "arm"
+          },
+          "safe": {
+            "Spanish": "seguro (m), segura (f)",
+            "Portuguese": "seguro (m), segura (f)",
+            "French": "sûr (m), sûre (f)",
+            "Italian": "sicuro (m), sicura (f)",
+            "German": "sicher"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Basic Vocabulary": {
+        "Verbs": {
+          "to be": {
+            "Spanish": "ser/estar",
+            "Portuguese": "ser/estar",
+            "French": "être",
+            "Italian": "essere",
+            "German": "sein"
+          },
+          "to have": {
+            "Spanish": "tener",
+            "Portuguese": "ter",
+            "French": "avoir",
+            "Italian": "avere",
+            "German": "haben"
+          },
+          "to go": {
+            "Spanish": "ir",
+            "Portuguese": "ir",
+            "French": "aller",
+            "Italian": "andare",
+            "German": "gehen"
+          },
+          "to come": {
+            "Spanish": "venir",
+            "Portuguese": "vir",
+            "French": "venir",
+            "Italian": "venire",
+            "German": "kommen"
+          },
+          "to see": {
+            "Spanish": "ver",
+            "Portuguese": "ver",
+            "French": "voir",
+            "Italian": "vedere",
+            "German": "sehen"
+          },
+          "to eat": {
+            "Spanish": "comer",
+            "Portuguese": "comer",
+            "French": "manger",
+            "Italian": "mangiare",
+            "German": "essen"
+          },
+          "to drink": {
+            "Spanish": "beber",
+            "Portuguese": "beber",
+            "French": "boire",
+            "Italian": "bere",
+            "German": "trinken"
+          },
+          "to sleep": {
+            "Spanish": "dormir",
+            "Portuguese": "dormir",
+            "French": "dormir",
+            "Italian": "dormire",
+            "German": "schlafen"
+          },
+          "to read": {
+            "Spanish": "leer",
+            "Portuguese": "ler",
+            "French": "lire",
+            "Italian": "leggere",
+            "German": "lesen"
+          },
+          "to write": {
+            "Spanish": "escribir",
+            "Portuguese": "escrever",
+            "French": "écrire",
+            "Italian": "scrivere",
+            "German": "schreiben"
+          },
+          "to speak": {
+            "Spanish": "hablar",
+            "Portuguese": "falar",
+            "French": "parler",
+            "Italian": "parlare",
+            "German": "sprechen"
+          },
+          "to hear": {
+            "Spanish": "oír",
+            "Portuguese": "ouvir",
+            "French": "entendre",
+            "Italian": "sentire",
+            "German": "hören"
+          },
+          "to listen": {
+            "Spanish": "escuchar",
+            "Portuguese": "escutar",
+            "French": "écouter",
+            "Italian": "ascoltare",
+            "German": "zuhören"
+          },
+          "to walk": {
+            "Spanish": "caminar",
+            "Portuguese": "caminhar",
+            "French": "marcher",
+            "Italian": "camminare",
+            "German": "gehen"
+          },
+          "to run": {
+            "Spanish": "correr",
+            "Portuguese": "correr",
+            "French": "courir",
+            "Italian": "correre",
+            "German": "rennen"
+          },
+          "to jump": {
+            "Spanish": "saltar",
+            "Portuguese": "saltar",
+            "French": "sauter",
+            "Italian": "saltare",
+            "German": "springen"
+          },
+          "to sit": {
+            "Spanish": "sentarse",
+            "Portuguese": "sentar-se",
+            "French": "s'asseoir",
+            "Italian": "sedersi",
+            "German": "sitzen"
+          },
+          "to stand": {
+            "Spanish": "pararse",
+            "Portuguese": "ficar de pé",
+            "French": "se tenir debout",
+            "Italian": "stare in piedi",
+            "German": "stehen"
+          },
+          "to open": {
+            "Spanish": "abrir",
+            "Portuguese": "abrir",
+            "French": "ouvrir",
+            "Italian": "aprire",
+            "German": "öffnen"
+          },
+          "to close": {
+            "Spanish": "cerrar",
+            "Portuguese": "fechar",
+            "French": "fermer",
+            "Italian": "chiudere",
+            "German": "schließen"
+          },
+          "to work": {
+            "Spanish": "trabajar",
+            "Portuguese": "trabalhar",
+            "French": "travailler",
+            "Italian": "lavorare",
+            "German": "arbeiten"
+          },
+          "to play": {
+            "Spanish": "jugar",
+            "Portuguese": "jogar/brincar",
+            "French": "jouer",
+            "Italian": "giocare",
+            "German": "spielen"
+          },
+          "to study": {
+            "Spanish": "estudiar",
+            "Portuguese": "estudar",
+            "French": "étudier",
+            "Italian": "studiare",
+            "German": "studieren"
+          },
+          "to learn": {
+            "Spanish": "aprender",
+            "Portuguese": "aprender",
+            "French": "apprendre",
+            "Italian": "imparare",
+            "German": "lernen"
+          },
+          "to teach": {
+            "Spanish": "enseñar",
+            "Portuguese": "ensinar",
+            "French": "enseigner",
+            "Italian": "insegnare",
+            "German": "lehren"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Common Phrases": {
+        "Greetings and Polite Expressions": {
+          "Hello": {
+            "Spanish": "Hola",
+            "Portuguese": "Olá",
+            "French": "Bonjour",
+            "Italian": "Ciao",
+            "German": "Hallo"
+          },
+          "Good morning": {
+            "Spanish": "Buenos días",
+            "Portuguese": "Bom dia",
+            "French": "Bonjour",
+            "Italian": "Buongiorno",
+            "German": "Guten Morgen"
+          },
+          "Good afternoon": {
+            "Spanish": "Buenas tardes",
+            "Portuguese": "Boa tarde",
+            "French": "Bon après-midi",
+            "Italian": "Buon pomeriggio",
+            "German": "Guten Tag"
+          },
+          "Good evening": {
+            "Spanish": "Buenas noches",
+            "Portuguese": "Boa noite",
+            "French": "Bonsoir",
+            "Italian": "Buonasera",
+            "German": "Guten Abend"
+          },
+          "Good night": {
+            "Spanish": "Buenas noches",
+            "Portuguese": "Boa noite",
+            "French": "Bonne nuit",
+            "Italian": "Buonanotte",
+            "German": "Gute Nacht"
+          },
+          "Goodbye": {
+            "Spanish": "Adiós",
+            "Portuguese": "Adeus",
+            "French": "Au revoir",
+            "Italian": "Arrivederci",
+            "German": "Auf Wiedersehen"
+          },
+          "Please": {
+            "Spanish": "Por favor",
+            "Portuguese": "Por favor",
+            "French": "S'il vous plaît",
+            "Italian": "Per favore",
+            "German": "Bitte"
+          },
+          "Thank you": {
+            "Spanish": "Gracias",
+            "Portuguese": "Obrigado(a)",
+            "French": "Merci",
+            "Italian": "Grazie",
+            "German": "Danke"
+          },
+          "You’re welcome": {
+            "Spanish": "De nada",
+            "Portuguese": "De nada",
+            "French": "De rien",
+            "Italian": "Prego",
+            "German": "Gern geschehen"
+          },
+          "Excuse me": {
+            "Spanish": "Perdón",
+            "Portuguese": "Com licença",
+            "French": "Excusez-moi",
+            "Italian": "Mi scusi",
+            "German": "Entschuldigung"
+          },
+          "I’m sorry": {
+            "Spanish": "Lo siento",
+            "Portuguese": "Desculpe",
+            "French": "Je suis désolé(e)",
+            "Italian": "Mi dispiace",
+            "German": "Es tut mir leid"
+          },
+          "How are you?": {
+            "Spanish": "¿Cómo estás?",
+            "Portuguese": "Como você está?",
+            "French": "Comment ça va ?",
+            "Italian": "Come stai?",
+            "German": "Wie geht's?"
+          },
+          "Fine, thank you": {
+            "Spanish": "Bien, gracias",
+            "Portuguese": "Bem, obrigado(a)",
+            "French": "Bien, merci",
+            "Italian": "Bene, grazie",
+            "German": "Gut, danke"
+          },
+          "Nice to meet you": {
+            "Spanish": "Mucho gusto",
+            "Portuguese": "Prazer em conhecê-lo",
+            "French": "Enchanté(e)",
+            "Italian": "Piacere di conoscerti",
+            "German": "Freut mich"
+          },
+          "What’s your name?": {
+            "Spanish": "¿Cuál es tu nombre?",
+            "Portuguese": "Qual é o seu nome?",
+            "French": "Comment tu t'appelles?",
+            "Italian": "Come ti chiami?",
+            "German": "Wie heißt du?"
+          },
+          "My name is…": {
+            "Spanish": "Mi nombre es…",
+            "Portuguese": "Meu nome é…",
+            "French": "Je m'appelle…",
+            "Italian": "Mi chiamo…",
+            "German": "Mein Name ist…"
+          },
+          "How old are you?": {
+            "Spanish": "¿Cuántos años tienes?",
+            "Portuguese": "Quantos anos você tem?",
+            "French": "Quel âge as-tu?",
+            "Italian": "Quanti anni hai?",
+            "German": "Wie alt bist du?"
+          },
+          "Where are you from?": {
+            "Spanish": "¿De dónde eres?",
+            "Portuguese": "De onde você é?",
+            "French": "D'où viens-tu?",
+            "Italian": "Di dove sei?",
+            "German": "Woher kommst du?"
+          },
+          "I’m from…": {
+            "Spanish": "Soy de…",
+            "Portuguese": "Eu sou de…",
+            "French": "Je viens de…",
+            "Italian": "Sono di…",
+            "German": "Ich komme aus…"
+          },
+          "Do you speak English?": {
+            "Spanish": "¿Hablas inglés?",
+            "Portuguese": "Você fala inglês?",
+            "French": "Parles-tu anglais?",
+            "Italian": "Parli inglese?",
+            "German": "Sprichst du Englisch?"
+          },
+          "I don’t understand": {
+            "Spanish": "No entiendo",
+            "Portuguese": "Eu não entendo",
+            "French": "Je ne comprends pas",
+            "Italian": "Non capisco",
+            "German": "Ich verstehe nicht"
+          },
+          "Can you help me?": {
+            "Spanish": "¿Puedes ayudarme?",
+            "Portuguese": "Você pode me ajudar?",
+            "French": "Peux-tu m'aider?",
+            "Italian": "Puoi aiutarmi?",
+            "German": "Kannst du mir helfen?"
+          },
+          "Yes": {
+            "Spanish": "Sí",
+            "Portuguese": "Sim",
+            "French": "Oui",
+            "Italian": "Sì",
+            "German": "Ja"
+          },
+          "No": {
+            "Spanish": "No",
+            "Portuguese": "Não",
+            "French": "Non",
+            "Italian": "No",
+            "German": "Nein"
+          },
+          "Maybe": {
+            "Spanish": "Tal vez",
+            "Portuguese": "Talvez",
+            "French": "Peut-être",
+            "Italian": "Forse",
+            "German": "Vielleicht"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Common Phrases": {
+        "Questions": {
+          "What is your name?": {
+            "Spanish": "¿Cuál es tu nombre?",
+            "Portuguese": "Qual é o seu nome?",
+            "French": "Comment tu t'appelles?",
+            "Italian": "Come ti chiami?",
+            "German": "Wie heißt du?"
+          },
+          "Where are you from?": {
+            "Spanish": "¿De dónde eres?",
+            "Portuguese": "De onde você é?",
+            "French": "D'où viens-tu?",
+            "Italian": "Di dove sei?",
+            "German": "Woher kommst du?"
+          },
+          "How old are you?": {
+            "Spanish": "¿Cuántos años tienes?",
+            "Portuguese": "Quantos anos você tem?",
+            "French": "Quel âge as-tu?",
+            "Italian": "Quanti anni hai?",
+            "German": "Wie alt bist du?"
+          },
+          "What do you do?": {
+            "Spanish": "¿A qué te dedicas?",
+            "Portuguese": "O que você faz?",
+            "French": "Que fais-tu ?",
+            "Italian": "Che cosa fai?",
+            "German": "Was machst du beruflich?"
+          },
+          "Do you speak English?": {
+            "Spanish": "¿Hablas inglés?",
+            "Portuguese": "Você fala inglês?",
+            "French": "Parles-tu anglais?",
+            "Italian": "Parli inglese?",
+            "German": "Sprichst du Englisch?"
+          },
+          "Can you help me?": {
+            "Spanish": "¿Puedes ayudarme?",
+            "Portuguese": "Você pode me ajudar?",
+            "French": "Peux-tu m'aider?",
+            "Italian": "Puoi aiutarmi?",
+            "German": "Kannst du mir helfen?"
+          },
+          "How much is this?": {
+            "Spanish": "¿Cuánto cuesta esto?",
+            "Portuguese": "Quanto custa isso?",
+            "French": "Combien ça coûte ?",
+            "Italian": "Quanto costa questo?",
+            "German": "Wie viel kostet das?"
+          },
+          "Where is the bathroom?": {
+            "Spanish": "¿Dónde está el baño?",
+            "Portuguese": "Onde fica o banheiro?",
+            "French": "Où sont les toilettes?",
+            "Italian": "Dove si trova il bagno?",
+            "German": "Wo ist die Toilette?"
+          },
+          "What time is it?": {
+            "Spanish": "¿Qué hora es?",
+            "Portuguese": "Que horas são?",
+            "French": "Quelle heure est-il ?",
+            "Italian": "Che ore sono?",
+            "German": "Wie spät ist es?"
+          },
+          "How are you?": {
+            "Spanish": "¿Cómo estás?",
+            "Portuguese": "Como você está?",
+            "French": "Comment ça va ?",
+            "Italian": "Come stai?",
+            "German": "Wie geht's?"
+          },
+          "What’s your phone number?": {
+            "Spanish": "¿Cuál es tu número de teléfono?",
+            "Portuguese": "Qual é o seu número de telefone?",
+            "French": "Quel est ton numéro de téléphone?",
+            "Italian": "Qual è il tuo numero di telefono?",
+            "German": "Wie ist deine Telefonnummer?"
+          },
+          "Do you have siblings?": {
+            "Spanish": "¿Tienes hermanos?",
+            "Portuguese": "Você tem irmãos?",
+            "French": "As-tu des frères et sœurs?",
+            "Italian": "Hai fratelli o sorelle?",
+            "German": "Hast du Geschwister?"
+          },
+          "Where do you live?": {
+            "Spanish": "¿Dónde vives?",
+            "Portuguese": "Onde você mora?",
+            "French": "Où habites-tu ?",
+            "Italian": "Dove vivi?",
+            "German": "Wo wohnst du?"
+          },
+          "What’s your favorite color?": {
+            "Spanish": "¿Cuál es tu color favorito?",
+            "Portuguese": "Qual é a sua cor favorita?",
+            "French": "Quelle est ta couleur préférée ?",
+            "Italian": "Qual è il tuo colore preferito?",
+            "German": "Was ist deine Lieblingsfarbe?"
+          },
+          "Can I have the bill, please?": {
+            "Spanish": "¿Me trae la cuenta, por favor?",
+            "Portuguese": "Me traz a conta, por favor?",
+            "French": "L'addition, s'il vous plaît ?",
+            "Italian": "Il conto, per favore?",
+            "German": "Die Rechnung, bitte?"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Daily Expressions": {
+        "How are you?": {
+          "Spanish": "¿Cómo estás?",
+          "Portuguese": "Como você está?",
+          "French": "Comment ça va ?",
+          "Italian": "Come stai?",
+          "German": "Wie geht's?"
+        },
+        "I’m fine, thank you": {
+          "Spanish": "Bien, gracias",
+          "Portuguese": "Bem, obrigado(a)",
+          "French": "Bien, merci",
+          "Italian": "Bene, grazie",
+          "German": "Gut, danke"
+        },
+        "What’s up?": {
+          "Spanish": "¿Qué pasa?",
+          "Portuguese": "E aí?",
+          "French": "Quoi de neuf ?",
+          "Italian": "Che succede?",
+          "German": "Was ist los?"
+        },
+        "Nothing much": {
+          "Spanish": "Nada mucho",
+          "Portuguese": "Nada demais",
+          "French": "Pas grand-chose",
+          "Italian": "Niente di che",
+          "German": "Nicht viel"
+        },
+        "See you later": {
+          "Spanish": "Hasta luego",
+          "Portuguese": "Até logo",
+          "French": "À plus tard",
+          "Italian": "A dopo",
+          "German": "Bis später"
+        },
+        "Take care": {
+          "Spanish": "Cuídate",
+          "Portuguese": "Se cuida",
+          "French": "Prends soin de toi",
+          "Italian": "Stammi bene",
+          "German": "Pass auf dich auf"
+        },
+        "What time is it?": {
+          "Spanish": "¿Qué hora es?",
+          "Portuguese": "Que horas são?",
+          "French": "Quelle heure est-il ?",
+          "Italian": "Che ore sono?",
+          "German": "Wie spät ist es?"
+        },
+        "Where is the bathroom?": {
+          "Spanish": "¿Dónde está el baño?",
+          "Portuguese": "Onde fica o banheiro?",
+          "French": "Où sont les toilettes?",
+          "Italian": "Dove si trova il bagno?",
+          "German": "Wo ist die Toilette?"
+        },
+        "I’m hungry": {
+          "Spanish": "Tengo hambre",
+          "Portuguese": "Estou com fome",
+          "French": "J'ai faim",
+          "Italian": "Ho fame",
+          "German": "Ich habe Hunger"
+        },
+        "I’m thirsty": {
+          "Spanish": "Tengo sed",
+          "Portuguese": "Estou com sede",
+          "French": "J'ai soif",
+          "Italian": "Ho sete",
+          "German": "Ich habe Durst"
+        },
+        "Good luck": {
+          "Spanish": "Buena suerte",
+          "Portuguese": "Boa sorte",
+          "French": "Bonne chance",
+          "Italian": "Buona fortuna",
+          "German": "Viel Glück"
+        },
+        "Congratulations": {
+          "Spanish": "Felicidades",
+          "Portuguese": "Parabéns",
+          "French": "Félicitations",
+          "Italian": "Congratulazioni",
+          "German": "Herzlichen Glückwunsch"
+        },
+        "Happy birthday": {
+          "Spanish": "Feliz cumpleaños",
+          "Portuguese": "Feliz aniversário",
+          "French": "Joyeux anniversaire",
+          "Italian": "Buon compleanno",
+          "German": "Alles Gute zum Geburtstag"
+        },
+        "Merry Christmas": {
+          "Spanish": "Feliz Navidad",
+          "Portuguese": "Feliz Natal",
+          "French": "Joyeux Noël",
+          "Italian": "Buon Natale",
+          "German": "Frohe Weihnachten"
+        },
+        "Happy New Year": {
+          "Spanish": "Feliz Año Nuevo",
+          "Portuguese": "Feliz Ano Novo",
+          "French": "Bonne année",
+          "Italian": "Felice Anno Nuovo",
+          "German": "Frohes Neues Jahr"
+        },
+        "Get well soon": {
+          "Spanish": "Recupérate pronto",
+          "Portuguese": "Melhoras",
+          "French": "Bon rétablissement",
+          "Italian": "Guarisci presto",
+          "German": "Gute Besserung"
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Numbers and Dates": {
+        "Numbers": {
+          "one": {
+            "Spanish": "uno",
+            "Portuguese": "um",
+            "French": "un",
+            "Italian": "uno",
+            "German": "eins"
+          },
+          "two": {
+            "Spanish": "dos",
+            "Portuguese": "dois",
+            "French": "deux",
+            "Italian": "due",
+            "German": "zwei"
+          },
+          "three": {
+            "Spanish": "tres",
+            "Portuguese": "três",
+            "French": "trois",
+            "Italian": "tre",
+            "German": "drei"
+          },
+          "four": {
+            "Spanish": "cuatro",
+            "Portuguese": "quatro",
+            "French": "quatre",
+            "Italian": "quattro",
+            "German": "vier"
+          },
+          "five": {
+            "Spanish": "cinco",
+            "Portuguese": "cinco",
+            "French": "cinq",
+            "Italian": "cinque",
+            "German": "fünf"
+          },
+          "six": {
+            "Spanish": "seis",
+            "Portuguese": "seis",
+            "French": "six",
+            "Italian": "sei",
+            "German": "sechs"
+          },
+          "seven": {
+            "Spanish": "siete",
+            "Portuguese": "sete",
+            "French": "sept",
+            "Italian": "sette",
+            "German": "sieben"
+          },
+          "eight": {
+            "Spanish": "ocho",
+            "Portuguese": "oito",
+            "French": "huit",
+            "Italian": "otto",
+            "German": "acht"
+          },
+          "nine": {
+            "Spanish": "nueve",
+            "Portuguese": "nove",
+            "French": "neuf",
+            "Italian": "nove",
+            "German": "neun"
+          },
+          "ten": {
+            "Spanish": "diez",
+            "Portuguese": "dez",
+            "French": "dix",
+            "Italian": "dieci",
+            "German": "zehn"
+          },
+          "eleven": {
+            "Spanish": "once",
+            "Portuguese": "onze",
+            "French": "onze",
+            "Italian": "undici",
+            "German": "elf"
+          },
+          "twelve": {
+            "Spanish": "doce",
+            "Portuguese": "doze",
+            "French": "douze",
+            "Italian": "dodici",
+            "German": "zwölf"
+          },
+          "thirteen": {
+            "Spanish": "trece",
+            "Portuguese": "treze",
+            "French": "treize",
+            "Italian": "tredici",
+            "German": "dreizehn"
+          },
+          "fourteen": {
+            "Spanish": "catorce",
+            "Portuguese": "catorze",
+            "French": "quatorze",
+            "Italian": "quattordici",
+            "German": "vierzehn"
+          },
+          "fifteen": {
+            "Spanish": "quince",
+            "Portuguese": "quinze",
+            "French": "quinze",
+            "Italian": "quindici",
+            "German": "fünfzehn"
+          },
+          "sixteen": {
+            "Spanish": "dieciséis",
+            "Portuguese": "dezesseis",
+            "French": "seize",
+            "Italian": "sedici",
+            "German": "sechzehn"
+          },
+          "seventeen": {
+            "Spanish": "diecisiete",
+            "Portuguese": "dezessete",
+            "French": "dix-sept",
+            "Italian": "diciassette",
+            "German": "siebzehn"
+          },
+          "eighteen": {
+            "Spanish": "dieciocho",
+            "Portuguese": "dezoito",
+            "French": "dix-huit",
+            "Italian": "diciotto",
+            "German": "achtzehn"
+          },
+          "nineteen": {
+            "Spanish": "diecinueve",
+            "Portuguese": "dezenove",
+            "French": "dix-neuf",
+            "Italian": "diciannove",
+            "German": "neunzehn"
+          },
+          "twenty": {
+            "Spanish": "veinte",
+            "Portuguese": "vinte",
+            "French": "vingt",
+            "Italian": "venti",
+            "German": "zwanzig"
+          },
+          "thirty": {
+            "Spanish": "treinta",
+            "Portuguese": "trinta",
+            "French": "trente",
+            "Italian": "trenta",
+            "German": "dreißig"
+          },
+          "forty": {
+            "Spanish": "cuarenta",
+            "Portuguese": "quarenta",
+            "French": "quarante",
+            "Italian": "quaranta",
+            "German": "vierzig"
+          },
+          "fifty": {
+            "Spanish": "cincuenta",
+            "Portuguese": "cinquenta",
+            "French": "cinquante",
+            "Italian": "cinquanta",
+            "German": "fünfzig"
+          },
+          "sixty": {
+            "Spanish": "sesenta",
+            "Portuguese": "sessenta",
+            "French": "soixante",
+            "Italian": "sessanta",
+            "German": "sechzig"
+          },
+          "seventy": {
+            "Spanish": "setenta",
+            "Portuguese": "setenta",
+            "French": "soixante-dix",
+            "Italian": "settanta",
+            "German": "siebzig"
+          },
+          "eighty": {
+            "Spanish": "ochenta",
+            "Portuguese": "oitenta",
+            "French": "quatre-vingts",
+            "Italian": "ottanta",
+            "German": "achtzig"
+          },
+          "ninety": {
+            "Spanish": "noventa",
+            "Portuguese": "noventa",
+            "French": "quatre-vingt-dix",
+            "Italian": "novanta",
+            "German": "neunzig"
+          },
+          "hundred": {
+            "Spanish": "cien",
+            "Portuguese": "cem",
+            "French": "cent",
+            "Italian": "cento",
+            "German": "hundert"
+          },
+          "thousand": {
+            "Spanish": "mil",
+            "Portuguese": "mil",
+            "French": "mille",
+            "Italian": "mille",
+            "German": "tausend"
+          },
+          "million": {
+            "Spanish": "millón",
+            "Portuguese": "milhão",
+            "French": "million",
+            "Italian": "milione",
+            "German": "million"
+          }
+        },
+        "Days of the Week": {
+          "Monday": {
+            "Spanish": "lunes",
+            "Portuguese": "segunda-feira",
+            "French": "lundi",
+            "Italian": "lunedì",
+            "German": "montag"
+          },
+          "Tuesday": {
+            "Spanish": "martes",
+            "Portuguese": "terça-feira",
+            "French": "mardi",
+            "Italian": "martedì",
+            "German": "dienstag"
+          },
+          "Wednesday": {
+            "Spanish": "miércoles",
+            "Portuguese": "quarta-feira",
+            "French": "mercredi",
+            "Italian": "mercoledì",
+            "German": "mittwoch"
+          },
+          "Thursday": {
+            "Spanish": "jueves",
+            "Portuguese": "quinta-feira",
+            "French": "jeudi",
+            "Italian": "giovedì",
+            "German": "donnerstag"
+          },
+          "Friday": {
+            "Spanish": "viernes",
+            "Portuguese": "sexta-feira",
+            "French": "vendredi",
+            "Italian": "venerdì",
+            "German": "freitag"
+          },
+          "Saturday": {
+            "Spanish": "sábado",
+            "Portuguese": "sábado",
+            "French": "samedi",
+            "Italian": "sabato",
+            "German": "samstag"
+          },
+          "Sunday": {
+            "Spanish": "domingo",
+            "Portuguese": "domingo",
+            "French": "dimanche",
+            "Italian": "domenica",
+            "German": "sonntag"
+          }
+        },
+        "Months": {
+          "January": {
+            "Spanish": "enero",
+            "Portuguese": "janeiro",
+            "French": "janvier",
+            "Italian": "gennaio",
+            "German": "januar"
+          },
+          "February": {
+            "Spanish": "febrero",
+            "Portuguese": "fevereiro",
+            "French": "février",
+            "Italian": "febbraio",
+            "German": "februar"
+          },
+          "March": {
+            "Spanish": "marzo",
+            "Portuguese": "março",
+            "French": "mars",
+            "Italian": "marzo",
+            "German": "märz"
+          },
+          "April": {
+            "Spanish": "abril",
+            "Portuguese": "abril",
+            "French": "avril",
+            "Italian": "aprile",
+            "German": "april"
+          },
+          "May": {
+            "Spanish": "mayo",
+            "Portuguese": "maio",
+            "French": "mai",
+            "Italian": "maggio",
+            "German": "mai"
+          },
+          "June": {
+            "Spanish": "junio",
+            "Portuguese": "junho",
+            "French": "juin",
+            "Italian": "giugno",
+            "German": "juni"
+          },
+          "July": {
+            "Spanish": "julio",
+            "Portuguese": "julho",
+            "French": "juillet",
+            "Italian": "luglio",
+            "German": "juli"
+          },
+          "August": {
+            "Spanish": "agosto",
+            "Portuguese": "agosto",
+            "French": "août",
+            "Italian": "agosto",
+            "German": "august"
+          },
+          "September": {
+            "Spanish": "septiembre",
+            "Portuguese": "setembro",
+            "French": "septembre",
+            "Italian": "settembre",
+            "German": "september"
+          },
+          "October": {
+            "Spanish": "octubre",
+            "Portuguese": "outubro",
+            "French": "octobre",
+            "Italian": "ottobre",
+            "German": "oktober"
+          },
+          "November": {
+            "Spanish": "noviembre",
+            "Portuguese": "novembro",
+            "French": "novembre",
+            "Italian": "novembre",
+            "German": "november"
+          },
+          "December": {
+            "Spanish": "diciembre",
+            "Portuguese": "dezembro",
+            "French": "décembre",
+            "Italian": "dicembre",
+            "German": "dezember"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Time Expressions": {
+        "Words": {
+          "today": {
+            "Spanish": "hoy",
+            "Portuguese": "hoje",
+            "French": "aujourd'hui",
+            "Italian": "oggi",
+            "German": "heute"
+          },
+          "tomorrow": {
+            "Spanish": "mañana",
+            "Portuguese": "amanhã",
+            "French": "demain",
+            "Italian": "domani",
+            "German": "morgen"
+          },
+          "yesterday": {
+            "Spanish": "ayer",
+            "Portuguese": "ontem",
+            "French": "hier",
+            "Italian": "ieri",
+            "German": "gestern"
+          },
+          "morning": {
+            "Spanish": "mañana",
+            "Portuguese": "manhã",
+            "French": "matin",
+            "Italian": "mattina",
+            "German": "morgen"
+          },
+          "afternoon": {
+            "Spanish": "tarde",
+            "Portuguese": "tarde",
+            "French": "après-midi",
+            "Italian": "pomeriggio",
+            "German": "nachmittag"
+          },
+          "evening": {
+            "Spanish": "tarde",
+            "Portuguese": "noite",
+            "French": "soir",
+            "Italian": "sera",
+            "German": "abend"
+          },
+          "night": {
+            "Spanish": "noche",
+            "Portuguese": "noite",
+            "French": "nuit",
+            "Italian": "notte",
+            "German": "nacht"
+          },
+          "now": {
+            "Spanish": "ahora",
+            "Portuguese": "agora",
+            "French": "maintenant",
+            "Italian": "adesso",
+            "German": "jetzt"
+          },
+          "later": {
+            "Spanish": "más tarde",
+            "Portuguese": "mais tarde",
+            "French": "plus tard",
+            "Italian": "più tardi",
+            "German": "später"
+          },
+          "soon": {
+            "Spanish": "pronto",
+            "Portuguese": "em breve",
+            "French": "bientôt",
+            "Italian": "presto",
+            "German": "bald"
+          },
+          "before": {
+            "Spanish": "antes",
+            "Portuguese": "antes",
+            "French": "avant",
+            "Italian": "prima",
+            "German": "vor"
+          },
+          "after": {
+            "Spanish": "después",
+            "Portuguese": "depois",
+            "French": "après",
+            "Italian": "dopo",
+            "German": "nach"
+          },
+          "always": {
+            "Spanish": "siempre",
+            "Portuguese": "sempre",
+            "French": "toujours",
+            "Italian": "sempre",
+            "German": "immer"
+          },
+          "never": {
+            "Spanish": "nunca",
+            "Portuguese": "nunca",
+            "French": "jamais",
+            "Italian": "mai",
+            "German": "nie"
+          },
+          "sometimes": {
+            "Spanish": "a veces",
+            "Portuguese": "às vezes",
+            "French": "parfois",
+            "Italian": "a volte",
+            "German": "manchmal"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Regular Verbs": {
+        "Words": {
+          "to work": {
+            "Spanish": "yo trabajo, tú trabajas, él/ella trabaja, nosotros/as trabajamos, vosotros/as trabajáis, ellos/as trabajan",
+            "Portuguese": "eu trabalho, tu trabalhas, ele/ela trabalha, nós trabalhamos, vós trabalhais, eles/elas trabalham",
+            "French": "je travaille, tu travailles, il/elle travaille, nous travaillons, vous travaillez, ils/elles travaillent",
+            "Italian": "io lavoro, tu lavori, lui/lei lavora, noi lavoriamo, voi lavorate, loro lavorano",
+            "German": "ich arbeite, du arbeitest, er/sie arbeitet, wir arbeiten, ihr arbeitet, sie arbeiten"
+          },
+          "to play": {
+            "Spanish": "yo juego, tú juegas, él/ella juega, nosotros/as jugamos, vosotros/as jugáis, ellos/as juegan",
+            "Portuguese": "eu jogo, tu jogas, ele/ela joga, nós jogamos, vós jogais, eles/elas jogam",
+            "French": "je joue, tu joues, il/elle joue, nous jouons, vous jouez, ils/elles jouent",
+            "Italian": "io gioco, tu giochi, lui/lei gioca, noi giochiamo, voi giocate, loro giocano",
+            "German": "ich spiele, du spielst, er/sie spielt, wir spielen, ihr spielt, sie spielen"
+          },
+          "to listen": {
+            "Spanish": "yo escucho, tú escuchas, él/ella escucha, nosotros/as escuchamos, vosotros/as escucháis, ellos/as escuchan",
+            "Portuguese": "eu escuto, tu escutas, ele/ela escuta, nós escutamos, vós escutais, eles/elas escutam",
+            "French": "j'écoute, tu écoutes, il/elle écoute, nous écoutons, vous écoutez, ils/elles écoutent",
+            "Italian": "io ascolto, tu ascolti, lui/lei ascolta, noi ascoltiamo, voi ascoltate, loro ascoltano",
+            "German": "ich höre, du hörst, er/sie hört, wir hören, ihr hört, sie hören"
+          },
+          "to walk": {
+            "Spanish": "yo camino, tú caminas, él/ella camina, nosotros/as caminamos, vosotros/as camináis, ellos/as caminan",
+            "Portuguese": "eu caminho, tu caminhas, ele/ela caminha, nós caminhamos, vós caminhais, eles/elas caminham",
+            "French": "je marche, tu marches, il/elle marche, nous marchons, vous marchez, ils/elles marchent",
+            "Italian": "io cammino, tu cammini, lui/lei cammina, noi camminiamo, voi camminate, loro camminano",
+            "German": "ich gehe, du gehst, er/sie geht, wir gehen, ihr geht, sie gehen"
+          },
+          "to talk": {
+            "Spanish": "yo hablo, tú hablas, él/ella habla, nosotros/as hablamos, vosotros/as habláis, ellos/as hablan",
+            "Portuguese": "eu falo, tu falas, ele/ela fala, nós falamos, vós falais, eles/elas falam",
+            "French": "je parle, tu parles, il/elle parle, nous parlons, vous parlez, ils/elles parlent",
+            "Italian": "io parlo, tu parli, lui/lei parla, noi parliamo, voi parlate, loro parlano",
+            "German": "ich spreche, du sprichst, er/sie spricht, wir sprechen, ihr sprecht, sie sprechen"
+          },
+          "to look": {
+            "Spanish": "yo miro, tú miras, él/ella mira, nosotros/as miramos, vosotros/as miráis, ellos/as miran",
+            "Portuguese": "eu olho, tu olhas, ele/ela olha, nós olhamos, vós olhais, eles/elas olham",
+            "French": "je regarde, tu regardes, il/elle regarde, nous regardons, vous regardez, ils/elles regardent",
+            "Italian": "io guardo, tu guardi, lui/lei guarda, noi guardiamo, voi guardate, loro guardano",
+            "German": "ich sehe, du siehst, er/sie sieht, wir sehen, ihr seht, sie sehen"
+          },
+          "to help": {
+            "Spanish": "yo ayudo, tú ayudas, él/ella ayuda, nosotros/as ayudamos, vosotros/as ayudáis, ellos/as ayudan",
+            "Portuguese": "eu ajudo, tu ajudas, ele/ela ajuda, nós ajudamos, vós ajudais, eles/elas ajudam",
+            "French": "j'aide, tu aides, il/elle aide, nous aidons, vous aidez, ils/elles aident",
+            "Italian": "io aiuto, tu aiuti, lui/lei aiuta, noi aiutiamo, voi aiutate, loro aiutano",
+            "German": "ich helfe, du hilfst, er/sie hilft, wir helfen, ihr helft, sie helfen"
+          },
+          "to start": {
+            "Spanish": "yo empiezo, tú empiezas, él/ella empieza, nosotros/as empezamos, vosotros/as empezáis, ellos/as empiezan",
+            "Portuguese": "eu começo, tu começas, ele/ela começa, nós começamos, vós começais, eles/elas começam",
+            "French": "je commence, tu commences, il/elle commence, nous commençons, vous commencez, ils/elles commencent",
+            "Italian": "io inizio, tu inizi, lui/lei inizia, noi iniziamo, voi iniziate, loro iniziano",
+            "German": "ich starte, du startest, er/sie startet, wir starten, ihr startet, sie starten"
+          },
+          "to move": {
+            "Spanish": "yo me muevo, tú te mueves, él/ella se mueve, nosotros/as nos movemos, vosotros/as os movéis, ellos/as se mueven",
+            "Portuguese": "eu me movo, tu te moves, ele/ela se move, nós nos movemos, vós vos moveis, eles/elas se movem",
+            "French": "je me déplace, tu te déplaces, il/elle se déplace, nous nous déplaçons, vous vous déplacez, ils/elles se déplacent",
+            "Italian": "io mi muovo, tu ti muovi, lui/lei si muove, noi ci muoviamo, voi vi muovete, loro si muovono",
+            "German": "ich bewege mich, du bewegst dich, er/sie bewegt sich, wir bewegen uns, ihr bewegt euch, sie bewegen sich"
+          },
+          "to love": {
+            "Spanish": "yo amo, tú amas, él/ella ama, nosotros/as amamos, vosotros/as amáis, ellos/as aman",
+            "Portuguese": "eu amo, tu amas, ele/ela ama, nós amamos, vós amais, eles/elas amam",
+            "French": "j'aime, tu aimes, il/elle aime, nous aimons, vous aimez, ils/elles aiment",
+            "Italian": "io amo, tu ami, lui/lei ama, noi amiamo, voi amate, loro amano",
+            "German": "ich liebe, du liebst, er/sie liebt, wir lieben, ihr liebt, sie lieben"
+          },
+          "to open": {
+            "Spanish": "yo abro, tú abres, él/ella abre, nosotros/as abrimos, vosotros/as abrís, ellos/as abren",
+            "Portuguese": "eu abro, tu abres, ele/ela abre, nós abrimos, vós abris, eles/elas abrem",
+            "French": "j'ouvre, tu ouvres, il/elle ouvre, nous ouvrons, vous ouvrez, ils/elles ouvrent",
+            "Italian": "io apro, tu apri, lui/lei apre, noi apriamo, voi aprite, loro aprono",
+            "German": "ich öffne, du öffnest, er/sie öffnet, wir öffnen, ihr öffnet, sie öffnen"
+          },
+          "to close": {
+            "Spanish": "yo cierro, tú cierras, él/ella cierra, nosotros/as cerramos, vosotros/as cerráis, ellos/as cierran",
+            "Portuguese": "eu fecho, tu fechas, ele/ela fecha, nós fechamos, vós fechais, eles/elas fecham",
+            "French": "je ferme, tu fermes, il/elle ferme, nous fermons, vous fermez, ils/elles ferment",
+            "Italian": "io chiudo, tu chiudi, lui/lei chiude, noi chiudiamo, voi chiudete, loro chiudono",
+            "German": "ich schließe, du schließt, er/sie schließt, wir schließen, ihr schließt, sie schließen"
+          },
+          "to live": {
+            "Spanish": "yo vivo, tú vives, él/ella vive, nosotros/as vivimos, vosotros/as vivís, ellos/as viven",
+            "Portuguese": "eu vivo, tu vives, ele/ela vive, nós vivemos, vós viveis, eles/elas vivem",
+            "French": "je vis, tu vis, il/elle vit, nous vivons, vous vivez, ils/elles vivent",
+            "Italian": "io vivo, tu vivi, lui/lei vive, noi viviamo, voi vivete, loro vivono",
+            "German": "ich lebe, du lebst, er/sie lebt, wir leben, ihr lebt, sie leben"
+          },
+          "to need": {
+            "Spanish": "yo necesito, tú necesitas, él/ella necesita, nosotros/as necesitamos, vosotros/as necesitáis, ellos/as necesitan",
+            "Portuguese": "eu preciso, tu precisas, ele/ela precisa, nós precisamos, vós precisais, eles/elas precisam",
+            "French": "j'ai besoin, tu as besoin, il/elle a besoin, nous avons besoin, vous avez besoin, ils/elles ont besoin",
+            "Italian": "io ho bisogno, tu hai bisogno, lui/lei ha bisogno, noi abbiamo bisogno, voi avete bisogno, loro hanno bisogno",
+            "German": "ich brauche, du brauchst, er/sie braucht, wir brauchen, ihr braucht, sie brauchen"
+          },
+          "to want": {
+            "Spanish": "yo quiero, tú quieres, él/ella quiere, nosotros/as queremos, vosotros/as queréis, ellos/as quieren",
+            "Portuguese": "eu quero, tu queres, ele/ela quer, nós queremos, vós quereis, eles/elas querem",
+            "French": "je veux, tu veux, il/elle veut, nous voulons, vous voulez, ils/elles veulent",
+            "Italian": "io voglio, tu vuoi, lui/lei vuole, noi vogliamo, voi volete, loro vogliono",
+            "German": "ich will, du willst, er/sie will, wir wollen, ihr wollt, sie wollen"
+          },
+          "to call": {
+            "Spanish": "yo llamo, tú llamas, él/ella llama, nosotros/as llamamos, vosotros/as llamáis, ellos/as llaman",
+            "Portuguese": "eu chamo, tu chamas, ele/ela chama, nós chamamos, vós chamais, eles/elas chamam",
+            "French": "j'appelle, tu appelles, il/elle appelle, nous appelons, vous appelez, ils/elles appellent",
+            "Italian": "io chiamo, tu chiami, lui/lei chiama, noi chiamiamo, voi chiamate, loro chiamano",
+            "German": "ich rufe an, du rufst an, er/sie ruft an, wir rufen an, ihr ruft an, sie rufen an"
+          },
+          "to use": {
+            "Spanish": "yo uso, tú usas, él/ella usa, nosotros/as usamos, vosotros/as usáis, ellos/as usan",
+            "Portuguese": "eu uso, tu usas, ele/ela usa, nós usamos, vós usais, eles/elas usam",
+            "French": "j'utilise, tu utilises, il/elle utilise, nous utilisons, vous utilisez, ils/elles utilisent",
+            "Italian": "io uso, tu usi, lui/lei usa, noi usiamo, voi usate, loro usano",
+            "German": "ich benutze, du benutzt, er/sie benutzt, wir benutzen, ihr benutzt, sie benutzen"
+          },
+          "to find": {
+            "Spanish": "yo encuentro, tú encuentras, él/ella encuentra, nosotros/as encontramos, vosotros/as encontráis, ellos/as encuentran",
+            "Portuguese": "eu encontro, tu encontras, ele/ela encontra, nós encontramos, vós encontrais, eles/elas encontram",
+            "French": "je trouve, tu trouves, il/elle trouve, nous trouvons, vous trouvez, ils/elles trouvent",
+            "Italian": "io trovo, tu trovi, lui/lei trova, noi troviamo, voi trovate, loro trovano",
+            "German": "ich finde, du findest, er/sie findet, wir finden, ihr findet, sie finden"
+          },
+          "to jump": {
+            "Spanish": "yo salto, tú saltas, él/ella salta, nosotros/as saltamos, vosotros/as saltáis, ellos/as saltan",
+            "Portuguese": "eu pulo, tu pulas, ele/ela pula, nós pulamos, vós pulais, eles/elas pulam",
+            "French": "je saute, tu sautes, il/elle saute, nous sautons, vous sautez, ils/elles sautent",
+            "Italian": "io salto, tu salti, lui/lei salta, noi saltiamo, voi saltate, loro saltano",
+            "German": "ich springe, du springst, er/sie springt, wir springen, ihr springt, sie springen"
+          },
+          "to sit": {
+            "Spanish": "yo me siento, tú te sientas, él/ella se sienta, nosotros/as nos sentamos, vosotros/as os sentáis, ellos/as se sientan",
+            "Portuguese": "eu me sento, tu te sentas, ele/ela se senta, nós nos sentamos, vós vos sentais, eles/elas se sentam",
+            "French": "je m'assieds, tu t'assieds, il/elle s'assied, nous nous asseyons, vous vous asseyez, ils/elles s'asseyent",
+            "Italian": "io mi siedo, tu ti siedi, lui/lei si siede, noi ci sediamo, voi vi sedete, loro si siedono",
+            "German": "ich sitze, du sitzt, er/sie sitzt, wir sitzen, ihr sitzt, sie sitzen"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Irregular Verbs": {
+        "Words": {
+          "to be": {
+            "Spanish": "yo soy, tú eres, él/ella es, nosotros/as somos, vosotros/as sois, ellos/as son",
+            "Portuguese": "eu sou, tu és, ele/ela é, nós somos, vós sois, eles/elas são",
+            "French": "je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont",
+            "Italian": "io sono, tu sei, lui/lei è, noi siamo, voi siete, loro sono",
+            "German": "ich bin, du bist, er/sie ist, wir sind, ihr seid, sie sind"
+          },
+          "to have": {
+            "Spanish": "yo tengo, tú tienes, él/ella tiene, nosotros/as tenemos, vosotros/as tenéis, ellos/as tienen",
+            "Portuguese": "eu tenho, tu tens, ele/ela tem, nós temos, vós tendes, eles/elas têm",
+            "French": "j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont",
+            "Italian": "io ho, tu hai, lui/lei ha, noi abbiamo, voi avete, loro hanno",
+            "German": "ich habe, du hast, er/sie hat, wir haben, ihr habt, sie haben"
+          },
+          "to do": {
+            "Spanish": "yo hago, tú haces, él/ella hace, nosotros/as hacemos, vosotros/as hacéis, ellos/as hacen",
+            "Portuguese": "eu faço, tu fazes, ele/ela faz, nós fazemos, vós fazeis, eles/elas fazem",
+            "French": "je fais, tu fais, il/elle fait, nous faisons, vous faites, ils/elles font",
+            "Italian": "io faccio, tu fai, lui/lei fa, noi facciamo, voi fate, loro fanno",
+            "German": "ich mache, du machst, er/sie macht, wir machen, ihr macht, sie machen"
+          },
+          "to say": {
+            "Spanish": "yo digo, tú dices, él/ella dice, nosotros/as decimos, vosotros/as decís, ellos/as dicen",
+            "Portuguese": "eu digo, tu dizes, ele/ela diz, nós dizemos, vós dizeis, eles/elas dizem",
+            "French": "je dis, tu dis, il/elle dit, nous disons, vous dites, ils/elles disent",
+            "Italian": "io dico, tu dici, lui/lei dice, noi diciamo, voi dite, loro dicono",
+            "German": "ich sage, du sagst, er/sie sagt, wir sagen, ihr sagt, sie sagen"
+          },
+          "to go": {
+            "Spanish": "yo voy, tú vas, él/ella va, nosotros/as vamos, vosotros/as vais, ellos/as van",
+            "Portuguese": "eu vou, tu vais, ele/ela vai, nós vamos, vós ides, eles/elas vão",
+            "French": "je vais, tu vas, il/elle va, nous allons, vous allez, ils/elles vont",
+            "Italian": "io vado, tu vai, lui/lei va, noi andiamo, voi andate, loro vanno",
+            "German": "ich gehe, du gehst, er/sie geht, wir gehen, ihr geht, sie gehen"
+          },
+          "to know": {
+            "Spanish": "yo sé, tú sabes, él/ella sabe, nosotros/as sabemos, vosotros/as sabéis, ellos/as saben",
+            "Portuguese": "eu sei, tu sabes, ele/ela sabe, nós sabemos, vós sabeis, eles/elas sabem",
+            "French": "je sais, tu sais, il/elle sait, nous savons, vous savez, ils/elles savent",
+            "Italian": "io so, tu sai, lui/lei sa, noi sappiamo, voi sapete, loro sanno",
+            "German": "ich weiß, du weißt, er/sie weiß, wir wissen, ihr wisst, sie wissen"
+          },
+          "to get": {
+            "Spanish": "yo obtengo, tú obtienes, él/ella obtiene, nosotros/as obtenemos, vosotros/as obtenéis, ellos/as obtienen",
+            "Portuguese": "eu obtenho, tu obténs, ele/ela obtém, nós obtemos, vós obtereis, eles/elas obtêm",
+            "French": "j’obtiens, tu obtiens, il/elle obtient, nous obtenons, vous obtenez, ils/elles obtiennent",
+            "Italian": "io ottengo, tu ottieni, lui/lei ottiene, noi otteniamo, voi ottenete, loro ottengono",
+            "German": "ich bekomme, du bekommst, er/sie bekommt, wir bekommen, ihr bekommt, sie bekommen"
+          },
+          "to make": {
+            "Spanish": "yo hago, tú haces, él/ella hace, nosotros/as hacemos, vosotros/as hacéis, ellos/as hacen",
+            "Portuguese": "eu faço, tu fazes, ele/ela faz, nós fazemos, vós fazeis, eles/elas fazem",
+            "French": "je fais, tu fais, il/elle fait, nous faisons, vous faites, ils/elles font",
+            "Italian": "io faccio, tu fai, lui/lei fa, noi facciamo, voi fate, loro fanno",
+            "German": "ich mache, du machst, er/sie macht, wir machen, ihr macht, sie machen"
+          },
+          "to think": {
+            "Spanish": "yo pienso, tú piensas, él/ella piensa, nosotros/as pensamos, vosotros/as pensáis, ellos/as piensan",
+            "Portuguese": "eu penso, tu pensas, ele/ela pensa, nós pensamos, vós pensais, eles/elas pensam",
+            "French": "je pense, tu penses, il/elle pense, nous pensons, vous pensez, ils/elles pensent",
+            "Italian": "io penso, tu pensi, lui/lei pensa, noi pensiamo, voi pensate, loro pensano",
+            "German": "ich denke, du denkst, er/sie denkt, wir denken, ihr denkt, sie denken"
+          },
+          "to take": {
+            "Spanish": "yo tomo, tú tomas, él/ella toma, nosotros/as tomamos, vosotros/as tomáis, ellos/as toman",
+            "Portuguese": "eu tomo, tu tomas, ele/ela toma, nós tomamos, vós tomais, eles/elas tomam",
+            "French": "je prends, tu prends, il/elle prend, nous prenons, vous prenez, ils/elles prennent",
+            "Italian": "io prendo, tu prendi, lui/lei prende, noi prendiamo, voi prendete, loro prendono",
+            "German": "ich nehme, du nimmst, er/sie nimmt, wir nehmen, ihr nehmt, sie nehmen"
+          },
+          "to see": {
+            "Spanish": "yo veo, tú ves, él/ella ve, nosotros/as vemos, vosotros/as veis, ellos/as ven",
+            "Portuguese": "eu vejo, tu vês, ele/ela vê, nós vemos, vós vedes, eles/elas veem",
+            "French": "je vois, tu vois, il/elle voit, nous voyons, vous voyez, ils/elles voient",
+            "Italian": "io vedo, tu vedi, lui/lei vede, noi vediamo, voi vedete, loro vedono",
+            "German": "ich sehe, du siehst, er/sie sieht, wir sehen, ihr seht, sie sehen"
+          },
+          "to come": {
+            "Spanish": "yo vengo, tú vienes, él/ella viene, nosotros/as venimos, vosotros/as venís, ellos/as vienen",
+            "Portuguese": "eu venho, tu vens, ele/ela vem, nós vimos, vós vindes, eles/elas vêm",
+            "French": "je viens, tu viens, il/elle vient, nous venons, vous venez, ils/elles viennent",
+            "Italian": "io vengo, tu vieni, lui/lei viene, noi veniamo, voi venite, loro vengono",
+            "German": "ich komme, du kommst, er/sie kommt, wir kommen, ihr kommt, sie kommen"
+          },
+          "to find": {
+            "Spanish": "yo encuentro, tú encuentras, él/ella encuentra, nosotros/as encontramos, vosotros/as encontráis, ellos/as encuentran",
+            "Portuguese": "eu encontro, tu encontras, ele/ela encontra, nós encontramos, vós encontrais, eles/elas encontram",
+            "French": "je trouve, tu trouves, il/elle trouve, nous trouvons, vous trouvez, ils/elles trouvent",
+            "Italian": "io trovo, tu trovi, lui/lei trova, noi troviamo, voi trovate, loro trovano",
+            "German": "ich finde, du findest, er/sie findet, wir finden, ihr findet, sie finden"
+          },
+          "to give": {
+            "Spanish": "yo doy, tú das, él/ella da, nosotros/as damos, vosotros/as dais, ellos/as dan",
+            "Portuguese": "eu dou, tu dás, ele/ela dá, nós damos, vós dais, eles/elas dão",
+            "French": "je donne, tu donnes, il/elle donne, nous donnons, vous donnez, ils/elles donnent",
+            "Italian": "io do, tu dai, lui/lei dà, noi diamo, voi date, loro danno",
+            "German": "ich gebe, du gibst, er/sie gibt, wir geben, ihr gebt, sie geben"
+          },
+          "to tell": {
+            "Spanish": "yo digo, tú dices, él/ella dice, nosotros/as decimos, vosotros/as decís, ellos/as dicen",
+            "Portuguese": "eu digo, tu dizes, ele/ela diz, nós dizemos, vós dizeis, eles/elas dizem",
+            "French": "je dis, tu dis, il/elle dit, nous disons, vous dites, ils/elles disent",
+            "Italian": "io dico, tu dici, lui/lei dice, noi diciamo, voi dite, loro dicono",
+            "German": "ich sage, du sagst, er/sie sagt, wir sagen, ihr sagt, sie sagen"
+          },
+          "to become": {
+            "Spanish": "yo me convierto, tú te conviertes, él/ella se convierte, nosotros/as nos convertimos, vosotros/as os convertís, ellos/as se convierten",
+            "Portuguese": "eu torno-me, tu tornas-te, ele/ela torna-se, nós tornamo-nos, vós tornais-vos, eles/elas tornam-se",
+            "French": "je deviens, tu deviens, il/elle devient, nous devenons, vous devenez, ils/elles deviennent",
+            "Italian": "io divento, tu diventi, lui/lei diventa, noi diventiamo, voi diventate, loro diventano",
+            "German": "ich werde, du wirst, er/sie wird, wir werden, ihr werdet, sie werden"
+          },
+          "to show": {
+            "Spanish": "yo muestro, tú muestras, él/ella muestra, nosotros/as mostramos, vosotros/as mostráis, ellos/as muestran",
+            "Portuguese": "eu mostro, tu mostras, ele/ela mostra, nós mostramos, vós mostrais, eles/elas mostram",
+            "French": "je montre, tu montres, il/elle montre, nous montrons, vous montrez, ils/elles montrent",
+            "Italian": "io mostro, tu mostri, lui/lei mostra, noi mostriamo, voi mostrate, loro mostrano",
+            "German": "ich zeige, du zeigst, er/sie zeigt, wir zeigen, ihr zeigt, sie zeigen"
+          },
+          "to leave": {
+            "Spanish": "yo dejo, tú dejas, él/ella deja, nosotros/as dejamos, vosotros/as dejáis, ellos/as dejan",
+            "Portuguese": "eu deixo, tu deixas, ele/ela deixa, nós deixamos, vós deixais, eles/elas deixam",
+            "French": "je quitte, tu quittes, il/elle quitte, nous quittons, vous quittez, ils/elles quittent",
+            "Italian": "io lascio, tu lasci, lui/lei lascia, noi lasciamo, voi lasciate, loro lasciano",
+            "German": "ich verlasse, du verlässt, er/sie verlässt, wir verlassen, ihr verlasst, sie verlassen"
+          },
+          "to feel": {
+            "Spanish": "yo siento, tú sientes, él/ella siente, nosotros/as sentimos, vosotros/as sentís, ellos/as sienten",
+            "Portuguese": "eu sinto, tu sentes, ele/ela sente, nós sentimos, vós sentis, eles/elas sentem",
+            "French": "je sens, tu sens, il/elle sent, nous sentons, vous sentez, ils/elles sentent",
+            "Italian": "io sento, tu senti, lui/lei sente, noi sentiamo, voi sentite, loro sentono",
+            "German": "ich fühle, du fühlst, er/sie fühlt, wir fühlen, ihr fühlt, sie fühlen"
+          },
+          "to put": {
+            "Spanish": "yo pongo, tú pones, él/ella pone, nosotros/as ponemos, vosotros/as ponéis, ellos/as ponen",
+            "Portuguese": "eu ponho, tu pões, ele/ela põe, nós pomos, vós pondes, eles/elas põem",
+            "French": "je mets, tu mets, il/elle met, nous mettons, vous mettez, ils/elles mettent",
+            "Italian": "io metto, tu metti, lui/lei mette, noi mettiamo, voi mettete, loro mettono",
+            "German": "ich setze, du setzt, er/sie setzt, wir setzen, ihr setzt, sie setzen"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "subject pronouns": {
+        "I": {
+          "Spanish": "yo",
+          "Portuguese": "eu",
+          "French": "je",
+          "Italian": "io",
+          "German": "ich"
+        },
+        "you": {
+          "Spanish": "tú / usted",
+          "Portuguese": "tu / você",
+          "French": "tu",
+          "Italian": "tu",
+          "German": "du"
+        },
+        "he": {
+          "Spanish": "él",
+          "Portuguese": "ele",
+          "French": "il",
+          "Italian": "lui",
+          "German": "er"
+        },
+        "she": {
+          "Spanish": "ella",
+          "Portuguese": "ela",
+          "French": "elle",
+          "Italian": "lei",
+          "German": "sie"
+        },
+        "it": {
+          "Spanish": "él / ella / ello",
+          "Portuguese": "ele / ela / isso",
+          "French": "il / elle / on",
+          "Italian": "esso / essa",
+          "German": "es / sie / es"
+        },
+        "we": {
+          "Spanish": "nosotros / nosotras",
+          "Portuguese": "nós",
+          "French": "nous",
+          "Italian": "noi",
+          "German": "wir"
+        },
+        "they": {
+          "Spanish": "ellos / ellas",
+          "Portuguese": "eles / elas",
+          "French": "ils / elles",
+          "Italian": "loro",
+          "German": "sie"
+        }
+      },
+      "possessive pronouns": {
+        "my": {
+          "Spanish": "mi",
+          "Portuguese": "meu / minha",
+          "French": "mon / ma",
+          "Italian": "mio",
+          "German": "mein"
+        },
+        "your": {
+          "Spanish": "tu",
+          "Portuguese": "teu / tua",
+          "French": "ton / ta",
+          "Italian": "tuo",
+          "German": "dein"
+        },
+        "his": {
+          "Spanish": "su",
+          "Portuguese": "seu / sua",
+          "French": "son / sa",
+          "Italian": "suo",
+          "German": "sein"
+        },
+        "her": {
+          "Spanish": "su",
+          "Portuguese": "seu / sua",
+          "French": "son / sa",
+          "Italian": "suo",
+          "German": "ihr"
+        },
+        "its": {
+          "Spanish": "su",
+          "Portuguese": "seu",
+          "French": "son",
+          "Italian": "suo",
+          "German": "sein"
+        },
+        "our": {
+          "Spanish": "nuestro / nuestra",
+          "Portuguese": "nosso",
+          "French": "notre",
+          "Italian": "nostro",
+          "German": "unser"
+        },
+        "their": {
+          "Spanish": "su",
+          "Portuguese": "seu",
+          "French": "leur",
+          "Italian": "loro",
+          "German": "ihr"
+        }
+      },
+      "articles": {
+        "the": {
+          "Spanish": "el / la",
+          "Portuguese": "o / a",
+          "French": "le / la",
+          "Italian": "il / la",
+          "German": "der / die / das"
+        },
+        "a": {
+          "Spanish": "un / una",
+          "Portuguese": "um / uma",
+          "French": "un / une",
+          "Italian": "un / una",
+          "German": "ein / eine"
+        },
+        "an": {
+          "Spanish": "un / una",
+          "Portuguese": "um / uma",
+          "French": "un / une",
+          "Italian": "un / una",
+          "German": "ein"
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Grammar": {
+        "Prepositions & Conjunctions": {
+          "in": {
+            "Spanish": "en",
+            "Portuguese": "em / dentro de",
+            "French": "dans",
+            "Italian": "in",
+            "German": "in"
+          },
+          "on": {
+            "Spanish": "en / sobre",
+            "Portuguese": "em / sobre",
+            "French": "sur",
+            "Italian": "su",
+            "German": "auf"
+          },
+          "at": {
+            "Spanish": "en / a",
+            "Portuguese": "em / no / na",
+            "French": "à",
+            "Italian": "a",
+            "German": "an / auf"
+          },
+          "by": {
+            "Spanish": "por",
+            "Portuguese": "por / perto de",
+            "French": "par",
+            "Italian": "da",
+            "German": "durch"
+          },
+          "with": {
+            "Spanish": "con",
+            "Portuguese": "com",
+            "French": "avec",
+            "Italian": "con",
+            "German": "mit"
+          },
+          "about": {
+            "Spanish": "sobre / acerca de",
+            "Portuguese": "sobre",
+            "French": "sur",
+            "Italian": "circa / su",
+            "German": "über"
+          },
+          "against": {
+            "Spanish": "contra",
+            "Portuguese": "contra",
+            "French": "contre",
+            "Italian": "contro",
+            "German": "gegen"
+          },
+          "between": {
+            "Spanish": "entre",
+            "Portuguese": "entre",
+            "French": "entre",
+            "Italian": "tra / fra",
+            "German": "zwischen"
+          },
+          "during": {
+            "Spanish": "durante",
+            "Portuguese": "durante",
+            "French": "pendant",
+            "Italian": "durante",
+            "German": "während"
+          },
+          "without": {
+            "Spanish": "sin",
+            "Portuguese": "sem",
+            "French": "sans",
+            "Italian": "senza",
+            "German": "ohne"
+          }
+        },
+        "Conjunctions": {
+          "and": {
+            "Spanish": "y",
+            "Portuguese": "e",
+            "French": "et",
+            "Italian": "e",
+            "German": "und"
+          },
+          "but": {
+            "Spanish": "pero",
+            "Portuguese": "mas",
+            "French": "mais",
+            "Italian": "ma",
+            "German": "aber"
+          },
+          "or": {
+            "Spanish": "o",
+            "Portuguese": "ou",
+            "French": "ou",
+            "Italian": "o",
+            "German": "oder"
+          },
+          "so": {
+            "Spanish": "así que / entonces",
+            "Portuguese": "então / assim",
+            "French": "donc / alors",
+            "Italian": "quindi / così",
+            "German": "also / so"
+          },
+          "because": {
+            "Spanish": "porque",
+            "Portuguese": "porque",
+            "French": "parce que",
+            "Italian": "perché",
+            "German": "weil"
+          },
+          "although": {
+            "Spanish": "aunque",
+            "Portuguese": "embora",
+            "French": "bien que / quoique",
+            "Italian": "sebbene / benché",
+            "German": "obwohl"
+          },
+          "if": {
+            "Spanish": "si",
+            "Portuguese": "se",
+            "French": "si",
+            "Italian": "se",
+            "German": "wenn"
+          },
+          "when": {
+            "Spanish": "cuando",
+            "Portuguese": "quando",
+            "French": "quand",
+            "Italian": "quando",
+            "German": "wenn"
+          },
+          "while": {
+            "Spanish": "mientras",
+            "Portuguese": "enquanto",
+            "French": "pendant que",
+            "Italian": "mentre",
+            "German": "während"
+          },
+          "since": {
+            "Spanish": "desde",
+            "Portuguese": "desde",
+            "French": "depuis",
+            "Italian": "dal",
+            "German": "seit"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Basic Vocabulary": {
+        "Common Food Items": {
+          "bread": {
+            "Spanish": "pan (m)",
+            "Portuguese": "pão (m)",
+            "French": "pain (m)",
+            "Italian": "pane (m)",
+            "German": "Brot (n)"
+          },
+          "water": {
+            "Spanish": "agua",
+            "Portuguese": "água",
+            "French": "eau",
+            "Italian": "acqua",
+            "German": "Wasser"
+          },
+          "fruit": {
+            "Spanish": "fruta",
+            "Portuguese": "fruta",
+            "French": "fruit",
+            "Italian": "frutta",
+            "German": "Obst"
+          },
+          "meat": {
+            "Spanish": "carne",
+            "Portuguese": "carne",
+            "French": "viande",
+            "Italian": "carne",
+            "German": "Fleisch"
+          },
+          "fish": {
+            "Spanish": "pescado / pez",
+            "Portuguese": "peixe",
+            "French": "poisson",
+            "Italian": "pesce",
+            "German": "Fisch"
+          },
+          "vegetable": {
+            "Spanish": "verdura / vegetal",
+            "Portuguese": "vegetal / legume",
+            "French": "légume",
+            "Italian": "verdura",
+            "German": "Gemüse"
+          },
+          "cheese": {
+            "Spanish": "queso",
+            "Portuguese": "queijo",
+            "French": "fromage",
+            "Italian": "formaggio",
+            "German": "Käse"
+          },
+          "egg": {
+            "Spanish": "huevo",
+            "Portuguese": "ovo",
+            "French": "œuf",
+            "Italian": "uovo",
+            "German": "Ei"
+          },
+          "rice": {
+            "Spanish": "arroz",
+            "Portuguese": "arroz",
+            "French": "riz",
+            "Italian": "riso",
+            "German": "Reis"
+          },
+          "pasta": {
+            "Spanish": "pasta",
+            "Portuguese": "massa",
+            "French": "pâtes",
+            "Italian": "pasta",
+            "German": "Nudeln"
+          },
+          "chicken": {
+            "Spanish": "pollo",
+            "Portuguese": "frango",
+            "French": "poulet",
+            "Italian": "pollo",
+            "German": "Hähnchen"
+          },
+          "soup": {
+            "Spanish": "sopa",
+            "Portuguese": "sopa",
+            "French": "soupe",
+            "Italian": "zuppa",
+            "German": "Suppe"
+          },
+          "salad": {
+            "Spanish": "ensalada",
+            "Portuguese": "salada",
+            "French": "salade",
+            "Italian": "insalata",
+            "German": "Salat"
+          },
+          "potato": {
+            "Spanish": "patata / papa",
+            "Portuguese": "batata",
+            "French": "pomme de terre",
+            "Italian": "patata",
+            "German": "Kartoffel"
+          },
+          "tomato": {
+            "Spanish": "tomate",
+            "Portuguese": "tomate",
+            "French": "tomate",
+            "Italian": "pomodoro",
+            "German": "Tomate"
+          }
+        },
+        "Meals and Dining Phrases": {
+          "breakfast": {
+            "Spanish": "desayuno",
+            "Portuguese": "café da manhã / pequeno-almoço",
+            "French": "petit-déjeuner",
+            "Italian": "colazione",
+            "German": "Frühstück"
+          },
+          "lunch": {
+            "Spanish": "almuerzo",
+            "Portuguese": "almoço",
+            "French": "déjeuner",
+            "Italian": "pranzo",
+            "German": "Mittagessen"
+          },
+          "dinner": {
+            "Spanish": "cena",
+            "Portuguese": "jantar",
+            "French": "dîner",
+            "Italian": "cena",
+            "German": "Abendessen"
+          },
+          "snack": {
+            "Spanish": "bocadillo / tentempié",
+            "Portuguese": "lanche / petisco",
+            "French": "collation",
+            "Italian": "spuntino",
+            "German": "Snack"
+          },
+          "dessert": {
+            "Spanish": "postre",
+            "Portuguese": "sobremesa",
+            "French": "dessert",
+            "Italian": "dolce",
+            "German": "Nachtisch"
+          },
+          "I’m hungry": {
+            "Spanish": "tengo hambre",
+            "Portuguese": "estou com fome",
+            "French": "j'ai faim",
+            "Italian": "ho fame",
+            "German": "Ich habe Hunger"
+          },
+          "I’m thirsty": {
+            "Spanish": "tengo sed",
+            "Portuguese": "estou com sede",
+            "French": "j'ai soif",
+            "Italian": "ho sete",
+            "German": "Ich habe Durst"
+          },
+          "What do you want to eat": {
+            "Spanish": "¿qué quieres comer?",
+            "Portuguese": "o que queres comer?",
+            "French": "que veux-tu manger ?",
+            "Italian": "cosa vuoi mangiare?",
+            "German": "Was möchtest du essen?"
+          },
+          "I would like": {
+            "Spanish": "me gustaría…",
+            "Portuguese": "eu gostaria de…",
+            "French": "je voudrais…",
+            "Italian": "vorrei…",
+            "German": "Ich möchte…"
+          },
+          "Can I have the menu": {
+            "Spanish": "¿puedo ver el menú?",
+            "Portuguese": "posso ver o cardápio?",
+            "French": "puis-je voir le menu ?",
+            "Italian": "posso vedere il menù?",
+            "German": "Kann ich die Speisekarte haben?"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Basic Vocabulary": {
+        "Travel Related Vocabulary": {
+          "airport": {
+            "Spanish": "aeropuerto (m)",
+            "Portuguese": "aeroporto (m)",
+            "French": "aéroport (m)",
+            "Italian": "aeroporto (m)",
+            "German": "flughafen (m)"
+          },
+          "ticket": {
+            "Spanish": "boleto / billete (m)",
+            "Portuguese": "bilhete (m)",
+            "French": "billet (m)",
+            "Italian": "biglietto (m)",
+            "German": "ticket (n)"
+          },
+          "passport": {
+            "Spanish": "pasaporte (m)",
+            "Portuguese": "passaporte (m)",
+            "French": "passeport (m)",
+            "Italian": "passaporto (m)",
+            "German": "reisepass (m)"
+          },
+          "train": {
+            "Spanish": "tren (m)",
+            "Portuguese": "trem (m)",
+            "French": "train (m)",
+            "Italian": "treno (m)",
+            "German": "zug (m)"
+          },
+          "bus": {
+            "Spanish": "autobús / bus (m)",
+            "Portuguese": "ônibus (m)",
+            "French": "bus (m)",
+            "Italian": "autobus (m)",
+            "German": "bus (m)"
+          },
+          "taxi": {
+            "Spanish": "taxi (m)",
+            "Portuguese": "táxi (m)",
+            "French": "taxi (m)",
+            "Italian": "taxi (m)",
+            "German": "taxi (n)"
+          },
+          "hotel": {
+            "Spanish": "hotel (m)",
+            "Portuguese": "hotel (m)",
+            "French": "hôtel (m)",
+            "Italian": "albergo (m)",
+            "German": "hotel (n)"
+          },
+          "luggage": {
+            "Spanish": "equipaje (m)",
+            "Portuguese": "bagagem (f)",
+            "French": "bagages (m)",
+            "Italian": "bagaglio (m)",
+            "German": "gepäck (n)"
+          },
+          "map": {
+            "Spanish": "mapa (m)",
+            "Portuguese": "mapa (m)",
+            "French": "carte (f)",
+            "Italian": "mappa (f)",
+            "German": "karte (f)"
+          },
+          "tourist": {
+            "Spanish": "turista (m/f)",
+            "Portuguese": "turista (m/f)",
+            "French": "touriste (m/f)",
+            "Italian": "turista (m/f)",
+            "German": "tourist (m/f)"
+          }
+        },
+        "Asking For Directions": {
+          "Where is…": {
+            "Spanish": "¿dónde está…?",
+            "Portuguese": "onde está…?",
+            "French": "où est…?",
+            "Italian": "dove è…?",
+            "German": "wo ist…?"
+          },
+          "How do I get to…": {
+            "Spanish": "¿cómo llego a…?",
+            "Portuguese": "como chego a…?",
+            "French": "comment arriver à…?",
+            "Italian": "come arrivo a…?",
+            "German": "wie komme ich zu…?"
+          },
+          "Is it far?": {
+            "Spanish": "¿está lejos?",
+            "Portuguese": "é longe?",
+            "French": "est-ce loin ?",
+            "Italian": "è lontano?",
+            "German": "ist es weit?"
+          },
+          "Is it near?": {
+            "Spanish": "¿está cerca?",
+            "Portuguese": "é perto?",
+            "French": "est-ce près ?",
+            "Italian": "è vicino?",
+            "German": "ist es in der nähe?"
+          },
+          "Turn left": {
+            "Spanish": "gire a la izquierda",
+            "Portuguese": "vire à esquerda",
+            "French": "tournez à gauche",
+            "Italian": "gira a sinistra",
+            "German": "biegen sie links ab"
+          },
+          "Turn right": {
+            "Spanish": "gire a la derecha",
+            "Portuguese": "vire à direita",
+            "French": "tournez à droite",
+            "Italian": "gira a destra",
+            "German": "biegen sie rechts ab"
+          },
+          "Go straight": {
+            "Spanish": "siga derecho / ve recto",
+            "Portuguese": "siga em frente",
+            "French": "allez tout droit",
+            "Italian": "vai dritto",
+            "German": "gehen sie geradeaus"
+          },
+          "On the corner": {
+            "Spanish": "en la esquina",
+            "Portuguese": "na esquina",
+            "French": "au coin",
+            "Italian": "all'angolo",
+            "German": "an der ecke"
+          },
+          "Next to…": {
+            "Spanish": "al lado de",
+            "Portuguese": "ao lado de",
+            "French": "à côté de",
+            "Italian": "accanto a",
+            "German": "neben"
+          },
+          "Across from…": {
+            "Spanish": "frente a / al otro lado de",
+            "Portuguese": "em frente a",
+            "French": "en face de",
+            "Italian": "di fronte a",
+            "German": "gegenüber von"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Basic Health Terms": {
+        "Words": {
+          "doctor": {
+            "Spanish": "médico",
+            "Portuguese": "médico",
+            "French": "médecin",
+            "Italian": "medico",
+            "German": "arzt"
+          },
+          "medicine": {
+            "Spanish": "medicina / medicamento",
+            "Portuguese": "medicina / remédio",
+            "French": "médicament",
+            "Italian": "medicina",
+            "German": "medizin"
+          },
+          "pain": {
+            "Spanish": "dolor",
+            "Portuguese": "dor",
+            "French": "douleur",
+            "Italian": "dolore",
+            "German": "schmerz"
+          },
+          "hospital": {
+            "Spanish": "hospital",
+            "Portuguese": "hospital",
+            "French": "hôpital",
+            "Italian": "ospedale",
+            "German": "krankenhaus"
+          },
+          "clinic": {
+            "Spanish": "clínica",
+            "Portuguese": "clínica",
+            "French": "clinique",
+            "Italian": "clinica",
+            "German": "klinik"
+          },
+          "prescription": {
+            "Spanish": "receta / prescripción",
+            "Portuguese": "receita / prescrição",
+            "French": "ordonnance",
+            "Italian": "prescrizione",
+            "German": "rezept"
+          },
+          "sick": {
+            "Spanish": "enfermo / enferma",
+            "Portuguese": "doente",
+            "French": "malade",
+            "Italian": "malato",
+            "German": "krank"
+          },
+          "fever": {
+            "Spanish": "fiebre",
+            "Portuguese": "febre",
+            "French": "fièvre",
+            "Italian": "febbre",
+            "German": "fieber"
+          },
+          "headache": {
+            "Spanish": "dolor de cabeza",
+            "Portuguese": "dor de cabeça",
+            "French": "mal de tête",
+            "Italian": "mal di testa",
+            "German": "kopfschmerzen"
+          },
+          "cold": {
+            "Spanish": "resfriado",
+            "Portuguese": "resfriado / constipação",
+            "French": "rhume",
+            "Italian": "raffreddore",
+            "German": "erkältung"
+          }
+        }
+      },
+      "Emergency Phrases": {
+        "Phrases": {
+          "I need help": {
+            "Spanish": "necesito ayuda",
+            "Portuguese": "eu preciso de ajuda",
+            "French": "j'ai besoin d'aide",
+            "Italian": "ho bisogno di aiuto",
+            "German": "ich brauche hilfe"
+          },
+          "Call the police": {
+            "Spanish": "llame a la policía",
+            "Portuguese": "chame a polícia",
+            "French": "appelez la police",
+            "Italian": "chiamate la polizia",
+            "German": "rufen sie die polizei an"
+          },
+          "Call an ambulance": {
+            "Spanish": "llame a una ambulancia",
+            "Portuguese": "chame uma ambulância",
+            "French": "appelez une ambulance",
+            "Italian": "chiamate un'ambulanza",
+            "German": "rufen sie einen krankenwagen"
+          },
+          "There is a fire": {
+            "Spanish": "hay un incendio",
+            "Portuguese": "há um incêndio",
+            "French": "il y a un incendie",
+            "Italian": "c'è un incendio",
+            "German": "es brennt"
+          },
+          "I’m lost": {
+            "Spanish": "estoy perdido / perdida",
+            "Portuguese": "estou perdido / perdida",
+            "French": "je suis perdu / perdue",
+            "Italian": "mi sono perso / persa",
+            "German": "ich habe mich verirrt"
+          },
+          "I’ve lost my…": {
+            "Spanish": "he perdido mi…",
+            "Portuguese": "eu perdi meu…",
+            "French": "j'ai perdu mon…",
+            "Italian": "ho perso il mio…",
+            "German": "ich habe mein… verloren"
+          },
+          "I’ve been robbed": {
+            "Spanish": "me han robado",
+            "Portuguese": "fui roubado / roubada",
+            "French": "on m'a volé",
+            "Italian": "sono stato / stata derubato",
+            "German": "ich wurde bestohlen"
+          },
+          "Is there a doctor?": {
+            "Spanish": "¿hay un médico?",
+            "Portuguese": "há um médico?",
+            "French": "y a-t-il un médecin ?",
+            "Italian": "c'è un medico?",
+            "German": "gibt es einen arzt?"
+          },
+          "emergency": {
+            "Spanish": "emergencia",
+            "Portuguese": "emergência",
+            "French": "urgence",
+            "Italian": "emergenza",
+            "German": "notfall"
+          },
+          "danger": {
+            "Spanish": "peligro",
+            "Portuguese": "perigo",
+            "French": "danger",
+            "Italian": "pericolo",
+            "German": "gefahr"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Common Shopping Terms": {
+        "Words": {
+          "price": {
+            "Spanish": "precio (m)",
+            "Portuguese": "preço (m)",
+            "French": "prix (m)",
+            "Italian": "prezzo (m)",
+            "German": "preis"
+          },
+          "buy": {
+            "Spanish": "comprar",
+            "Portuguese": "comprar",
+            "French": "acheter",
+            "Italian": "comprare",
+            "German": "kaufen"
+          },
+          "sell": {
+            "Spanish": "vender",
+            "Portuguese": "vender",
+            "French": "vendre",
+            "Italian": "vendere",
+            "German": "verkaufen"
+          },
+          "shop": {
+            "Spanish": "tienda (f) / comprar",
+            "Portuguese": "loja (f)",
+            "French": "magasin (m)",
+            "Italian": "negozio (m)",
+            "German": "geschäft"
+          },
+          "store": {
+            "Spanish": "tienda (f)",
+            "Portuguese": "loja (f)",
+            "French": "magasin (m)",
+            "Italian": "negozio (m)",
+            "German": "laden"
+          },
+          "market": {
+            "Spanish": "mercado (m)",
+            "Portuguese": "mercado (m)",
+            "French": "marché (m)",
+            "Italian": "mercato (m)",
+            "German": "markt"
+          },
+          "cheap": {
+            "Spanish": "barato (m) / barata (f)",
+            "Portuguese": "barato (m) / barata (f)",
+            "French": "bon marché",
+            "Italian": "a buon mercato",
+            "German": "billig"
+          },
+          "expensive": {
+            "Spanish": "caro (m) / cara (f)",
+            "Portuguese": "caro (m) / cara (f)",
+            "French": "cher (m) / chère (f)",
+            "Italian": "costoso (m) / costosa (f)",
+            "German": "teuer"
+          },
+          "discount": {
+            "Spanish": "descuento (m)",
+            "Portuguese": "desconto (m)",
+            "French": "remise (f) / réduction (f)",
+            "Italian": "sconto (m)",
+            "German": "rabatt"
+          },
+          "bargain": {
+            "Spanish": "ganga (f) / oferta (f)",
+            "Portuguese": "pechincha (f) / oferta (f)",
+            "French": "bonne affaire (f)",
+            "Italian": "affare (m)",
+            "German": "schnäppchen (n)"
+          }
+        }
+      },
+      "Money and Transactions": {
+        "Words": {
+          "cash": {
+            "Spanish": "efectivo (m) / dinero en efectivo",
+            "Portuguese": "dinheiro (m)",
+            "French": "espèces (f)",
+            "Italian": "contanti (m)",
+            "German": "bargeld (n)"
+          },
+          "credit card": {
+            "Spanish": "tarjeta de crédito (f)",
+            "Portuguese": "cartão de crédito (m)",
+            "French": "carte de crédit (f)",
+            "Italian": "carta di credito (f)",
+            "German": "kreditkarte (f)"
+          },
+          "receipt": {
+            "Spanish": "recibo (m)",
+            "Portuguese": "recibo (m)",
+            "French": "reçu (m)",
+            "Italian": "ricevuta (f)",
+            "German": "quittung (f)"
+          },
+          "change": {
+            "Spanish": "cambio (m) / cambiar",
+            "Portuguese": "troco (m) / mudança (f)",
+            "French": "monnaie (f) / changement (m)",
+            "Italian": "cambio (m) / cambiare",
+            "German": "wechselgeld (n)"
+          },
+          "bill": {
+            "Spanish": "factura (f) / cuenta (f)",
+            "Portuguese": "conta (f)",
+            "French": "facture (f)",
+            "Italian": "conto (m)",
+            "German": "rechnung (f)"
+          },
+          "coin": {
+            "Spanish": "moneda (f)",
+            "Portuguese": "moeda (f)",
+            "French": "pièce de monnaie (f)",
+            "Italian": "moneta (f)",
+            "German": "münze (f)"
+          },
+          "ATM": {
+            "Spanish": "cajero automático (m)",
+            "Portuguese": "caixa eletrônico (m) / multibanco (m)",
+            "French": "distributeur automatique de billets (m)",
+            "Italian": "bancomat (m)",
+            "German": "geldautomat (m)"
+          },
+          "wallet": {
+            "Spanish": "billetera (f) / monedero (m)",
+            "Portuguese": "carteira (f) / porta-moedas (m)",
+            "French": "portefeuille (m)",
+            "Italian": "portafoglio (m)",
+            "German": "brieftasche (f)"
+          },
+          "price tag": {
+            "Spanish": "etiqueta de precio (f)",
+            "Portuguese": "etiqueta de preço (f)",
+            "French": "étiquette de prix (f)",
+            "Italian": "etichetta del prezzo (f)",
+            "German": "preisschild (n)"
+          },
+          "bank": {
+            "Spanish": "banco (m)",
+            "Portuguese": "banco (m)",
+            "French": "banque (f)",
+            "Italian": "banca (f)",
+            "German": "bank (f)"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Colors": {
+        "Words": {
+          "red": {
+            "Spanish": "rojo (m)",
+            "Portuguese": "vermelho (m)",
+            "French": "rouge",
+            "Italian": "rosso (m)",
+            "German": "rot"
+          },
+          "blue": {
+            "Spanish": "azul",
+            "Portuguese": "azul",
+            "French": "bleu",
+            "Italian": "blu",
+            "German": "blau"
+          },
+          "green": {
+            "Spanish": "verde",
+            "Portuguese": "verde",
+            "French": "vert",
+            "Italian": "verde",
+            "German": "grün"
+          },
+          "yellow": {
+            "Spanish": "amarillo (m)",
+            "Portuguese": "amarelo (m)",
+            "French": "jaune",
+            "Italian": "giallo (m)",
+            "German": "gelb"
+          },
+          "black": {
+            "Spanish": "negro (m)",
+            "Portuguese": "preto (m)",
+            "French": "noir",
+            "Italian": "nero (m)",
+            "German": "schwarz"
+          },
+          "white": {
+            "Spanish": "blanco (m)",
+            "Portuguese": "branco (m)",
+            "French": "blanc",
+            "Italian": "bianco (m)",
+            "German": "weiß"
+          },
+          "pink": {
+            "Spanish": "rosa",
+            "Portuguese": "rosa",
+            "French": "rose",
+            "Italian": "rosa",
+            "German": "rosa"
+          },
+          "brown": {
+            "Spanish": "marrón / café",
+            "Portuguese": "marrom / café",
+            "French": "marron",
+            "Italian": "marrone",
+            "German": "braun"
+          },
+          "orange": {
+            "Spanish": "naranja",
+            "Portuguese": "laranja",
+            "French": "orange",
+            "Italian": "arancione",
+            "German": "orange"
+          },
+          "purple": {
+            "Spanish": "púrpura / morado (m)",
+            "Portuguese": "roxo / púrpura",
+            "French": "violet",
+            "Italian": "viola",
+            "German": "lila / violett"
+          },
+          "grey": {
+            "Spanish": "gris",
+            "Portuguese": "cinza",
+            "French": "gris",
+            "Italian": "grigio (m)",
+            "German": "grau"
+          },
+          "beige": {
+            "Spanish": "beige",
+            "Portuguese": "bege",
+            "French": "beige",
+            "Italian": "beige",
+            "German": "beige"
+          },
+          "turquoise": {
+            "Spanish": "turquesa",
+            "Portuguese": "turquesa",
+            "French": "turquoise",
+            "Italian": "turchese",
+            "German": "türkis"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Family and Relationships": {
+        "Words": {
+          "mother": {
+            "Spanish": "madre",
+            "Portuguese": "mãe",
+            "French": "mère",
+            "Italian": "madre",
+            "German": "mutter"
+          },
+          "father": {
+            "Spanish": "padre",
+            "Portuguese": "pai",
+            "French": "père",
+            "Italian": "padre",
+            "German": "vater"
+          },
+          "sister": {
+            "Spanish": "hermana",
+            "Portuguese": "irmã",
+            "French": "sœur",
+            "Italian": "sorella",
+            "German": "schwester"
+          },
+          "brother": {
+            "Spanish": "hermano",
+            "Portuguese": "irmão",
+            "French": "frère",
+            "Italian": "fratello",
+            "German": "bruder"
+          },
+          "son": {
+            "Spanish": "hijo",
+            "Portuguese": "filho",
+            "French": "fils",
+            "Italian": "figlio",
+            "German": "sohn"
+          },
+          "daughter": {
+            "Spanish": "hija",
+            "Portuguese": "filha",
+            "French": "fille",
+            "Italian": "figlia",
+            "German": "tochter"
+          },
+          "husband": {
+            "Spanish": "esposo / marido",
+            "Portuguese": "marido",
+            "French": "mari",
+            "Italian": "marito",
+            "German": "ehemann"
+          },
+          "wife": {
+            "Spanish": "esposa / mujer",
+            "Portuguese": "esposa",
+            "French": "femme",
+            "Italian": "moglie",
+            "German": "ehefrau"
+          },
+          "friend": {
+            "Spanish": "amigo / amiga",
+            "Portuguese": "amigo / amiga",
+            "French": "ami",
+            "Italian": "amico / amica",
+            "German": "freund / freundin"
+          },
+          "relative": {
+            "Spanish": "pariente",
+            "Portuguese": "parente",
+            "French": "parent",
+            "Italian": "parente",
+            "German": "verwandter"
+          },
+          "grandfather": {
+            "Spanish": "abuelo",
+            "Portuguese": "avô",
+            "French": "grand-père",
+            "Italian": "nonno",
+            "German": "großvater"
+          },
+          "grandmother": {
+            "Spanish": "abuela",
+            "Portuguese": "avó",
+            "French": "grand-mère",
+            "Italian": "nonna",
+            "German": "großmutter"
+          },
+          "uncle": {
+            "Spanish": "tío",
+            "Portuguese": "tio",
+            "French": "oncle",
+            "Italian": "zio",
+            "German": "onkel"
+          },
+          "aunt": {
+            "Spanish": "tía",
+            "Portuguese": "tia",
+            "French": "tante",
+            "Italian": "zia",
+            "German": "tante"
+          },
+          "cousin": {
+            "Spanish": "primo / prima",
+            "Portuguese": "primo / prima",
+            "French": "cousin / cousine",
+            "Italian": "cugino / cugina",
+            "German": "cousin / cousine"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Body Parts": {
+        "Words": {
+          "head": {
+            "Spanish": "cabeza",
+            "Portuguese": "cabeça",
+            "French": "tête",
+            "Italian": "testa",
+            "German": "kopf"
+          },
+          "hand": {
+            "Spanish": "mano (f)",
+            "Portuguese": "mão (f)",
+            "French": "main (f)",
+            "Italian": "mano (f)",
+            "German": "hand (f)"
+          },
+          "arm": {
+            "Spanish": "brazo",
+            "Portuguese": "braço",
+            "French": "bras",
+            "Italian": "braccio",
+            "German": "arm"
+          },
+          "leg": {
+            "Spanish": "pierna",
+            "Portuguese": "perna",
+            "French": "jambe",
+            "Italian": "gamba",
+            "German": "bein"
+          },
+          "foot": {
+            "Spanish": "pie",
+            "Portuguese": "pé",
+            "French": "pied",
+            "Italian": "piede",
+            "German": "fuß"
+          },
+          "eye": {
+            "Spanish": "ojo",
+            "Portuguese": "olho",
+            "French": "œil",
+            "Italian": "occhio",
+            "German": "auge"
+          },
+          "ear": {
+            "Spanish": "oído / oreja",
+            "Portuguese": "ouvido / orelha",
+            "French": "oreille",
+            "Italian": "orecchio",
+            "German": "ohr"
+          },
+          "nose": {
+            "Spanish": "nariz",
+            "Portuguese": "nariz",
+            "French": "nez",
+            "Italian": "naso",
+            "German": "nase"
+          },
+          "mouth": {
+            "Spanish": "boca",
+            "Portuguese": "boca",
+            "French": "bouche",
+            "Italian": "bocca",
+            "German": "mund"
+          },
+          "stomach": {
+            "Spanish": "estómago",
+            "Portuguese": "estômago",
+            "French": "estomac",
+            "Italian": "stomaco",
+            "German": "magen"
+          },
+          "back": {
+            "Spanish": "espalda",
+            "Portuguese": "costas",
+            "French": "dos",
+            "Italian": "schiena",
+            "German": "rücken"
+          },
+          "chest": {
+            "Spanish": "pecho",
+            "Portuguese": "peito",
+            "French": "poitrine",
+            "Italian": "petto",
+            "German": "brust"
+          },
+          "finger": {
+            "Spanish": "dedo",
+            "Portuguese": "dedo",
+            "French": "doigt",
+            "Italian": "dito",
+            "German": "finger"
+          },
+          "knee": {
+            "Spanish": "rodilla",
+            "Portuguese": "joelho",
+            "French": "genou",
+            "Italian": "ginocchio",
+            "German": "knie"
+          }
+        }
+      }
+    }
+  }
+  
+  {
+    "Subjects": {
+      "Animals": {
+        "Words": {
+          "dog": {
+            "Spanish": "perro",
+            "Portuguese": "cão",
+            "French": "chien",
+            "Italian": "cane",
+            "German": "hund"
+          },
+          "cat": {
+            "Spanish": "gato",
+            "Portuguese": "gato",
+            "French": "chat",
+            "Italian": "gatto",
+            "German": "katze"
+          },
+          "bird": {
+            "Spanish": "pájaro / ave",
+            "Portuguese": "pássaro / ave",
+            "French": "oiseau",
+            "Italian": "uccello",
+            "German": "vogel"
+          },
+          "fish": {
+            "Spanish": "pez / pescado",
+            "Portuguese": "peixe",
+            "French": "poisson",
+            "Italian": "pesce",
+            "German": "fisch"
+          },
+          "cow": {
+            "Spanish": "vaca / buey",
+            "Portuguese": "vaca",
+            "French": "vache",
+            "Italian": "mucca",
+            "German": "kuh"
+          },
+          "horse": {
+            "Spanish": "caballo",
+            "Portuguese": "cavalo",
+            "French": "cheval",
+            "Italian": "cavallo",
+            "German": "pferd"
+          },
+          "chicken": {
+            "Spanish": "pollo / gallina",
+            "Portuguese": "frango / galinha",
+            "French": "poulet",
+            "Italian": "pollo",
+            "German": "huhn"
+          },
+          "pig": {
+            "Spanish": "cerdo / puerco",
+            "Portuguese": "porco",
+            "French": "cochon",
+            "Italian": "maiale",
+            "German": "schwein"
+          },
+          "sheep": {
+            "Spanish": "oveja",
+            "Portuguese": "ovelha",
+            "French": "mouton",
+            "Italian": "pecora",
+            "German": "schaf"
+          },
+          "duck": {
+            "Spanish": "pato",
+            "Portuguese": "pato",
+            "French": "canard",
+            "Italian": "anatra",
+            "German": "ente"
+          },
+          "rabbit": {
+            "Spanish": "conejo",
+            "Portuguese": "coelho",
+            "French": "lapin",
+            "Italian": "coniglio",
+            "German": "kaninchen"
+          },
+          "elephant": {
+            "Spanish": "elefante",
+            "Portuguese": "elefante",
+            "French": "éléphant",
+            "Italian": "elefante",
+            "German": "elefant"
+          },
+          "lion": {
+            "Spanish": "león",
+            "Portuguese": "leão",
+            "French": "lion",
+            "Italian": "leone",
+            "German": "löwe"
+          },
+          "tiger": {
+            "Spanish": "tigre",
+            "Portuguese": "tigre",
+            "French": "tigre",
+            "Italian": "tigre",
+            "German": "tiger"
+          },
+          "bear": {
+            "Spanish": "oso",
+            "Portuguese": "urso",
+            "French": "ours",
+            "Italian": "orso",
+            "German": "bär"
+          },
+          "monkey": {
+            "Spanish": "mono",
+            "Portuguese": "macaco",
+            "French": "singe",
+            "Italian": "scimmia",
+            "German": "affe"
+          },
+          "deer": {
+            "Spanish": "ciervo",
+            "Portuguese": "veado",
+            "French": "cerf",
+            "Italian": "cervo",
+            "German": "hirsch"
+          },
+          "frog": {
+            "Spanish": "rana",
+            "Portuguese": "sapo",
+            "French": "grenouille",
+            "Italian": "rana",
+            "German": "frosch"
+          },
+          "snake": {
+            "Spanish": "serpiente / culebra",
+            "Portuguese": "cobra / serpente",
+            "French": "serpent",
+            "Italian": "serpente",
+            "German": "schlange"
+          },
+          "turtle": {
+            "Spanish": "tortuga",
+            "Portuguese": "tartaruga",
+            "French": "tortue",
+            "Italian": "tartaruga",
+            "German": "schildkröte"
+          },
+          "whale": {
+            "Spanish": "ballena",
+            "Portuguese": "baleia",
+            "French": "baleine",
+            "Italian": "balena",
+            "German": "wal"
+          },
+          "dolphin": {
+            "Spanish": "delfín",
+            "Portuguese": "golfinho",
+            "French": "dauphin",
+            "Italian": "delfino",
+            "German": "delphin"
+          },
+          "shark": {
+            "Spanish": "tiburón",
+            "Portuguese": "tubarão",
+            "French": "requin",
+            "Italian": "squalo",
+            "German": "hai"
+          },
+          "wolf": {
+            "Spanish": "lobo",
+            "Portuguese": "lobo",
+            "French": "loup",
+            "Italian": "lupo",
+            "German": "wolf"
+          },
+          "fox": {
+            "Spanish": "zorro",
+            "Portuguese": "raposa",
+            "French": "renard",
+            "Italian": "volpe",
+            "German": "fuchs"
+          }
+        }
+      }
+    }
+  }
+} 
+  
