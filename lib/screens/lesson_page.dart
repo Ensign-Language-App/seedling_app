@@ -20,6 +20,13 @@ class LessonPage extends StatefulWidget {
   LessonPageState createState() => LessonPageState();
 }
 
+class LessonPage extends StatefulWidget {
+  const LessonPage({super.key});
+
+  @override
+  LessonPageState createState() => LessonPageState();
+}
+
 class LessonPageState extends State<LessonPage> {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   bool isCardVisible = true;
@@ -27,6 +34,7 @@ class LessonPageState extends State<LessonPage> {
   int currentIndex = 0;
   bool isLoading = true;
   String message = '';
+  String selectedLanguage = 'English';  // Add this line
 
   @override
   void initState() {
@@ -34,7 +42,15 @@ class LessonPageState extends State<LessonPage> {
     fetchWords();
   }
 
-Future<void> fetchWords() async {
+  void onLanguageChanged(String language) {
+    setState(() {
+      selectedLanguage = language;
+      isLoading = true;
+    });
+    fetchWords();
+  }
+
+  Future<void> fetchWords() async {
     const maxRetries = 5;
     const backoffDuration = Duration(seconds: 2);
     int retryCount = 0;
@@ -53,11 +69,7 @@ Future<void> fetchWords() async {
           print('Fetched document: ${doc.id} with data: ${doc.data()}');
           fetchedWords.add({
             'english': doc.id,
-            'spanish': doc['Spanish'],
-            'portuguese': doc['Portuguese'],
-            'french': doc['French'],
-            'italian': doc['Italian'],
-            'german': doc['German'],
+            selectedLanguage.toLowerCase(): doc[selectedLanguage],
           });
         }
 
@@ -84,130 +96,114 @@ Future<void> fetchWords() async {
     }
   }
 
-  void resetCard() {
-    setState(() {
-      isCardVisible = true;
-    });
-  }
-
-  void showNextCard() {
-    setState(() {
-      currentIndex = (currentIndex + 3) % words.length;
-      isCardVisible = true;
-    });
-  }
-
-  void showPreviousCard() {
-    setState(() {
-      currentIndex = (currentIndex + 1) % words.length;
-      isCardVisible = true;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
       appBar: AppBar(title: const Text('Learn')),
-      body: isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : words.isEmpty
-              ? Center(
-                  child: Text(message.isEmpty ? 'No words found' : message))
-              : Center(
-                  child: isCardVisible
-                      ? GestureDetector(
-                          onTap: () {
-                            HapticFeedback.lightImpact();
-                          },
-                          child: Dismissible(
-                            key: Key(words[currentIndex]['english']!),
-                            direction: DismissDirection.horizontal,
-                            onDismissed: (direction) {
-                              if (direction == DismissDirection.endToStart) {
-                                // Left Swipe
-                                setState(() {
-                                  isCardVisible = false;
-                                });
-                                // Show the next card after a delay
-                                Future.delayed(
-                                    const Duration(milliseconds: 300),
-                                    showNextCard);
-                              } else {
-                                // Right Swipe
-                                setState(() {
-                                  isCardVisible = false;
-                                });
-                                // Show the next card after a delay
-                                Future.delayed(
-                                    const Duration(milliseconds: 300),
-                                    showPreviousCard);
-                              }
+      body: Column(
+        children: [
+          LanguageSelector(
+            width: 50,
+            height: 50,
+            onLanguageChanged: onLanguageChanged,  // Pass the callback here
+          ),
+          Expanded(
+            child: isLoading
+                ? const Center(child: CircularProgressIndicator())
+                : words.isEmpty
+                    ? Center(child: Text(message.isEmpty ? 'No words found' : message))
+                    : Center(
+                        child: isCardVisible
+                            ? GestureDetector(
+                                onTap: () {
+                                  HapticFeedback.lightImpact();
+                                },
+                                child: Dismissible(
+                                  key: Key(words[currentIndex]['english']!),
+                                  direction: DismissDirection.horizontal,
+                                  onDismissed: (direction) {
+                                    if (direction == DismissDirection.endToStart) {
+                                      // Left Swipe
+                                      setState(() {
+                                        isCardVisible = false;
+                                      });
+                                      // Show the next card after a delay
+                                      Future.delayed(const Duration(milliseconds: 300), showNextCard);
+                                    } else {
+                                      // Right Swipe
+                                      setState(() {
+                                        isCardVisible = false;
+                                      });
+                                      // Show the next card after a delay
+                                      Future.delayed(const Duration(milliseconds: 300), showPreviousCard);
+                                    }
 
-                              setState(() {
-                                isCardVisible = false;
-                              });
-                              // Show the next card after a delay
-                              Future.delayed(const Duration(milliseconds: 300),
-                                  showNextCard);
-                            },
-                            child: Dismissible(
-                              key: Key('flip_card_$currentIndex'),
-                              direction: DismissDirection.vertical,
-                              onDismissed: (direction) {
-                                setState(() {
-                                  isCardVisible = false;
-                                });
-                                // Reset the card after a delay
-                                Future.delayed(
-                                    const Duration(milliseconds: 300),
-                                    resetCard);
-                              },
-                              child: FlipCard(
-                                key: cardKey,
-                                direction: FlipDirection.HORIZONTAL,
-                                front: Card(
-                                  elevation: 8.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                  child: Container(
-                                    height: 450,
-                                    width: 300,
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      words[currentIndex]['english']!,
-                                      style: const TextStyle(
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.bold,
+                                    setState(() {
+                                      isCardVisible = false;
+                                    });
+                                    // Show the next card after a delay
+                                    Future.delayed(const Duration(milliseconds: 300), showNextCard);
+                                  },
+                                  child: Dismissible(
+                                    key: Key('flip_card_$currentIndex'),
+                                    direction: DismissDirection.vertical,
+                                    onDismissed: (direction) {
+                                      setState(() {
+                                        isCardVisible = false;
+                                      });
+                                      // Reset the card after a delay
+                                      Future.delayed(const Duration(milliseconds: 300), resetCard);
+                                    },
+                                    child: FlipCard(
+                                      key: cardKey,
+                                      direction: FlipDirection.HORIZONTAL,
+                                      front: Card(
+                                        elevation: 8.0,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(30.0),
+                                        ),
+                                        child: Container(
+                                          height: 450,
+                                          width: 300,
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            words[currentIndex]['english']!,
+                                            style: const TextStyle(
+                                              fontSize: 24.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      back: Card(
+                                        elevation: 8.0,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(30.0),
+                                        ),
+                                        child: Container(
+                                          height: 450,
+                                          width: 300,
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            words[currentIndex][selectedLanguage.toLowerCase()]!,
+                                            style: const TextStyle(
+                                              fontSize: 24.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                                back: Card(
-                                  elevation: 8.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                  child: Container(
-                                    height: 450,
-                                    width: 300,
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      words[currentIndex]['french']!,
-                                      style: const TextStyle(
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                      : const SizedBox.shrink(),
-                ),
+                              )
+                            : const SizedBox.shrink(),
+                      ),
+          ),
+        ],
+      ),
     );
   }
 }
+

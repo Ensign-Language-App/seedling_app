@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(
-    home: Center(child: LanguageSelector(width: 50, height: 50))));
+    home: Center(child: LanguageSelector(width: 50, height: 50, ))));
 
 class LanguageSelector extends StatefulWidget {
   final double width;
   final double height;
+  final Function(String) onLanguageChanged;  // Add this line
 
-  const LanguageSelector(
-      {super.key, required this.width, required this.height});
+
+  const LanguageSelector({
+      super.key, 
+      required this.width, 
+      required this.height,
+      required this.onLanguageChanged,  // Add this line
+      });
 
   @override
   LanguageSelectorState createState() => LanguageSelectorState();
@@ -16,6 +22,7 @@ class LanguageSelector extends StatefulWidget {
 
 class LanguageSelectorState extends State<LanguageSelector> {
   String _selectedFlag = 'assets/icons/flags/US_flag.png';
+  String _selectedLanguage = 'English (US)';
 
   final List<Map<String, String>> _flags = [
     {'language': 'English (US)', 'path': 'assets/icons/flags/US_flag.png'},
@@ -65,7 +72,9 @@ class LanguageSelectorState extends State<LanguageSelector> {
         if (selected != null) {
           setState(() {
             _selectedFlag = selected['path']!;
+            _selectedLanguage = selected['language']!;
           });
+          widget.onLanguageChanged(_selectedLanguage);  // Call the callback here
         }
       },
       child: Image.asset(
