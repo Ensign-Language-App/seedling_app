@@ -61,29 +61,34 @@ class SideMenuState extends State<SideMenu> {
             leading: const Icon(Icons.person),
             title: const Text('Profile'),
             onTap: () async {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfilePage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings),
+            title: const Text('Settings'),
+            onTap: () async {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const SettingsPage()),
+              // );
+
               bool isAuthenticated = await biometricAuth.authenticate();
               if (!mounted) return;
 
               if (isAuthenticated) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ProfilePage()),
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
                 );
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Authentication failed')),
                 );
               }
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SettingsPage()),
-              );
             },
           ),
           ListTile(
