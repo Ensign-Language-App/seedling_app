@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../utilities/biometric_auth.dart';
@@ -7,7 +9,6 @@ import 'package:seedling_app/screens/profile_page.dart';
 import 'package:seedling_app/screens/settings_page.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:seedling_app/screens/settings_screens.dart';
-
 
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
@@ -65,12 +66,10 @@ class SideMenuState extends State<SideMenu> {
 
               if (isAuthenticated) {
                 Navigator.push(
-                  // TODO: ADDRESS THIS WARNING
                   context,
                   MaterialPageRoute(builder: (context) => const ProfilePage()),
                 );
               } else {
-                // TODO: ADDRESS THIS WARNING
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Authentication failed')),
                 );
@@ -93,7 +92,8 @@ class SideMenuState extends State<SideMenu> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const NotificationsPage()),
+                MaterialPageRoute(
+                    builder: (context) => const NotificationsPage()),
               );
             },
           ),
@@ -119,7 +119,6 @@ class SideMenuState extends State<SideMenu> {
               await userController.signOut();
               if (mounted) {
                 Navigator.pushReplacement(
-                  // TODO: ADDRESS THIS WARNING
                   context,
                   MaterialPageRoute(builder: (context) => const LogInPage()),
                 );
