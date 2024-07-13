@@ -131,7 +131,7 @@ class LogInPageState extends State<LogInPage>
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return ResetPassword();
+                          return const ResetPassword();
                         },
                       ),
                     );
@@ -319,8 +319,7 @@ class LogInPageState extends State<LogInPage>
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content:
-                Text("Login cancelled" ?? e.message ?? 'An error occurred'),
+            content: Text('Login cancelled${e.message}An error occurred'),
           ),
         );
       }

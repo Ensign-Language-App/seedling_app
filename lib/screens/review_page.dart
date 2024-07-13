@@ -174,7 +174,7 @@ class ReviewPageState extends State<ReviewPage> {
                                     fontWeight: FontWeight.bold),
                               ),
                               onDismissed: (direction) {
-                                //TODO remove card from review list
+                                //TODO: remove card from review list
 
                                 setState(() {
                                   isCardVisible = false;

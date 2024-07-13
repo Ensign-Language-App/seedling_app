@@ -34,7 +34,7 @@ class LessonPageState extends State<LessonPage> {
     fetchWords();
   }
 
-Future<void> fetchWords() async {
+  Future<void> fetchWords() async {
     const maxRetries = 5;
     const backoffDuration = Duration(seconds: 2);
     int retryCount = 0;
@@ -123,6 +123,22 @@ Future<void> fetchWords() async {
                           child: Dismissible(
                             key: Key(words[currentIndex]['english']!),
                             direction: DismissDirection.horizontal,
+                            background: const Text(
+                              "\n\nPrevious",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(175, 255, 255, 255),
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            secondaryBackground: const Text(
+                              "\n\nNext",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(175, 255, 255, 255),
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
                             onDismissed: (direction) {
                               if (direction == DismissDirection.endToStart) {
                                 // Left Swipe
@@ -154,6 +170,22 @@ Future<void> fetchWords() async {
                             child: Dismissible(
                               key: Key('flip_card_$currentIndex'),
                               direction: DismissDirection.vertical,
+                              background: const Text(
+                                "\n\nAdd to Review",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromARGB(175, 255, 255, 255),
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              secondaryBackground: const Text(
+                                "\n\n\nMastered",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromARGB(175, 255, 255, 255),
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.bold),
+                              ),
                               onDismissed: (direction) {
                                 setState(() {
                                   isCardVisible = false;
@@ -211,4 +243,3 @@ Future<void> fetchWords() async {
     );
   }
 }
-

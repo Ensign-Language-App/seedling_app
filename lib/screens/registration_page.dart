@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +19,8 @@ class RegistrationPageState extends State<RegistrationPage> {
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController reEnteredPasswordController = TextEditingController();
+  final TextEditingController reEnteredPasswordController =
+      TextEditingController();
 
   bool isFirstNameValid = true;
   bool isLastNameValid = true;
@@ -48,116 +51,116 @@ class RegistrationPageState extends State<RegistrationPage> {
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : ListView(
-        padding: const EdgeInsets.all(30.0),
-        children: [
-          TextFormField(
-            controller: firstNameController,
-            decoration: InputDecoration(
-              labelText: 'First Name',
-              hintText: 'Enter your first name',
-              errorText: isFirstNameValid
-                  ? null
-                  : 'First name can only contain letters.',
+              padding: const EdgeInsets.all(30.0),
+              children: [
+                TextFormField(
+                  controller: firstNameController,
+                  decoration: InputDecoration(
+                    labelText: 'First Name',
+                    hintText: 'Enter your first name',
+                    errorText: isFirstNameValid
+                        ? null
+                        : 'First name can only contain letters.',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      isFirstNameValid = value.trim().isNotEmpty &&
+                          RegExp(r'^[\p{L}\p{M}]+$', unicode: true)
+                              .hasMatch(value);
+                    });
+                  },
+                ),
+                const SizedBox(height: 15.0),
+                // TODO: SET UP THE WARNING HERE
+                TextFormField(
+                  controller: lastNameController,
+                  decoration: InputDecoration(
+                    labelText: 'Last Name',
+                    hintText: 'Enter your last name',
+                    errorText: isLastNameValid
+                        ? null
+                        : 'Last name can only contain letters.',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      isLastNameValid = value.trim().isNotEmpty &&
+                          RegExp(r'^[\p{L}\p{M}]+$', unicode: true)
+                              .hasMatch(value);
+                    });
+                  },
+                ),
+                const SizedBox(height: 15.0),
+                TextFormField(
+                  controller: userNameController,
+                  decoration: InputDecoration(
+                    labelText: 'Username',
+                    hintText: 'Choose a username',
+                    errorText: isUsernameValid
+                        ? null
+                        : 'Username can only contain letters and numbers.',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      isUsernameValid = value.trim().isNotEmpty &&
+                          RegExp(r'^[a-zA-Z0-9]+$').hasMatch(value);
+                    });
+                  },
+                ),
+                const SizedBox(height: 15.0),
+                TextFormField(
+                  controller: emailController,
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    hintText: 'Enter your email address',
+                    errorText: isEmailValid ? null : 'Invalid Email.',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      isEmailValid = value.trim().isNotEmpty &&
+                          RegExp(r'^[^@]+@[^@]+\.[^@]+$').hasMatch(value);
+                    });
+                  },
+                ),
+                const SizedBox(height: 15.0),
+                TextFormField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    hintText: 'Enter a strong password',
+                    errorText: isPasswordValid
+                        ? null
+                        : 'Password must contain at lease a lower case, upper case, and special character.',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      isPasswordValid = value.trim().isNotEmpty &&
+                          value.length >= 8 &&
+                          RegExp(r'[0-9]').hasMatch(value) &&
+                          RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value);
+                    });
+                  },
+                ),
+                const SizedBox(height: 15.0),
+                TextFormField(
+                  controller: reEnteredPasswordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Re-enter Password',
+                    hintText: 'Re-enter your password',
+                    errorText: isReEnteredPasswordValid
+                        ? null
+                        : 'Re-entered password is different from the password.',
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      isReEnteredPasswordValid =
+                          value.trim() == passwordController.text;
+                    });
+                  },
+                ),
+              ],
             ),
-            onChanged: (value) {
-              setState(() {
-                isFirstNameValid = value.trim().isNotEmpty &&
-                    RegExp(r'^[\p{L}\p{M}]+$', unicode: true).hasMatch(value);
-              });
-            },
-          ),
-          const SizedBox(height: 15.0),
-          // TODO: SET UP THE WARNING HERE
-          TextFormField(
-            controller: lastNameController,
-            decoration: InputDecoration(
-              labelText: 'Last Name',
-              hintText: 'Enter your last name',
-              errorText: isLastNameValid
-                  ? null
-                  : 'Last name can only contain letters.',
-            ),
-            onChanged: (value) {
-              setState(() {
-                isLastNameValid = value.trim().isNotEmpty &&
-                    RegExp(r'^[\p{L}\p{M}]+$', unicode: true).hasMatch(value);
-              });
-            },
-          ),
-          const SizedBox(height: 15.0),
-          TextFormField(
-            controller: userNameController,
-            decoration: InputDecoration(
-              labelText: 'Username',
-              hintText: 'Choose a username',
-              errorText: isUsernameValid
-                  ? null
-                  : 'Username can only contain letters and numbers.',
-            ),
-            onChanged: (value) {
-              setState(() {
-                isUsernameValid = value.trim().isNotEmpty &&
-                    RegExp(r'^[a-zA-Z0-9]+$').hasMatch(value);
-              });
-            },
-          ),
-          const SizedBox(height: 15.0),
-          TextFormField(
-            controller: emailController,
-            decoration: InputDecoration(
-              labelText: 'Email',
-              hintText: 'Enter your email address',
-              errorText: isEmailValid
-                  ? null
-                  : 'Invalid Email.',
-            ),
-            onChanged: (value) {
-              setState(() {
-                isEmailValid = value.trim().isNotEmpty &&
-                    RegExp(r'^[^@]+@[^@]+\.[^@]+$').hasMatch(value);
-              });
-            },
-          ),
-          const SizedBox(height: 15.0),
-          TextFormField(
-            controller: passwordController,
-            obscureText: true,
-            decoration: InputDecoration(
-              labelText: 'Password',
-              hintText: 'Enter a strong password',
-              errorText: isPasswordValid
-                  ? null
-                  : 'Password must contain at lease a lower case, upper case, and special character.',
-            ),
-            onChanged: (value) {
-              setState(() {
-                isPasswordValid = value.trim().isNotEmpty &&
-                    value.length >= 8 &&
-                    RegExp(r'[0-9]').hasMatch(value) &&
-                    RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value);
-              });
-            },
-          ),
-          const SizedBox(height: 15.0),
-          TextFormField(
-            controller: reEnteredPasswordController,
-            obscureText: true,
-            decoration: InputDecoration(
-              labelText: 'Re-enter Password',
-              hintText: 'Re-enter your password',
-              errorText: isReEnteredPasswordValid
-                  ? null
-                  : 'Re-entered password is different from the password.',
-            ),
-            onChanged: (value) {
-              setState(() {
-                isReEnteredPasswordValid =
-                    value.trim() == passwordController.text;
-              });
-            },
-          ),
-        ],
-      ),
     );
   }
 
@@ -209,7 +212,8 @@ class RegistrationPageState extends State<RegistrationPage> {
       });
 
       try {
-        final userController = Provider.of<UserController>(context, listen: false);
+        final userController =
+            Provider.of<UserController>(context, listen: false);
         await userController.registerWithEmailAndPassword(
           emailController.text.trim(),
           passwordController.text.trim(),
@@ -226,7 +230,6 @@ class RegistrationPageState extends State<RegistrationPage> {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => const LogInPage(),
         ));
-
       } on FirebaseAuthException catch (e) {
         // Handle errors
         ScaffoldMessenger.of(context).showSnackBar(
