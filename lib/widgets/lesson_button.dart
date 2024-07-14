@@ -2,19 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:seedling_app/screens/lesson_page.dart';
 
 void main() => runApp(const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: LessonButton(
-            image: 'assets/icons/flags/US_flag.png',
-            title: 'Lesson 1',
-            lessonColor: Color(0xFFf4a261),
-            stackColor1: Color(0xFFe9c46a),
-            stackColor2: Color(0xFF2a9d8f),
-            progress: 0.5,
-          ),
-        ),
+  home: Scaffold(
+    body: Center(
+      child: LessonButton(
+        image: 'assets/icons/flags/US_flag.png',
+        title: 'Lesson 1',
+        lessonColor: Color(0xFFf4a261),
+        stackColor1: Color(0xFFe9c46a),
+        stackColor2: Color(0xFF2a9d8f),
+        progress: 0.5,
+        nativeLanguage: 'English',
+        learningLanguage: 'French',
+        topic: 'Greetings',
       ),
-    ));
+    ),
+  ),
+));
 
 class LessonButton extends StatefulWidget {
   final String image;
@@ -23,15 +26,21 @@ class LessonButton extends StatefulWidget {
   final Color stackColor1;
   final Color stackColor2;
   final double progress;
+  final String nativeLanguage;
+  final String learningLanguage;
+  final String topic;
 
   const LessonButton(
       {super.key,
-      required this.image,
-      required this.title,
-      required this.lessonColor,
-      required this.stackColor1,
-      required this.stackColor2,
-      required this.progress});
+        required this.image,
+        required this.title,
+        required this.lessonColor,
+        required this.stackColor1,
+        required this.stackColor2,
+        required this.progress,
+        required this.nativeLanguage,
+        required this.learningLanguage,
+        required this.topic});
 
   @override
   LessonButtonState createState() => LessonButtonState();
@@ -96,12 +105,6 @@ class LessonButtonState extends State<LessonButton> {
           height: 130,
           decoration: BoxDecoration(
             color: widget.lessonColor,
-            // gradient: LinearGradient(
-            //   colors: [widget.lessonColor, Colors.white],
-            //   // You can change these colors
-            //   begin: Alignment.topLeft,
-            //   end: Alignment.bottomRight,
-            // ),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
@@ -155,7 +158,13 @@ class LessonButtonState extends State<LessonButton> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const LessonPage()),
+            MaterialPageRoute(
+              builder: (context) => LessonPage(
+                nativeLanguage: widget.nativeLanguage,
+                learningLanguage: widget.learningLanguage,
+                topic: widget.topic,
+              ),
+            ),
           );
         },
       )

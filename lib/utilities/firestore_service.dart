@@ -7,7 +7,7 @@ import 'dart:convert';
 class FirestoreService {
   static Future<void> saveUser(String firstName, String lastName,
       String userName, String email, String password) async {
-    // Hash the password
+
     final hashedPassword = sha256.convert(utf8.encode(password)).toString();
 
     try {

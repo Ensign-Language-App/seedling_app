@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/services.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const MaterialApp(
-    home: LessonPage(),
-  ));
-}
-
 class LessonPage extends StatefulWidget {
-  const LessonPage({super.key});
+  final String nativeLanguage;
+  final String learningLanguage;
+  final String topic;
+
+  const LessonPage({
+    super.key,
+    required this.nativeLanguage,
+    required this.learningLanguage,
+    required this.topic,
+  });
 
   @override
   LessonPageState createState() => LessonPageState();
@@ -27,6 +27,8 @@ class LessonPageState extends State<LessonPage> {
   int currentIndex = 0;
   bool isLoading = true;
   String message = '';
+  List<String> masteredWords = [];
+  int totalCards = 0;
 
   @override
   void initState() {
@@ -45,19 +47,23 @@ class LessonPageState extends State<LessonPage> {
         QuerySnapshot querySnapshot = await FirebaseFirestore.instance
             .collection('Vocabulary')
             .doc('Subjects')
-            .collection('People')
+            .collection(widget.topic)
             .get();
+
+        // TODO: MAKE SURE THIS LINE GETS THE CORRECT NUMBER OF CARDS
+        totalCards = querySnapshot.docs.length;
 
         List<Map<String, String>> fetchedWords = [];
         for (var doc in querySnapshot.docs) {
           print('Fetched document: ${doc.id} with data: ${doc.data()}');
+          var data = doc.data() as Map<String, dynamic>;
           fetchedWords.add({
             'english': doc.id,
-            'spanish': doc['Spanish'],
-            'portuguese': doc['Portuguese'],
-            'french': doc['French'],
-            'italian': doc['Italian'],
-            'german': doc['German'],
+            'spanish': data['Spanish'] ?? 'N/A',
+            'portuguese': data['Portuguese'] ?? 'N/A',
+            'french': data['French'] ?? 'N/A',
+            'italian': data['Italian'] ?? 'N/A',
+            'german': data['German'] ?? 'N/A',
           });
         }
 
@@ -92,154 +98,160 @@ class LessonPageState extends State<LessonPage> {
 
   void showNextCard() {
     setState(() {
-      currentIndex = (currentIndex + 3) % words.length;
+      currentIndex = (currentIndex + 1) % words.length;
       isCardVisible = true;
     });
   }
 
   void showPreviousCard() {
     setState(() {
-      currentIndex = (currentIndex + 1) % words.length;
+      currentIndex = (currentIndex - 1 + words.length) % words.length;
       isCardVisible = true;
     });
+  }
+
+  // TODO: MAKE SURE THIS WORKS
+  void addToMaster(){
+    masteredWords.add(words[currentIndex]['english']!);
+  }
+
+  // TODO: Implement the calculateProgress method
+  Future<double> calculateProgress() async {
+    return masteredWords.length/totalCards;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
-      appBar: AppBar(title: const Text('Learn')),
+      appBar: AppBar(
+        backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.close, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : words.isEmpty
-              ? Center(
-                  child: Text(message.isEmpty ? 'No words found' : message))
-              : Center(
-                  child: isCardVisible
-                      ? GestureDetector(
-                          onTap: () {
-                            HapticFeedback.lightImpact();
-                          },
-                          child: Dismissible(
-                            key: Key(words[currentIndex]['english']!),
-                            direction: DismissDirection.horizontal,
-                            background: const Text(
-                              "\n\nPrevious",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Color.fromARGB(175, 255, 255, 255),
-                                  fontSize: 50,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            secondaryBackground: const Text(
-                              "\n\nNext",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Color.fromARGB(175, 255, 255, 255),
-                                  fontSize: 50,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            onDismissed: (direction) {
-                              if (direction == DismissDirection.endToStart) {
-                                // Left Swipe
-                                setState(() {
-                                  isCardVisible = false;
-                                });
-                                // Show the next card after a delay
-                                Future.delayed(
-                                    const Duration(milliseconds: 300),
-                                    showNextCard);
-                              } else {
-                                // Right Swipe
-                                setState(() {
-                                  isCardVisible = false;
-                                });
-                                // Show the next card after a delay
-                                Future.delayed(
-                                    const Duration(milliseconds: 300),
-                                    showPreviousCard);
-                              }
+          ? Center(
+          child: Text(message.isEmpty ? 'No words found' : message))
+          : Center(
+        child: isCardVisible
+            ? GestureDetector(
+          onTap: () {
+            HapticFeedback.lightImpact();
+          },
+          child: Dismissible(
+            key: Key(words[currentIndex]['english']!),
+            direction: DismissDirection.horizontal,
+            background: const Text(
+              "\n\nPrevious",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromARGB(175, 255, 255, 255),
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold),
+            ),
+            secondaryBackground: const Text(
+              "\n\nNext",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromARGB(175, 255, 255, 255),
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold),
+            ),
+            onDismissed: (direction) {
+              if (direction == DismissDirection.endToStart) {
+                // Left Swipe
+                setState(() {
+                  isCardVisible = false;
+                });
+                // Show the next card after a delay
+                Future.delayed(
+                    const Duration(milliseconds: 300),
+                    showNextCard);
+              } else {
+                // Right Swipe
+                setState(() {
+                  isCardVisible = false;
+                });
+                // Show the previous card after a delay
+                Future.delayed(
+                    const Duration(milliseconds: 300),
+                    showPreviousCard);
+              }
+            },
+            child: Dismissible(
+              key: Key('flip_card_$currentIndex'),
+              direction: DismissDirection.up,
+              background: const Text(
+                "\n\n\nMastered",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromARGB(175, 255, 255, 255),
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold),
+              ),
+              onDismissed: (direction) {
+                //TODO: remove card from review list
 
-                              setState(() {
-                                isCardVisible = false;
-                              });
-                              // Show the next card after a delay
-                              Future.delayed(const Duration(milliseconds: 300),
-                                  showNextCard);
-                            },
-                            child: Dismissible(
-                              key: Key('flip_card_$currentIndex'),
-                              direction: DismissDirection.vertical,
-                              background: const Text(
-                                "\n\nAdd to Review",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Color.fromARGB(175, 255, 255, 255),
-                                    fontSize: 50,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              secondaryBackground: const Text(
-                                "\n\n\nMastered",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Color.fromARGB(175, 255, 255, 255),
-                                    fontSize: 50,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              onDismissed: (direction) {
-                                setState(() {
-                                  isCardVisible = false;
-                                });
-                                // Reset the card after a delay
-                                Future.delayed(
-                                    const Duration(milliseconds: 300),
-                                    resetCard);
-                              },
-                              child: FlipCard(
-                                key: cardKey,
-                                direction: FlipDirection.HORIZONTAL,
-                                front: Card(
-                                  elevation: 8.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                  child: Container(
-                                    height: 450,
-                                    width: 300,
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      words[currentIndex]['english']!,
-                                      style: const TextStyle(
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                back: Card(
-                                  elevation: 8.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                  child: Container(
-                                    height: 450,
-                                    width: 300,
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      words[currentIndex]['french']!,
-                                      style: const TextStyle(
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                      : const SizedBox.shrink(),
+                setState(() {
+                  isCardVisible = false;
+                });
+                // Reset the card after a delay
+                Future.delayed(
+                    const Duration(milliseconds: 300),
+                    resetCard);
+              },
+              child: FlipCard(
+                key: cardKey,
+                direction: FlipDirection.HORIZONTAL,
+                front: Card(
+                  elevation: 8.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: Container(
+                    height: 450,
+                    width: 300,
+                    alignment: Alignment.center,
+                    child: Text(
+                      words[currentIndex][widget.nativeLanguage.toLowerCase()] ?? 'N/A',
+                      style: const TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ),
+                back: Card(
+                  elevation: 8.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: Container(
+                    height: 450,
+                    width: 300,
+                    alignment: Alignment.center,
+                    child: Text(
+                      words[currentIndex][widget.learningLanguage.toLowerCase()] ?? 'N/A',
+                      style: const TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        )
+            : const SizedBox.shrink(),
+      ),
     );
   }
 }

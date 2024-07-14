@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/lesson_button.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 
 void main() => runApp(const MaterialApp(home: HomePage()));
 
@@ -24,6 +26,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFF7f5539),
                     stackColor2: Color(0xFFe6ccb2),
                     progress: 1,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Animals',
                   ),
                 ),
                 Flexible(
@@ -34,6 +39,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFF2b2d42),
                     stackColor2: Color(0xFFedf2f4),
                     progress: 0.5,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Greetings',
                   ),
                 ),
               ],
@@ -50,6 +58,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFF006d77),
                     stackColor2: Color(0xFFb08968),
                     progress: 0.2,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Family',
                   ),
                 ),
                 Flexible(
@@ -60,6 +71,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Body',
                   ),
                 ),
               ],
@@ -76,6 +90,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFade8f4),
                     stackColor2: Color(0xFFcaf0f8),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Numbers',
                   ),
                 ),
                 Flexible(
@@ -86,6 +103,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFe3d5ca),
                     stackColor2: Color(0xFFf5ebe0),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Food & Drink',
                   ),
                 ),
               ],
@@ -102,6 +122,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Clothing',
                   ),
                 ),
                 Flexible(
@@ -112,6 +135,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Places',
                   ),
                 ),
               ],
@@ -128,6 +154,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'The Body',
                   ),
                 ),
                 Flexible(
@@ -138,6 +167,9 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFffbf69),
                     stackColor2: Color(0xFFffffff),
                     progress: 0,
+                    nativeLanguage: 'English',
+                    learningLanguage: 'French',
+                    topic: 'Traffics',
                   ),
                 ),
               ],
@@ -148,4 +180,23 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+  Future<List<String>> fetchSubjects() async {
+    List<String> subjects = [];
+    try {
+      DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance
+          .collection('Vocabulary')
+          .doc('Subjects')
+          .get();
+
+      if (documentSnapshot.exists) {
+        Map<String, dynamic> data = documentSnapshot.data() as Map<String, dynamic>;
+        subjects = data.keys.toList();
+      }
+    } catch (e) {
+      print('Failed to fetch subjects: $e');
+    }
+    return subjects;
+  }
+
 }
