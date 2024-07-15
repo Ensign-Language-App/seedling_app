@@ -32,3 +32,4 @@ class TopNavBarState extends State<TopNavBar> {
 
 void main() =>
     runApp(const MaterialApp(home: Scaffold(body: TopNavBar(title: 'Home'))));
+

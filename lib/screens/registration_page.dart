@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
+import 'package:seedling_app/screens/languages.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -229,7 +230,8 @@ class RegistrationPageState extends State<RegistrationPage> {
         // ));
 
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => const LogInPage(),
+        //  builder: (context) => const LogInPage(),
+          builder: (context) => LanguagesScreen(),
         ));
       } on FirebaseAuthException catch (e) {
         // Handle errors

@@ -24,7 +24,7 @@ class LanguageSelectorState extends State<LanguageSelector> {
     {'language': 'French', 'path': 'assets/icons/flags/France_flag.png'},
     {'language': 'German', 'path': 'assets/icons/flags/Germany_flag.png'},
     {'language': 'Italian', 'path': 'assets/icons/flags/Italy_flag.png'},
-    {'language': 'Portuguese', 'path': 'assets/icons/flags/Portugal_flag.png'},
+    {'language': 'Portuguese', 'path': 'assets/icons/flags/Brazil_flag.png'},
     {'language': 'Russian', 'path': 'assets/icons/flags/Russia_flag.png'},
     {
       'language': 'Chinese (Simplified)',
