@@ -52,7 +52,6 @@ void main() {
     expect(lessonButtonWidget.lessonColor, const Color(0xFF9c6644));
     expect(lessonButtonWidget.stackColor1, const Color(0xFF7f5539));
     expect(lessonButtonWidget.stackColor2, const Color(0xFFe6ccb2));
-    expect(lessonButtonWidget.progress, 1.0);
   });
 
   testWidgets('HomePage layout is correct', (WidgetTester tester) async {

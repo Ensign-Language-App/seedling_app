@@ -3,6 +3,8 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
+import 'package:provider/provider.dart';
+import '../providers/progress_provider.dart';
 
 class LessonPage extends StatefulWidget {
   final String nativeLanguage;
@@ -27,7 +29,6 @@ class LessonPageState extends State<LessonPage> {
   int currentIndex = 0;
   bool isLoading = true;
   String message = '';
-  List<String> masteredWords = [];
   int totalCards = 0;
 
   @override
@@ -50,7 +51,6 @@ class LessonPageState extends State<LessonPage> {
             .collection(widget.topic)
             .get();
 
-        // TODO: MAKE SURE THIS LINE GETS THE CORRECT NUMBER OF CARDS
         totalCards = querySnapshot.docs.length;
 
         List<Map<String, String>> fetchedWords = [];
@@ -68,7 +68,11 @@ class LessonPageState extends State<LessonPage> {
         }
 
         setState(() {
-          words = fetchedWords;
+          words = fetchedWords
+              .where((word) => !Provider.of<ProgressProvider>(context, listen: false)
+              .getMasteredCards(widget.topic)
+              .contains(word['english']))
+              .toList();
           isLoading = false;
         });
 
@@ -110,86 +114,88 @@ class LessonPageState extends State<LessonPage> {
     });
   }
 
-  // TODO: MAKE SURE THIS WORKS
-  void addToMaster(){
-    masteredWords.add(words[currentIndex]['english']!);
+  void addToMaster(BuildContext context) {
+    Provider.of<ProgressProvider>(context, listen: false).addMasteredCard(
+      widget.topic,
+      words[currentIndex]['english']!,
+    );
   }
 
-  // TODO: Implement the calculateProgress method
-  Future<double> calculateProgress() async {
-    return masteredWords.length/totalCards;
+  void removeCardFromReviewList(BuildContext context) {
+    setState(() {
+      addToMaster(context);
+      words.removeAt(currentIndex);
+      if (currentIndex >= words.length) {
+        currentIndex = 0;
+      }
+      isCardVisible = false;
+      if (words.isEmpty) {
+        message = 'Congratulations, you have completed all words in this section.';
+        Provider.of<ProgressProvider>(context, listen: false).setProgress(
+          widget.topic,
+          1.0,
+        );
+      }
+    });
+
+    Future.delayed(const Duration(milliseconds: 300), resetCard);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
-      appBar: AppBar(
+    return PopScope(
+      onPopInvoked: (didPop) async {
+        Provider.of<ProgressProvider>(context, listen: false).setProgress(
+          widget.topic,
+          Provider.of<ProgressProvider>(context, listen: false)
+              .getMasteredCards(widget.topic)
+              .length /
+              totalCards.toDouble(),
+        );
+      },
+      child: Scaffold(
         backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.close, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        appBar: AppBar(
+          backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
+          elevation: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.close, color: Colors.white),
+            onPressed: () {
+              Provider.of<ProgressProvider>(context, listen: false).setProgress(
+                widget.topic,
+                Provider.of<ProgressProvider>(context, listen: false)
+                    .getMasteredCards(widget.topic)
+                    .length /
+                    totalCards.toDouble(),
+              );
+              Navigator.pop(context);
+            },
+          ),
         ),
-      ),
-      body: isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : words.isEmpty
-          ? Center(
-          child: Text(message.isEmpty ? 'No words found' : message))
-          : Center(
-        child: isCardVisible
-            ? GestureDetector(
-          onTap: () {
-            HapticFeedback.lightImpact();
-          },
-          child: Dismissible(
-            key: Key(words[currentIndex]['english']!),
-            direction: DismissDirection.horizontal,
-            background: const Text(
-              "\n\nPrevious",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromARGB(175, 255, 255, 255),
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold),
-            ),
-            secondaryBackground: const Text(
-              "\n\nNext",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromARGB(175, 255, 255, 255),
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold),
-            ),
-            onDismissed: (direction) {
-              if (direction == DismissDirection.endToStart) {
-                // Left Swipe
-                setState(() {
-                  isCardVisible = false;
-                });
-                // Show the next card after a delay
-                Future.delayed(
-                    const Duration(milliseconds: 300),
-                    showNextCard);
-              } else {
-                // Right Swipe
-                setState(() {
-                  isCardVisible = false;
-                });
-                // Show the previous card after a delay
-                Future.delayed(
-                    const Duration(milliseconds: 300),
-                    showPreviousCard);
-              }
+        body: isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : words.isEmpty
+            ? Center(
+            child: Text(message.isEmpty ? 'No words found' : message))
+            : Center(
+          child: isCardVisible
+              ? GestureDetector(
+            onTap: () {
+              HapticFeedback.lightImpact();
             },
             child: Dismissible(
-              key: Key('flip_card_$currentIndex'),
-              direction: DismissDirection.up,
+              key: Key(words[currentIndex]['english']!),
+              direction: DismissDirection.horizontal,
               background: const Text(
-                "\n\n\nMastered",
+                "\n\nPrevious",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromARGB(175, 255, 255, 255),
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold),
+              ),
+              secondaryBackground: const Text(
+                "\n\nNext",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Color.fromARGB(175, 255, 255, 255),
@@ -197,60 +203,89 @@ class LessonPageState extends State<LessonPage> {
                     fontWeight: FontWeight.bold),
               ),
               onDismissed: (direction) {
-                //TODO: remove card from review list
-
-                setState(() {
-                  isCardVisible = false;
-                });
-                // Reset the card after a delay
-                Future.delayed(
-                    const Duration(milliseconds: 300),
-                    resetCard);
+                if (direction == DismissDirection.endToStart) {
+                  // Left Swipe
+                  setState(() {
+                    isCardVisible = false;
+                  });
+                  // Show the next card after a delay
+                  Future.delayed(
+                      const Duration(milliseconds: 300),
+                      showNextCard);
+                } else {
+                  // Right Swipe
+                  setState(() {
+                    isCardVisible = false;
+                  });
+                  // Show the previous card after a delay
+                  Future.delayed(
+                      const Duration(milliseconds: 300),
+                      showPreviousCard);
+                }
               },
-              child: FlipCard(
-                key: cardKey,
-                direction: FlipDirection.HORIZONTAL,
-                front: Card(
-                  elevation: 8.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                  child: Container(
-                    height: 450,
-                    width: 300,
-                    alignment: Alignment.center,
-                    child: Text(
-                      words[currentIndex][widget.nativeLanguage.toLowerCase()] ?? 'N/A',
-                      style: const TextStyle(
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.bold,
+              child: Dismissible(
+                key: Key('flip_card_$currentIndex'),
+                direction: DismissDirection.up,
+                background: const Text(
+                  "\n\n\nMastered",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color.fromARGB(175, 255, 255, 255),
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold),
+                ),
+                onDismissed: (direction) {
+                  removeCardFromReviewList(context);
+                },
+                child: FlipCard(
+                  key: cardKey,
+                  direction: FlipDirection.HORIZONTAL,
+                  front: Card(
+                    elevation: 8.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                    child: Container(
+                      height: 450,
+                      width: 300,
+                      alignment: Alignment.center,
+                      child: Text(
+                        words[currentIndex][widget.nativeLanguage
+                            .toLowerCase()] ??
+                            'N/A',
+                        style: const TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                back: Card(
-                  elevation: 8.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                  child: Container(
-                    height: 450,
-                    width: 300,
-                    alignment: Alignment.center,
-                    child: Text(
-                      words[currentIndex][widget.learningLanguage.toLowerCase()] ?? 'N/A',
-                      style: const TextStyle(
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.bold,
+                  back: Card(
+                    elevation: 8.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                    child: Container(
+                      height: 450,
+                      width: 300,
+                      alignment: Alignment.center,
+                      child: Text(
+                        words[currentIndex][widget.learningLanguage
+                            .toLowerCase()] ??
+                            'N/A',
+                        style: const TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        )
-            : const SizedBox.shrink(),
+          )
+              : const SizedBox.shrink(),
+        ),
       ),
     );
   }

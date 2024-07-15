@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seedling_app/screens/lesson_page.dart';
+import 'package:provider/provider.dart';
+import '../screens/lesson_page.dart'; // Import the LessonPage
+import '../providers/progress_provider.dart'; // Import the provider
 
 void main() => runApp(const MaterialApp(
   home: Scaffold(
@@ -10,7 +12,6 @@ void main() => runApp(const MaterialApp(
         lessonColor: Color(0xFFf4a261),
         stackColor1: Color(0xFFe9c46a),
         stackColor2: Color(0xFF2a9d8f),
-        progress: 0.5,
         nativeLanguage: 'English',
         learningLanguage: 'French',
         topic: 'Greetings',
@@ -25,22 +26,21 @@ class LessonButton extends StatefulWidget {
   final Color lessonColor;
   final Color stackColor1;
   final Color stackColor2;
-  final double progress;
   final String nativeLanguage;
   final String learningLanguage;
   final String topic;
 
-  const LessonButton(
-      {super.key,
-        required this.image,
-        required this.title,
-        required this.lessonColor,
-        required this.stackColor1,
-        required this.stackColor2,
-        required this.progress,
-        required this.nativeLanguage,
-        required this.learningLanguage,
-        required this.topic});
+  const LessonButton({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.lessonColor,
+    required this.stackColor1,
+    required this.stackColor2,
+    required this.nativeLanguage,
+    required this.learningLanguage,
+    required this.topic,
+  });
 
   @override
   LessonButtonState createState() => LessonButtonState();
@@ -88,6 +88,8 @@ class ColoredCard extends StatelessWidget {
 class LessonButtonState extends State<LessonButton> {
   @override
   Widget build(BuildContext context) {
+    double progress = Provider.of<ProgressProvider>(context).getProgress(widget.topic);
+
     return Stack(alignment: Alignment.center, children: <Widget>[
       ColoredCard(
         offset: const Offset(10, 10),
@@ -144,7 +146,7 @@ class LessonButtonState extends State<LessonButton> {
                               backgroundColor: Colors.grey[500],
                               valueColor: const AlwaysStoppedAnimation<Color>(
                                   Colors.white),
-                              value: widget.progress,
+                              value: progress,
                               strokeWidth: 2,
                             ))
                       ],

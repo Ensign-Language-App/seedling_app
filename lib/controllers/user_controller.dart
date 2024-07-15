@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:provider/provider.dart';
+import '../providers/progress_provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class UserController with ChangeNotifier {
@@ -96,7 +98,6 @@ class UserController with ChangeNotifier {
     }
   }
 
-
   Future<void> registerWithEmailAndPassword(
       String email, String password, String firstName, String lastName) async {
     try {
@@ -119,8 +120,9 @@ class UserController with ChangeNotifier {
     }
   }
 
-
-  Future<void> signOut() async {
+  Future<void> signOut(context) async {
+    // Save progress before logging out
+    await Provider.of<ProgressProvider>(context, listen: false).saveProgressToFirestore();
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
     _user = null;

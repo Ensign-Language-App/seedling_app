@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/lesson_button.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 void main() => runApp(const MaterialApp(home: HomePage()));
 
 class HomePage extends StatelessWidget {
@@ -25,7 +24,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF9c6644),
                     stackColor1: Color(0xFF7f5539),
                     stackColor2: Color(0xFFe6ccb2),
-                    progress: 1,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Animals',
@@ -38,7 +36,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF8d99ae),
                     stackColor1: Color(0xFF2b2d42),
                     stackColor2: Color(0xFFedf2f4),
-                    progress: 0.5,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Greetings',
@@ -57,7 +54,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF83c5be),
                     stackColor1: Color(0xFF006d77),
                     stackColor2: Color(0xFFb08968),
-                    progress: 0.2,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Family',
@@ -70,7 +66,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Body',
@@ -89,7 +84,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF48cae4),
                     stackColor1: Color(0xFFade8f4),
                     stackColor2: Color(0xFFcaf0f8),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Numbers',
@@ -102,7 +96,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFd5bdaf),
                     stackColor1: Color(0xFFe3d5ca),
                     stackColor2: Color(0xFFf5ebe0),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Food & Drink',
@@ -121,7 +114,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Clothing',
@@ -134,7 +126,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Places',
@@ -153,7 +144,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'The Body',
@@ -166,7 +156,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
                     stackColor2: Color(0xFFffffff),
-                    progress: 0,
                     nativeLanguage: 'English',
                     learningLanguage: 'French',
                     topic: 'Traffics',
@@ -198,5 +187,4 @@ class HomePage extends StatelessWidget {
     }
     return subjects;
   }
-
 }

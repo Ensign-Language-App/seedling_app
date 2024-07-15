@@ -6,7 +6,7 @@ import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'utilities/firebase_options.dart';
-
+import 'providers/progress_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +16,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeNotifier()),
         ChangeNotifierProvider(create: (_) => UserController()),
+        ChangeNotifierProvider(create: (_) => ProgressProvider()),
       ],
       child: const MyApp(),
     ),
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
+    final progressProvider = Provider.of<ProgressProvider>(context, listen: false);
+    progressProvider.loadProgressFromFirestore();
 
     return MaterialApp(
       theme: lightMode,

@@ -121,7 +121,7 @@ class SideMenuState extends State<SideMenu> {
             leading: const Icon(Icons.logout),
             title: const Text('Log out'),
             onTap: () async {
-              await userController.signOut();
+              await userController.signOut(context);
               if (mounted) {
                 Navigator.pushReplacement(
                   context,
