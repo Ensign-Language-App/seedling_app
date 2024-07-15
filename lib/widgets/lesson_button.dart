@@ -135,7 +135,7 @@ class LessonButtonState extends State<LessonButton> {
                         Expanded(
                           child: Text(
                             widget.title,
-                            style: const TextStyle(fontSize: 11),
+                            style: TextStyle(fontSize: widget.title.length > 15 ? 7 : 11),
                             textAlign: TextAlign.center,
                           ),
                         ),
