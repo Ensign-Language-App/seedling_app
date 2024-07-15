@@ -470,7 +470,7 @@ class HomePage extends StatelessWidget {
                 Flexible(
                   child: LessonButton(
                     image: 'assets/images/lessons/clothing.png',
-                    title: 'Subject Pronouns',
+                    title: 'Subj. Pronouns',
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
@@ -482,7 +482,7 @@ class HomePage extends StatelessWidget {
                 Flexible(
                   child: LessonButton(
                     image: 'assets/images/lessons/places.png',
-                    title: 'Possessive Pronouns',
+                    title: 'Poss. Pronouns',
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
