@@ -52,6 +52,9 @@ class ProgressProvider with ChangeNotifier {
         Map<String, dynamic> masteredCardsDynamic = doc.get('masteredCards') ?? {};
         _masteredCards = masteredCardsDynamic.map((key, value) => MapEntry(key, List<String>.from(value)));
         notifyListeners();
+      } else {
+        _progress = {};
+        _masteredCards = {};
       }
     }
   }

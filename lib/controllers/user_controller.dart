@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +10,7 @@ class UserController with ChangeNotifier {
   User? _user = FirebaseAuth.instance.currentUser;
   User? get user => _user;
 
-  Future<void> signInWithGoogle() async {
+  Future<void> signInWithGoogle(BuildContext context) async {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn();
       final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
@@ -22,25 +22,16 @@ class UserController with ChangeNotifier {
       }
 
       final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-
-      if (googleAuth.accessToken == null || googleAuth.idToken == null) {
-        throw PlatformException(
-          code: 'ERROR_MISSING_GOOGLE_AUTH_TOKENS',
-          message: 'Missing Google Auth Tokens',
-        );
-      }
-
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
-      final userCredential =
-      await FirebaseAuth.instance.signInWithCredential(credential);
+      final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
 
-      // Use these tokens to authenticate with Firebase or your backend
-      print('Sign in successful: Access Token: ${googleAuth.accessToken}, ID Token: ${googleAuth.idToken}');
+      // Load progress for the new user after notifying listeners
+      await Provider.of<ProgressProvider>(context, listen: false).loadProgressFromFirestore();
     } catch (error) {
       if (error is PlatformException && error.code == 'sign_in_canceled') {
         print('Sign in cancelled by user');
@@ -50,7 +41,7 @@ class UserController with ChangeNotifier {
     }
   }
 
-  Future<void> signInWithApple() async {
+  Future<void> signInWithApple(BuildContext context) async {
     try {
       final appleCredential = await SignInWithApple.getAppleIDCredential(
         scopes: [
@@ -73,24 +64,26 @@ class UserController with ChangeNotifier {
         await _user!.updateDisplayName(displayName);
       }
       notifyListeners();
+
+      // Load progress for the new user after notifying listeners
+      await Provider.of<ProgressProvider>(context, listen: false).loadProgressFromFirestore();
     } on PlatformException catch (e) {
-      // TODO: REMOVE PRINT ON PRODUCTION
       print('Failed to sign in with Apple: $e');
       throw FirebaseAuthException(message: e.message, code: e.code);
     } catch (e) {
-      // TODO: REMOVE PRINT ON PRODUCTION
-      // TODO: REMOVE PRINT ON PRODUCTION
       print('An error occurred while signing in with Apple: $e');
       throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
     }
   }
 
-  Future<void> signInWithEmailAndPassword(String email, String password) async {
+  Future<void> signInWithEmailAndPassword(String email, String password, BuildContext context) async {
     try {
-      final userCredential = await FirebaseAuth.instance
-          .signInWithEmailAndPassword(email: email, password: password);
+      final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
       _user = userCredential.user;
       notifyListeners();
+
+      // Load progress for the new user after notifying listeners
+      await Provider.of<ProgressProvider>(context, listen: false).loadProgressFromFirestore();
     } on FirebaseAuthException catch (e) {
       print(e.message);
     } catch (e) {
@@ -99,11 +92,9 @@ class UserController with ChangeNotifier {
   }
 
   Future<void> registerWithEmailAndPassword(
-      String email, String password, String firstName, String lastName) async {
+      String email, String password, String firstName, String lastName, BuildContext context) async {
     try {
-      await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: email, password: password);
-      // _user = userCredential.user;
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
 
       if (_user != null) {
         await _user!.updateDisplayName("$firstName $lastName");
@@ -120,7 +111,7 @@ class UserController with ChangeNotifier {
     }
   }
 
-  Future<void> signOut(context) async {
+  Future<void> signOut(BuildContext context) async {
     // Save progress before logging out
     await Provider.of<ProgressProvider>(context, listen: false).saveProgressToFirestore();
     await FirebaseAuth.instance.signOut();
