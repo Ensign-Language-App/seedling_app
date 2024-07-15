@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/lesson_button.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -313,7 +315,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-                        SizedBox(height: 40),
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -539,7 +541,8 @@ class HomePage extends StatelessWidget {
           .get();
 
       if (documentSnapshot.exists) {
-        Map<String, dynamic> data = documentSnapshot.data() as Map<String, dynamic>;
+        Map<String, dynamic> data =
+            documentSnapshot.data() as Map<String, dynamic>;
         subjects = data.keys.toList();
       }
     } catch (e) {
