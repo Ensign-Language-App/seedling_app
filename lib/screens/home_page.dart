@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:seedling_app/widgets/lesson_button.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -546,7 +544,7 @@ class HomePage extends StatelessWidget {
         subjects = data.keys.toList();
       }
     } catch (e) {
-      print('Failed to fetch subjects: $e');
+      debugPrint('Failed to fetch subjects: $e');
     }
     return subjects;
   }

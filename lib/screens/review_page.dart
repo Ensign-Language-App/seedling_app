@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/services.dart';
@@ -43,7 +41,7 @@ class ReviewPageState extends State<ReviewPage> {
 
     while (retryCount < maxRetries) {
       try {
-        print('Attempting to fetch words...');
+        debugPrint('Attempting to fetch words...');
         QuerySnapshot querySnapshot = await FirebaseFirestore.instance
             .collection('Subjects')
             .doc('Test')
@@ -52,7 +50,7 @@ class ReviewPageState extends State<ReviewPage> {
 
         List<Map<String, String>> fetchedWords = [];
         for (var doc in querySnapshot.docs) {
-          print('Fetched document: ${doc.id} with data: ${doc.data()}');
+          debugPrint('Fetched document: ${doc.id} with data: ${doc.data()}');
           fetchedWords.add({
             'english': doc.id,
             'french': doc['French'],
@@ -64,10 +62,10 @@ class ReviewPageState extends State<ReviewPage> {
           isLoading = false;
         });
 
-        print('Fetched words: $words');
+        debugPrint('Fetched words: $words');
         return;
       } catch (e) {
-        print('Error fetching words: $e');
+        debugPrint('Error fetching words: $e');
         retryCount++;
         if (retryCount < maxRetries) {
           await Future.delayed(backoffDuration * retryCount);

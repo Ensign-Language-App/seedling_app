@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(home: LanguagesSelectionPage()));
@@ -53,7 +51,7 @@ class LanguageTile extends StatelessWidget {
       onTap: () {
         // TODO: Handle language selection
         // TODO: REMOVE PRINT STATEMENT AT PRODUCTION
-        print('Selected $language');
+        debugPrint('Selected $language');
       },
       child: Container(
         padding: const EdgeInsets.symmetric(

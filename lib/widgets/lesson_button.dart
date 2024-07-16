@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../screens/lesson_page.dart'; // Import the LessonPage
-import '../providers/progress_provider.dart'; // Import the provider
+import '../screens/lesson_page.dart';
+import '../providers/progress_provider.dart';
 
 void main() => runApp(const MaterialApp(
   home: Scaffold(

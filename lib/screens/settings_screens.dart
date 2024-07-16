@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_colorpicker/flutter_colorpicker.dart'; // Import the color picker package
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:seedling_app/providers/color_provider.dart';
 
