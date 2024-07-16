@@ -7,8 +7,8 @@ import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/profile_page.dart';
 import 'package:seedling_app/screens/settings_page.dart';
-import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:seedling_app/screens/settings_screens.dart';
+import 'package:seedling_app/providers/color_provider.dart';
 
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
@@ -23,6 +23,7 @@ class SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
     final userController = Provider.of<UserController>(context);
+    final backgroundColor = Provider.of<ColorProvider>(context).backgroundColor;
 
     ImageProvider<Object> userImage;
     if (userController.user?.photoURL != null &&
@@ -36,8 +37,8 @@ class SideMenuState extends State<SideMenu> {
       child: ListView(
         children: <Widget>[
           DrawerHeader(
-            decoration: const BoxDecoration(
-              color: Color.fromRGBO(255, 150, 79, 1.0),
+            decoration: BoxDecoration(
+              color: backgroundColor,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,11 +72,6 @@ class SideMenuState extends State<SideMenu> {
             leading: const Icon(Icons.settings),
             title: const Text('Settings'),
             onTap: () async {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const SettingsPage()),
-              // );
-
               bool isAuthenticated = await biometricAuth.authenticate();
               if (!mounted) return;
 
@@ -101,20 +97,6 @@ class SideMenuState extends State<SideMenu> {
                     builder: (context) => const NotificationsPage()),
               );
             },
-          ),
-          ListTile(
-            leading: const Icon(Icons.dark_mode),
-            title: const Text('Dark Mode'),
-            trailing: Consumer<ThemeNotifier>(
-              builder: (context, theme, child) {
-                return Switch(
-                  value: theme.isDarkMode,
-                  onChanged: (bool value) {
-                    theme.toggleTheme();
-                  },
-                );
-              },
-            ),
           ),
           const Divider(),
           ListTile(

@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'home_page.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
 import 'bookmark_page.dart';
+import 'package:seedling_app/providers/color_provider.dart';
 
 void main() => runApp(const MyApp());
 
@@ -40,6 +41,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final userController = Provider.of<UserController>(context);
     final user = userController.user;
+    final backgroundColor = Provider.of<ColorProvider>(context).backgroundColor;
 
     return Scaffold(
       appBar: AppBar(
@@ -55,7 +57,7 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Theme.of(context).primaryColor,
+              color: backgroundColor,
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
@@ -64,7 +66,7 @@ class ProfilePage extends StatelessWidget {
                     backgroundImage: user?.photoURL != null
                         ? NetworkImage(user!.photoURL!)
                         : const AssetImage('assets/images/default_icon.jpg')
-                            as ImageProvider,
+                    as ImageProvider,
                   ),
                   const SizedBox(width: 20),
                   Column(
@@ -132,22 +134,22 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   _buildSection(
-                    'Bookmark',
-                    child: IconButton(
-                      icon: const Icon(FontAwesomeIcons.heart, color: Colors.red,
-                      size: 30),
-                      onPressed: () {
-                        Navigator.push(context,
-                        MaterialPageRoute(
-                          builder: (context) => const BookmarkPage(),
-                          ));
-                      })
+                      'Bookmark',
+                      child: IconButton(
+                          icon: const Icon(FontAwesomeIcons.heart, color: Colors.red,
+                              size: 30),
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(
+                                  builder: (context) => const BookmarkPage(),
+                                ));
+                          })
                   ),
                   _buildSection(
                     'Practice',
                     child: IconButton(
                       icon: const Icon(FontAwesomeIcons.book, color: Colors.lightGreen,
-                      size: 30),
+                          size: 30),
                       onPressed: () {
                         Navigator.push(
                           context,
