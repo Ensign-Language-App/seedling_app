@@ -471,7 +471,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/clothing.png',
+                    image: 'assets/images/lessons/subj_pronouns.png',
                     title: 'Subject Pronouns',
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
@@ -483,7 +483,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/places.png',
+                    image: 'assets/images/lessons/poss_pronouns.png',
                     title: 'Possessive Pronouns',
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
@@ -501,7 +501,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/the_body.png',
+                    image: 'assets/images/lessons/prepositions.png',
                     title: 'Prepositions',
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
@@ -513,7 +513,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/traffics.png',
+                    image: 'assets/images/lessons/conjunctions.png',
                     title: 'Conjunctions',
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
