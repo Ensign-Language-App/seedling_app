@@ -171,7 +171,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/animals.png',
+                    image: 'assets/images/lessons/people.png',
                     title: 'People',
                     lessonColor: Color(0xFF9c6644),
                     stackColor1: Color(0xFF7f5539),
