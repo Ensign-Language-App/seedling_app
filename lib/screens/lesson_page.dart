@@ -6,7 +6,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import 'package:provider/provider.dart';
 import '../providers/progress_provider.dart';
-import '../providers/color_provider.dart';
 
 class LessonPage extends StatefulWidget {
   final String nativeLanguage;
@@ -71,8 +70,7 @@ class LessonPageState extends State<LessonPage> {
 
         setState(() {
           words = fetchedWords
-              .where((word) =>
-          !Provider.of<ProgressProvider>(context, listen: false)
+              .where((word) => !Provider.of<ProgressProvider>(context, listen: false)
               .getMasteredCards(widget.topic)
               .contains(word['english']))
               .toList();
@@ -133,8 +131,7 @@ class LessonPageState extends State<LessonPage> {
       }
       isCardVisible = false;
       if (words.isEmpty) {
-        message =
-        'Congratulations, you have completed all words in this section.';
+        message = 'Congratulations, you have completed all words in this section.';
         Provider.of<ProgressProvider>(context, listen: false).setProgress(
           widget.topic,
           1.0,
@@ -147,10 +144,8 @@ class LessonPageState extends State<LessonPage> {
 
   @override
   Widget build(BuildContext context) {
-    final backgroundColor = Provider.of<ColorProvider>(context).backgroundColor;
-
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      onPopInvoked: (didPop) async {
         Provider.of<ProgressProvider>(context, listen: false).setProgress(
           widget.topic,
           Provider.of<ProgressProvider>(context, listen: false)
@@ -158,12 +153,11 @@ class LessonPageState extends State<LessonPage> {
               .length /
               totalCards.toDouble(),
         );
-        return true;
       },
       child: Scaffold(
-        backgroundColor: backgroundColor,
+        backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
         appBar: AppBar(
-          backgroundColor: backgroundColor,
+          backgroundColor: const Color.fromRGBO(255, 150, 79, 1.0),
           elevation: 0,
           leading: IconButton(
             icon: const Icon(Icons.close, color: Colors.white),
@@ -232,16 +226,8 @@ class LessonPageState extends State<LessonPage> {
               },
               child: Dismissible(
                 key: Key('flip_card_$currentIndex'),
-                direction: DismissDirection.vertical,
+                direction: DismissDirection.up,
                 background: const Text(
-                  "\n\nAdd to Review",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color.fromARGB(175, 255, 255, 255),
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold),
-                ),
-                secondaryBackground: const Text(
                   "\n\n\nMastered",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -250,23 +236,7 @@ class LessonPageState extends State<LessonPage> {
                       fontWeight: FontWeight.bold),
                 ),
                 onDismissed: (direction) {
-                  //TODO: check directional logic makes shure its going in the direction it is specified
-                  if (direction ==
-                      DismissDirection.endToStart) {
-                    // Down Swipe
-                    setState(() {
-                      isCardVisible = false;
-                    });
-                    // Show the next card after a delay
-                    //TODO: add to Review List
-                  } else {
-                    // Up Swipe
-                    setState(() {
-                      isCardVisible = false;
-                    });
-                    // Show the previous card after a delay
-                    //TODO: add to Mastered
-                  }
+                  removeCardFromReviewList(context);
                 },
                 child: FlipCard(
                   key: cardKey,
@@ -281,13 +251,13 @@ class LessonPageState extends State<LessonPage> {
                       width: 300,
                       alignment: Alignment.center,
                       child: Text(
-                        words[currentIndex][widget
-                            .nativeLanguage
+                        words[currentIndex][widget.nativeLanguage
                             .toLowerCase()] ??
                             'N/A',
                         style: const TextStyle(
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -301,13 +271,13 @@ class LessonPageState extends State<LessonPage> {
                       width: 300,
                       alignment: Alignment.center,
                       child: Text(
-                        words[currentIndex][widget
-                            .learningLanguage
+                        words[currentIndex][widget.learningLanguage
                             .toLowerCase()] ??
                             'N/A',
                         style: const TextStyle(
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

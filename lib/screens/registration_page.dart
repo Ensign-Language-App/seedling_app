@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
-import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/languages.dart';
 
 class RegistrationPage extends StatefulWidget {
