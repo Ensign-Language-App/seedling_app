@@ -411,7 +411,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/family.png',
+                    image: 'assets/images/lessons/adjectives.png',
                     title: 'Adjectives',
                     lessonColor: Color(0xFF83c5be),
                     stackColor1: Color(0xFF006d77),
@@ -423,7 +423,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/the_body.png',
+                    image: 'assets/images/lessons/verbs.png',
                     title: 'Verbs',
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
@@ -441,7 +441,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/numbers.png',
+                    image: 'assets/images/lessons/reg_verbs.png',
                     title: 'Regular Verbs',
                     lessonColor: Color(0xFF48cae4),
                     stackColor1: Color(0xFFade8f4),
@@ -453,7 +453,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/food.png',
+                    image: 'assets/images/lessons/irreg_verbs.png',
                     title: 'Irregular Verbs',
                     lessonColor: Color(0xFFd5bdaf),
                     stackColor1: Color(0xFFe3d5ca),
