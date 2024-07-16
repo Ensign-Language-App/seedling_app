@@ -35,9 +35,15 @@ class SettingsPage extends StatelessWidget {
               );
             },
           ),
-          const ListTile(
-            leading: Icon(Icons.delete_forever),
-            title: Text('Delete or Suspend Account'),
+          ListTile(
+            leading: const Icon(Icons.delete_forever),
+            title: const Text('Delete or Suspend Account'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const DeleteAccountPage()), // Link to the new screen
+              );
+            },
           ),
         ],
       ),

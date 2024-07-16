@@ -134,4 +134,32 @@ class UserController with ChangeNotifier {
     _user = null;
     notifyListeners();
   }
+  Future<void> deleteAccount(BuildContext context) async {
+    try {
+      // Ensure the user is authenticated before deleting
+      if (_user != null) {
+        await _user!.delete();
+        _user = null;
+        notifyListeners();
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Account successfully deleted')),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('No user is currently signed in')),
+        );
+      }
+    } on FirebaseAuthException catch (e) {
+      print('Failed to delete account: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to delete account: ${e.message}')),
+      );
+    } catch (e) {
+      print('An error occurred while deleting the account: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('An error occurred: $e')),
+      );
+    }
+  }
 }
+
