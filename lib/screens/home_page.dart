@@ -351,7 +351,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/the_body.png',
+                    image: 'assets/images/lessons/months.png',
                     title: 'Months',
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
@@ -363,7 +363,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/traffics.png',
+                    image: 'assets/images/lessons/time.png',
                     title: 'Time',
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
@@ -381,7 +381,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/animals.png',
+                    image: 'assets/images/lessons/questions.png',
                     title: 'Questions',
                     lessonColor: Color(0xFF9c6644),
                     stackColor1: Color(0xFF7f5539),
@@ -393,7 +393,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/greets.png',
+                    image: 'assets/images/lessons/conversation.png',
                     title: 'Conversation',
                     lessonColor: Color(0xFF8d99ae),
                     stackColor1: Color(0xFF2b2d42),
