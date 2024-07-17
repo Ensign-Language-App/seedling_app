@@ -28,11 +28,48 @@ class ProfilePage extends StatelessWidget {
   return await progressProvider.getTotalProgress(context);
 }
 
+  Future<void> _showEditNameDialog(BuildContext context) async {
+    final userController = Provider.of<UserController>(context, listen: false);
+    final TextEditingController nameController = TextEditingController(
+      text: userController.user?.displayName ?? '',
+    );
+
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Edit User Name'),
+          content: TextField(
+            controller: nameController,
+            decoration: const InputDecoration(
+              labelText: 'New User Name',
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Cancel'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: const Text('Save'),
+              onPressed: () async {
+                await userController.updateUserName(nameController.text);
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final userController = Provider.of<UserController>(context);
     final user = userController.user;
-    final backgroundColor = Provider.of<ColorProvider>(context).backgroundColor;
+    final colorProvider = Provider.of<ColorProvider>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -48,16 +85,37 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: backgroundColor,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [colorProvider.gradientStartColor, colorProvider.gradientEndColor],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: user?.photoURL != null
-                        ? NetworkImage(user!.photoURL!)
-                        : const AssetImage('assets/images/default_icon.jpg')
-                            as ImageProvider,
+                  Stack(
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundImage: user?.photoURL != null
+                            ? NetworkImage(user!.photoURL!)
+                            : null,
+                        child: user?.photoURL == null
+                            ? InkWell(
+                          onTap: () async {
+                            await userController.updateProfilePicture();
+                          },
+                          child: const Icon(
+                            Icons.camera_alt,
+                            color: Colors.white,
+                            size: 50,
+                          ),
+                        )
+                            : null,
+                      ),
+                    ],
                   ),
                   const SizedBox(width: 20),
                   Column(
@@ -66,13 +124,23 @@ class ProfilePage extends StatelessWidget {
                       const LanguageSelector(
                           width: 50, height: 50, isNativeSelector: true),
                       const SizedBox(height: 10),
-                      Text(
-                        user?.displayName ?? 'User Name',
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            user?.displayName != null && user!.displayName!.length > 16
+                                ? '${user.displayName!.substring(0, 16)}...'
+                                : user?.displayName ?? 'User Name',
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.edit, color: Colors.white),
+                            onPressed: () => _showEditNameDialog(context),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -127,15 +195,20 @@ class ProfilePage extends StatelessWidget {
                     'Social Media',
                     child: Row(
                       children: [
-                        _socialIcon(FontAwesomeIcons.facebook, Colors.blue,
-                            'https://www.facebook.com/'),
-                        _socialIcon(FontAwesomeIcons.twitter, Colors.lightBlue,
-                            'https://twitter.com/'),
-                        _socialIcon(FontAwesomeIcons.instagram, Colors.pink,
-                            'https://www.instagram.com/'),
-                        _socialIcon(FontAwesomeIcons.youtube, Colors.red,
-                            'https://www.youtube.com/'),
+                        _socialIcon(FontAwesomeIcons.facebook, Colors.blue, 'https://www.facebook.com/'),
+                        _socialIcon(FontAwesomeIcons.twitter, Colors.lightBlue, 'https://twitter.com/'),
+                        _socialIcon(FontAwesomeIcons.instagram, Colors.pink, 'https://www.instagram.com/'),
+                        _socialIcon(FontAwesomeIcons.youtube, Colors.red, 'https://www.youtube.com/'),
                       ],
+                    ),
+                  ),
+                  _buildSection(
+                    'Bookmark',
+                    child: IconButton(
+                      icon: const Icon(FontAwesomeIcons.heart, color: Colors.red, size: 30),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const BookmarkPage()));
+                      },
                     ),
                   ),
                   _buildSection('Bookmark',
@@ -155,11 +228,7 @@ class ProfilePage extends StatelessWidget {
                       icon: const Icon(FontAwesomeIcons.book,
                           color: Colors.lightGreen, size: 30),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()),
-                        );
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
                       },
                     ),
                   ),
