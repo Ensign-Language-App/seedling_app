@@ -1,7 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
 import json
-import time
 
 # Path to your service account key file
 service_account_key_path = '/Users/Justin/Projects/Ensign/CS480/Ensign_Language_App/seedling_app/scripts/firebase-adminsdk.json'
@@ -25,26 +24,21 @@ def upload_vocab_to_firestore(data, collection_name='Vocabulary'):
             for topic, topic_data in subject_data.items():
                 for word, translations in topic_data.items():
                     doc_ref = db.collection(collection_name).document(subject).collection(topic).document(word)
-                    retry_count = 0
-                    while retry_count < 5:
-                        try:
-                            existing_doc = doc_ref.get()
-                            if existing_doc.exists:
-                                doc_ref.update(translations)
-                            else:
-                                doc_ref.set(translations)
-                            print(f'Uploaded {word} in {subject}/{topic}')
-                            break
-                        except Exception as e:
-                            retry_count += 1
-                            print(f'Error uploading {word} in {subject}/{topic}: {e}')
-                            time.sleep(5 * retry_count)  # Exponential backoff
+                    # Fetch the existing data
+                    existing_doc = doc_ref.get()
+                    if existing_doc.exists:
+                        existing_data = existing_doc.to_dict()
+                        # Merge the existing data with new translations
+                        existing_data.update(translations)
+                        doc_ref.set(existing_data)
+                    else:
+                        doc_ref.set(translations)
+                    print(f'Uploaded {word} in {subject}/{topic}')
 
 # Upload the vocabulary data
 upload_vocab_to_firestore(vocab_data)
 
 print('Vocabulary data uploaded successfully.')
-
 
 
 # import firebase_admin
