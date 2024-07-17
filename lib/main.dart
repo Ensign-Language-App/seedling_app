@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
+import 'package:seedling_app/providers/language_provider.dart';
 import 'package:seedling_app/screens/landing_screen.dart';
 import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:seedling_app/providers/color_provider.dart';
-
 import 'utilities/firebase_options.dart';
 import 'providers/progress_provider.dart';
 
@@ -20,6 +20,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => UserController()),
         ChangeNotifierProvider(create: (_) => ProgressProvider()),
         ChangeNotifierProvider(create: (_) => ColorProvider()),
+        ChangeNotifierProvider(create: (_) => LanguageProvider())
 
       ],
       child: const MyApp(),

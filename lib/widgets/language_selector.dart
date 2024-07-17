@@ -1,57 +1,85 @@
 import 'package:flutter/material.dart';
-
-void main() => runApp(const MaterialApp(
-    home: Center(child: LanguageSelector(width: 50, height: 50))));
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../providers/language_provider.dart';
 
 class LanguageSelector extends StatefulWidget {
   final double width;
   final double height;
+  final bool isNativeSelector;
 
-  const LanguageSelector(
-      {super.key, required this.width, required this.height});
+  const LanguageSelector({
+    super.key,
+    required this.width,
+    required this.height,
+    this.isNativeSelector = false,
+  });
 
   @override
   LanguageSelectorState createState() => LanguageSelectorState();
 }
 
 class LanguageSelectorState extends State<LanguageSelector> {
-  String _selectedFlag = 'assets/icons/flags/US_flag.png';
+  late String _selectedFlag;
 
   final List<Map<String, String>> _flags = [
-    {'language': 'English (US)', 'path': 'assets/icons/flags/US_flag.png'},
-    {'language': 'English (UK)', 'path': 'assets/icons/flags/UK_flag.png'},
+    {'language': 'English', 'path': 'assets/icons/flags/US_flag.png'},
     {'language': 'Spanish', 'path': 'assets/icons/flags/Spain_flag.png'},
     {'language': 'French', 'path': 'assets/icons/flags/France_flag.png'},
     {'language': 'German', 'path': 'assets/icons/flags/Germany_flag.png'},
     {'language': 'Italian', 'path': 'assets/icons/flags/Italy_flag.png'},
     {'language': 'Portuguese', 'path': 'assets/icons/flags/Brazil_flag.png'},
     {'language': 'Russian', 'path': 'assets/icons/flags/Russia_flag.png'},
-    {
-      'language': 'Chinese (Simplified)',
-      'path': 'assets/icons/flags/China_flag.png'
-    },
-    {
-      'language': 'Chinese (Traditional)',
-      'path': 'assets/icons/flags/Taiwan_flag.png'
-    },
+    {'language': 'Chinese (Simplified)', 'path': 'assets/icons/flags/China_flag.png'},
+    {'language': 'Chinese (Traditional)', 'path': 'assets/icons/flags/Taiwan_flag.png'},
     {'language': 'Japanese', 'path': 'assets/icons/flags/Japan_flag.png'},
     {'language': 'Korean', 'path': 'assets/icons/flags/Korea_flag.png'},
   ];
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _flags.sort((a, b) => a['language']!.compareTo(b['language']!));
-  // }
+  @override
+  void initState() {
+    super.initState();
+    _loadSelectedFlag();
+  }
+
+  Future<void> _loadSelectedFlag() async {
+    final prefs = await SharedPreferences.getInstance();
+    final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
+    final initialLanguage = widget.isNativeSelector
+        ? languageProvider.nativeLanguage
+        : languageProvider.learningLanguage;
+
+    final savedFlag = prefs.getString(widget.isNativeSelector ? 'nativeFlag' : 'learningFlag');
+    setState(() {
+      _selectedFlag = savedFlag ?? _getFlagPath(initialLanguage);
+    });
+  }
+
+  Future<void> _saveSelectedFlag(String flagPath) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(widget.isNativeSelector ? 'nativeFlag' : 'learningFlag', flagPath);
+  }
+
+  String _getFlagPath(String language) {
+    return _flags.firstWhere((flag) => flag['language'] == language, orElse: () => _flags[0])['path']!;
+  }
 
   @override
   Widget build(BuildContext context) {
+    final languageProvider = Provider.of<LanguageProvider>(context);
+    final nativeLanguage = languageProvider.nativeLanguage;
+
+    // Filter flags to exclude the native language if this is not the native language selector
+    final filteredFlags = widget.isNativeSelector
+        ? _flags
+        : _flags.where((flag) => flag['language'] != nativeLanguage).toList();
+
     return GestureDetector(
       onTap: () async {
         final selected = await showMenu<Map<String, String>>(
           context: context,
           position: const RelativeRect.fromLTRB(100, 100, 100, 100),
-          items: _flags.map((flag) {
+          items: filteredFlags.map((flag) {
             return PopupMenuItem<Map<String, String>>(
               value: flag,
               child: ListTile(
@@ -66,6 +94,14 @@ class LanguageSelectorState extends State<LanguageSelector> {
           setState(() {
             _selectedFlag = selected['path']!;
           });
+
+          await _saveSelectedFlag(selected['path']!);
+
+          if (widget.isNativeSelector) {
+            languageProvider.setNativeLanguage(selected['language']!);
+          } else {
+            languageProvider.setLearningLanguage(selected['language']!);
+          }
         }
       },
       child: Image.asset(

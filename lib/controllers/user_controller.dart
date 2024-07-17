@@ -22,13 +22,13 @@ class UserController with ChangeNotifier {
       }
 
       final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      await googleUser.authentication;
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
       final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
 
@@ -60,14 +60,14 @@ class UserController with ChangeNotifier {
       );
 
       final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
 
       if (appleCredential.givenName != null ||
           appleCredential.familyName != null) {
         final displayName =
-            '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
-                .trim();
+        '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
+            .trim();
         await _user!.updateDisplayName(displayName);
       }
       notifyListeners();
@@ -133,3 +133,4 @@ class UserController with ChangeNotifier {
     notifyListeners();
   }
 }
+

@@ -2,23 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../screens/lesson_page.dart';
 import '../providers/progress_provider.dart';
-
-void main() => runApp(const MaterialApp(
-  home: Scaffold(
-    body: Center(
-      child: LessonButton(
-        image: 'assets/icons/flags/US_flag.png',
-        title: 'Lesson 1',
-        lessonColor: Color(0xFFf4a261),
-        stackColor1: Color(0xFFe9c46a),
-        stackColor2: Color(0xFF2a9d8f),
-        nativeLanguage: 'English',
-        learningLanguage: 'French',
-        topic: 'Greetings',
-      ),
-    ),
-  ),
-));
+import '../providers/language_provider.dart';
 
 class LessonButton extends StatefulWidget {
   final String image;
@@ -26,8 +10,6 @@ class LessonButton extends StatefulWidget {
   final Color lessonColor;
   final Color stackColor1;
   final Color stackColor2;
-  final String nativeLanguage;
-  final String learningLanguage;
   final String topic;
 
   const LessonButton({
@@ -37,8 +19,6 @@ class LessonButton extends StatefulWidget {
     required this.lessonColor,
     required this.stackColor1,
     required this.stackColor2,
-    required this.nativeLanguage,
-    required this.learningLanguage,
     required this.topic,
   });
 
@@ -88,7 +68,9 @@ class ColoredCard extends StatelessWidget {
 class LessonButtonState extends State<LessonButton> {
   @override
   Widget build(BuildContext context) {
-    double progress = Provider.of<ProgressProvider>(context).getProgress(widget.topic);
+    final progressProvider = Provider.of<ProgressProvider>(context);
+    final languageProvider = Provider.of<LanguageProvider>(context);
+    double progress = progressProvider.getProgress(widget.topic, languageProvider.learningLanguage);
 
     return Stack(alignment: Alignment.center, children: <Widget>[
       ColoredCard(
@@ -162,8 +144,8 @@ class LessonButtonState extends State<LessonButton> {
             context,
             MaterialPageRoute(
               builder: (context) => LessonPage(
-                nativeLanguage: widget.nativeLanguage,
-                learningLanguage: widget.learningLanguage,
+                nativeLanguage: languageProvider.nativeLanguage,
+                learningLanguage: languageProvider.learningLanguage,
                 topic: widget.topic,
               ),
             ),
