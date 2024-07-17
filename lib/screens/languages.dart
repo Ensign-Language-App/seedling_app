@@ -1,18 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/color_provider.dart';
 
 class LanguagesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final colorProvider = Provider.of<ColorProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Choose a Language'),
-        centerTitle: true, // Center the title
+        title: const Text('Choose a Language'),
+        centerTitle: true,
       ),
       body: Container(
-        color: Colors.yellow, // Yellow background
-        padding: EdgeInsets.symmetric(vertical: 40.0), // Padding to center vertically
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Center vertically
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              colorProvider.gradientStartColor,
+              colorProvider.gradientEndColor,
+            ],
+          ),
+        ),
+        padding: const EdgeInsets.symmetric(vertical: 40.0),
+        child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             LanguageTile(
               imagePath: 'assets/icons/flags/France_flag.png',
@@ -49,7 +62,7 @@ class LanguageTile extends StatelessWidget {
   final String imagePath;
   final String language;
 
-  LanguageTile({required this.imagePath, required this.language});
+  const LanguageTile({required this.imagePath, required this.language});
 
   @override
   Widget build(BuildContext context) {
@@ -59,29 +72,44 @@ class LanguageTile extends StatelessWidget {
         print('Selected $language');
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0), // Padding around each tile
+        margin: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.9),
+          borderRadius: BorderRadius.circular(40.0),
+          border: Border.all(
+            color: Colors.black26,
+            width: 2.0,
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26,
+              offset: Offset(0, 2),
+              blurRadius: 6.0,
+            ),
+          ],
+        ),
         child: Row(
           children: [
-            Spacer(flex: 1), // Spacer to push the icon to the second third
             Container(
-              width: 50, // Fixed icon size
-              height: 50,
-              child: Image.asset(
-                imagePath,
-                width: 50, // Adjust icon size
-                height: 50,
+              width: 30,
+              height: 30,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                image: DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            SizedBox(width: 10), // Space between icon and text
+            const SizedBox(width: 100),
             Expanded(
-              flex: 2,
               child: Text(
                 language,
-                style: TextStyle(
-                  fontSize: 24, // Text size
-                  fontWeight: FontWeight.bold, // Bold text
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
-                textAlign: TextAlign.left, // Align left
               ),
             ),
           ],
