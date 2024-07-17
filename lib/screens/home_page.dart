@@ -218,7 +218,6 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-
             SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -241,6 +240,110 @@ class HomePage extends StatelessWidget {
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
                     topic: 'Dining',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/health.png',
+                    title: 'Health',
+                    lessonColor: Color(0xFFf6bd60),
+                    stackColor1: Color(0xFFf5cac3),
+                    stackColor2: Color(0xFFf7ede2),
+                    topic: 'Health',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/shopping.png',
+                    title: 'Shopping',
+                    lessonColor: Color(0xFFff8fab),
+                    stackColor1: Color(0xFFffb3c6),
+                    stackColor2: Color(0xFFffe5ec),
+                    topic: 'Shopping',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/travel.png',
+                    title: 'Travel',
+                    lessonColor: Color(0xFF48cae4),
+                    stackColor1: Color(0xFFade8f4),
+                    stackColor2: Color(0xFFcaf0f8),
+                    topic: 'Travel',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/directions.png',
+                    title: 'Directions',
+                    lessonColor: Color(0xFFd5bdaf),
+                    stackColor1: Color(0xFFe3d5ca),
+                    stackColor2: Color(0xFFf5ebe0),
+                    topic: 'Directions',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/emergency.png',
+                    title: 'Emergency',
+                    lessonColor: Color(0xFFe9edc9),
+                    stackColor1: Color(0xFFfaedcd),
+                    stackColor2: Color(0xFFfefae0),
+                    topic: 'Emergency',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/money.png',
+                    title: 'Money',
+                    lessonColor: Color(0xFFff9f1c),
+                    stackColor1: Color(0xFFffbf69),
+                    stackColor2: Color(0xFFffffff),
+                    topic: 'Money',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/reg_verbs.png',
+                    title: 'Regular Verbs',
+                    lessonColor: Color(0xFF48cae4),
+                    stackColor1: Color(0xFFade8f4),
+                    stackColor2: Color(0xFFcaf0f8),
+                    topic: 'Regular Verbs',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/irreg_verbs.png',
+                    title: 'Irregular Verbs',
+                    lessonColor: Color(0xFFd5bdaf),
+                    stackColor1: Color(0xFFe3d5ca),
+                    stackColor2: Color(0xFFf5ebe0),
+                    topic: 'Irregular Verbs',
                   ),
                 ),
               ],
