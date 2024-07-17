@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:provider/provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:provider/provider.dart';
 import '../providers/language_provider.dart';
 import '../providers/progress_provider.dart';
 
@@ -22,22 +22,17 @@ class UserController with ChangeNotifier {
         );
       }
 
-      final GoogleSignInAuthentication googleAuth =
-      await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
-      final userCredential =
-      await FirebaseAuth.instance.signInWithCredential(credential);
+      final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
 
       // Load progress and preferences for the new user after notifying listeners
-      await Provider.of<ProgressProvider>(context, listen: false)
-          .loadProgressFromFirestore();
-      await Provider.of<LanguageProvider>(context, listen: false)
-          .loadPreferences();
+      await _loadUserPreferencesAndProgress(context);
     } catch (error) {
       if (error is PlatformException && error.code == 'sign_in_canceled') {
         debugPrint('Sign in cancelled by user');
@@ -62,24 +57,17 @@ class UserController with ChangeNotifier {
         accessToken: appleCredential.authorizationCode,
       );
 
-      final userCredential =
-      await FirebaseAuth.instance.signInWithCredential(credential);
+      final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
 
-      if (appleCredential.givenName != null ||
-          appleCredential.familyName != null) {
-        final displayName =
-        '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
-            .trim();
+      if (appleCredential.givenName != null || appleCredential.familyName != null) {
+        final displayName = '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'.trim();
         await _user!.updateDisplayName(displayName);
       }
       notifyListeners();
 
       // Load progress and preferences for the new user after notifying listeners
-      await Provider.of<ProgressProvider>(context, listen: false)
-          .loadProgressFromFirestore();
-      await Provider.of<LanguageProvider>(context, listen: false)
-          .loadPreferences();
+      await _loadUserPreferencesAndProgress(context);
     } on PlatformException catch (e) {
       debugPrint('Failed to sign in with Apple: $e');
       throw FirebaseAuthException(message: e.message, code: e.code);
@@ -98,10 +86,7 @@ class UserController with ChangeNotifier {
       notifyListeners();
 
       // Load progress and preferences for the new user after notifying listeners
-      await Provider.of<ProgressProvider>(context, listen: false)
-          .loadProgressFromFirestore();
-      await Provider.of<LanguageProvider>(context, listen: false)
-          .loadPreferences();
+      await _loadUserPreferencesAndProgress(context);
     } on FirebaseAuthException catch (e) {
       debugPrint(e.message);
     } catch (e) {
@@ -130,23 +115,26 @@ class UserController with ChangeNotifier {
     }
   }
 
-  // TODO: SOME DUMBASS ERROR HERE
   Future<void> signOut(BuildContext context) async {
-    await Provider.of<ProgressProvider>(context, listen: false)
-        .saveProgressToFirestore();
+    // Save progress and preferences before signing out
+    await _saveProgressAndPreferences(context);
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
 
-    await Provider.of<LanguageProvider>(context, listen: false)
-        .resetPreferences();
-
+    // Ensure context-dependent operations are complete before state change
     _user = null;
     notifyListeners();
+
+    // Reset preferences safely
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (context.mounted) {
+        Provider.of<LanguageProvider>(context, listen: false).resetPreferences();
+      }
+    });
   }
 
   Future<void> deleteAccount(BuildContext context) async {
     try {
-      // Ensure the user is authenticated before deleting
       if (_user != null) {
         await _user!.delete();
         _user = null;
@@ -170,5 +158,17 @@ class UserController with ChangeNotifier {
         SnackBar(content: Text('An error occurred: $e')),
       );
     }
+  }
+
+  Future<void> _loadUserPreferencesAndProgress(BuildContext context) async {
+    await Provider.of<ProgressProvider>(context, listen: false)
+        .loadProgressFromFirestore();
+    await Provider.of<LanguageProvider>(context, listen: false)
+        .loadPreferences();
+  }
+
+  Future<void> _saveProgressAndPreferences(BuildContext context) async {
+    await Provider.of<ProgressProvider>(context, listen: false)
+        .saveProgressToFirestore();
   }
 }

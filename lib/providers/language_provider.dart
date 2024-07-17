@@ -38,3 +38,4 @@ class LanguageProvider with ChangeNotifier {
     notifyListeners();
   }
 }
+

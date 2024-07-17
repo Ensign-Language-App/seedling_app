@@ -19,7 +19,7 @@ class LanguageSelector extends StatefulWidget {
 }
 
 class LanguageSelectorState extends State<LanguageSelector> {
-  late String _selectedFlag = '';
+  String _selectedFlag = '';
 
   final List<Map<String, String>> _flags = [
     {'language': 'English', 'path': 'assets/icons/flags/US_flag.png'},
@@ -48,16 +48,16 @@ class LanguageSelectorState extends State<LanguageSelector> {
   }
 
   Future<void> _initializeSelectedFlag() async {
-  final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
-  await languageProvider.loadPreferences();
-
-    setState(() {
-      _selectedFlag = widget.isNativeSelector
-          ? _getFlagPath(languageProvider.nativeLanguage)
-          : _getFlagPath(languageProvider.learningLanguage);
-    });
-
-}
+    final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
+    await languageProvider.loadPreferences();
+    if (mounted) {
+      setState(() {
+        _selectedFlag = widget.isNativeSelector
+            ? _getFlagPath(languageProvider.nativeLanguage)
+            : _getFlagPath(languageProvider.learningLanguage);
+      });
+    }
+  }
 
   String _getFlagPath(String language) {
     return _flags.firstWhere((flag) => flag['language'] == language)['path']!;
@@ -94,19 +94,19 @@ class LanguageSelectorState extends State<LanguageSelector> {
           });
 
           if (widget.isNativeSelector) {
-            languageProvider.setNativeLanguage(selected['language']!);
+            await languageProvider.setNativeLanguage(selected['language']!);
           } else {
-            languageProvider.setLearningLanguage(selected['language']!);
+            await languageProvider.setLearningLanguage(selected['language']!);
           }
         }
       },
       child: _selectedFlag.isEmpty
           ? const CircularProgressIndicator()
           : Image.asset(
-              _selectedFlag,
-              width: widget.width,
-              height: widget.height,
-            ),
+        _selectedFlag,
+        width: widget.width,
+        height: widget.height,
+      ),
     );
   }
 }
