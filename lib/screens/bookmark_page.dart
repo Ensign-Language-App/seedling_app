@@ -56,7 +56,7 @@ class BookmarkPageState extends State<BookmarkPage> {
             );
           }
           String topic = topics[index - 1];
-          double progress = Provider.of<ProgressProvider>(context).getProgress(topic);
+          double progress = Provider.of<ProgressProvider>(context).getProgress('French', topic);
           return ListTile(
             title: Text(topic),
             trailing: Text('${(progress * 100).toStringAsFixed(1)}%'),

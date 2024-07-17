@@ -52,7 +52,7 @@ class SideMenuState extends State<SideMenu> {
                           userController.user!.photoURL!.isEmpty
                           ? InkWell(
                         onTap: () async {
-                          await userController.updateProfilePicture();
+                          // await userController.updateProfilePicture();
                         },
                         child: const Icon(
                           Icons.camera_alt,
