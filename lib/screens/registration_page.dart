@@ -230,7 +230,7 @@ class RegistrationPageState extends State<RegistrationPage> {
 
         Navigator.of(context).pushReplacement(MaterialPageRoute(
         //  builder: (context) => const LogInPage(),
-          builder: (context) => LanguagesScreen(),
+          builder: (context) => const LanguagesScreen(),
         ));
       } on FirebaseAuthException catch (e) {
         // Handle errors

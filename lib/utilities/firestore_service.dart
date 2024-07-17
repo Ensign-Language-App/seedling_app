@@ -1,8 +1,8 @@
-// ignore_for_file: avoid_print
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
 
 class FirestoreService {
   static Future<void> saveUser(String firstName, String lastName,
@@ -17,9 +17,9 @@ class FirestoreService {
         'email': email,
         'password': hashedPassword,
       });
-      print('User saved successfully');
+      debugPrint('User saved successfully');
     } catch (e) {
-      print('Error saving user: $e');
+      debugPrint('Error saving user: $e');
       // Handle errors as needed
     }
   }

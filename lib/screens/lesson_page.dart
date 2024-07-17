@@ -1,4 +1,3 @@
-// ignore_for_file: avoid_print
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/services.dart';
@@ -45,7 +44,7 @@ class LessonPageState extends State<LessonPage> {
 
     while (retryCount < maxRetries) {
       try {
-        print('Attempting to fetch words...');
+        debugPrint('Attempting to fetch words...');
         QuerySnapshot querySnapshot = await FirebaseFirestore.instance
             .collection('Vocabulary')
             .doc('Subjects')
@@ -56,7 +55,7 @@ class LessonPageState extends State<LessonPage> {
 
         List<Map<String, String>> fetchedWords = [];
         for (var doc in querySnapshot.docs) {
-          print('Fetched document: ${doc.id} with data: ${doc.data()}');
+          debugPrint('Fetched document: ${doc.id} with data: ${doc.data()}');
           var data = doc.data() as Map<String, dynamic>;
           fetchedWords.add({
             'english': doc.id,
@@ -71,16 +70,16 @@ class LessonPageState extends State<LessonPage> {
         setState(() {
           words = fetchedWords
               .where((word) => !Provider.of<ProgressProvider>(context, listen: false)
-              .getMasteredCards(widget.topic)
+              .getMasteredCards(widget.topic, widget.learningLanguage)
               .contains(word['english']))
               .toList();
           isLoading = false;
         });
 
-        print('Fetched words: $words');
+        debugPrint('Fetched words: $words');
         return;
       } catch (e) {
-        print('Error fetching words: $e');
+        debugPrint('Error fetching words: $e');
         retryCount++;
         if (retryCount < maxRetries) {
           await Future.delayed(backoffDuration * retryCount);
@@ -118,6 +117,7 @@ class LessonPageState extends State<LessonPage> {
   void addToMaster(BuildContext context) {
     Provider.of<ProgressProvider>(context, listen: false).addMasteredCard(
       widget.topic,
+      widget.learningLanguage,
       words[currentIndex]['english']!,
     );
   }
@@ -134,6 +134,7 @@ class LessonPageState extends State<LessonPage> {
         message = 'Congratulations, you have completed all words in this section.';
         Provider.of<ProgressProvider>(context, listen: false).setProgress(
           widget.topic,
+          widget.learningLanguage,
           1.0,
         );
       }
@@ -148,8 +149,11 @@ class LessonPageState extends State<LessonPage> {
       onPopInvoked: (didPop) async {
         Provider.of<ProgressProvider>(context, listen: false).setProgress(
           widget.topic,
-          Provider.of<ProgressProvider>(context, listen: false)
-              .getMasteredCards(widget.topic)
+          widget.learningLanguage,
+          totalCards == 0
+              ? 0
+              : Provider.of<ProgressProvider>(context, listen: false)
+              .getMasteredCards(widget.topic, widget.learningLanguage)
               .length /
               totalCards.toDouble(),
         );
@@ -164,8 +168,9 @@ class LessonPageState extends State<LessonPage> {
             onPressed: () {
               Provider.of<ProgressProvider>(context, listen: false).setProgress(
                 widget.topic,
+                widget.learningLanguage,
                 Provider.of<ProgressProvider>(context, listen: false)
-                    .getMasteredCards(widget.topic)
+                    .getMasteredCards(widget.topic, widget.learningLanguage)
                     .length /
                     totalCards.toDouble(),
               );

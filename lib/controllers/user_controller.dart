@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,13 +22,13 @@ class UserController with ChangeNotifier {
       }
 
       final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      await googleUser.authentication;
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
       final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
 
@@ -39,9 +37,9 @@ class UserController with ChangeNotifier {
           .loadProgressFromFirestore();
     } catch (error) {
       if (error is PlatformException && error.code == 'sign_in_canceled') {
-        print('Sign in cancelled by user');
+        debugPrint('Sign in cancelled by user');
       } else {
-        print('An error occurred while signing in with Google: $error');
+        debugPrint('An error occurred while signing in with Google: $error');
       }
     }
   }
@@ -62,14 +60,14 @@ class UserController with ChangeNotifier {
       );
 
       final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
 
       if (appleCredential.givenName != null ||
           appleCredential.familyName != null) {
         final displayName =
-            '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
-                .trim();
+        '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
+            .trim();
         await _user!.updateDisplayName(displayName);
       }
       notifyListeners();
@@ -78,10 +76,10 @@ class UserController with ChangeNotifier {
       await Provider.of<ProgressProvider>(context, listen: false)
           .loadProgressFromFirestore();
     } on PlatformException catch (e) {
-      print('Failed to sign in with Apple: $e');
+      debugPrint('Failed to sign in with Apple: $e');
       throw FirebaseAuthException(message: e.message, code: e.code);
     } catch (e) {
-      print('An error occurred while signing in with Apple: $e');
+      debugPrint('An error occurred while signing in with Apple: $e');
       throw FirebaseAuthException(message: e.toString(), code: 'ERROR_UNKNOWN');
     }
   }
@@ -98,9 +96,9 @@ class UserController with ChangeNotifier {
       await Provider.of<ProgressProvider>(context, listen: false)
           .loadProgressFromFirestore();
     } on FirebaseAuthException catch (e) {
-      print(e.message);
+      debugPrint(e.message);
     } catch (e) {
-      print('An error occurred while signing in');
+      debugPrint('An error occurred while signing in');
     }
   }
 
@@ -117,10 +115,10 @@ class UserController with ChangeNotifier {
       }
       notifyListeners();
     } on FirebaseAuthException catch (e) {
-      print(e.message);
+      debugPrint(e.message);
       rethrow;
     } catch (e) {
-      print('An error occurred while registering: $e');
+      debugPrint('An error occurred while registering: $e');
       rethrow;
     }
   }

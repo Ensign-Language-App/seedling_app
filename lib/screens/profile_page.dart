@@ -72,7 +72,7 @@ class ProfilePage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const LanguageSelector(width: 50, height: 50),
+                      const LanguageSelector(width: 50, height: 50, isNativeSelector: true),
                       const SizedBox(height: 10),
                       Text(
                         user?.displayName ?? 'User Name',
@@ -97,10 +97,10 @@ class ProfilePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const LanguageSelector(width: 40, height: 40),
+                        const LanguageSelector(width: 40, height: 40, isNativeSelector: false),
                         const SizedBox(height: 15),
                         LinearProgressIndicator(
-                          value: 0.4,
+                          value: 0.4, // Example progress value
                           backgroundColor: Colors.grey[300],
                           valueColor: AlwaysStoppedAnimation<Color>(
                               Theme.of(context).primaryColor),

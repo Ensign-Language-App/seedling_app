@@ -1,16 +1,37 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:seedling_app/widgets/lesson_button.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:seedling_app/providers/language_provider.dart';
 
-void main() => runApp(const MaterialApp(home: HomePage()));
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => LanguageProvider()),
+        // Add other providers as needed
+      ],
+      child: MaterialApp(
+        home: const HomePage(),
+        theme: ThemeData(
+          primarySwatch: Colors.orange,
+          scaffoldBackgroundColor: Colors.grey[100],
+        ),
+      ),
+    );
+  }
+}
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -26,8 +47,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF9c6644),
                     stackColor1: Color(0xFF7f5539),
                     stackColor2: Color(0xFFe6ccb2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Animals',
                   ),
                 ),
@@ -38,8 +57,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF8d99ae),
                     stackColor1: Color(0xFF2b2d42),
                     stackColor2: Color(0xFFedf2f4),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Greetings',
                   ),
                 ),
@@ -56,8 +73,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF83c5be),
                     stackColor1: Color(0xFF006d77),
                     stackColor2: Color(0xFFb08968),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Family',
                   ),
                 ),
@@ -68,8 +83,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Body',
                   ),
                 ),
@@ -86,8 +99,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF48cae4),
                     stackColor1: Color(0xFFade8f4),
                     stackColor2: Color(0xFFcaf0f8),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Numbers',
                   ),
                 ),
@@ -98,8 +109,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFd5bdaf),
                     stackColor1: Color(0xFFe3d5ca),
                     stackColor2: Color(0xFFf5ebe0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Food & Drink',
                   ),
                 ),
@@ -116,8 +125,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Clothing',
                   ),
                 ),
@@ -128,8 +135,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Places',
                   ),
                 ),
@@ -146,9 +151,7 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
-                    topic: 'The Body',
+                    topic: 'Body',
                   ),
                 ),
                 Flexible(
@@ -158,8 +161,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
                     stackColor2: Color(0xFFffffff),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Traffics',
                   ),
                 ),
@@ -176,8 +177,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF9c6644),
                     stackColor1: Color(0xFF7f5539),
                     stackColor2: Color(0xFFe6ccb2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'People',
                   ),
                 ),
@@ -188,8 +187,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF8d99ae),
                     stackColor1: Color(0xFF2b2d42),
                     stackColor2: Color(0xFFedf2f4),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Greetings',
                   ),
                 ),
@@ -206,8 +203,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF83c5be),
                     stackColor1: Color(0xFF006d77),
                     stackColor2: Color(0xFFb08968),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Places',
                   ),
                 ),
@@ -218,8 +213,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Dining',
                   ),
                 ),
@@ -236,8 +229,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF48cae4),
                     stackColor1: Color(0xFFade8f4),
                     stackColor2: Color(0xFFcaf0f8),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Travel',
                   ),
                 ),
@@ -248,8 +239,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFd5bdaf),
                     stackColor1: Color(0xFFe3d5ca),
                     stackColor2: Color(0xFFf5ebe0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Directions',
                   ),
                 ),
@@ -266,8 +255,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Health',
                   ),
                 ),
@@ -278,8 +265,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Emergency',
                   ),
                 ),
@@ -296,8 +281,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Shopping',
                   ),
                 ),
@@ -308,8 +291,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
                     stackColor2: Color(0xFFffffff),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Money',
                   ),
                 ),
@@ -326,8 +307,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Colors',
                   ),
                 ),
@@ -338,8 +317,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Days',
                   ),
                 ),
@@ -356,8 +333,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Months',
                   ),
                 ),
@@ -368,8 +343,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
                     stackColor2: Color(0xFFffffff),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Time',
                   ),
                 ),
@@ -386,8 +359,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF9c6644),
                     stackColor1: Color(0xFF7f5539),
                     stackColor2: Color(0xFFe6ccb2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Questions',
                   ),
                 ),
@@ -398,8 +369,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF8d99ae),
                     stackColor1: Color(0xFF2b2d42),
                     stackColor2: Color(0xFFedf2f4),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Conversation',
                   ),
                 ),
@@ -416,8 +385,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF83c5be),
                     stackColor1: Color(0xFF006d77),
                     stackColor2: Color(0xFFb08968),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Adjectives',
                   ),
                 ),
@@ -428,8 +395,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Verbs',
                   ),
                 ),
@@ -446,8 +411,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFF48cae4),
                     stackColor1: Color(0xFFade8f4),
                     stackColor2: Color(0xFFcaf0f8),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Regular Verbs',
                   ),
                 ),
@@ -458,8 +421,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFd5bdaf),
                     stackColor1: Color(0xFFe3d5ca),
                     stackColor2: Color(0xFFf5ebe0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Irregular Verbs',
                   ),
                 ),
@@ -476,8 +437,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFf6bd60),
                     stackColor1: Color(0xFFf5cac3),
                     stackColor2: Color(0xFFf7ede2),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Subject Pronouns',
                   ),
                 ),
@@ -488,8 +447,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFe9edc9),
                     stackColor1: Color(0xFFfaedcd),
                     stackColor2: Color(0xFFfefae0),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Possessive Pronouns',
                   ),
                 ),
@@ -506,8 +463,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff8fab),
                     stackColor1: Color(0xFFffb3c6),
                     stackColor2: Color(0xFFffe5ec),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Prepositions',
                   ),
                 ),
@@ -518,8 +473,6 @@ class HomePage extends StatelessWidget {
                     lessonColor: Color(0xFFff9f1c),
                     stackColor1: Color(0xFFffbf69),
                     stackColor2: Color(0xFFffffff),
-                    nativeLanguage: 'English',
-                    learningLanguage: 'French',
                     topic: 'Conjunctions',
                   ),
                 ),
@@ -530,24 +483,5 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  Future<List<String>> fetchSubjects() async {
-    List<String> subjects = [];
-    try {
-      DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance
-          .collection('Vocabulary')
-          .doc('Subjects')
-          .get();
-
-      if (documentSnapshot.exists) {
-        Map<String, dynamic> data =
-            documentSnapshot.data() as Map<String, dynamic>;
-        subjects = data.keys.toList();
-      }
-    } catch (e) {
-      print('Failed to fetch subjects: $e');
-    }
-    return subjects;
   }
 }
