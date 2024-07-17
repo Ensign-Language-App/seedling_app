@@ -6,13 +6,14 @@ import 'package:seedling_app/utilities/theme.dart';
 import 'package:seedling_app/providers/theme_notifier.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:seedling_app/providers/color_provider.dart';
-
+import 'package:seedling_app/services/notification_service.dart';
 import 'utilities/firebase_options.dart';
 import 'providers/progress_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(
     MultiProvider(
       providers: [
@@ -20,7 +21,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => UserController()),
         ChangeNotifierProvider(create: (_) => ProgressProvider()),
         ChangeNotifierProvider(create: (_) => ColorProvider()),
-
+        ChangeNotifierProvider(create: (_) => NotificationService()), // Initialize NotificationService here
       ],
       child: const MyApp(),
     ),

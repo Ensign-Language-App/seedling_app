@@ -27,7 +27,7 @@ class BottomNavBarState extends State<BottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.collections_bookmark),
-          label: 'Bookmark',
+          label: 'Path',
         ),
       ],
       onTap: (int index) {

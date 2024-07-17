@@ -1,14 +1,15 @@
 // ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../utilities/biometric_auth.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
 import 'package:seedling_app/screens/log_in_page.dart';
 import 'package:seedling_app/screens/profile_page.dart';
 import 'package:seedling_app/screens/settings_page.dart';
 import 'package:seedling_app/screens/settings_screens.dart';
 import 'package:seedling_app/providers/color_provider.dart';
+import 'package:seedling_app/utilities/biometric_auth.dart';
+
+import '../providers/theme_notifier.dart';
 
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
@@ -23,29 +24,45 @@ class SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
     final userController = Provider.of<UserController>(context);
-    final backgroundColor = Provider.of<ColorProvider>(context).backgroundColor;
-
-    ImageProvider<Object> userImage;
-    if (userController.user?.photoURL != null &&
-        userController.user!.photoURL!.isNotEmpty) {
-      userImage = NetworkImage(userController.user!.photoURL!);
-    } else {
-      userImage = const AssetImage('assets/images/default_icon.jpg');
-    }
+    final colorProvider = Provider.of<ColorProvider>(context);
 
     return Drawer(
       child: ListView(
         children: <Widget>[
           DrawerHeader(
             decoration: BoxDecoration(
-              color: backgroundColor,
+              gradient: LinearGradient(
+                colors: [colorProvider.gradientStartColor, colorProvider.gradientEndColor],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                CircleAvatar(
-                  radius: 40,
-                  foregroundImage: userImage,
+                Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundImage: userController.user?.photoURL != null &&
+                          userController.user!.photoURL!.isNotEmpty
+                          ? NetworkImage(userController.user!.photoURL!)
+                          : null,
+                      child: userController.user?.photoURL == null ||
+                          userController.user!.photoURL!.isEmpty
+                          ? InkWell(
+                        onTap: () async {
+                          await userController.updateProfilePicture();
+                        },
+                        child: const Icon(
+                          Icons.camera_alt,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                      )
+                          : null,
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 10),
                 Text(
@@ -116,4 +133,19 @@ class SideMenuState extends State<SideMenu> {
       ),
     );
   }
+}
+
+void main() {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeNotifier()),
+        ChangeNotifierProvider(create: (_) => ColorProvider()),
+        ChangeNotifierProvider(create: (_) => UserController()),
+      ],
+      child: const MaterialApp(
+        home: SettingsPage(),
+      ),
+    ),
+  );
 }

@@ -1,5 +1,4 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print, duplicate_ignore
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,6 +7,7 @@ import 'package:seedling_app/controllers/home_page_controller.dart';
 import 'package:seedling_app/screens/registration_page.dart';
 import 'package:flutter/services.dart';
 import 'package:seedling_app/screens/reset_pass_page.dart';
+import 'package:seedling_app/providers/color_provider.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -52,6 +52,7 @@ class LogInPageState extends State<LogInPage>
 
   @override
   Widget build(BuildContext context) {
+    final colorProvider = Provider.of<ColorProvider>(context);
     final backgroundColor = Theme.of(context).canvasColor;
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     final signUpColor = isDarkMode ? Colors.white : Colors.black;
@@ -59,14 +60,14 @@ class LogInPageState extends State<LogInPage>
     return Scaffold(
       body: Stack(
         children: [
-          _buildAnimatedGradientBackground(),
+          _buildAnimatedGradientBackground(colorProvider),
           _buildFormContainer(context, backgroundColor, signUpColor),
         ],
       ),
     );
   }
 
-  Widget _buildAnimatedGradientBackground() {
+  Widget _buildAnimatedGradientBackground(ColorProvider colorProvider) {
     final screenHeight = MediaQuery.of(context).size.height;
     return AnimatedBuilder(
       animation: _animation,
@@ -76,7 +77,7 @@ class LogInPageState extends State<LogInPage>
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: const [Color(0xFFff964f), Color(0xFFFFF3B0)],
+              colors: [colorProvider.gradientStartColor, colorProvider.gradientEndColor],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               transform: GradientRotation(_animation.value * 3.14 * 2),
@@ -86,7 +87,7 @@ class LogInPageState extends State<LogInPage>
         );
       },
       child: Padding(
-        padding: EdgeInsets.only(top: screenHeight * .07, left: 22),
+        padding: EdgeInsets.only(top: screenHeight * .10, left: 22),
         child: const Text(
           'Hello there!\nSign in',
           style: TextStyle(
@@ -121,7 +122,7 @@ class LogInPageState extends State<LogInPage>
             children: [
               SizedBox(height: screenHeight * .025),
               _buildTextField(
-                  emailController, 'Username/E-mail', Icons.check, false),
+                  emailController, 'E-mail', Icons.check, false),
               SizedBox(height: screenHeight * .02),
               _buildTextField(passwordController, 'Password', null, true),
               SizedBox(height: screenHeight * .02),
@@ -166,7 +167,7 @@ class LogInPageState extends State<LogInPage>
                               height: 25,
                               width: 25,
                               image:
-                                  AssetImage("assets/icons/Google_icon.png"))),
+                              AssetImage("assets/icons/Google_icon.png"))),
                       GestureDetector(
                           onTap: _signInWithApple,
                           child: const Icon(
@@ -281,7 +282,7 @@ class LogInPageState extends State<LogInPage>
   Future<void> _signInWithGoogle() async {
     try {
       final userController =
-          Provider.of<UserController>(context, listen: false);
+      Provider.of<UserController>(context, listen: false);
       await userController.signInWithGoogle(context);
       if (userController.user != null && mounted) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -308,7 +309,7 @@ class LogInPageState extends State<LogInPage>
   Future<void> _signInWithApple() async {
     try {
       final userController =
-          Provider.of<UserController>(context, listen: false);
+      Provider.of<UserController>(context, listen: false);
       await userController.signInWithApple(context);
       if (userController.user != null && mounted) {
         Navigator.of(context).pushReplacement(MaterialPageRoute(

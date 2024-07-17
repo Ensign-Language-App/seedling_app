@@ -1,5 +1,5 @@
 // ignore_for_file: avoid_print
-
+import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -7,10 +7,14 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import '../providers/progress_provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class UserController with ChangeNotifier {
   User? _user = FirebaseAuth.instance.currentUser;
   User? get user => _user;
+
+  final ImagePicker _picker = ImagePicker();
 
   Future<void> signInWithGoogle(BuildContext context) async {
     try {
@@ -24,13 +28,13 @@ class UserController with ChangeNotifier {
       }
 
       final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      await googleUser.authentication;
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
       final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
       notifyListeners();
 
@@ -62,14 +66,14 @@ class UserController with ChangeNotifier {
       );
 
       final userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
       _user = userCredential.user;
 
       if (appleCredential.givenName != null ||
           appleCredential.familyName != null) {
         final displayName =
-            '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
-                .trim();
+        '${appleCredential.givenName ?? ''} ${appleCredential.familyName ?? ''}'
+            .trim();
         await _user!.updateDisplayName(displayName);
       }
       notifyListeners();
@@ -125,6 +129,44 @@ class UserController with ChangeNotifier {
     }
   }
 
+  Future<void> updateUserName(String newName) async {
+    if (_user != null) {
+      try {
+        await _user!.updateDisplayName(newName);
+        await _user!.reload();
+        _user = FirebaseAuth.instance.currentUser;
+        notifyListeners();
+      } on FirebaseAuthException catch (e) {
+        print('Failed to update user name: $e');
+        throw e;
+      } catch (e) {
+        print('An error occurred while updating the user name: $e');
+        throw e;
+      }
+    }
+  }
+
+  Future<void> updateProfilePicture() async {
+    try {
+      final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+      if (pickedFile != null) {
+        final file = File(pickedFile.path);
+        final storageRef = FirebaseStorage.instance
+            .ref()
+            .child('profile_pictures/${_user!.uid}.jpg');
+        await storageRef.putFile(file);
+        final photoURL = await storageRef.getDownloadURL();
+        await _user!.updatePhotoURL(photoURL);
+        await _user!.reload();
+        _user = FirebaseAuth.instance.currentUser;
+        notifyListeners();
+      }
+    } catch (e) {
+      print('Failed to update profile picture: $e');
+      throw e;
+    }
+  }
+
   Future<void> signOut(BuildContext context) async {
     // Save progress before logging out
     await Provider.of<ProgressProvider>(context, listen: false)
@@ -134,6 +176,7 @@ class UserController with ChangeNotifier {
     _user = null;
     notifyListeners();
   }
+
   Future<void> deleteAccount(BuildContext context) async {
     try {
       // Ensure the user is authenticated before deleting
@@ -162,4 +205,3 @@ class UserController with ChangeNotifier {
     }
   }
 }
-
