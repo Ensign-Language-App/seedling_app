@@ -42,22 +42,22 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/greets.png',
-                    title: 'Greetings',
-                    lessonColor: Color(0xFF8d99ae),
-                    stackColor1: Color(0xFF2b2d42),
-                    stackColor2: Color(0xFFedf2f4),
-                    topic: 'Greetings',
-                  ),
-                ),
-                Flexible(
-                  child: LessonButton(
                     image: 'assets/images/lessons/numbers.png',
                     title: 'Numbers',
                     lessonColor: Color(0xFF48cae4),
                     stackColor1: Color(0xFFade8f4),
                     stackColor2: Color(0xFFcaf0f8),
                     topic: 'Numbers',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/colors.png',
+                    title: 'Colors',
+                    lessonColor: Color(0xFFf6bd60),
+                    stackColor1: Color(0xFFf5cac3),
+                    stackColor2: Color(0xFFf7ede2),
+                    topic: 'Colors',
                   ),
                 ),
               ],
@@ -130,12 +130,12 @@ class HomePage extends StatelessWidget {
                 ),
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/colors.png',
-                    title: 'Colors',
-                    lessonColor: Color(0xFFf6bd60),
-                    stackColor1: Color(0xFFf5cac3),
-                    stackColor2: Color(0xFFf7ede2),
-                    topic: 'Colors',
+                    image: 'assets/images/lessons/greets.png',
+                    title: 'Greetings',
+                    lessonColor: Color(0xFF8d99ae),
+                    stackColor1: Color(0xFF2b2d42),
+                    stackColor2: Color(0xFFedf2f4),
+                    topic: 'Greetings',
                   ),
                 ),
               ],
@@ -250,32 +250,6 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: LessonButton(
-                    image: 'assets/images/lessons/health.png',
-                    title: 'Health',
-                    lessonColor: Color(0xFFf6bd60),
-                    stackColor1: Color(0xFFf5cac3),
-                    stackColor2: Color(0xFFf7ede2),
-                    topic: 'Health',
-                  ),
-                ),
-                Flexible(
-                  child: LessonButton(
-                    image: 'assets/images/lessons/shopping.png',
-                    title: 'Shopping',
-                    lessonColor: Color(0xFFff8fab),
-                    stackColor1: Color(0xFFffb3c6),
-                    stackColor2: Color(0xFFffe5ec),
-                    topic: 'Shopping',
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Flexible(
-                  child: LessonButton(
                     image: 'assets/images/lessons/travel.png',
                     title: 'Travel',
                     lessonColor: Color(0xFF48cae4),
@@ -322,6 +296,32 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/health.png',
+                    title: 'Health',
+                    lessonColor: Color(0xFFf6bd60),
+                    stackColor1: Color(0xFFf5cac3),
+                    stackColor2: Color(0xFFf7ede2),
+                    topic: 'Health',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/shopping.png',
+                    title: 'Shopping',
+                    lessonColor: Color(0xFFff8fab),
+                    stackColor1: Color(0xFFffb3c6),
+                    stackColor2: Color(0xFFffe5ec),
+                    topic: 'Shopping',
+                  ),
+                ),
+              ],
+            ),            
             SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
