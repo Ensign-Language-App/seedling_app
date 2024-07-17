@@ -1519,175 +1519,300 @@
             "Portuguese": "Olá",
             "French": "Bonjour",
             "Italian": "Ciao",
-            "German": "Hallo"
+            "German": "Hallo",
+            "Chinese (Simplified)": "你好",
+            "Chinese (Traditional)": "你好",
+            "Korean": "안녕하세요",
+            "Japanese": "こんにちは",
+            "Russian": "Привет"
           },
           "Good morning": {
             "Spanish": "Buenos días",
             "Portuguese": "Bom dia",
             "French": "Bonjour",
             "Italian": "Buongiorno",
-            "German": "Guten Morgen"
+            "German": "Guten Morgen",
+            "Chinese (Simplified)": "早上好",
+            "Chinese (Traditional)": "早上好",
+            "Korean": "좋은 아침",
+            "Japanese": "おはようございます",
+            "Russian": "Доброе утро"
           },
           "Good afternoon": {
             "Spanish": "Buenas tardes",
             "Portuguese": "Boa tarde",
             "French": "Bon après-midi",
             "Italian": "Buon pomeriggio",
-            "German": "Guten Tag"
+            "German": "Guten Tag",
+            "Chinese (Simplified)": "下午好",
+            "Chinese (Traditional)": "下午好",
+            "Korean": "안녕하세요",
+            "Japanese": "こんにちは",
+            "Russian": "Добрый день"
           },
           "Good evening": {
             "Spanish": "Buenas noches",
             "Portuguese": "Boa noite",
             "French": "Bonsoir",
             "Italian": "Buonasera",
-            "German": "Guten Abend"
+            "German": "Guten Abend",
+            "Chinese (Simplified)": "晚上好",
+            "Chinese (Traditional)": "晚上好",
+            "Korean": "좋은 저녁",
+            "Japanese": "こんばんは",
+            "Russian": "Добрый вечер"
           },
           "Good night": {
             "Spanish": "Buenas noches",
             "Portuguese": "Boa noite",
             "French": "Bonne nuit",
             "Italian": "Buonanotte",
-            "German": "Gute Nacht"
+            "German": "Gute Nacht",
+            "Chinese (Simplified)": "晚安",
+            "Chinese (Traditional)": "晚安",
+            "Korean": "안녕히 주무세요",
+            "Japanese": "おやすみなさい",
+            "Russian": "Спокойной ночи"
           },
           "Goodbye": {
             "Spanish": "Adiós",
             "Portuguese": "Adeus",
             "French": "Au revoir",
             "Italian": "Arrivederci",
-            "German": "Auf Wiedersehen"
+            "German": "Auf Wiedersehen",
+            "Chinese (Simplified)": "再见",
+            "Chinese (Traditional)": "再见",
+            "Korean": "안녕히 가세요",
+            "Japanese": "さようなら",
+            "Russian": "До свидания"
           },
           "Please": {
             "Spanish": "Por favor",
             "Portuguese": "Por favor",
             "French": "S'il vous plaît",
             "Italian": "Per favore",
-            "German": "Bitte"
+            "German": "Bitte",
+            "Chinese (Simplified)": "请",
+            "Chinese (Traditional)": "請",
+            "Korean": "제발",
+            "Japanese": "お願いします",
+            "Russian": "Пожалуйста"
           },
           "Thank you": {
             "Spanish": "Gracias",
             "Portuguese": "Obrigado(a)",
             "French": "Merci",
             "Italian": "Grazie",
-            "German": "Danke"
+            "German": "Danke",
+            "Chinese (Simplified)": "谢谢",
+            "Chinese (Traditional)": "謝謝",
+            "Korean": "감사합니다",
+            "Japanese": "ありがとうございます",
+            "Russian": "Спасибо"
           },
           "You’re welcome": {
             "Spanish": "De nada",
             "Portuguese": "De nada",
             "French": "De rien",
             "Italian": "Prego",
-            "German": "Gern geschehen"
+            "German": "Gern geschehen",
+            "Chinese (Simplified)": "不客气",
+            "Chinese (Traditional)": "不客氣",
+            "Korean": "천만에요",
+            "Japanese": "どういたしまして",
+            "Russian": "Пожалуйста"
           },
           "Excuse me": {
             "Spanish": "Perdón",
             "Portuguese": "Com licença",
             "French": "Excusez-moi",
             "Italian": "Mi scusi",
-            "German": "Entschuldigung"
+            "German": "Entschuldigung",
+            "Chinese (Simplified)": "对不起",
+            "Chinese (Traditional)": "對不起",
+            "Korean": "실례합니다",
+            "Japanese": "すみません",
+            "Russian": "Извините"
           },
           "I’m sorry": {
             "Spanish": "Lo siento",
             "Portuguese": "Desculpe",
             "French": "Je suis désolé(e)",
             "Italian": "Mi dispiace",
-            "German": "Es tut mir leid"
+            "German": "Es tut mir leid",
+            "Chinese (Simplified)": "对不起",
+            "Chinese (Traditional)": "對不起",
+            "Korean": "죄송합니다",
+            "Japanese": "ごめんなさい",
+            "Russian": "Простите"
           },
           "How are you?": {
             "Spanish": "¿Cómo estás?",
             "Portuguese": "Como você está?",
             "French": "Comment ça va ?",
             "Italian": "Come stai?",
-            "German": "Wie geht's?"
+            "German": "Wie geht's?",
+            "Chinese (Simplified)": "你好吗？",
+            "Chinese (Traditional)": "你好嗎？",
+            "Korean": "어떻게 지내세요?",
+            "Japanese": "お元気ですか？",
+            "Russian": "Как дела?"
           },
           "Fine, thank you": {
             "Spanish": "Bien, gracias",
             "Portuguese": "Bem, obrigado(a)",
             "French": "Bien, merci",
             "Italian": "Bene, grazie",
-            "German": "Gut, danke"
+            "German": "Gut, danke",
+            "Chinese (Simplified)": "很好，谢谢",
+            "Chinese (Traditional)": "很好，謝謝",
+            "Korean": "잘 지내요, 감사합니다",
+            "Japanese": "元気です、ありがとう",
+            "Russian": "Хорошо, спасибо"
           },
           "Nice to meet you": {
             "Spanish": "Mucho gusto",
             "Portuguese": "Prazer em conhecê-lo",
             "French": "Enchanté(e)",
             "Italian": "Piacere di conoscerti",
-            "German": "Freut mich"
+            "German": "Freut mich",
+            "Chinese (Simplified)": "很高兴认识你",
+            "Chinese (Traditional)": "很高興認識你",
+            "Korean": "만나서 반가워요",
+            "Japanese": "はじめまして",
+            "Russian": "Приятно познакомиться"
           },
           "What’s your name?": {
             "Spanish": "¿Cuál es tu nombre?",
             "Portuguese": "Qual é o seu nome?",
             "French": "Comment tu t'appelles?",
             "Italian": "Come ti chiami?",
-            "German": "Wie heißt du?"
+            "German": "Wie heißt du?",
+            "Chinese (Simplified)": "你叫什么名字？",
+            "Chinese (Traditional)": "你叫什麼名字？",
+            "Korean": "이름이 뭐에요?",
+            "Japanese": "お名前は？",
+            "Russian": "Как тебя зовут?"
           },
           "My name is…": {
             "Spanish": "Mi nombre es…",
             "Portuguese": "Meu nome é…",
             "French": "Je m'appelle…",
             "Italian": "Mi chiamo…",
-            "German": "Mein Name ist…"
+            "German": "Mein Name ist…",
+            "Chinese (Simplified)": "我的名字是…",
+            "Chinese (Traditional)": "我的名字是…",
+            "Korean": "내 이름은…",
+            "Japanese": "私の名前は…",
+            "Russian": "Меня зовут…"
           },
           "How old are you?": {
             "Spanish": "¿Cuántos años tienes?",
             "Portuguese": "Quantos anos você tem?",
             "French": "Quel âge as-tu?",
             "Italian": "Quanti anni hai?",
-            "German": "Wie alt bist du?"
+            "German": "Wie alt bist du?",
+            "Chinese (Simplified)": "你多大了？",
+            "Chinese (Traditional)": "你多大了？",
+            "Korean": "몇 살이에요?",
+            "Japanese": "何歳ですか？",
+            "Russian": "Сколько тебе лет?"
           },
           "Where are you from?": {
             "Spanish": "¿De dónde eres?",
             "Portuguese": "De onde você é?",
             "French": "D'où viens-tu?",
             "Italian": "Di dove sei?",
-            "German": "Woher kommst du?"
+            "German": "Woher kommst du?",
+            "Chinese (Simplified)": "你从哪里来？",
+            "Chinese (Traditional)": "你從哪裡來？",
+            "Korean": "어디서 왔어요?",
+            "Japanese": "どこから来ましたか？",
+            "Russian": "Откуда ты?"
           },
           "I’m from…": {
             "Spanish": "Soy de…",
             "Portuguese": "Eu sou de…",
             "French": "Je viens de…",
             "Italian": "Sono di…",
-            "German": "Ich komme aus…"
+            "German": "Ich komme aus…",
+            "Chinese (Simplified)": "我来自…",
+            "Chinese (Traditional)": "我來自…",
+            "Korean": "저는…에서 왔어요",
+            "Japanese": "私は…から来ました",
+            "Russian": "Я из…"
           },
           "Do you speak English?": {
             "Spanish": "¿Hablas inglés?",
             "Portuguese": "Você fala inglês?",
             "French": "Parles-tu anglais?",
             "Italian": "Parli inglese?",
-            "German": "Sprichst du Englisch?"
+            "German": "Sprichst du Englisch?",
+            "Chinese (Simplified)": "你会说英语吗？",
+            "Chinese (Traditional)": "你會說英語嗎？",
+            "Korean": "영어 할 줄 아세요?",
+            "Japanese": "英語を話せますか？",
+            "Russian": "Ты говоришь по-английски?"
           },
           "I don’t understand": {
             "Spanish": "No entiendo",
             "Portuguese": "Eu não entendo",
             "French": "Je ne comprends pas",
             "Italian": "Non capisco",
-            "German": "Ich verstehe nicht"
+            "German": "Ich verstehe nicht",
+            "Chinese (Simplified)": "我不明白",
+            "Chinese (Traditional)": "我不明白",
+            "Korean": "이해가 안 돼요",
+            "Japanese": "わかりません",
+            "Russian": "Я не понимаю"
           },
           "Can you help me?": {
             "Spanish": "¿Puedes ayudarme?",
             "Portuguese": "Você pode me ajudar?",
             "French": "Peux-tu m'aider?",
             "Italian": "Puoi aiutarmi?",
-            "German": "Kannst du mir helfen?"
+            "German": "Kannst du mir helfen?",
+            "Chinese (Simplified)": "你能帮我吗？",
+            "Chinese (Traditional)": "你能幫我嗎？",
+            "Korean": "도와줄 수 있어요?",
+            "Japanese": "手伝ってくれますか？",
+            "Russian": "Ты можешь мне помочь?"
           },
           "Yes": {
             "Spanish": "Sí",
             "Portuguese": "Sim",
             "French": "Oui",
             "Italian": "Sì",
-            "German": "Ja"
+            "German": "Ja",
+            "Chinese (Simplified)": "是",
+            "Chinese (Traditional)": "是",
+            "Korean": "예",
+            "Japanese": "はい",
+            "Russian": "Да"
           },
           "No": {
             "Spanish": "No",
             "Portuguese": "Não",
             "French": "Non",
             "Italian": "No",
-            "German": "Nein"
+            "German": "Nein",
+            "Chinese (Simplified)": "不",
+            "Chinese (Traditional)": "不",
+            "Korean": "아니요",
+            "Japanese": "いいえ",
+            "Russian": "Нет"
           },
           "Maybe": {
             "Spanish": "Tal vez",
             "Portuguese": "Talvez",
             "French": "Peut-être",
             "Italian": "Forse",
-            "German": "Vielleicht"
+            "German": "Vielleicht",
+            "Chinese (Simplified)": "也许",
+            "Chinese (Traditional)": "也許",
+            "Korean": "아마도",
+            "Japanese": "たぶん",
+            "Russian": "Может быть"
           }
         },
         "Questions": {
@@ -1696,105 +1821,180 @@
             "Portuguese": "Qual é o seu nome?",
             "French": "Comment tu t'appelles?",
             "Italian": "Come ti chiami?",
-            "German": "Wie heißt du?"
+            "German": "Wie heißt du?",
+            "Chinese (Simplified)": "你叫什么名字？",
+            "Chinese (Traditional)": "你叫什麼名字？",
+            "Korean": "이름이 뭐에요?",
+            "Japanese": "お名前は？",
+            "Russian": "Как тебя зовут?"
           },
           "Where are you from?": {
             "Spanish": "¿De dónde eres?",
             "Portuguese": "De onde você é?",
             "French": "D'où viens-tu?",
             "Italian": "Di dove sei?",
-            "German": "Woher kommst du?"
+            "German": "Woher kommst du?",
+            "Chinese (Simplified)": "你从哪里来？",
+            "Chinese (Traditional)": "你從哪裡來？",
+            "Korean": "어디서 왔어요?",
+            "Japanese": "どこから来ましたか？",
+            "Russian": "Откуда ты?"
           },
           "How old are you?": {
             "Spanish": "¿Cuántos años tienes?",
             "Portuguese": "Quantos anos você tem?",
             "French": "Quel âge as-tu?",
             "Italian": "Quanti anni hai?",
-            "German": "Wie alt bist du?"
+            "German": "Wie alt bist du?",
+            "Chinese (Simplified)": "你多大了？",
+            "Chinese (Traditional)": "你多大了？",
+            "Korean": "몇 살이에요?",
+            "Japanese": "何歳ですか？",
+            "Russian": "Сколько тебе лет?"
           },
           "What do you do?": {
             "Spanish": "¿A qué te dedicas?",
             "Portuguese": "O que você faz?",
             "French": "Que fais-tu ?",
             "Italian": "Che cosa fai?",
-            "German": "Was machst du beruflich?"
+            "German": "Was machst du beruflich?",
+            "Chinese (Simplified)": "你做什么工作？",
+            "Chinese (Traditional)": "你做什麼工作？",
+            "Korean": "무슨 일 하세요?",
+            "Japanese": "仕事は何ですか？",
+            "Russian": "Чем занимаешься?"
           },
           "Do you speak English?": {
             "Spanish": "¿Hablas inglés?",
             "Portuguese": "Você fala inglês?",
             "French": "Parles-tu anglais?",
             "Italian": "Parli inglese?",
-            "German": "Sprichst du Englisch?"
+            "German": "Sprichst du Englisch?",
+            "Chinese (Simplified)": "你会说英语吗？",
+            "Chinese (Traditional)": "你會說英語嗎？",
+            "Korean": "영어 할 줄 아세요?",
+            "Japanese": "英語を話せますか？",
+            "Russian": "Ты говоришь по-английски?"
           },
           "Can you help me?": {
             "Spanish": "¿Puedes ayudarme?",
             "Portuguese": "Você pode me ajudar?",
             "French": "Peux-tu m'aider?",
             "Italian": "Puoi aiutarmi?",
-            "German": "Kannst du mir helfen?"
+            "German": "Kannst du mir helfen?",
+            "Chinese (Simplified)": "你能帮我吗？",
+            "Chinese (Traditional)": "你能幫我嗎？",
+            "Korean": "도와줄 수 있어요?",
+            "Japanese": "手伝ってくれますか？",
+            "Russian": "Ты можешь мне помочь?"
           },
           "How much is this?": {
             "Spanish": "¿Cuánto cuesta esto?",
             "Portuguese": "Quanto custa isso?",
             "French": "Combien ça coûte ?",
             "Italian": "Quanto costa questo?",
-            "German": "Wie viel kostet das?"
+            "German": "Wie viel kostet das?",
+            "Chinese (Simplified)": "这个多少钱？",
+            "Chinese (Traditional)": "這個多少錢？",
+            "Korean": "이거 얼마에요?",
+            "Japanese": "これはいくらですか？",
+            "Russian": "Сколько это стоит?"
           },
           "Where is the bathroom?": {
             "Spanish": "¿Dónde está el baño?",
             "Portuguese": "Onde fica o banheiro?",
             "French": "Où sont les toilettes?",
             "Italian": "Dove si trova il bagno?",
-            "German": "Wo ist die Toilette?"
+            "German": "Wo ist die Toilette?",
+            "Chinese (Simplified)": "洗手间在哪里？",
+            "Chinese (Traditional)": "洗手間在哪裡？",
+            "Korean": "화장실이 어디에요?",
+            "Japanese": "トイレはどこですか？",
+            "Russian": "Где туалет?"
           },
           "What time is it?": {
             "Spanish": "¿Qué hora es?",
             "Portuguese": "Que horas são?",
             "French": "Quelle heure est-il ?",
             "Italian": "Che ore sono?",
-            "German": "Wie spät ist es?"
+            "German": "Wie spät ist es?",
+            "Chinese (Simplified)": "现在几点？",
+            "Chinese (Traditional)": "現在幾點？",
+            "Korean": "지금 몇 시에요?",
+            "Japanese": "今何時ですか？",
+            "Russian": "Который час?"
           },
           "How are you?": {
             "Spanish": "¿Cómo estás?",
             "Portuguese": "Como você está?",
             "French": "Comment ça va ?",
             "Italian": "Come stai?",
-            "German": "Wie geht's?"
+            "German": "Wie geht's?",
+            "Chinese (Simplified)": "你好吗？",
+            "Chinese (Traditional)": "你好嗎？",
+            "Korean": "어떻게 지내세요?",
+            "Japanese": "お元気ですか？",
+            "Russian": "Как дела?"
           },
           "What’s your phone number?": {
             "Spanish": "¿Cuál es tu número de teléfono?",
             "Portuguese": "Qual é o seu número de telefone?",
             "French": "Quel est ton numéro de téléphone?",
             "Italian": "Qual è il tuo numero di telefono?",
-            "German": "Wie ist deine Telefonnummer?"
+            "German": "Wie ist deine Telefonnummer?",
+            "Chinese (Simplified)": "你的电话号码是多少？",
+            "Chinese (Traditional)": "你的電話號碼是多少？",
+            "Korean": "전화번호가 뭐에요?",
+            "Japanese": "電話番号は何ですか？",
+            "Russian": "Какой у тебя номер телефона?"
           },
           "Do you have siblings?": {
             "Spanish": "¿Tienes hermanos?",
             "Portuguese": "Você tem irmãos?",
             "French": "As-tu des frères et sœurs?",
             "Italian": "Hai fratelli o sorelle?",
-            "German": "Hast du Geschwister?"
+            "German": "Hast du Geschwister?",
+            "Chinese (Simplified)": "你有兄弟姐妹吗？",
+            "Chinese (Traditional)": "你有兄弟姐妹嗎？",
+            "Korean": "형제자매가 있어요?",
+            "Japanese": "兄弟姉妹はいますか？",
+            "Russian": "У тебя есть братья или сестры?"
           },
           "Where do you live?": {
             "Spanish": "¿Dónde vives?",
             "Portuguese": "Onde você mora?",
             "French": "Où habites-tu ?",
             "Italian": "Dove vivi?",
-            "German": "Wo wohnst du?"
+            "German": "Wo wohnst du?",
+            "Chinese (Simplified)": "你住在哪里？",
+            "Chinese (Traditional)": "你住在哪裡？",
+            "Korean": "어디에 살아요?",
+            "Japanese": "どこに住んでいますか？",
+            "Russian": "Где ты живешь?"
           },
           "What’s your favorite color?": {
             "Spanish": "¿Cuál es tu color favorito?",
             "Portuguese": "Qual é a sua cor favorita?",
             "French": "Quelle est ta couleur préférée ?",
             "Italian": "Qual è il tuo colore preferito?",
-            "German": "Was ist deine Lieblingsfarbe?"
+            "German": "Was ist deine Lieblingsfarbe?",
+            "Chinese (Simplified)": "你最喜欢的颜色是什么？",
+            "Chinese (Traditional)": "你最喜歡的顏色是什麼？",
+            "Korean": "좋아하는 색깔이 뭐에요?",
+            "Japanese": "好きな色は何ですか？",
+            "Russian": "Какой твой любимый цвет?"
           },
           "Can I have the bill, please?": {
             "Spanish": "¿Me trae la cuenta, por favor?",
             "Portuguese": "Me traz a conta, por favor?",
             "French": "L'addition, s'il vous plaît ?",
             "Italian": "Il conto, per favore?",
-            "German": "Die Rechnung, bitte?"
+            "German": "Die Rechnung, bitte?",
+            "Chinese (Simplified)": "请给我账单。",
+            "Chinese (Traditional)": "請給我賬單。",
+            "Korean": "계산서 주세요.",
+            "Japanese": "お会計お願いします。",
+            "Russian": "Можно счет, пожалуйста?"
           }
         },
         "Conversation": {
@@ -1803,113 +2003,193 @@
             "Portuguese": "Como você está?",
             "French": "Comment ça va ?",
             "Italian": "Come stai?",
-            "German": "Wie geht's?"
-            },
+            "German": "Wie geht's?",
+            "Chinese (Simplified)": "你好吗？",
+            "Chinese (Traditional)": "你好嗎？",
+            "Korean": "어떻게 지내세요?",
+            "Japanese": "お元気ですか？",
+            "Russian": "Как дела?"
+          },
           "I’m fine, thank you": {
             "Spanish": "Bien, gracias",
             "Portuguese": "Bem, obrigado(a)",
             "French": "Bien, merci",
             "Italian": "Bene, grazie",
-            "German": "Gut, danke"
-            },
+            "German": "Gut, danke",
+            "Chinese (Simplified)": "我很好，谢谢",
+            "Chinese (Traditional)": "我很好，謝謝",
+            "Korean": "잘 지내요, 고마워요",
+            "Japanese": "元気です、ありがとう",
+            "Russian": "Хорошо, спасибо"
+          },
           "What’s up?": {
             "Spanish": "¿Qué pasa?",
             "Portuguese": "E aí?",
             "French": "Quoi de neuf ?",
             "Italian": "Che succede?",
-            "German": "Was ist los?"
-            },
+            "German": "Was ist los?",
+            "Chinese (Simplified)": "怎么了？",
+            "Chinese (Traditional)": "怎麼了？",
+            "Korean": "뭐해요?",
+            "Japanese": "どうしたの？",
+            "Russian": "Что нового?"
+          },
           "Nothing much": {
             "Spanish": "Nada mucho",
             "Portuguese": "Nada demais",
             "French": "Pas grand-chose",
             "Italian": "Niente di che",
-            "German": "Nicht viel"
-            },
+            "German": "Nicht viel",
+            "Chinese (Simplified)": "没什么",
+            "Chinese (Traditional)": "沒什麼",
+            "Korean": "별로요",
+            "Japanese": "特に何も",
+            "Russian": "Ничего особенного"
+          },
           "See you later": {
             "Spanish": "Hasta luego",
             "Portuguese": "Até logo",
             "French": "À plus tard",
             "Italian": "A dopo",
-            "German": "Bis später"
-            },
+            "German": "Bis später",
+            "Chinese (Simplified)": "再见",
+            "Chinese (Traditional)": "再見",
+            "Korean": "나중에 봐요",
+            "Japanese": "またね",
+            "Russian": "Увидимся позже"
+          },
           "Take care": {
             "Spanish": "Cuídate",
             "Portuguese": "Se cuida",
             "French": "Prends soin de toi",
             "Italian": "Stammi bene",
-            "German": "Pass auf dich auf"
-            },
+            "German": "Pass auf dich auf",
+            "Chinese (Simplified)": "保重",
+            "Chinese (Traditional)": "保重",
+            "Korean": "잘 지내요",
+            "Japanese": "お大事に",
+            "Russian": "Береги себя"
+          },
           "What time is it?": {
             "Spanish": "¿Qué hora es?",
             "Portuguese": "Que horas são?",
             "French": "Quelle heure est-il ?",
             "Italian": "Che ore sono?",
-            "German": "Wie spät ist es?"
-            },
+            "German": "Wie spät ist es?",
+            "Chinese (Simplified)": "现在几点？",
+            "Chinese (Traditional)": "現在幾點？",
+            "Korean": "지금 몇 시에요?",
+            "Japanese": "今何時ですか？",
+            "Russian": "Который час?"
+          },
           "Where is the bathroom?": {
             "Spanish": "¿Dónde está el baño?",
             "Portuguese": "Onde fica o banheiro?",
             "French": "Où sont les toilettes?",
             "Italian": "Dove si trova il bagno?",
-            "German": "Wo ist die Toilette?"
-            },
+            "German": "Wo ist die Toilette?",
+            "Chinese (Simplified)": "洗手间在哪里？",
+            "Chinese (Traditional)": "洗手間在哪裡？",
+            "Korean": "화장실이 어디에요?",
+            "Japanese": "トイレはどこですか？",
+            "Russian": "Где туалет?"
+          },
           "I’m hungry": {
             "Spanish": "Tengo hambre",
             "Portuguese": "Estou com fome",
             "French": "J'ai faim",
             "Italian": "Ho fame",
-            "German": "Ich habe Hunger"
-            },
+            "German": "Ich habe Hunger",
+            "Chinese (Simplified)": "我饿了",
+            "Chinese (Traditional)": "我餓了",
+            "Korean": "배고파요",
+            "Japanese": "お腹が空きました",
+            "Russian": "Я голоден"
+          },
           "I’m thirsty": {
             "Spanish": "Tengo sed",
             "Portuguese": "Estou com sede",
             "French": "J'ai soif",
             "Italian": "Ho sete",
-            "German": "Ich habe Durst"
-            },
+            "German": "Ich habe Durst",
+            "Chinese (Simplified)": "我渴了",
+            "Chinese (Traditional)": "我渴了",
+            "Korean": "목말라요",
+            "Japanese": "喉が渇きました",
+            "Russian": "Я хочу пить"
+          },
           "Good luck": {
             "Spanish": "Buena suerte",
             "Portuguese": "Boa sorte",
             "French": "Bonne chance",
             "Italian": "Buona fortuna",
-            "German": "Viel Glück"
-            },
+            "German": "Viel Glück",
+            "Chinese (Simplified)": "祝你好运",
+            "Chinese (Traditional)": "祝你好運",
+            "Korean": "행운을 빌어요",
+            "Japanese": "頑張って",
+            "Russian": "Удачи"
+          },
           "Congratulations": {
             "Spanish": "Felicidades",
             "Portuguese": "Parabéns",
             "French": "Félicitations",
             "Italian": "Congratulazioni",
-            "German": "Herzlichen Glückwunsch"
-            },
+            "German": "Herzlichen Glückwunsch",
+            "Chinese (Simplified)": "祝贺",
+            "Chinese (Traditional)": "祝賀",
+            "Korean": "축하해요",
+            "Japanese": "おめでとうございます",
+            "Russian": "Поздравляю"
+          },
           "Happy birthday": {
             "Spanish": "Feliz cumpleaños",
             "Portuguese": "Feliz aniversário",
             "French": "Joyeux anniversaire",
             "Italian": "Buon compleanno",
-            "German": "Alles Gute zum Geburtstag"
-            },
+            "German": "Alles Gute zum Geburtstag",
+            "Chinese (Simplified)": "生日快乐",
+            "Chinese (Traditional)": "生日快樂",
+            "Korean": "생일 축하해요",
+            "Japanese": "お誕生日おめでとうございます",
+            "Russian": "С Днем Рождения"
+          },
           "Merry Christmas": {
             "Spanish": "Feliz Navidad",
             "Portuguese": "Feliz Natal",
             "French": "Joyeux Noël",
             "Italian": "Buon Natale",
-            "German": "Frohe Weihnachten"
-            },
+            "German": "Frohe Weihnachten",
+            "Chinese (Simplified)": "圣诞快乐",
+            "Chinese (Traditional)": "聖誕快樂",
+            "Korean": "메리 크리스마스",
+            "Japanese": "メリークリスマス",
+            "Russian": "С Рождеством"
+          },
           "Happy New Year": {
             "Spanish": "Feliz Año Nuevo",
             "Portuguese": "Feliz Ano Novo",
             "French": "Bonne année",
             "Italian": "Felice Anno Nuovo",
-            "German": "Frohes Neues Jahr"
-            },
+            "German": "Frohes Neues Jahr",
+            "Chinese (Simplified)": "新年快乐",
+            "Chinese (Traditional)": "新年快樂",
+            "Korean": "새해 복 많이 받으세요",
+            "Japanese": "明けましておめでとうございます",
+            "Russian": "С Новым Годом"
+          },
           "Get well soon": {
             "Spanish": "Recupérate pronto",
             "Portuguese": "Melhoras",
             "French": "Bon rétablissement",
             "Italian": "Guarisci presto",
-            "German": "Gute Besserung"
-            }
+            "German": "Gute Besserung",
+            "Chinese (Simplified)": "早日康复",
+            "Chinese (Traditional)": "早日康復",
+            "Korean": "빨리 나으세요",
+            "Japanese": "お大事に",
+            "Russian": "Выздоравливай скорее"
+          }
         },
         "Numbers": {
           "one": {
@@ -1917,210 +2197,360 @@
             "Portuguese": "um",
             "French": "un",
             "Italian": "uno",
-            "German": "eins"
+            "German": "eins",
+            "Chinese (Simplified)": "一",
+            "Chinese (Traditional)": "一",
+            "Korean": "일",
+            "Japanese": "一",
+            "Russian": "один"
           },
           "two": {
             "Spanish": "dos",
             "Portuguese": "dois",
             "French": "deux",
             "Italian": "due",
-            "German": "zwei"
+            "German": "zwei",
+            "Chinese (Simplified)": "二",
+            "Chinese (Traditional)": "二",
+            "Korean": "이",
+            "Japanese": "二",
+            "Russian": "два"
           },
           "three": {
             "Spanish": "tres",
             "Portuguese": "três",
             "French": "trois",
             "Italian": "tre",
-            "German": "drei"
+            "German": "drei",
+            "Chinese (Simplified)": "三",
+            "Chinese (Traditional)": "三",
+            "Korean": "삼",
+            "Japanese": "三",
+            "Russian": "три"
           },
           "four": {
             "Spanish": "cuatro",
             "Portuguese": "quatro",
             "French": "quatre",
             "Italian": "quattro",
-            "German": "vier"
+            "German": "vier",
+            "Chinese (Simplified)": "四",
+            "Chinese (Traditional)": "四",
+            "Korean": "사",
+            "Japanese": "四",
+            "Russian": "четыре"
           },
           "five": {
             "Spanish": "cinco",
             "Portuguese": "cinco",
             "French": "cinq",
             "Italian": "cinque",
-            "German": "fünf"
+            "German": "fünf",
+            "Chinese (Simplified)": "五",
+            "Chinese (Traditional)": "五",
+            "Korean": "오",
+            "Japanese": "五",
+            "Russian": "пять"
           },
           "six": {
             "Spanish": "seis",
             "Portuguese": "seis",
             "French": "six",
             "Italian": "sei",
-            "German": "sechs"
+            "German": "sechs",
+            "Chinese (Simplified)": "六",
+            "Chinese (Traditional)": "六",
+            "Korean": "육",
+            "Japanese": "六",
+            "Russian": "шесть"
           },
           "seven": {
             "Spanish": "siete",
             "Portuguese": "sete",
             "French": "sept",
             "Italian": "sette",
-            "German": "sieben"
+            "German": "sieben",
+            "Chinese (Simplified)": "七",
+            "Chinese (Traditional)": "七",
+            "Korean": "칠",
+            "Japanese": "七",
+            "Russian": "семь"
           },
           "eight": {
             "Spanish": "ocho",
             "Portuguese": "oito",
             "French": "huit",
             "Italian": "otto",
-            "German": "acht"
+            "German": "acht",
+            "Chinese (Simplified)": "八",
+            "Chinese (Traditional)": "八",
+            "Korean": "팔",
+            "Japanese": "八",
+            "Russian": "восемь"
           },
           "nine": {
             "Spanish": "nueve",
             "Portuguese": "nove",
             "French": "neuf",
             "Italian": "nove",
-            "German": "neun"
+            "German": "neun",
+            "Chinese (Simplified)": "九",
+            "Chinese (Traditional)": "九",
+            "Korean": "구",
+            "Japanese": "九",
+            "Russian": "девять"
           },
           "ten": {
             "Spanish": "diez",
             "Portuguese": "dez",
             "French": "dix",
             "Italian": "dieci",
-            "German": "zehn"
+            "German": "zehn",
+            "Chinese (Simplified)": "十",
+            "Chinese (Traditional)": "十",
+            "Korean": "십",
+            "Japanese": "十",
+            "Russian": "десять"
           },
           "eleven": {
             "Spanish": "once",
             "Portuguese": "onze",
             "French": "onze",
             "Italian": "undici",
-            "German": "elf"
+            "German": "elf",
+            "Chinese (Simplified)": "十一",
+            "Chinese (Traditional)": "十一",
+            "Korean": "십일",
+            "Japanese": "十一",
+            "Russian": "одиннадцать"
           },
           "twelve": {
             "Spanish": "doce",
             "Portuguese": "doze",
             "French": "douze",
             "Italian": "dodici",
-            "German": "zwölf"
+            "German": "zwölf",
+            "Chinese (Simplified)": "十二",
+            "Chinese (Traditional)": "十二",
+            "Korean": "십이",
+            "Japanese": "十二",
+            "Russian": "двенадцать"
           },
           "thirteen": {
             "Spanish": "trece",
             "Portuguese": "treze",
             "French": "treize",
             "Italian": "tredici",
-            "German": "dreizehn"
+            "German": "dreizehn",
+            "Chinese (Simplified)": "十三",
+            "Chinese (Traditional)": "十三",
+            "Korean": "십삼",
+            "Japanese": "十三",
+            "Russian": "тринадцать"
           },
           "fourteen": {
             "Spanish": "catorce",
             "Portuguese": "catorze",
             "French": "quatorze",
             "Italian": "quattordici",
-            "German": "vierzehn"
+            "German": "vierzehn",
+            "Chinese (Simplified)": "十四",
+            "Chinese (Traditional)": "十四",
+            "Korean": "십사",
+            "Japanese": "十四",
+            "Russian": "четырнадцать"
           },
           "fifteen": {
             "Spanish": "quince",
             "Portuguese": "quinze",
             "French": "quinze",
             "Italian": "quindici",
-            "German": "fünfzehn"
+            "German": "fünfzehn",
+            "Chinese (Simplified)": "十五",
+            "Chinese (Traditional)": "十五",
+            "Korean": "십오",
+            "Japanese": "十五",
+            "Russian": "пятнадцать"
           },
           "sixteen": {
             "Spanish": "dieciséis",
             "Portuguese": "dezesseis",
             "French": "seize",
             "Italian": "sedici",
-            "German": "sechzehn"
+            "German": "sechzehn",
+            "Chinese (Simplified)": "十六",
+            "Chinese (Traditional)": "十六",
+            "Korean": "십육",
+            "Japanese": "十六",
+            "Russian": "шестнадцать"
           },
           "seventeen": {
             "Spanish": "diecisiete",
             "Portuguese": "dezessete",
             "French": "dix-sept",
             "Italian": "diciassette",
-            "German": "siebzehn"
+            "German": "siebzehn",
+            "Chinese (Simplified)": "十七",
+            "Chinese (Traditional)": "十七",
+            "Korean": "십칠",
+            "Japanese": "十七",
+            "Russian": "семнадцать"
           },
           "eighteen": {
             "Spanish": "dieciocho",
             "Portuguese": "dezoito",
             "French": "dix-huit",
             "Italian": "diciotto",
-            "German": "achtzehn"
+            "German": "achtzehn",
+            "Chinese (Simplified)": "十八",
+            "Chinese (Traditional)": "十八",
+            "Korean": "십팔",
+            "Japanese": "十八",
+            "Russian": "восемнадцать"
           },
           "nineteen": {
             "Spanish": "diecinueve",
             "Portuguese": "dezenove",
             "French": "dix-neuf",
             "Italian": "diciannove",
-            "German": "neunzehn"
+            "German": "neunzehn",
+            "Chinese (Simplified)": "十九",
+            "Chinese (Traditional)": "十九",
+            "Korean": "십구",
+            "Japanese": "十九",
+            "Russian": "девятнадцать"
           },
           "twenty": {
             "Spanish": "veinte",
             "Portuguese": "vinte",
             "French": "vingt",
             "Italian": "venti",
-            "German": "zwanzig"
+            "German": "zwanzig",
+            "Chinese (Simplified)": "二十",
+            "Chinese (Traditional)": "二十",
+            "Korean": "이십",
+            "Japanese": "二十",
+            "Russian": "двадцать"
           },
           "thirty": {
             "Spanish": "treinta",
             "Portuguese": "trinta",
             "French": "trente",
             "Italian": "trenta",
-            "German": "dreißig"
+            "German": "dreißig",
+            "Chinese (Simplified)": "三十",
+            "Chinese (Traditional)": "三十",
+            "Korean": "삼십",
+            "Japanese": "三十",
+            "Russian": "тридцать"
           },
           "forty": {
             "Spanish": "cuarenta",
             "Portuguese": "quarenta",
             "French": "quarante",
             "Italian": "quaranta",
-            "German": "vierzig"
+            "German": "vierzig",
+            "Chinese (Simplified)": "四十",
+            "Chinese (Traditional)": "四十",
+            "Korean": "사십",
+            "Japanese": "四十",
+            "Russian": "сорок"
           },
           "fifty": {
             "Spanish": "cincuenta",
             "Portuguese": "cinquenta",
             "French": "cinquante",
             "Italian": "cinquanta",
-            "German": "fünfzig"
+            "German": "fünfzig",
+            "Chinese (Simplified)": "五十",
+            "Chinese (Traditional)": "五十",
+            "Korean": "오십",
+            "Japanese": "五十",
+            "Russian": "пятьдесят"
           },
           "sixty": {
             "Spanish": "sesenta",
             "Portuguese": "sessenta",
             "French": "soixante",
             "Italian": "sessanta",
-            "German": "sechzig"
+            "German": "sechzig",
+            "Chinese (Simplified)": "六十",
+            "Chinese (Traditional)": "六十",
+            "Korean": "육십",
+            "Japanese": "六十",
+            "Russian": "шестьдесят"
           },
           "seventy": {
             "Spanish": "setenta",
             "Portuguese": "setenta",
             "French": "soixante-dix",
             "Italian": "settanta",
-            "German": "siebzig"
+            "German": "siebzig",
+            "Chinese (Simplified)": "七十",
+            "Chinese (Traditional)": "七十",
+            "Korean": "칠십",
+            "Japanese": "七十",
+            "Russian": "семьдесят"
           },
           "eighty": {
             "Spanish": "ochenta",
             "Portuguese": "oitenta",
             "French": "quatre-vingts",
             "Italian": "ottanta",
-            "German": "achtzig"
+            "German": "achtzig",
+            "Chinese (Simplified)": "八十",
+            "Chinese (Traditional)": "八十",
+            "Korean": "팔십",
+            "Japanese": "八十",
+            "Russian": "восемьдесят"
           },
           "ninety": {
             "Spanish": "noventa",
             "Portuguese": "noventa",
             "French": "quatre-vingt-dix",
             "Italian": "novanta",
-            "German": "neunzig"
+            "German": "neunzig",
+            "Chinese (Simplified)": "九十",
+            "Chinese (Traditional)": "九十",
+            "Korean": "구십",
+            "Japanese": "九十",
+            "Russian": "девяносто"
           },
           "hundred": {
             "Spanish": "cien",
             "Portuguese": "cem",
             "French": "cent",
             "Italian": "cento",
-            "German": "hundert"
+            "German": "hundert",
+            "Chinese (Simplified)": "百",
+            "Chinese (Traditional)": "百",
+            "Korean": "백",
+            "Japanese": "百",
+            "Russian": "сто"
           },
           "thousand": {
             "Spanish": "mil",
             "Portuguese": "mil",
             "French": "mille",
             "Italian": "mille",
-            "German": "tausend"
+            "German": "tausend",
+            "Chinese (Simplified)": "千",
+            "Chinese (Traditional)": "千",
+            "Korean": "천",
+            "Japanese": "千",
+            "Russian": "тысяча"
           },
           "million": {
             "Spanish": "millón",
             "Portuguese": "milhão",
             "French": "million",
             "Italian": "milione",
-            "German": "million"
+            "German": "million",
+            "Chinese (Simplified)": "百万",
+            "Chinese (Traditional)": "百萬",
+            "Korean": "백만",
+            "Japanese": "百万",
+            "Russian": "миллион"
           }
         },
         "Days": {
