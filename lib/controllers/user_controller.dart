@@ -130,14 +130,13 @@ class UserController with ChangeNotifier {
     }
   }
 
+  // TODO: SOME DUMBASS ERROR HERE
   Future<void> signOut(BuildContext context) async {
-    // Save progress before logging out
     await Provider.of<ProgressProvider>(context, listen: false)
         .saveProgressToFirestore();
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
 
-    // Reset language preferences
     await Provider.of<LanguageProvider>(context, listen: false)
         .resetPreferences();
 
