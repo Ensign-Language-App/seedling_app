@@ -13,7 +13,7 @@ class LanguagesSelectionPage extends StatelessWidget {
         centerTitle: true, // Center the title
       ),
       body: Container(
-        color: Colors.yellow, // Yellow background
+        color: const Color(0xFFff964f), // Yellow background
         padding: const EdgeInsets.symmetric(
             vertical: 40.0), // Padding to center vertically
         child: const Column(
@@ -28,8 +28,28 @@ class LanguagesSelectionPage extends StatelessWidget {
               language: 'Spanish',
             ),
             LanguageTile(
-              imagePath: 'assets/icons/flags/Portugal_flag.png',
+              imagePath: 'assets/icons/flags/Brazil_flag.png',
               language: 'Portuguese',
+            ),  
+            LanguageTile(
+              imagePath: 'assets/icons/flags/Italy_flag.png',
+              language: 'Italian',
+            ),
+            LanguageTile(
+              imagePath: 'assets/icons/flags/Germany_flag.png',
+              language: 'German',
+            ),
+            LanguageTile(
+              imagePath: 'assets/icons/flags/Russia_flag.png',
+              language: 'Russian',            
+            ),
+            LanguageTile(
+              imagePath: 'assets/icons/flags/China_flag.png',
+              language: 'Chinese',
+            ),
+            LanguageTile(
+              imagePath: 'assets/icons/flags/Japan_flag.png',
+              language: 'Japanese',            
             ),
           ],
         ),
