@@ -64,6 +64,11 @@ class LessonPageState extends State<LessonPage> {
             'french': data['French'] ?? 'N/A',
             'italian': data['Italian'] ?? 'N/A',
             'german': data['German'] ?? 'N/A',
+            'russian': data['Russian'] ?? 'N/A',
+            'chinese (simplified)': data['Chinese (Simplified)'] ?? 'N/A',
+            'chinese (traditional)': data['Chinese (Traditional)'] ?? 'N/A',
+            'japanese': data['Japanese'] ?? 'N/A',
+            'korean': data['Korean'] ?? 'N/A',
           });
         }
 
