@@ -33,7 +33,6 @@ class UserController with ChangeNotifier {
       _user = userCredential.user;
       notifyListeners();
 
-      // Load progress and preferences for the new user after notifying listeners
       await _loadUserPreferencesAndProgress();
     } catch (error) {
       if (error is PlatformException && error.code == 'sign_in_canceled') {
@@ -68,7 +67,6 @@ class UserController with ChangeNotifier {
       }
       notifyListeners();
 
-      // Load progress and preferences for the new user after notifying listeners
       await _loadUserPreferencesAndProgress();
     } on PlatformException catch (e) {
       debugPrint('Failed to sign in with Apple: $e');
@@ -85,7 +83,6 @@ class UserController with ChangeNotifier {
       _user = userCredential.user;
       notifyListeners();
 
-      // Load progress and preferences for the new user after notifying listeners
       await _loadUserPreferencesAndProgress();
     } on FirebaseAuthException catch (e) {
       debugPrint(e.message);
@@ -114,16 +111,13 @@ class UserController with ChangeNotifier {
   }
 
   Future<void> signOut() async {
-    // Save progress and preferences before signing out
     await _saveProgressAndPreferences();
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
 
-    // Ensure context-dependent operations are complete before state change
     _user = null;
     notifyListeners();
 
-    // Reset preferences safely
     _resetUserPreferences();
   }
 
@@ -138,10 +132,10 @@ class UserController with ChangeNotifier {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No user is currently signed in')));
       }
     } on FirebaseAuthException catch (e) {
-      print('Failed to delete account: $e');
+      debugPrint('Failed to delete account: $e');
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to delete account: ${e.message}')));
     } catch (e) {
-      print('An error occurred while deleting the account: $e');
+      debugPrint('An error occurred while deleting the account: $e');
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $e')));
     }
   }
