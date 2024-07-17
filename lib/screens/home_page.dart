@@ -165,7 +165,87 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ],
-            ),            
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/the_body.png',
+                    title: 'The Body',
+                    lessonColor: Color(0xFFff8fab),
+                    stackColor1: Color(0xFFffb3c6),
+                    stackColor2: Color(0xFFffe5ec),
+                    topic: 'Body',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/clothing.png',
+                    title: 'Clothing',
+                    lessonColor: Color(0xFFf6bd60),
+                    stackColor1: Color(0xFFf5cac3),
+                    stackColor2: Color(0xFFf7ede2),
+                    topic: 'Clothing',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/greets.png',
+                    title: 'Home',
+                    lessonColor: Color(0xFF8d99ae),
+                    stackColor1: Color(0xFF2b2d42),
+                    stackColor2: Color(0xFFedf2f4),
+                    topic: 'Greetings',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/places.png',
+                    title: 'Places',
+                    lessonColor: Color(0xFFe9edc9),
+                    stackColor1: Color(0xFFfaedcd),
+                    stackColor2: Color(0xFFfefae0),
+                    topic: 'Places',
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/food.png',
+                    title: 'Food & Drink',
+                    lessonColor: Color(0xFFd5bdaf),
+                    stackColor1: Color(0xFFe3d5ca),
+                    stackColor2: Color(0xFFf5ebe0),
+                    topic: 'Food & Drink',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/dining.png',
+                    title: 'Dining',
+                    lessonColor: Color(0xFFff8fab),
+                    stackColor1: Color(0xFFffb3c6),
+                    stackColor2: Color(0xFFffe5ec),
+                    topic: 'Dining',
+                  ),
+                ),
+              ],
+            ),
+
             SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
