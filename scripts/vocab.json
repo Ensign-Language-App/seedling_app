@@ -7,140 +7,240 @@
             "Portuguese": "mãe (f)",
             "French": "mère (f)",
             "Italian": "madre (f)",
-            "German": "mutter (f)"
+            "German": "mutter (f)",
+            "Chinese (Simplified)": "母亲",
+            "Chinese (Traditional)": "母親",
+            "Korean": "어머니",
+            "Japanese": "母",
+            "Russian": "мать"
           },
           "father": {
             "Spanish": "padre (m)",
             "Portuguese": "pai (m)",
             "French": "père (m)",
             "Italian": "padre (m)",
-            "German": "vater (m)"
+            "German": "vater (m)",
+            "Chinese (Simplified)": "父亲",
+            "Chinese (Traditional)": "父親",
+            "Korean": "아버지",
+            "Japanese": "父",
+            "Russian": "отец"
           },
           "sister": {
             "Spanish": "hermana (f)",
             "Portuguese": "irmã (f)",
             "French": "sœur (f)",
             "Italian": "sorella (f)",
-            "German": "schwester (f)"
+            "German": "schwester (f)",
+            "Chinese (Simplified)": "姐姐",
+            "Chinese (Traditional)": "姐姐",
+            "Korean": "여자 형제",
+            "Japanese": "姉妹",
+            "Russian": "сестра"
           },
           "brother": {
             "Spanish": "hermano (m)",
             "Portuguese": "irmão (m)",
             "French": "frère (m)",
             "Italian": "fratello (m)",
-            "German": "bruder (m)"
+            "German": "bruder (m)",
+            "Chinese (Simplified)": "兄弟",
+            "Chinese (Traditional)": "兄弟",
+            "Korean": "남자 형제",
+            "Japanese": "兄弟",
+            "Russian": "брат"
           },
           "son": {
             "Spanish": "hijo (m)",
             "Portuguese": "filho (m)",
             "French": "fils (m)",
             "Italian": "figlio (m)",
-            "German": "sohn (m)"
+            "German": "sohn (m)",
+            "Chinese (Simplified)": "儿子",
+            "Chinese (Traditional)": "兒子",
+            "Korean": "아들",
+            "Japanese": "息子",
+            "Russian": "сын"
           },
           "daughter": {
             "Spanish": "hija (f)",
             "Portuguese": "filha (f)",
             "French": "fille (f)",
             "Italian": "figlia (f)",
-            "German": "tochter (f)"
+            "German": "tochter (f)",
+            "Chinese (Simplified)": "女儿",
+            "Chinese (Traditional)": "女兒",
+            "Korean": "딸",
+            "Japanese": "娘",
+            "Russian": "дочь"
           },
           "friend": {
             "Spanish": "amigo (m)",
             "Portuguese": "amigo (m)",
             "French": "ami (m)",
             "Italian": "amico (m)",
-            "German": "freund (m)"
+            "German": "freund (m)",
+            "Chinese (Simplified)": "朋友",
+            "Chinese (Traditional)": "朋友",
+            "Korean": "친구",
+            "Japanese": "友達",
+            "Russian": "друг"
           },
           "teacher": {
             "Spanish": "profesor (m)",
             "Portuguese": "professor (m)",
             "French": "professeur (m)",
             "Italian": "professore (m)",
-            "German": "lehrer (m)"
+            "German": "lehrer (m)",
+            "Chinese (Simplified)": "老师",
+            "Chinese (Traditional)": "老師",
+            "Korean": "선생님",
+            "Japanese": "先生",
+            "Russian": "учитель"
           },
           "student": {
             "Spanish": "estudiante",
             "Portuguese": "estudante",
             "French": "étudiant",
             "Italian": "studente",
-            "German": "student"
+            "German": "student",
+            "Chinese (Simplified)": "学生",
+            "Chinese (Traditional)": "學生",
+            "Korean": "학생",
+            "Japanese": "学生",
+            "Russian": "студент"
           },
           "doctor": {
             "Spanish": "doctor (m)",
             "Portuguese": "médico (m)",
             "French": "médecin (m)",
             "Italian": "dottore (m)",
-            "German": "arzt (m)"
+            "German": "arzt (m)",
+            "Chinese (Simplified)": "医生",
+            "Chinese (Traditional)": "醫生",
+            "Korean": "의사",
+            "Japanese": "医者",
+            "Russian": "врач"
           },
           "nurse": {
             "Spanish": "enfermera (f)",
             "Portuguese": "enfermeira (f)",
             "French": "infirmière (f)",
             "Italian": "infermiera (f)",
-            "German": "krankenschwester (f)"
+            "German": "krankenschwester (f)",
+            "Chinese (Simplified)": "护士",
+            "Chinese (Traditional)": "護士",
+            "Korean": "간호사",
+            "Japanese": "看護師",
+            "Russian": "медсестра"
           },
           "police officer": {
             "Spanish": "policía",
             "Portuguese": "policial",
             "French": "policier (m)",
             "Italian": "poliziotto (m)",
-            "German": "polizist (m)"
+            "German": "polizist (m)",
+            "Chinese (Simplified)": "警察",
+            "Chinese (Traditional)": "警察",
+            "Korean": "경찰",
+            "Japanese": "警官",
+            "Russian": "полицейский"
           },
           "firefighter": {
             "Spanish": "bombero (m)",
             "Portuguese": "bombeiro (m)",
             "French": "pompier (m)",
             "Italian": "pompiere (m)",
-            "German": "feuerwehrmann (m)"
+            "German": "feuerwehrmann (m)",
+            "Chinese (Simplified)": "消防员",
+            "Chinese (Traditional)": "消防員",
+            "Korean": "소방관",
+            "Japanese": "消防士",
+            "Russian": "пожарный"
           },
           "neighbor": {
             "Spanish": "vecino (m)",
             "Portuguese": "vizinho (m)",
             "French": "voisin (m)",
             "Italian": "vicino (m)",
-            "German": "nachbar (m)"
+            "German": "nachbar (m)",
+            "Chinese (Simplified)": "邻居",
+            "Chinese (Traditional)": "鄰居",
+            "Korean": "이웃",
+            "Japanese": "隣人",
+            "Russian": "сосед"
           },
           "child": {
             "Spanish": "niño (m)",
             "Portuguese": "criança",
             "French": "enfant",
             "Italian": "bambino (m)",
-            "German": "kind"
+            "German": "kind",
+            "Chinese (Simplified)": "孩子",
+            "Chinese (Traditional)": "孩子",
+            "Korean": "아이",
+            "Japanese": "子供",
+            "Russian": "ребенок"
           },
           "adult": {
             "Spanish": "adulto (m)",
             "Portuguese": "adulto (m)",
             "French": "adulte",
             "Italian": "adulto (m)",
-            "German": "erwachsener (m)"
+            "German": "erwachsener (m)",
+            "Chinese (Simplified)": "成人",
+            "Chinese (Traditional)": "成人",
+            "Korean": "성인",
+            "Japanese": "大人",
+            "Russian": "взрослый"
           },
           "baby": {
             "Spanish": "bebé",
             "Portuguese": "bebê",
             "French": "bébé",
             "Italian": "bambino (m)",
-            "German": "baby"
+            "German": "baby",
+            "Chinese (Simplified)": "婴儿",
+            "Chinese (Traditional)": "嬰兒",
+            "Korean": "아기",
+            "Japanese": "赤ちゃん",
+            "Russian": "младенец"
           },
           "grandmother": {
             "Spanish": "abuela (f)",
             "Portuguese": "avó (f)",
             "French": "grand-mère (f)",
             "Italian": "nonna (f)",
-            "German": "großmutter (f)"
+            "German": "großmutter (f)",
+            "Chinese (Simplified)": "祖母",
+            "Chinese (Traditional)": "祖母",
+            "Korean": "할머니",
+            "Japanese": "祖母",
+            "Russian": "бабушка"
           },
           "grandfather": {
             "Spanish": "abuelo (m)",
             "Portuguese": "avô (m)",
             "French": "grand-père (m)",
             "Italian": "nonno (m)",
-            "German": "großvater (m)"
+            "German": "großvater (m)",
+            "Chinese (Simplified)": "祖父",
+            "Chinese (Traditional)": "祖父",
+            "Korean": "할아버지",
+            "Japanese": "祖父",
+            "Russian": "дедушка"
           },
           "cousin": {
             "Spanish": "primo (m)",
             "Portuguese": "primo (m)",
             "French": "cousin (m)",
             "Italian": "cugino (m)",
-            "German": "cousin (m)"
+            "German": "cousin (m)",
+            "Chinese (Simplified)": "表兄弟",
+            "Chinese (Traditional)": "表兄弟",
+            "Korean": "사촌",
+            "Japanese": "いとこ",
+            "Russian": "двоюродный брат"
           }
         },
         "Home": {
@@ -149,140 +249,240 @@
             "Portuguese": "casa (f)",
             "French": "maison (f)",
             "Italian": "casa (f)",
-            "German": "haus (n)"
+            "German": "haus (n)",
+            "Chinese (Simplified)": "房子",
+            "Chinese (Traditional)": "房子",
+            "Korean": "집",
+            "Japanese": "家",
+            "Russian": "дом"
           },
           "car": {
             "Spanish": "coche (m)",
             "Portuguese": "carro (m)",
             "French": "voiture (f)",
             "Italian": "auto (f)",
-            "German": "auto (n)"
+            "German": "auto (n)",
+            "Chinese (Simplified)": "汽车",
+            "Chinese (Traditional)": "汽車",
+            "Korean": "자동차",
+            "Japanese": "車",
+            "Russian": "машина"
           },
           "computer": {
             "Spanish": "computadora (f)",
             "Portuguese": "computador (m)",
             "French": "ordinateur (m)",
             "Italian": "computer (m)",
-            "German": "computer (m)"
+            "German": "computer (m)",
+            "Chinese (Simplified)": "电脑",
+            "Chinese (Traditional)": "電腦",
+            "Korean": "컴퓨터",
+            "Japanese": "コンピュータ",
+            "Russian": "компьютер"
           },
           "phone": {
             "Spanish": "teléfono (m)",
             "Portuguese": "telefone (m)",
             "French": "téléphone (m)",
             "Italian": "telefono (m)",
-            "German": "telefon (n)"
+            "German": "telefon (n)",
+            "Chinese (Simplified)": "电话",
+            "Chinese (Traditional)": "電話",
+            "Korean": "전화",
+            "Japanese": "電話",
+            "Russian": "телефон"
           },
           "book": {
             "Spanish": "libro (m)",
             "Portuguese": "livro (m)",
             "French": "livre (m)",
             "Italian": "libro (m)",
-            "German": "buch (n)"
+            "German": "buch (n)",
+            "Chinese (Simplified)": "书",
+            "Chinese (Traditional)": "書",
+            "Korean": "책",
+            "Japanese": "本",
+            "Russian": "книга"
           },
           "chair": {
             "Spanish": "silla (f)",
             "Portuguese": "cadeira (f)",
             "French": "chaise (f)",
             "Italian": "sedia (f)",
-            "German": "stuhl (m)"
+            "German": "stuhl (m)",
+            "Chinese (Simplified)": "椅子",
+            "Chinese (Traditional)": "椅子",
+            "Korean": "의자",
+            "Japanese": "椅子",
+            "Russian": "стул"
           },
           "table": {
             "Spanish": "mesa (f)",
             "Portuguese": "mesa (f)",
             "French": "table (f)",
             "Italian": "tavolo (m)",
-            "German": "tisch (m)"
+            "German": "tisch (m)",
+            "Chinese (Simplified)": "桌子",
+            "Chinese (Traditional)": "桌子",
+            "Korean": "테이블",
+            "Japanese": "テーブル",
+            "Russian": "стол"
           },
           "bed": {
             "Spanish": "cama (f)",
             "Portuguese": "cama (f)",
             "French": "lit (m)",
             "Italian": "letto (m)",
-            "German": "bett (n)"
+            "German": "bett (n)",
+            "Chinese (Simplified)": "床",
+            "Chinese (Traditional)": "床",
+            "Korean": "침대",
+            "Japanese": "ベッド",
+            "Russian": "кровать"
           },
           "pen": {
             "Spanish": "bolígrafo (m)",
             "Portuguese": "caneta (f)",
             "French": "stylo (m)",
             "Italian": "penna (f)",
-            "German": "stift (m)"
+            "German": "stift (m)",
+            "Chinese (Simplified)": "笔",
+            "Chinese (Traditional)": "筆",
+            "Korean": "펜",
+            "Japanese": "ペン",
+            "Russian": "ручка"
           },
           "window": {
             "Spanish": "ventana (f)",
             "Portuguese": "janela (f)",
             "French": "fenêtre (f)",
             "Italian": "finestra (f)",
-            "German": "fenster (n)"
+            "German": "fenster (n)",
+            "Chinese (Simplified)": "窗户",
+            "Chinese (Traditional)": "窗戶",
+            "Korean": "창문",
+            "Japanese": "窓",
+            "Russian": "окно"
           },
           "door": {
             "Spanish": "puerta (f)",
             "Portuguese": "porta (f)",
             "French": "porte (f)",
             "Italian": "porta (f)",
-            "German": "tür (f)"
+            "German": "tür (f)",
+            "Chinese (Simplified)": "门",
+            "Chinese (Traditional)": "門",
+            "Korean": "문",
+            "Japanese": "ドア",
+            "Russian": "дверь"
           },
           "lamp": {
             "Spanish": "lámpara (f)",
             "Portuguese": "lâmpada (f)",
             "French": "lampe (f)",
             "Italian": "lampada (f)",
-            "German": "lampe (f)"
+            "German": "lampe (f)",
+            "Chinese (Simplified)": "灯",
+            "Chinese (Traditional)": "燈",
+            "Korean": "램프",
+            "Japanese": "ランプ",
+            "Russian": "лампа"
           },
           "clock": {
             "Spanish": "reloj (m)",
             "Portuguese": "relógio (m)",
             "French": "horloge (f)",
             "Italian": "orologio (m)",
-            "German": "uhr (f)"
+            "German": "uhr (f)",
+            "Chinese (Simplified)": "钟",
+            "Chinese (Traditional)": "鐘",
+            "Korean": "시계",
+            "Japanese": "時計",
+            "Russian": "часы"
           },
           "bag": {
             "Spanish": "bolsa (f)",
             "Portuguese": "bolsa (f)",
             "French": "sac (m)",
             "Italian": "borsa (f)",
-            "German": "tasche (f)"
+            "German": "tasche (f)",
+            "Chinese (Simplified)": "袋",
+            "Chinese (Traditional)": "袋",
+            "Korean": "가방",
+            "Japanese": "バッグ",
+            "Russian": "сумка"
           },
           "television": {
             "Spanish": "televisión (f)",
             "Portuguese": "televisão (f)",
             "French": "télévision (f)",
             "Italian": "televisione (f)",
-            "German": "fernsehen (n)"
+            "German": "fernsehen (n)",
+            "Chinese (Simplified)": "电视",
+            "Chinese (Traditional)": "電視",
+            "Korean": "텔레비전",
+            "Japanese": "テレビ",
+            "Russian": "телевизор"
           },
           "refrigerator": {
             "Spanish": "refrigerador (m)",
             "Portuguese": "geladeira (f)",
             "French": "réfrigérateur (m)",
             "Italian": "frigorifero (m)",
-            "German": "kühlschrank (m)"
+            "German": "kühlschrank (m)",
+            "Chinese (Simplified)": "冰箱",
+            "Chinese (Traditional)": "冰箱",
+            "Korean": "냉장고",
+            "Japanese": "冷蔵庫",
+            "Russian": "холодильник"
           },
           "oven": {
             "Spanish": "horno (m)",
             "Portuguese": "forno (m)",
             "French": "four (m)",
             "Italian": "forno (m)",
-            "German": "ofen (m)"
+            "German": "ofen (m)",
+            "Chinese (Simplified)": "烤箱",
+            "Chinese (Traditional)": "烤箱",
+            "Korean": "오븐",
+            "Japanese": "オーブン",
+            "Russian": "духовка"
           },
           "microwave": {
             "Spanish": "microondas (m)",
             "Portuguese": "microondas (m)",
             "French": "micro-ondes (m)",
             "Italian": "microonde (m)",
-            "German": "mikrowelle (f)"
+            "German": "mikrowelle (f)",
+            "Chinese (Simplified)": "微波炉",
+            "Chinese (Traditional)": "微波爐",
+            "Korean": "전자레인지",
+            "Japanese": "電子レンジ",
+            "Russian": "микроволновка"
           },
           "sofa": {
             "Spanish": "sofá (m)",
             "Portuguese": "sofá (m)",
             "French": "canapé (m)",
             "Italian": "divano (m)",
-            "German": "sofa (n)"
+            "German": "sofa (n)",
+            "Chinese (Simplified)": "沙发",
+            "Chinese (Traditional)": "沙發",
+            "Korean": "소파",
+            "Japanese": "ソファ",
+            "Russian": "диван"
           },
           "cup": {
             "Spanish": "taza (f)",
             "Portuguese": "copo (m)",
             "French": "tasse (f)",
             "Italian": "tazza (f)",
-            "German": "tasse (f)"
+            "German": "tasse (f)",
+            "Chinese (Simplified)": "杯子",
+            "Chinese (Traditional)": "杯子",
+            "Korean": "컵",
+            "Japanese": "カップ",
+            "Russian": "чашка"
           }
         },
         "Places": {
@@ -291,140 +491,240 @@
             "Portuguese": "escola (f)",
             "French": "école (f)",
             "Italian": "scuola (f)",
-            "German": "schule (f)"
+            "German": "schule (f)",
+            "Chinese (Simplified)": "学校",
+            "Chinese (Traditional)": "學校",
+            "Korean": "학교",
+            "Japanese": "学校",
+            "Russian": "школа"
           },
           "city": {
             "Spanish": "ciudad (f)",
             "Portuguese": "cidade (f)",
             "French": "ville (f)",
             "Italian": "città (f)",
-            "German": "stadt (f)"
+            "German": "stadt (f)",
+            "Chinese (Simplified)": "城市",
+            "Chinese (Traditional)": "城市",
+            "Korean": "도시",
+            "Japanese": "都市",
+            "Russian": "город"
           },
           "country": {
             "Spanish": "país (m)",
             "Portuguese": "país (m)",
             "French": "pays (m)",
             "Italian": "paese (m)",
-            "German": "land (n)"
+            "German": "land (n)",
+            "Chinese (Simplified)": "国家",
+            "Chinese (Traditional)": "國家",
+            "Korean": "나라",
+            "Japanese": "国",
+            "Russian": "страна"
           },
           "park": {
             "Spanish": "parque (m)",
             "Portuguese": "parque (m)",
             "French": "parc (m)",
             "Italian": "parco (m)",
-            "German": "park (m)"
+            "German": "park (m)",
+            "Chinese (Simplified)": "公园",
+            "Chinese (Traditional)": "公園",
+            "Korean": "공원",
+            "Japanese": "公園",
+            "Russian": "парк"
           },
           "store": {
             "Spanish": "tienda (f)",
             "Portuguese": "loja (f)",
             "French": "magasin (m)",
             "Italian": "negozio (m)",
-            "German": "geschäft (n)"
+            "German": "geschäft (n)",
+            "Chinese (Simplified)": "商店",
+            "Chinese (Traditional)": "商店",
+            "Korean": "가게",
+            "Japanese": "店",
+            "Russian": "магазин"
           },
           "garden": {
             "Spanish": "jardín (m)",
             "Portuguese": "jardim (m)",
             "French": "jardin (m)",
             "Italian": "giardino (m)",
-            "German": "garten (m)"
+            "German": "garten (m)",
+            "Chinese (Simplified)": "花园",
+            "Chinese (Traditional)": "花園",
+            "Korean": "정원",
+            "Japanese": "庭",
+            "Russian": "сад"
           },
           "hospital": {
             "Spanish": "hospital (m)",
             "Portuguese": "hospital (m)",
             "French": "hôpital (m)",
             "Italian": "ospedale (m)",
-            "German": "krankenhaus (n)"
+            "German": "krankenhaus (n)",
+            "Chinese (Simplified)": "医院",
+            "Chinese (Traditional)": "醫院",
+            "Korean": "병원",
+            "Japanese": "病院",
+            "Russian": "больница"
           },
           "restaurant": {
             "Spanish": "restaurante (m)",
             "Portuguese": "restaurante (m)",
             "French": "restaurant (m)",
             "Italian": "ristorante (m)",
-            "German": "restaurant (n)"
+            "German": "restaurant (n)",
+            "Chinese (Simplified)": "餐馆",
+            "Chinese (Traditional)": "餐館",
+            "Korean": "식당",
+            "Japanese": "レストラン",
+            "Russian": "ресторан"
           },
           "airport": {
             "Spanish": "aeropuerto (m)",
             "Portuguese": "aeroporto (m)",
             "French": "aéroport (m)",
             "Italian": "aeroporto (m)",
-            "German": "flughafen (m)"
+            "German": "flughafen (m)",
+            "Chinese (Simplified)": "机场",
+            "Chinese (Traditional)": "機場",
+            "Korean": "공항",
+            "Japanese": "空港",
+            "Russian": "аэропорт"
           },
           "train station": {
             "Spanish": "estación de tren (f)",
             "Portuguese": "estação de trem (f)",
             "French": "gare (f)",
             "Italian": "stazione ferroviaria (f)",
-            "German": "bahnhof (m)"
+            "German": "bahnhof (m)",
+            "Chinese (Simplified)": "火车站",
+            "Chinese (Traditional)": "火車站",
+            "Korean": "기차역",
+            "Japanese": "駅",
+            "Russian": "вокзал"
           },
           "bus stop": {
             "Spanish": "parada de autobús (f)",
             "Portuguese": "parada de ônibus (f)",
             "French": "arrêt de bus (m)",
             "Italian": "fermata dell'autobus (f)",
-            "German": "bushaltestelle (f)"
+            "German": "bushaltestelle (f)",
+            "Chinese (Simplified)": "公交车站",
+            "Chinese (Traditional)": "公交車站",
+            "Korean": "버스 정류장",
+            "Japanese": "バス停",
+            "Russian": "автобусная остановка"
           },
           "library": {
             "Spanish": "biblioteca (f)",
             "Portuguese": "biblioteca (f)",
             "French": "bibliothèque (f)",
             "Italian": "biblioteca (f)",
-            "German": "bibliothek (f)"
+            "German": "bibliothek (f)",
+            "Chinese (Simplified)": "图书馆",
+            "Chinese (Traditional)": "圖書館",
+            "Korean": "도서관",
+            "Japanese": "図書館",
+            "Russian": "библиотека"
           },
           "museum": {
             "Spanish": "museo (m)",
             "Portuguese": "museu (m)",
             "French": "musée (m)",
             "Italian": "museo (m)",
-            "German": "museum (n)"
+            "German": "museum (n)",
+            "Chinese (Simplified)": "博物馆",
+            "Chinese (Traditional)": "博物館",
+            "Korean": "박물관",
+            "Japanese": "博物館",
+            "Russian": "музей"
           },
           "beach": {
             "Spanish": "playa (f)",
             "Portuguese": "praia (f)",
             "French": "plage (f)",
             "Italian": "spiaggia (f)",
-            "German": "strand (m)"
+            "German": "strand (m)",
+            "Chinese (Simplified)": "海滩",
+            "Chinese (Traditional)": "海灘",
+            "Korean": "해변",
+            "Japanese": "ビーチ",
+            "Russian": "пляж"
           },
           "hotel": {
             "Spanish": "hotel (m)",
             "Portuguese": "hotel (m)",
             "French": "hôtel (m)",
             "Italian": "hotel (m)",
-            "German": "hotel (n)"
+            "German": "hotel (n)",
+            "Chinese (Simplified)": "酒店",
+            "Chinese (Traditional)": "酒店",
+            "Korean": "호텔",
+            "Japanese": "ホテル",
+            "Russian": "отель"
           },
           "office": {
             "Spanish": "oficina (f)",
             "Portuguese": "escritório (m)",
             "French": "bureau (m)",
             "Italian": "ufficio (m)",
-            "German": "büro (n)"
+            "German": "büro (n)",
+            "Chinese (Simplified)": "办公室",
+            "Chinese (Traditional)": "辦公室",
+            "Korean": "사무실",
+            "Japanese": "オフィス",
+            "Russian": "офис"
           },
           "factory": {
             "Spanish": "fábrica (f)",
             "Portuguese": "fábrica (f)",
             "French": "usine (f)",
             "Italian": "fabbrica (f)",
-            "German": "fabrik (f)"
+            "German": "fabrik (f)",
+            "Chinese (Simplified)": "工厂",
+            "Chinese (Traditional)": "工廠",
+            "Korean": "공장",
+            "Japanese": "工場",
+            "Russian": "завод"
           },
           "farm": {
             "Spanish": "granja (f)",
             "Portuguese": "fazenda (f)",
             "French": "ferme (f)",
             "Italian": "fattoria (f)",
-            "German": "bauernhof (m)"
+            "German": "bauernhof (m)",
+            "Chinese (Simplified)": "农场",
+            "Chinese (Traditional)": "農場",
+            "Korean": "농장",
+            "Japanese": "農場",
+            "Russian": "ферма"
           },
           "theater": {
             "Spanish": "teatro (m)",
             "Portuguese": "teatro (m)",
             "French": "théâtre (m)",
             "Italian": "teatro (m)",
-            "German": "theater (n)"
+            "German": "theater (n)",
+            "Chinese (Simplified)": "剧院",
+            "Chinese (Traditional)": "劇院",
+            "Korean": "극장",
+            "Japanese": "劇場",
+            "Russian": "театр"
           },
           "market": {
             "Spanish": "mercado (m)",
             "Portuguese": "mercado (m)",
             "French": "marché (m)",
             "Italian": "mercato (m)",
-            "German": "markt (m)"
+            "German": "markt (m)",
+            "Chinese (Simplified)": "市场",
+            "Chinese (Traditional)": "市場",
+            "Korean": "시장",
+            "Japanese": "市場",
+            "Russian": "рынок"
           }
         },
         "Clothing": {
@@ -433,282 +733,482 @@
             "Portuguese": "camisa (f)",
             "French": "chemise (f)",
             "Italian": "camicia (f)",
-            "German": "hemd (n)"
-            },
+            "German": "hemd (n)",
+            "Chinese (Simplified)": "衬衫",
+            "Chinese (Traditional)": "襯衫",
+            "Korean": "셔츠",
+            "Japanese": "シャツ",
+            "Russian": "рубашка"
+          },
           "pants": {
             "Spanish": "pantalones (m)",
             "Portuguese": "calças (f)",
             "French": "pantalon (m)",
             "Italian": "pantaloni (m)",
-            "German": "hose (f)"
-            },
+            "German": "hose (f)",
+            "Chinese (Simplified)": "裤子",
+            "Chinese (Traditional)": "褲子",
+            "Korean": "바지",
+            "Japanese": "ズボン",
+            "Russian": "брюки"
+          },
           "dress": {
             "Spanish": "vestido (m)",
             "Portuguese": "vestido (m)",
             "French": "robe (f)",
             "Italian": "vestito (m)",
-            "German": "kleid (n)"
-            },
+            "German": "kleid (n)",
+            "Chinese (Simplified)": "连衣裙",
+            "Chinese (Traditional)": "連衣裙",
+            "Korean": "드레스",
+            "Japanese": "ドレス",
+            "Russian": "платье"
+          },
           "shoes": {
             "Spanish": "zapatos (m)",
             "Portuguese": "sapatos (m)",
             "French": "chaussures (f)",
             "Italian": "scarpe (f)",
-            "German": "schuhe (f)"
-            },
+            "German": "schuhe (f)",
+            "Chinese (Simplified)": "鞋子",
+            "Chinese (Traditional)": "鞋子",
+            "Korean": "신발",
+            "Japanese": "靴",
+            "Russian": "обувь"
+          },
           "hat": {
             "Spanish": "sombrero (m)",
             "Portuguese": "chapéu (m)",
             "French": "chapeau (m)",
             "Italian": "cappello (m)",
-            "German": "hut (m)"
-            },
+            "German": "hut (m)",
+            "Chinese (Simplified)": "帽子",
+            "Chinese (Traditional)": "帽子",
+            "Korean": "모자",
+            "Japanese": "帽子",
+            "Russian": "шляпа"
+          },
           "coat": {
             "Spanish": "abrigo (m)",
             "Portuguese": "casaco (m)",
             "French": "manteau (m)",
             "Italian": "cappotto (m)",
-            "German": "mantel (m)"
-            },
+            "German": "mantel (m)",
+            "Chinese (Simplified)": "大衣",
+            "Chinese (Traditional)": "大衣",
+            "Korean": "코트",
+            "Japanese": "コート",
+            "Russian": "пальто"
+          },
           "skirt": {
             "Spanish": "falda (f)",
             "Portuguese": "saia (f)",
             "French": "jupe (f)",
             "Italian": "gonna (f)",
-            "German": "rock (m)"
-            },
+            "German": "rock (m)",
+            "Chinese (Simplified)": "裙子",
+            "Chinese (Traditional)": "裙子",
+            "Korean": "치마",
+            "Japanese": "スカート",
+            "Russian": "юбка"
+          },
           "socks": {
             "Spanish": "calcetines (m)",
             "Portuguese": "meias (f)",
             "French": "chaussettes (f)",
             "Italian": "calzini (m)",
-            "German": "socken (f)"
-            },
+            "German": "socken (f)",
+            "Chinese (Simplified)": "袜子",
+            "Chinese (Traditional)": "襪子",
+            "Korean": "양말",
+            "Japanese": "靴下",
+            "Russian": "носки"
+          },
           "gloves": {
             "Spanish": "guantes (m)",
             "Portuguese": "luvas (f)",
             "French": "gants (m)",
             "Italian": "guanti (m)",
-            "German": "handschuhe (f)"
-            },
+            "German": "handschuhe (f)",
+            "Chinese (Simplified)": "手套",
+            "Chinese (Traditional)": "手套",
+            "Korean": "장갑",
+            "Japanese": "手袋",
+            "Russian": "перчатки"
+          },
           "scarf": {
             "Spanish": "bufanda (f)",
             "Portuguese": "cachecol (m)",
             "French": "écharpe (f)",
             "Italian": "sciarpa (f)",
-            "German": "schal (m)"
-            },
+            "German": "schal (m)",
+            "Chinese (Simplified)": "围巾",
+            "Chinese (Traditional)": "圍巾",
+            "Korean": "목도리",
+            "Japanese": "スカーフ",
+            "Russian": "шарф"
+          },
           "sweater": {
             "Spanish": "suéter (m)",
             "Portuguese": "suéter (m)",
             "French": "pull (m)",
             "Italian": "maglione (m)",
-            "German": "pullover (m)"
-            },
+            "German": "pullover (m)",
+            "Chinese (Simplified)": "毛衣",
+            "Chinese (Traditional)": "毛衣",
+            "Korean": "스웨터",
+            "Japanese": "セーター",
+            "Russian": "свитер"
+          },
           "jacket": {
             "Spanish": "chaqueta (f)",
             "Portuguese": "jaqueta (f)",
             "French": "veste (f)",
             "Italian": "giacca (f)",
-            "German": "jacke (f)"
-            },
+            "German": "jacke (f)",
+            "Chinese (Simplified)": "夹克",
+            "Chinese (Traditional)": "夾克",
+            "Korean": "재킷",
+            "Japanese": "ジャケット",
+            "Russian": "куртка"
+          },
           "shorts": {
             "Spanish": "pantalones cortos (m)",
             "Portuguese": "shorts (m)",
             "French": "short (m)",
             "Italian": "pantaloncini (m)",
-            "German": "shorts (m)"
-            },
+            "German": "shorts (m)",
+            "Chinese (Simplified)": "短裤",
+            "Chinese (Traditional)": "短褲",
+            "Korean": "반바지",
+            "Japanese": "短パン",
+            "Russian": "шорты"
+          },
           "belt": {
             "Spanish": "cinturón (m)",
             "Portuguese": "cinto (m)",
             "French": "ceinture (f)",
             "Italian": "cintura (f)",
-            "German": "gürtel (m)"
-            },
+            "German": "gürtel (m)",
+            "Chinese (Simplified)": "腰带",
+            "Chinese (Traditional)": "腰帶",
+            "Korean": "벨트",
+            "Japanese": "ベルト",
+            "Russian": "ремень"
+          },
           "tie": {
             "Spanish": "corbata (f)",
             "Portuguese": "gravata (f)",
             "French": "cravate (f)",
             "Italian": "cravatta (f)",
-            "German": "krawatte (f)"
+            "German": "krawatte (f)",
+            "Chinese (Simplified)": "领带",
+            "Chinese (Traditional)": "領帶",
+            "Korean": "넥타이",
+            "Japanese": "ネクタイ",
+            "Russian": "галстук"
           }
-        }, 
+        },
         "Adjectives": {
           "big": {
             "Spanish": "grande",
             "Portuguese": "grande",
             "French": "grand (m), grande (f)",
             "Italian": "grande",
-            "German": "groß"
+            "German": "groß",
+            "Chinese (Simplified)": "大",
+            "Chinese (Traditional)": "大",
+            "Korean": "큰",
+            "Japanese": "大きい",
+            "Russian": "большой"
           },
           "small": {
             "Spanish": "pequeño (m), pequeña (f)",
             "Portuguese": "pequeno (m), pequena (f)",
             "French": "petit (m), petite (f)",
             "Italian": "piccolo (m), piccola (f)",
-            "German": "klein"
+            "German": "klein",
+            "Chinese (Simplified)": "小",
+            "Chinese (Traditional)": "小",
+            "Korean": "작은",
+            "Japanese": "小さい",
+            "Russian": "маленький"
           },
           "happy": {
             "Spanish": "feliz",
             "Portuguese": "feliz",
             "French": "heureux (m), heureuse (f)",
             "Italian": "felice",
-            "German": "glücklich"
+            "German": "glücklich",
+            "Chinese (Simplified)": "高兴",
+            "Chinese (Traditional)": "高興",
+            "Korean": "행복한",
+            "Japanese": "幸せ",
+            "Russian": "счастливый"
           },
           "sad": {
             "Spanish": "triste",
             "Portuguese": "triste",
             "French": "triste",
             "Italian": "triste",
-            "German": "traurig"
+            "German": "traurig",
+            "Chinese (Simplified)": "伤心",
+            "Chinese (Traditional)": "傷心",
+            "Korean": "슬픈",
+            "Japanese": "悲しい",
+            "Russian": "грустный"
           },
           "new": {
             "Spanish": "nuevo (m), nueva (f)",
             "Portuguese": "novo (m), nova (f)",
             "French": "nouveau (m), nouvelle (f)",
             "Italian": "nuovo (m), nuova (f)",
-            "German": "neu"
+            "German": "neu",
+            "Chinese (Simplified)": "新的",
+            "Chinese (Traditional)": "新的",
+            "Korean": "새로운",
+            "Japanese": "新しい",
+            "Russian": "новый"
           },
           "old": {
             "Spanish": "viejo (m), vieja (f)",
             "Portuguese": "velho (m), velha (f)",
             "French": "vieux (m), vieille (f)",
             "Italian": "vecchio (m), vecchia (f)",
-            "German": "alt"
+            "German": "alt",
+            "Chinese (Simplified)": "旧的",
+            "Chinese (Traditional)": "舊的",
+            "Korean": "오래된",
+            "Japanese": "古い",
+            "Russian": "старый"
           },
           "good": {
             "Spanish": "bueno (m), buena (f)",
             "Portuguese": "bom (m), boa (f)",
             "French": "bon (m), bonne (f)",
             "Italian": "buono (m), buona (f)",
-            "German": "gut"
+            "German": "gut",
+            "Chinese (Simplified)": "好",
+            "Chinese (Traditional)": "好",
+            "Korean": "좋은",
+            "Japanese": "良い",
+            "Russian": "хороший"
           },
           "bad": {
             "Spanish": "malo (m), mala (f)",
             "Portuguese": "mau (m), má (f)",
             "French": "mauvais (m), mauvaise (f)",
             "Italian": "cattivo (m), cattiva (f)",
-            "German": "schlecht"
+            "German": "schlecht",
+            "Chinese (Simplified)": "坏",
+            "Chinese (Traditional)": "壞",
+            "Korean": "나쁜",
+            "Japanese": "悪い",
+            "Russian": "плохой"
           },
           "beautiful": {
             "Spanish": "hermoso (m), hermosa (f)",
             "Portuguese": "bonito (m), bonita (f)",
             "French": "beau (m), belle (f)",
             "Italian": "bello (m), bella (f)",
-            "German": "schön"
+            "German": "schön",
+            "Chinese (Simplified)": "漂亮",
+            "Chinese (Traditional)": "漂亮",
+            "Korean": "아름다운",
+            "Japanese": "美しい",
+            "Russian": "красивый"
           },
           "ugly": {
             "Spanish": "feo (m), fea (f)",
             "Portuguese": "feio (m), feia (f)",
             "French": "laid (m), laide (f)",
             "Italian": "brutto (m), brutta (f)",
-            "German": "hässlich"
+            "German": "hässlich",
+            "Chinese (Simplified)": "丑陋",
+            "Chinese (Traditional)": "醜陋",
+            "Korean": "못생긴",
+            "Japanese": "醜い",
+            "Russian": "уродливый"
           },
           "easy": {
             "Spanish": "fácil",
             "Portuguese": "fácil",
             "French": "facile",
             "Italian": "facile",
-            "German": "einfach"
+            "German": "einfach",
+            "Chinese (Simplified)": "容易",
+            "Chinese (Traditional)": "容易",
+            "Korean": "쉬운",
+            "Japanese": "簡単",
+            "Russian": "легкий"
           },
           "difficult": {
             "Spanish": "difícil",
             "Portuguese": "difícil",
             "French": "difficile",
             "Italian": "difficile",
-            "German": "schwierig"
+            "German": "schwierig",
+            "Chinese (Simplified)": "难",
+            "Chinese (Traditional)": "難",
+            "Korean": "어려운",
+            "Japanese": "難しい",
+            "Russian": "трудный"
           },
           "fast": {
             "Spanish": "rápido (m), rápida (f)",
             "Portuguese": "rápido (m), rápida (f)",
             "French": "rapide",
             "Italian": "veloce",
-            "German": "schnell"
+            "German": "schnell",
+            "Chinese (Simplified)": "快",
+            "Chinese (Traditional)": "快",
+            "Korean": "빠른",
+            "Japanese": "速い",
+            "Russian": "быстрый"
           },
           "slow": {
             "Spanish": "lento (m), lenta (f)",
             "Portuguese": "lento (m), lenta (f)",
             "French": "lent (m), lente (f)",
             "Italian": "lento (m), lenta (f)",
-            "German": "langsam"
+            "German": "langsam",
+            "Chinese (Simplified)": "慢",
+            "Chinese (Traditional)": "慢",
+            "Korean": "느린",
+            "Japanese": "遅い",
+            "Russian": "медленный"
           },
           "hot": {
             "Spanish": "caliente",
             "Portuguese": "quente",
             "French": "chaud (m), chaude (f)",
             "Italian": "caldo (m), calda (f)",
-            "German": "heiß"
+            "German": "heiß",
+            "Chinese (Simplified)": "热",
+            "Chinese (Traditional)": "熱",
+            "Korean": "뜨거운",
+            "Japanese": "暑い",
+            "Russian": "горячий"
           },
           "cold": {
             "Spanish": "frío (m), fría (f)",
             "Portuguese": "frio (m), fria (f)",
             "French": "froid (m), froide (f)",
             "Italian": "freddo (m), fredda (f)",
-            "German": "kalt"
+            "German": "kalt",
+            "Chinese (Simplified)": "冷",
+            "Chinese (Traditional)": "冷",
+            "Korean": "차가운",
+            "Japanese": "寒い",
+            "Russian": "холодный"
           },
           "long": {
             "Spanish": "largo (m), larga (f)",
             "Portuguese": "longo (m), longa (f)",
             "French": "long (m), longue (f)",
             "Italian": "lungo (m), lunga (f)",
-            "German": "lang"
+            "German": "lang",
+            "Chinese (Simplified)": "长",
+            "Chinese (Traditional)": "長",
+            "Korean": "긴",
+            "Japanese": "長い",
+            "Russian": "длинный"
           },
           "short": {
             "Spanish": "corto (m), corta (f)",
             "Portuguese": "curto (m), curta (f)",
             "French": "court (m), courte (f)",
             "Italian": "corto (m), corta (f)",
-            "German": "kurz"
+            "German": "kurz",
+            "Chinese (Simplified)": "短",
+            "Chinese (Traditional)": "短",
+            "Korean": "짧은",
+            "Japanese": "短い",
+            "Russian": "короткий"
           },
           "clean": {
             "Spanish": "limpio (m), limpia (f)",
             "Portuguese": "limpo (m), limpa (f)",
             "French": "propre",
             "Italian": "pulito (m), pulita (f)",
-            "German": "sauber"
+            "German": "sauber",
+            "Chinese (Simplified)": "干净",
+            "Chinese (Traditional)": "乾淨",
+            "Korean": "깨끗한",
+            "Japanese": "きれい",
+            "Russian": "чистый"
           },
           "dirty": {
             "Spanish": "sucio (m), sucia (f)",
             "Portuguese": "sujo (m), suja (f)",
             "French": "sale",
             "Italian": "sporco (m), sporca (f)",
-            "German": "schmutzig"
+            "German": "schmutzig",
+            "Chinese (Simplified)": "脏",
+            "Chinese (Traditional)": "髒",
+            "Korean": "더러운",
+            "Japanese": "汚い",
+            "Russian": "грязный"
           },
           "strong": {
             "Spanish": "fuerte",
             "Portuguese": "forte",
             "French": "fort (m), forte (f)",
             "Italian": "forte",
-            "German": "stark"
+            "German": "stark",
+            "Chinese (Simplified)": "强",
+            "Chinese (Traditional)": "強",
+            "Korean": "강한",
+            "Japanese": "強い",
+            "Russian": "сильный"
           },
           "weak": {
             "Spanish": "débil",
             "Portuguese": "fraco (m), fraca (f)",
             "French": "faible",
             "Italian": "debole",
-            "German": "schwach"
+            "German": "schwach",
+            "Chinese (Simplified)": "弱",
+            "Chinese (Traditional)": "弱",
+            "Korean": "약한",
+            "Japanese": "弱い",
+            "Russian": "слабый"
           },
           "rich": {
             "Spanish": "rico (m), rica (f)",
             "Portuguese": "rico (m), rica (f)",
             "French": "riche",
             "Italian": "ricco (m), ricca (f)",
-            "German": "reich"
+            "German": "reich",
+            "Chinese (Simplified)": "富有",
+            "Chinese (Traditional)": "富有",
+            "Korean": "부유한",
+            "Japanese": "豊か",
+            "Russian": "богатый"
           },
           "poor": {
             "Spanish": "pobre",
             "Portuguese": "pobre",
             "French": "pauvre",
             "Italian": "povero (m), povera (f)",
-            "German": "arm"
+            "German": "arm",
+            "Chinese (Simplified)": "贫穷",
+            "Chinese (Traditional)": "貧窮",
+            "Korean": "가난한",
+            "Japanese": "貧乏",
+            "Russian": "бедный"
           },
           "safe": {
             "Spanish": "seguro (m), segura (f)",
             "Portuguese": "seguro (m), segura (f)",
             "French": "sûr (m), sûre (f)",
             "Italian": "sicuro (m), sicura (f)",
-            "German": "sicher"
+            "German": "sicher",
+            "Chinese (Simplified)": "安全",
+            "Chinese (Traditional)": "安全",
+            "Korean": "안전한",
+            "Japanese": "安全",
+            "Russian": "безопасный"
           }
         },
         "Verbs": {
@@ -717,175 +1217,300 @@
             "Portuguese": "ser/estar",
             "French": "être",
             "Italian": "essere",
-            "German": "sein"
+            "German": "sein",
+            "Chinese (Simplified)": "是",
+            "Chinese (Traditional)": "是",
+            "Korean": "이다",
+            "Japanese": "である",
+            "Russian": "быть"
           },
           "to have": {
             "Spanish": "tener",
             "Portuguese": "ter",
             "French": "avoir",
             "Italian": "avere",
-            "German": "haben"
+            "German": "haben",
+            "Chinese (Simplified)": "有",
+            "Chinese (Traditional)": "有",
+            "Korean": "가지다",
+            "Japanese": "持つ",
+            "Russian": "иметь"
           },
           "to go": {
             "Spanish": "ir",
             "Portuguese": "ir",
             "French": "aller",
             "Italian": "andare",
-            "German": "gehen"
+            "German": "gehen",
+            "Chinese (Simplified)": "去",
+            "Chinese (Traditional)": "去",
+            "Korean": "가다",
+            "Japanese": "行く",
+            "Russian": "идти"
           },
           "to come": {
             "Spanish": "venir",
             "Portuguese": "vir",
             "French": "venir",
             "Italian": "venire",
-            "German": "kommen"
+            "German": "kommen",
+            "Chinese (Simplified)": "来",
+            "Chinese (Traditional)": "來",
+            "Korean": "오다",
+            "Japanese": "来る",
+            "Russian": "приходить"
           },
           "to see": {
             "Spanish": "ver",
             "Portuguese": "ver",
             "French": "voir",
             "Italian": "vedere",
-            "German": "sehen"
+            "German": "sehen",
+            "Chinese (Simplified)": "看",
+            "Chinese (Traditional)": "看",
+            "Korean": "보다",
+            "Japanese": "見る",
+            "Russian": "видеть"
           },
           "to eat": {
             "Spanish": "comer",
             "Portuguese": "comer",
             "French": "manger",
             "Italian": "mangiare",
-            "German": "essen"
+            "German": "essen",
+            "Chinese (Simplified)": "吃",
+            "Chinese (Traditional)": "吃",
+            "Korean": "먹다",
+            "Japanese": "食べる",
+            "Russian": "есть"
           },
           "to drink": {
             "Spanish": "beber",
             "Portuguese": "beber",
             "French": "boire",
             "Italian": "bere",
-            "German": "trinken"
+            "German": "trinken",
+            "Chinese (Simplified)": "喝",
+            "Chinese (Traditional)": "喝",
+            "Korean": "마시다",
+            "Japanese": "飲む",
+            "Russian": "пить"
           },
           "to sleep": {
             "Spanish": "dormir",
             "Portuguese": "dormir",
             "French": "dormir",
             "Italian": "dormire",
-            "German": "schlafen"
+            "German": "schlafen",
+            "Chinese (Simplified)": "睡觉",
+            "Chinese (Traditional)": "睡覺",
+            "Korean": "자다",
+            "Japanese": "寝る",
+            "Russian": "спать"
           },
           "to read": {
             "Spanish": "leer",
             "Portuguese": "ler",
             "French": "lire",
             "Italian": "leggere",
-            "German": "lesen"
+            "German": "lesen",
+            "Chinese (Simplified)": "读",
+            "Chinese (Traditional)": "讀",
+            "Korean": "읽다",
+            "Japanese": "読む",
+            "Russian": "читать"
           },
           "to write": {
             "Spanish": "escribir",
             "Portuguese": "escrever",
             "French": "écrire",
             "Italian": "scrivere",
-            "German": "schreiben"
+            "German": "schreiben",
+            "Chinese (Simplified)": "写",
+            "Chinese (Traditional)": "寫",
+            "Korean": "쓰다",
+            "Japanese": "書く",
+            "Russian": "писать"
           },
           "to speak": {
             "Spanish": "hablar",
             "Portuguese": "falar",
             "French": "parler",
             "Italian": "parlare",
-            "German": "sprechen"
+            "German": "sprechen",
+            "Chinese (Simplified)": "说",
+            "Chinese (Traditional)": "說",
+            "Korean": "말하다",
+            "Japanese": "話す",
+            "Russian": "говорить"
           },
           "to hear": {
             "Spanish": "oír",
             "Portuguese": "ouvir",
             "French": "entendre",
             "Italian": "sentire",
-            "German": "hören"
+            "German": "hören",
+            "Chinese (Simplified)": "听",
+            "Chinese (Traditional)": "聽",
+            "Korean": "듣다",
+            "Japanese": "聞く",
+            "Russian": "слышать"
           },
           "to listen": {
             "Spanish": "escuchar",
             "Portuguese": "escutar",
             "French": "écouter",
             "Italian": "ascoltare",
-            "German": "zuhören"
+            "German": "zuhören",
+            "Chinese (Simplified)": "听",
+            "Chinese (Traditional)": "聽",
+            "Korean": "듣다",
+            "Japanese": "聞く",
+            "Russian": "слушать"
           },
           "to walk": {
             "Spanish": "caminar",
             "Portuguese": "caminhar",
             "French": "marcher",
             "Italian": "camminare",
-            "German": "gehen"
+            "German": "gehen",
+            "Chinese (Simplified)": "走",
+            "Chinese (Traditional)": "走",
+            "Korean": "걷다",
+            "Japanese": "歩く",
+            "Russian": "ходить"
           },
           "to run": {
             "Spanish": "correr",
             "Portuguese": "correr",
             "French": "courir",
             "Italian": "correre",
-            "German": "rennen"
+            "German": "rennen",
+            "Chinese (Simplified)": "跑",
+            "Chinese (Traditional)": "跑",
+            "Korean": "달리다",
+            "Japanese": "走る",
+            "Russian": "бежать"
           },
           "to jump": {
             "Spanish": "saltar",
             "Portuguese": "saltar",
             "French": "sauter",
             "Italian": "saltare",
-            "German": "springen"
+            "German": "springen",
+            "Chinese (Simplified)": "跳",
+            "Chinese (Traditional)": "跳",
+            "Korean": "뛰다",
+            "Japanese": "跳ぶ",
+            "Russian": "прыгать"
           },
           "to sit": {
             "Spanish": "sentarse",
             "Portuguese": "sentar-se",
             "French": "s'asseoir",
             "Italian": "sedersi",
-            "German": "sitzen"
+            "German": "sitzen",
+            "Chinese (Simplified)": "坐",
+            "Chinese (Traditional)": "坐",
+            "Korean": "앉다",
+            "Japanese": "座る",
+            "Russian": "сидеть"
           },
           "to stand": {
             "Spanish": "pararse",
             "Portuguese": "ficar de pé",
             "French": "se tenir debout",
             "Italian": "stare in piedi",
-            "German": "stehen"
+            "German": "stehen",
+            "Chinese (Simplified)": "站",
+            "Chinese (Traditional)": "站",
+            "Korean": "서다",
+            "Japanese": "立つ",
+            "Russian": "стоять"
           },
           "to open": {
             "Spanish": "abrir",
             "Portuguese": "abrir",
             "French": "ouvrir",
             "Italian": "aprire",
-            "German": "öffnen"
+            "German": "öffnen",
+            "Chinese (Simplified)": "开",
+            "Chinese (Traditional)": "開",
+            "Korean": "열다",
+            "Japanese": "開ける",
+            "Russian": "открывать"
           },
           "to close": {
             "Spanish": "cerrar",
             "Portuguese": "fechar",
             "French": "fermer",
             "Italian": "chiudere",
-            "German": "schließen"
+            "German": "schließen",
+            "Chinese (Simplified)": "关",
+            "Chinese (Traditional)": "關",
+            "Korean": "닫다",
+            "Japanese": "閉める",
+            "Russian": "закрывать"
           },
           "to work": {
             "Spanish": "trabajar",
             "Portuguese": "trabalhar",
             "French": "travailler",
             "Italian": "lavorare",
-            "German": "arbeiten"
+            "German": "arbeiten",
+            "Chinese (Simplified)": "工作",
+            "Chinese (Traditional)": "工作",
+            "Korean": "일하다",
+            "Japanese": "働く",
+            "Russian": "работать"
           },
           "to play": {
             "Spanish": "jugar",
             "Portuguese": "jogar/brincar",
             "French": "jouer",
             "Italian": "giocare",
-            "German": "spielen"
+            "German": "spielen",
+            "Chinese (Simplified)": "玩",
+            "Chinese (Traditional)": "玩",
+            "Korean": "놀다",
+            "Japanese": "遊ぶ",
+            "Russian": "играть"
           },
           "to study": {
             "Spanish": "estudiar",
             "Portuguese": "estudar",
             "French": "étudier",
             "Italian": "studiare",
-            "German": "studieren"
+            "German": "studieren",
+            "Chinese (Simplified)": "学习",
+            "Chinese (Traditional)": "學習",
+            "Korean": "공부하다",
+            "Japanese": "勉強する",
+            "Russian": "учиться"
           },
           "to learn": {
             "Spanish": "aprender",
             "Portuguese": "aprender",
             "French": "apprendre",
             "Italian": "imparare",
-            "German": "lernen"
+            "German": "lernen",
+            "Chinese (Simplified)": "学",
+            "Chinese (Traditional)": "學",
+            "Korean": "배우다",
+            "Japanese": "学ぶ",
+            "Russian": "учить"
           },
           "to teach": {
             "Spanish": "enseñar",
             "Portuguese": "ensinar",
             "French": "enseigner",
             "Italian": "insegnare",
-            "German": "lehren"
+            "German": "lehren",
+            "Chinese (Simplified)": "教",
+            "Chinese (Traditional)": "教",
+            "Korean": "가르치다",
+            "Japanese": "教える",
+            "Russian": "учить"
           }
         },
         "Greetings": {

@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
-import '../providers/progress_provider.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import '../providers/language_provider.dart';
+import '../providers/progress_provider.dart';
 
 class UserController with ChangeNotifier {
   User? _user = FirebaseAuth.instance.currentUser;
@@ -32,9 +33,11 @@ class UserController with ChangeNotifier {
       _user = userCredential.user;
       notifyListeners();
 
-      // Load progress for the new user after notifying listeners
+      // Load progress and preferences for the new user after notifying listeners
       await Provider.of<ProgressProvider>(context, listen: false)
           .loadProgressFromFirestore();
+      await Provider.of<LanguageProvider>(context, listen: false)
+          .loadPreferences();
     } catch (error) {
       if (error is PlatformException && error.code == 'sign_in_canceled') {
         debugPrint('Sign in cancelled by user');
@@ -72,9 +75,11 @@ class UserController with ChangeNotifier {
       }
       notifyListeners();
 
-      // Load progress for the new user after notifying listeners
+      // Load progress and preferences for the new user after notifying listeners
       await Provider.of<ProgressProvider>(context, listen: false)
           .loadProgressFromFirestore();
+      await Provider.of<LanguageProvider>(context, listen: false)
+          .loadPreferences();
     } on PlatformException catch (e) {
       debugPrint('Failed to sign in with Apple: $e');
       throw FirebaseAuthException(message: e.message, code: e.code);
@@ -92,9 +97,11 @@ class UserController with ChangeNotifier {
       _user = userCredential.user;
       notifyListeners();
 
-      // Load progress for the new user after notifying listeners
+      // Load progress and preferences for the new user after notifying listeners
       await Provider.of<ProgressProvider>(context, listen: false)
           .loadProgressFromFirestore();
+      await Provider.of<LanguageProvider>(context, listen: false)
+          .loadPreferences();
     } on FirebaseAuthException catch (e) {
       debugPrint(e.message);
     } catch (e) {
@@ -129,9 +136,15 @@ class UserController with ChangeNotifier {
         .saveProgressToFirestore();
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
+
+    // Reset language preferences
+    await Provider.of<LanguageProvider>(context, listen: false)
+        .resetPreferences();
+
     _user = null;
     notifyListeners();
   }
+
   Future<void> deleteAccount(BuildContext context) async {
     try {
       // Ensure the user is authenticated before deleting
@@ -160,4 +173,3 @@ class UserController with ChangeNotifier {
     }
   }
 }
-

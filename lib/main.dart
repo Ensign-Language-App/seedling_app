@@ -21,7 +21,6 @@ void main() async {
         ChangeNotifierProvider(create: (_) => ProgressProvider()),
         ChangeNotifierProvider(create: (_) => ColorProvider()),
         ChangeNotifierProvider(create: (_) => LanguageProvider())
-
       ],
       child: const MyApp(),
     ),
