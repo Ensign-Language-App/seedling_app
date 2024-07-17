@@ -9,6 +9,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:seedling_app/providers/color_provider.dart';
 import 'utilities/firebase_options.dart';
 import 'providers/progress_provider.dart';
+import 'utilities/app_globals.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
     progressProvider.loadProgressFromFirestore();
 
     return MaterialApp(
+      navigatorKey: globalKey, // Use the global key here
       theme: lightMode,
       darkTheme: darkMode,
       themeMode: themeNotifier.isDarkMode ? ThemeMode.dark : ThemeMode.light,

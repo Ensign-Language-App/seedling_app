@@ -1,11 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:provider/provider.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import '../providers/language_provider.dart';
 import '../providers/progress_provider.dart';
+import '../utilities/app_globals.dart';
 
 class UserController with ChangeNotifier {
   User? _user = FirebaseAuth.instance.currentUser;
@@ -32,7 +34,7 @@ class UserController with ChangeNotifier {
       notifyListeners();
 
       // Load progress and preferences for the new user after notifying listeners
-      await _loadUserPreferencesAndProgress(context);
+      await _loadUserPreferencesAndProgress();
     } catch (error) {
       if (error is PlatformException && error.code == 'sign_in_canceled') {
         debugPrint('Sign in cancelled by user');
@@ -67,7 +69,7 @@ class UserController with ChangeNotifier {
       notifyListeners();
 
       // Load progress and preferences for the new user after notifying listeners
-      await _loadUserPreferencesAndProgress(context);
+      await _loadUserPreferencesAndProgress();
     } on PlatformException catch (e) {
       debugPrint('Failed to sign in with Apple: $e');
       throw FirebaseAuthException(message: e.message, code: e.code);
@@ -77,16 +79,14 @@ class UserController with ChangeNotifier {
     }
   }
 
-  Future<void> signInWithEmailAndPassword(
-      String email, String password, BuildContext context) async {
+  Future<void> signInWithEmailAndPassword(String email, String password) async {
     try {
-      final userCredential = await FirebaseAuth.instance
-          .signInWithEmailAndPassword(email: email, password: password);
+      final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
       _user = userCredential.user;
       notifyListeners();
 
       // Load progress and preferences for the new user after notifying listeners
-      await _loadUserPreferencesAndProgress(context);
+      await _loadUserPreferencesAndProgress();
     } on FirebaseAuthException catch (e) {
       debugPrint(e.message);
     } catch (e) {
@@ -94,11 +94,9 @@ class UserController with ChangeNotifier {
     }
   }
 
-  Future<void> registerWithEmailAndPassword(String email, String password,
-      String firstName, String lastName, BuildContext context) async {
+  Future<void> registerWithEmailAndPassword(String email, String password, String firstName, String lastName) async {
     try {
-      await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: email, password: password);
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
 
       if (_user != null) {
         await _user!.updateDisplayName("$firstName $lastName");
@@ -115,9 +113,9 @@ class UserController with ChangeNotifier {
     }
   }
 
-  Future<void> signOut(BuildContext context) async {
+  Future<void> signOut() async {
     // Save progress and preferences before signing out
-    await _saveProgressAndPreferences(context);
+    await _saveProgressAndPreferences();
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
 
@@ -126,11 +124,7 @@ class UserController with ChangeNotifier {
     notifyListeners();
 
     // Reset preferences safely
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (context.mounted) {
-        Provider.of<LanguageProvider>(context, listen: false).resetPreferences();
-      }
-    });
+    _resetUserPreferences();
   }
 
   Future<void> deleteAccount(BuildContext context) async {
@@ -139,36 +133,40 @@ class UserController with ChangeNotifier {
         await _user!.delete();
         _user = null;
         notifyListeners();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Account successfully deleted')),
-        );
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Account successfully deleted')));
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('No user is currently signed in')),
-        );
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No user is currently signed in')));
       }
     } on FirebaseAuthException catch (e) {
       print('Failed to delete account: $e');
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to delete account: ${e.message}')),
-      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to delete account: ${e.message}')));
     } catch (e) {
       print('An error occurred while deleting the account: $e');
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('An error occurred: $e')),
-      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $e')));
     }
   }
 
-  Future<void> _loadUserPreferencesAndProgress(BuildContext context) async {
-    await Provider.of<ProgressProvider>(context, listen: false)
-        .loadProgressFromFirestore();
-    await Provider.of<LanguageProvider>(context, listen: false)
-        .loadPreferences();
+  Future<void> _loadUserPreferencesAndProgress() async {
+    final BuildContext? context = globalKey.currentContext;
+    if (context != null && context.mounted) {
+      await Provider.of<ProgressProvider>(context, listen: false).loadProgressFromFirestore();
+      await Provider.of<LanguageProvider>(context, listen: false).loadPreferences();
+    }
   }
 
-  Future<void> _saveProgressAndPreferences(BuildContext context) async {
-    await Provider.of<ProgressProvider>(context, listen: false)
-        .saveProgressToFirestore();
+  Future<void> _saveProgressAndPreferences() async {
+    final BuildContext? context = globalKey.currentContext;
+    if (context != null && context.mounted) {
+      await Provider.of<ProgressProvider>(context, listen: false).saveProgressToFirestore();
+    }
+  }
+
+  void _resetUserPreferences() {
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      final BuildContext? context = globalKey.currentContext;
+      if (context != null && context.mounted) {
+        Provider.of<LanguageProvider>(context, listen: false).resetPreferences();
+      }
+    });
   }
 }

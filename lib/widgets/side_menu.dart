@@ -104,7 +104,7 @@ class SideMenuState extends State<SideMenu> {
             title: const Text('Log out'),
             // TODO: CANT FIND THE ERROR... I THINK IT'S IN THE USER_CONTROLLER
             onTap: () async {
-              await userController.signOut(context);
+              await userController.signOut();
               if (mounted) {
                 Navigator.pushReplacement(
                   context,

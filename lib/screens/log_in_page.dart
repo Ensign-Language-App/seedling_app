@@ -263,7 +263,7 @@ class LogInPageState extends State<LogInPage>
   Future<void> _signInWithEmail() async {
     final userController = Provider.of<UserController>(context, listen: false);
     await userController.signInWithEmailAndPassword(
-        emailController.text.trim(), passwordController.text.trim(), context);
+        emailController.text.trim(), passwordController.text.trim());
 
     if (userController.user != null && mounted) {
       Navigator.of(context).pushReplacement(MaterialPageRoute(

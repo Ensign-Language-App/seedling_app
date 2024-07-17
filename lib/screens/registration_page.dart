@@ -219,7 +219,6 @@ class RegistrationPageState extends State<RegistrationPage> {
           passwordController.text.trim(),
           firstNameController.text.trim(),
           lastNameController.text.trim(),
-          context
         );
 
         // TODO: WAIT FOR THE LANGUAGE SELECTION PAGE TO BE READY
