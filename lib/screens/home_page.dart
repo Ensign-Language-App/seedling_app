@@ -36,6 +36,136 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+           SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/greets.png',
+                    title: 'Greetings',
+                    lessonColor: Color(0xFF8d99ae),
+                    stackColor1: Color(0xFF2b2d42),
+                    stackColor2: Color(0xFFedf2f4),
+                    topic: 'Greetings',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/numbers.png',
+                    title: 'Numbers',
+                    lessonColor: Color(0xFF48cae4),
+                    stackColor1: Color(0xFFade8f4),
+                    stackColor2: Color(0xFFcaf0f8),
+                    topic: 'Numbers',
+                  ),
+                ),
+              ],
+            ),
+          SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/days.png',
+                    title: 'Days',
+                    lessonColor: Color(0xFFe9edc9),
+                    stackColor1: Color(0xFFfaedcd),
+                    stackColor2: Color(0xFFfefae0),
+                    topic: 'Days',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/months.png',
+                    title: 'Months',
+                    lessonColor: Color(0xFFff8fab),
+                    stackColor1: Color(0xFFffb3c6),
+                    stackColor2: Color(0xFFffe5ec),
+                    topic: 'Months',
+                  ),
+                ),
+              ],
+            ),
+          SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/time.png',
+                    title: 'Time',
+                    lessonColor: Color(0xFFff9f1c),
+                    stackColor1: Color(0xFFffbf69),
+                    stackColor2: Color(0xFFffffff),
+                    topic: 'Time',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/questions.png',
+                    title: 'Questions',
+                    lessonColor: Color(0xFF9c6644),
+                    stackColor1: Color(0xFF7f5539),
+                    stackColor2: Color(0xFFe6ccb2),
+                    topic: 'Questions',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/animals.png',
+                    title: 'Animals',
+                    lessonColor: Color(0xFF9c6644),
+                    stackColor1: Color(0xFF7f5539),
+                    stackColor2: Color(0xFFe6ccb2),
+                    topic: 'Animals',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/colors.png',
+                    title: 'Colors',
+                    lessonColor: Color(0xFFf6bd60),
+                    stackColor1: Color(0xFFf5cac3),
+                    stackColor2: Color(0xFFf7ede2),
+                    topic: 'Colors',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/people.png',
+                    title: 'People',
+                    lessonColor: Color(0xFF9c6644),
+                    stackColor1: Color(0xFF7f5539),
+                    stackColor2: Color(0xFFe6ccb2),
+                    topic: 'People',
+                  ),
+                ),
+                Flexible(
+                  child: LessonButton(
+                    image: 'assets/images/lessons/family.png',
+                    title: 'Family',
+                    lessonColor: Color(0xFF83c5be),
+                    stackColor1: Color(0xFF006d77),
+                    stackColor2: Color(0xFFb08968),
+                    topic: 'Family',
+                  ),
+                ),
+              ],
+            ),            
             SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
