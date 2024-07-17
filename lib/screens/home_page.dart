@@ -36,6 +36,11 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            SizedBox(height: 40),
+            Text(
+              'The Basics',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 106, 105, 105)),
+            ),
            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -139,6 +144,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 40),
+            Text(
+              'Daily Life',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 106, 105, 105)),
             ),
             SizedBox(height: 40),
             Row(
@@ -245,6 +255,11 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 40),
+            Text(
+              'Travel & Directions',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 106, 105, 105)),
+            ),
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -321,7 +336,12 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ],
-            ),            
+            ),
+            SizedBox(height: 40),
+            Text(
+              'Grammar',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 106, 105, 105)),
+            ),
             SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
