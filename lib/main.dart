@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
     progressProvider.loadProgressFromFirestore();
 
     return MaterialApp(
-      navigatorKey: globalKey, // Use the global key here
+      navigatorKey: globalKey,
       theme: lightMode,
       darkTheme: darkMode,
       themeMode: themeNotifier.isDarkMode ? ThemeMode.dark : ThemeMode.light,

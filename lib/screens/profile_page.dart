@@ -3,30 +3,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:seedling_app/widgets/language_selector.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../providers/language_provider.dart';
+import '../providers/progress_provider.dart';
 import 'home_page.dart';
 import 'package:seedling_app/controllers/user_controller.dart';
 import 'bookmark_page.dart';
 import 'package:seedling_app/providers/color_provider.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => UserController(),
-      child: MaterialApp(
-        home: const ProfilePage(),
-        theme: ThemeData(
-          primarySwatch: Colors.orange,
-          scaffoldBackgroundColor: Colors.grey[100],
-        ),
-      ),
-    );
-  }
-}
+void main() => runApp(const MaterialApp(home: ProfilePage()));
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -36,6 +20,13 @@ class ProfilePage extends StatelessWidget {
       throw 'Could not launch $url';
     }
   }
+
+  Future<double> _fetchProgress(BuildContext context) async {
+  final progressProvider = Provider.of<ProgressProvider>(context, listen: false);
+  final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
+  final learningLanguage = languageProvider.learningLanguage;
+  return await progressProvider.getTotalProgress(context);
+}
 
   @override
   Widget build(BuildContext context) {
@@ -66,13 +57,14 @@ class ProfilePage extends StatelessWidget {
                     backgroundImage: user?.photoURL != null
                         ? NetworkImage(user!.photoURL!)
                         : const AssetImage('assets/images/default_icon.jpg')
-                    as ImageProvider,
+                            as ImageProvider,
                   ),
                   const SizedBox(width: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const LanguageSelector(width: 50, height: 50, isNativeSelector: true),
+                      const LanguageSelector(
+                          width: 50, height: 50, isNativeSelector: true),
                       const SizedBox(height: 10),
                       Text(
                         user?.displayName ?? 'User Name',
@@ -97,13 +89,26 @@ class ProfilePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const LanguageSelector(width: 40, height: 40, isNativeSelector: false),
+                        const LanguageSelector(
+                            width: 40, height: 40, isNativeSelector: false),
                         const SizedBox(height: 15),
-                        LinearProgressIndicator(
-                          value: 0.4, // Example progress value
-                          backgroundColor: Colors.grey[300],
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                              Theme.of(context).primaryColor),
+                        FutureBuilder<double>(
+                          future: _fetchProgress(context),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return const CircularProgressIndicator();
+                            } else if (snapshot.hasError) {
+                              return const Text('Error loading progress');
+                            } else {
+                              return LinearProgressIndicator(
+                                value: snapshot.data ?? 0.0,
+                                backgroundColor: Colors.grey[300],
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                    Theme.of(context).primaryColor),
+                              );
+                            }
+                          },
                         ),
                       ],
                     ),
@@ -133,23 +138,22 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  _buildSection(
-                      'Bookmark',
+                  _buildSection('Bookmark',
                       child: IconButton(
-                          icon: const Icon(FontAwesomeIcons.heart, color: Colors.red,
-                              size: 30),
+                          icon: const Icon(FontAwesomeIcons.heart,
+                              color: Colors.red, size: 30),
                           onPressed: () {
-                            Navigator.push(context,
+                            Navigator.push(
+                                context,
                                 MaterialPageRoute(
                                   builder: (context) => const BookmarkPage(),
                                 ));
-                          })
-                  ),
+                          })),
                   _buildSection(
                     'Practice',
                     child: IconButton(
-                      icon: const Icon(FontAwesomeIcons.book, color: Colors.lightGreen,
-                          size: 30),
+                      icon: const Icon(FontAwesomeIcons.book,
+                          color: Colors.lightGreen, size: 30),
                       onPressed: () {
                         Navigator.push(
                           context,

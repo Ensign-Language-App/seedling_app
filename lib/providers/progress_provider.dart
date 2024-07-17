@@ -1,10 +1,44 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart';
+import '../providers/language_provider.dart';
 
 class ProgressProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   User? _user = FirebaseAuth.instance.currentUser;
+  final List<String> subjects = [
+    'Adjectives'
+    'Animals',
+    'Articles'
+    'Body',
+    'Colors',
+    'Conjunctions',
+    'Conversation',
+    'Days',
+    'Dinning',
+    'Directions',
+    'Emergency',
+    'Family',
+    'Food & Drink',
+    'Greetings',
+    'Health',
+    'Home',
+    'Irregular Verbs',
+    'Money',
+    'Months',
+    'Numbers',
+    'People',
+    'Places',
+    'Positive Pronouns',
+    'Prepositions',
+    'Regular Verbs',
+    'Shopping',
+    'Subject Pronouns',
+    'Time',
+    'Travel',
+    'Verbs'
+  ];
 
   Map<String, double> _progress = {};
   Map<String, List<String>> _masteredCards = {};
@@ -85,4 +119,48 @@ class ProgressProvider with ChangeNotifier {
       }
     }
   }
+
+  int getTotalMasteredCards(String learningLanguage) {
+    int totalMasteredCards = 0;
+    _masteredCards.forEach((key, value) {
+      if (key.contains(learningLanguage)) {
+        totalMasteredCards += value.length;
+      }
+    });
+    return totalMasteredCards;
+  }
+
+  Future<int> getTotalCards() async {
+    int totalCards = 0;
+    try {
+      debugPrint('Attempting to fetch words...');
+      for(String subject in subjects) {
+        QuerySnapshot querySnapshot = await FirebaseFirestore.instance
+            .collection('Vocabulary')
+            .doc('Subjects')
+            .collection(subject)
+            .get();
+        totalCards += querySnapshot.docs.length;
+      }
+
+      debugPrint('Fetched total cards: $totalCards');
+    } catch (e) {
+      debugPrint('Error fetching total cards: $e');
+    }
+    return totalCards;
+  }
+
+  Future<double> getTotalProgress(context) async {
+    int totalCards = await getTotalCards();
+    if(totalCards == 0) {
+      return 0.0;
+    }
+    return getTotalMasteredCards(getLearningLanguage(context)) / await getTotalCards();
+  }
+
+  String getLearningLanguage(BuildContext context) {
+    final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
+    return languageProvider.learningLanguage;
+  }
+
 }
